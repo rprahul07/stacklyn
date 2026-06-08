@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#capabilities", label: "Services" },
-  { href: "#work", label: "Work" },
-  { href: "#stack", label: "Technology" },
-  { href: "#process", label: "Process" },
+  { href: "/#capabilities", label: "Services" },
+  { href: "/#work", label: "Work" },
+  { href: "/#stack", label: "Technology" },
+  { href: "/#process", label: "Process" },
   { href: "/blog", label: "Blog" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const serviceLinks = [
@@ -54,7 +54,7 @@ export function Nav() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <a href="#capabilities" className="hover:text-foreground transition-colors flex items-center gap-1">
+            <a href="/#capabilities" className="hover:text-foreground transition-colors flex items-center gap-1">
               Services
               <svg className="h-3 w-3 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
@@ -83,7 +83,7 @@ export function Nav() {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="inline-flex items-center gap-1.5 rounded-full bg-foreground text-background px-4 h-9 text-sm font-medium hover:bg-navy transition-colors"
         >
           Start a project
