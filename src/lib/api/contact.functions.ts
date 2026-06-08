@@ -1,6 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import nodemailer from "nodemailer";
 
 const ContactSchema = z.object({
   name: z.string().min(1),
@@ -15,33 +14,15 @@ const ContactSchema = z.object({
 export const sendContactEmail = createServerFn({ method: "POST" })
   .validator(ContactSchema)
   .handler(async ({ data }) => {
-    const host = process.env.SMTP_HOST;
-    const port = Number(process.env.SMTP_PORT ?? 465);
-    const user = process.env.SMTP_USER;
-    const pass = process.env.SMTP_PASS;
-    const from = process.env.EMAIL_FROM;
-    const to = process.env.EMAIL_TO;
+    const apiKey = process.env.BREVO_API_KEY;
+    const to = process.env.EMAIL_TO ?? "rprahulofficial07@gmail.com";
+    const fromEmail = process.env.SMTP_USER ?? "augustinevadakumchery@lenienttree.com";
+    const fromName = "LenientTree via Stacklyn";
 
-    if (!host || !user || !pass || !from || !to) {
-      const missing = [
-        !host && "SMTP_HOST",
-        !user && "SMTP_USER",
-        !pass && "SMTP_PASS",
-        !from && "EMAIL_FROM",
-        !to && "EMAIL_TO",
-      ].filter(Boolean).join(", ");
-      console.error("[contact] Missing env vars:", missing);
-      throw new Error(`Email not configured. Missing: ${missing}`);
+    if (!apiKey) {
+      console.error("[contact] Missing BREVO_API_KEY env var");
+      throw new Error("Email service not configured.");
     }
-
-    const transporter = nodemailer.createTransport({
-      host,
-      port,
-      secure: port === 465,
-      auth: { user, pass },
-      connectionTimeout: 10000,
-      greetingTimeout: 10000,
-    });
 
     const html = `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a">
@@ -64,17 +45,25 @@ export const sendContactEmail = createServerFn({ method: "POST" })
       </div>
     `;
 
-    try {
-      await transporter.sendMail({
-        from,
-        to,
-        replyTo: `${data.name} <${data.email}>`,
+    const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        "api-key": apiKey,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        sender: { name: fromName, email: fromEmail },
+        to: [{ email: to }],
+        replyTo: { name: data.name, email: data.email },
         subject: `New inquiry from ${data.name}${data.company ? ` (${data.company})` : ""}`,
-        html,
-      });
-    } catch (err) {
-      console.error("[contact] SMTP send failed:", err);
-      throw new Error("Failed to send email. Please try again or contact us directly.");
+        htmlContent: html,
+      }),
+    });
+
+    if (!res.ok) {
+      const body = await res.text();
+      console.error("[contact] Brevo API error:", res.status, body);
+      throw new Error("Failed to send email.");
     }
 
     return { ok: true };

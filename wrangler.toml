@@ -4,8 +4,5 @@ compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".output/public"
 
 [vars]
-SMTP_HOST = "smtp.hostinger.com"
-SMTP_PORT = "465"
 SMTP_USER = "augustinevadakumchery@lenienttree.com"
-EMAIL_FROM = "LenientTree <augustinevadakumchery@lenienttree.com>"
 EMAIL_TO = "rprahulofficial07@gmail.com"
