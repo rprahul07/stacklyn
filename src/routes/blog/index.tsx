@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SchemaMarkup } from "@/components/velora/SchemaMarkup";
-import Nav from "@/components/velora/Nav";
-import Footer from "@/components/velora/Footer";
+import { Nav } from "@/components/velora/Nav";
+import { Footer } from "@/components/velora/Footer";
 
 interface BlogPost {
   slug: string;
