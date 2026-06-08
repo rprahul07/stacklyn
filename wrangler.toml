@@ -3,6 +3,5 @@ compatibility_date = "2025-06-08"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".output/public"
 
-[vars]
-SMTP_USER = "augustinevadakumchery@lenienttree.com"
-EMAIL_TO = "rprahulofficial07@gmail.com"
+# [vars]
+# GOOGLE_SCRIPT_URL is set as an encrypted secret in Cloudflare Pages dashboard
