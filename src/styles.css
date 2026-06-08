@@ -1,0 +1,130 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-soft: var(--primary-soft);
+  --color-navy: var(--navy);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+
+  --font-display: "Inter", "SF Pro Display", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --shadow-elegant: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(15, 76, 255, 0.08);
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.05), 0 12px 40px -16px rgba(15, 76, 255, 0.12);
+  --shadow-glow: 0 20px 60px -20px rgba(15, 76, 255, 0.35);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.18 0.04 257);
+  --surface: oklch(0.985 0.005 250);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 257);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 257);
+
+  /* Royal blue #0F4CFF */
+  --primary: oklch(0.55 0.24 263);
+  --primary-foreground: oklch(1 0 0);
+  --primary-deep: oklch(0.48 0.22 263);
+  --primary-soft: oklch(0.78 0.12 255);
+  --navy: oklch(0.25 0.08 257);
+
+  --secondary: oklch(0.97 0.01 250);
+  --secondary-foreground: oklch(0.18 0.04 257);
+  --muted: oklch(0.97 0.01 250);
+  --muted-foreground: oklch(0.5 0.03 257);
+  --accent: oklch(0.96 0.02 255);
+  --accent-foreground: oklch(0.25 0.08 257);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.93 0.012 255);
+  --input: oklch(0.93 0.012 255);
+  --ring: oklch(0.55 0.24 263);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, oklch(0.93 0.012 255 / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.93 0.012 255 / 0.6) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .grid-bg-fade {
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 80%);
+  }
+  .marquee {
+    animation: marquee 38s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .reveal-up {
+    animation: revealUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .dash-flow {
+    stroke-dasharray: 6 8;
+    animation: dash 4s linear infinite;
+  }
+  @keyframes dash {
+    to { stroke-dashoffset: -56; }
+  }
+}

@@ -1,0 +1,4 @@
+name = "stacklyn"
+compatibility_date = "2025-06-08"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".output/public"
