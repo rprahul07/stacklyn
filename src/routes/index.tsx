@@ -15,15 +15,6 @@ import { Footer } from "@/components/velora/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-<<<<<<< HEAD
-      { title: "STACKLYN — Innovation in Motion" },
-      {
-        name: "description",
-        content:
-          "STACKLYN is a software engineering and AI studio building scalable web, mobile, and cloud-native products for modern businesses.",
-      },
-      { property: "og:title", content: "STACKLYN — Innovation in Motion" },
-=======
       { title: "Stacklyn — Innovation in Motion" },
       {
         name: "description",
@@ -31,7 +22,6 @@ export const Route = createFileRoute("/")({
           "Stacklyn is a software engineering and AI studio building scalable web, mobile, and cloud-native products for modern businesses.",
       },
       { property: "og:title", content: "Stacklyn — Innovation in Motion" },
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
       {
         property: "og:description",
         content:
