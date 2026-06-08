@@ -1,0 +1,106 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "React Development",
+  slug: "react-development",
+  headline: "React Development Services for Modern Web Interfaces",
+  tagline: "React 19 · TypeScript · Tailwind · Kerala, India",
+  intro:
+    "Stacklyn builds production-grade React applications for startups and enterprises. From single-page apps and interactive dashboards to complex SaaS frontends, our React developers deliver performant, accessible, and maintainable user interfaces.",
+  whatIs:
+    "React is a JavaScript library for building user interfaces, developed and maintained by Meta (Facebook). React uses a component-based architecture where UI is broken into reusable pieces, and a virtual DOM that efficiently updates only the parts of the page that change. React is the most widely-used frontend library in the world.",
+  whyItMatters:
+    "React's component model, large ecosystem, and strong developer community make it the default choice for building complex, interactive web interfaces. Its unidirectional data flow, hooks API, and TypeScript compatibility make it ideal for large teams and long-lived codebases.",
+  subServices: [
+    "React Single Page Application (SPA) Development",
+    "React + TypeScript Codebase Development",
+    "React Component Library Development",
+    "React Performance Optimization",
+    "React State Management (Zustand, Redux Toolkit)",
+    "React Dashboard and Data Visualization",
+    "React + REST API / GraphQL Integration",
+    "React Testing (Jest, React Testing Library)",
+    "React Code Audit and Refactoring",
+    "React Migration from Legacy Frameworks",
+  ],
+  benefits: [
+    { title: "Component Reusability", desc: "Build once, use everywhere. React components reduce development time and ensure visual consistency across your application." },
+    { title: "Rich Ecosystem", desc: "Access to thousands of React libraries — UI components, animation, data visualization, forms, and more." },
+    { title: "Strong Community", desc: "The largest frontend developer community means solutions to almost every problem exist and best practices are well-documented." },
+    { title: "Performance", desc: "React's virtual DOM and hooks like useMemo and useCallback enable fine-grained performance optimization for complex UIs." },
+    { title: "Developer Productivity", desc: "React Developer Tools, hot reloading, and TypeScript integration make React developers significantly more productive." },
+    { title: "Future-Proof", desc: "Meta's continued investment and React 19's new features (Server Components, concurrent features) ensure React remains relevant for years." },
+  ],
+  process: [
+    { step: "Component Architecture", desc: "Design the component hierarchy, state management strategy, routing structure, and design system approach." },
+    { step: "Design System Setup", desc: "Establish typography, colors, spacing tokens, and base UI components using Tailwind CSS or your brand system." },
+    { step: "Core Components", desc: "Build reusable, accessible UI components with TypeScript interfaces, storybook documentation, and tests." },
+    { step: "Page Development", desc: "Assemble pages from components, implement routing, and connect to backend APIs with TanStack Query." },
+    { step: "Performance Optimization", desc: "Code splitting, lazy loading, memo optimization, and bundle analysis to ensure fast load times." },
+    { step: "Testing & QA", desc: "Unit tests with React Testing Library, cross-browser testing, accessibility audits, and performance profiling." },
+  ],
+  techStack: [
+    "React 19", "TypeScript", "Vite", "Next.js",
+    "Tailwind CSS", "shadcn/ui", "Radix UI", "Framer Motion",
+    "TanStack Router", "TanStack Query", "Zustand", "Jotai",
+    "React Hook Form", "Zod",
+    "Jest", "Vitest", "React Testing Library", "Playwright",
+    "Storybook",
+  ],
+  whyStacklyn: [
+    { title: "React Specialists", desc: "React is our primary frontend technology. Every project uses React with TypeScript, hooks, and modern patterns." },
+    { title: "Accessibility First", desc: "We build accessible React UIs from the start — ARIA attributes, keyboard navigation, and screen reader compatibility." },
+    { title: "Performance Budgets", desc: "We set and enforce performance budgets — First Contentful Paint under 1.5s, Largest Contentful Paint under 2.5s." },
+    { title: "Clean Code Standards", desc: "Consistent naming, folder structure, ESLint rules, and Prettier formatting. Code you can hand to any React developer." },
+    { title: "Design Fidelity", desc: "We implement designs pixel-perfectly and maintain visual consistency across all screen sizes and devices." },
+    { title: "Thorough Testing", desc: "Component tests, integration tests, and visual regression tests ensure your UI stays working as features are added." },
+  ],
+  faqs: [
+    { q: "What is React development?", a: "React development is building user interfaces using React, the JavaScript library from Meta. React uses components, hooks, and a virtual DOM to create interactive, high-performance web interfaces." },
+    { q: "Is React good for building SaaS products?", a: "Yes. React is the most popular choice for SaaS frontend development. Its component model handles complex UIs with many interactive elements, and its ecosystem includes everything needed for dashboards, forms, data tables, and real-time features." },
+    { q: "What is the difference between React and Next.js?", a: "React is a UI library for building components. Next.js is a full-stack framework built on top of React that adds server-side rendering (SSR), static generation (SSG), API routes, file-based routing, and deployment optimization. Stacklyn recommends Next.js for most production projects." },
+    { q: "Does Stacklyn use TypeScript with React?", a: "Yes. All Stacklyn React projects use TypeScript. TypeScript with React provides type-safe props, state, and events, reducing runtime errors and improving code maintainability significantly." },
+    { q: "What state management does Stacklyn use in React?", a: "We use Zustand for client-side state and TanStack Query for server state management. For simple projects, React Context and useState are sufficient. We avoid Redux for most projects as it adds unnecessary complexity." },
+    { q: "Does Stacklyn build React component libraries?", a: "Yes. We design and build reusable component libraries with TypeScript, Storybook documentation, Tailwind CSS styling, and accessibility built-in. Component libraries are ideal for design systems and multi-product companies." },
+    { q: "How does Stacklyn optimize React performance?", a: "Performance optimization includes: code splitting with React.lazy, list virtualization for long lists, memo optimization with useMemo and useCallback, bundle analysis, image optimization, and Core Web Vitals monitoring." },
+    { q: "What CSS approach does Stacklyn use with React?", a: "We primarily use Tailwind CSS with Radix UI or shadcn/ui for component systems. Tailwind provides utility-first styling that's highly maintainable and consistent. We also use CSS Modules or styled-components when project requirements dictate." },
+    { q: "Does Stacklyn write tests for React components?", a: "Yes. We write component tests using React Testing Library and Vitest/Jest, integration tests, and end-to-end tests with Playwright. We maintain meaningful test coverage for critical user flows." },
+    { q: "Can Stacklyn take over an existing React codebase?", a: "Yes. We regularly take over existing React codebases for refactoring, adding TypeScript, upgrading to modern React patterns, improving performance, or adding new features." },
+    { q: "How long does a React frontend project take?", a: "A React frontend for a medium-complexity SaaS product takes 6–10 weeks. Simple informational sites take 2–4 weeks. Complex dashboards with many data visualizations take 10–16 weeks depending on the number of unique views." },
+    { q: "Does Stacklyn build React dashboards with charts?", a: "Yes. We build analytics dashboards using Recharts, Chart.js, or Nivo for visualization, connected to your backend APIs. Dashboards include real-time updates, filtering, date range selection, and export capabilities." },
+    { q: "What is React 19 and should I use it?", a: "React 19 introduces new hooks (use, useActionState), improved Server Components, and the new React Compiler for automatic performance optimization. Stacklyn uses React 19 for all new projects. Existing projects can migrate when dependencies are compatible." },
+    { q: "Can Stacklyn build accessible React applications?", a: "Yes. Accessibility is a standard requirement in all Stacklyn React projects. We use Radix UI's accessible primitives, proper ARIA attributes, keyboard navigation support, and test with screen readers." },
+    { q: "Does Stacklyn use Vite or Create React App?", a: "We use Vite for React SPAs and Next.js for full-stack React applications. Create React App is deprecated and we do not use it for new projects. Vite provides faster builds and a better developer experience." },
+    { q: "Does Stacklyn integrate third-party services into React apps?", a: "Yes. Common integrations include authentication (Clerk, Auth0), payments (Stripe), analytics (Mixpanel, PostHog), maps (Mapbox, Google Maps), and communication tools (Intercom, Crisp)." },
+    { q: "What is Framer Motion and does Stacklyn use it?", a: "Framer Motion is a React animation library for declarative animations, page transitions, and interactive micro-animations. Stacklyn uses Framer Motion for polished, performant animations in our React projects." },
+    { q: "Does Stacklyn do React Native (mobile) development?", a: "Yes. Stacklyn builds mobile apps with React Native, sharing logic and components with the React web app where possible. React Native connects to the same Node.js backend API as the web frontend." },
+    { q: "What is the cost of React development at Stacklyn?", a: "React frontend development starts at ₹1.5 lakh for simple UIs. Full SaaS frontends range from ₹3–12 lakh depending on complexity, number of pages, and feature richness." },
+    { q: "How do I start a React project with Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849 with your project brief. We'll schedule a free call to discuss requirements and send a proposal within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "Next.js Development", href: "/services/nextjs-development" },
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "MERN Stack Development", href: "/services/mern-development" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+    { name: "Node.js Development", href: "/services/nodejs-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/react-development")({
+  head: () => ({
+    meta: [
+      { title: "React Development Services | Stacklyn — Kerala, India" },
+      { name: "description", content: "Expert React development from Stacklyn, Kerala, India. We build SPAs, dashboards, SaaS frontends, and component libraries with React 19, TypeScript, and Tailwind CSS." },
+      { name: "keywords", content: "React development India, React developers Kerala, React.js development company India, hire React developers India, React TypeScript development" },
+      { property: "og:title", content: "React Development Services | Stacklyn" },
+      { property: "og:description", content: "Production React applications with TypeScript, Tailwind CSS, and modern patterns. From Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "React Development Services | Stacklyn" },
+      { name: "twitter:description", content: "Expert React developers building SPAs, dashboards, and SaaS frontends." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/react-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

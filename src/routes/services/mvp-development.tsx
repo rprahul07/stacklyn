@@ -1,0 +1,106 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "MVP Development",
+  slug: "mvp-development",
+  headline: "Startup MVP Development — Ship in 8–12 Weeks",
+  tagline: "Idea to production in weeks · Kerala, India",
+  intro:
+    "Stacklyn builds startup MVPs in 8–12 weeks. From product scoping and UI/UX design to full stack development, cloud deployment, and post-launch iteration — we take your idea to a production-ready product that validates your market and attracts your first users.",
+  whatIs:
+    "MVP (Minimum Viable Product) development is the process of building the smallest version of a product that delivers core value to users and validates your key business assumptions. An MVP focuses on the essential features needed to test your hypothesis, gather user feedback, and attract investors or early customers — without the cost and time of building a full product.",
+  whyItMatters:
+    "Most startups fail not because they couldn't build the product, but because they built the wrong product. An MVP allows you to test your idea with real users before spending months or years on a full build. A focused MVP lets you validate demand, refine your value proposition, and raise funding faster.",
+  subServices: [
+    "Product Strategy and Scope Definition",
+    "UI/UX Design and Wireframing",
+    "Full Stack MVP Development (React + Node.js)",
+    "User Authentication and Onboarding",
+    "Core Feature Development",
+    "Payment Integration (Stripe, Razorpay)",
+    "Cloud Deployment (AWS, Vercel)",
+    "Analytics and Tracking Setup",
+    "Post-launch Iteration and Support",
+    "Investor-ready Technical Architecture",
+  ],
+  benefits: [
+    { title: "Validate Before Over-investing", desc: "Test your market hypothesis with real users before committing to a full product build. Fail fast, learn cheap." },
+    { title: "Faster Time to Market", desc: "Ship in 8–12 weeks instead of 12–18 months. Get to users, feedback, and revenue faster than building everything at once." },
+    { title: "Investor-ready Product", desc: "A working product is the most powerful fundraising tool. Our MVPs are built to demo well and scale with your funding." },
+    { title: "Scalable Foundation", desc: "We don't cut corners on architecture. The MVP is built on a foundation that can grow into your full product without a rewrite." },
+    { title: "Focus on Core Value", desc: "We help you ruthlessly prioritize features that matter. No feature creep, no distractions from your core value proposition." },
+    { title: "Fixed-price Certainty", desc: "We offer fixed-scope MVP packages with predictable pricing so you know exactly what you're getting and what it costs." },
+  ],
+  process: [
+    { step: "Discovery (Week 1)", desc: "Define problem statement, target users, core features, success metrics, and technical requirements." },
+    { step: "Design (Weeks 2–3)", desc: "Wireframes, user flows, and high-fidelity UI mockups. Mobile-first, conversion-optimized design." },
+    { step: "Development Sprint 1 (Weeks 4–6)", desc: "Core infrastructure, authentication, database, and primary user flows built and deployed to staging." },
+    { step: "Development Sprint 2 (Weeks 7–9)", desc: "Secondary features, integrations, admin dashboard, and analytics implementation." },
+    { step: "QA & Polish (Weeks 10–11)", desc: "End-to-end testing, performance optimization, edge case handling, and final design polish." },
+    { step: "Launch (Week 12)", desc: "Production deployment, monitoring setup, onboarding documentation, and launch-day support." },
+  ],
+  techStack: [
+    "Next.js", "React", "TypeScript", "Tailwind CSS",
+    "Node.js", "Express.js", "PostgreSQL", "Prisma",
+    "Stripe", "Razorpay", "Clerk", "Auth.js",
+    "AWS", "Vercel", "Supabase",
+    "Mixpanel", "PostHog", "Google Analytics",
+    "Docker", "GitHub Actions",
+  ],
+  whyStacklyn: [
+    { title: "MVP Specialists", desc: "MVP development is a core Stacklyn service. We know how to scope ruthlessly, build fast, and ship production-quality products." },
+    { title: "Product Thinking", desc: "We don't just execute specifications — we challenge assumptions and help you build the right product for your users." },
+    { title: "No Over-engineering", desc: "We build what you need right now, not what you might need in 3 years. Clean, simple, shippable." },
+    { title: "Startup-Friendly Pricing", desc: "Fixed-scope MVP packages designed for pre-seed and seed-stage startups. Competitive pricing without compromising quality." },
+    { title: "Proven Track Record", desc: "We've helped founders ship MVPs that have attracted seed funding, paying customers, and product-market validation." },
+    { title: "Handoff Package", desc: "After launch, you receive: full source code, deployment documentation, architecture guide, and a 2-week handoff period." },
+  ],
+  faqs: [
+    { q: "What is MVP development?", a: "MVP (Minimum Viable Product) development is building the smallest, simplest version of a product that validates your core business idea with real users. It focuses on essential features only, allowing founders to test assumptions before investing in a full build." },
+    { q: "How long does MVP development take at Stacklyn?", a: "Most MVPs at Stacklyn take 8–12 weeks. Simple MVPs with defined scope take 8 weeks. MVPs with complex features, multiple user roles, or third-party integrations take 10–12 weeks." },
+    { q: "What does an MVP from Stacklyn include?", a: "A standard Stacklyn MVP includes: product scoping, UI/UX design, full stack development (React + Node.js), user authentication, core features, payment integration (if needed), cloud deployment, analytics setup, and 30 days of post-launch support." },
+    { q: "How much does MVP development cost at Stacklyn?", a: "MVP development at Stacklyn starts at ₹2 lakh for simple apps. Most MVPs range from ₹2–8 lakh depending on feature complexity, design requirements, and integrations. We provide a fixed-price quote after the discovery call." },
+    { q: "What is the difference between an MVP and a prototype?", a: "A prototype is a non-functional or partially functional demo used for user testing or investor demos. An MVP is a fully functional, production-deployed product that real users can sign up for and use. MVPs ship real value; prototypes test hypotheses." },
+    { q: "What tech stack does Stacklyn use for MVPs?", a: "We primarily use Next.js (React) for the frontend and Node.js (Express or Fastify) for the backend, with PostgreSQL as the database. This stack is production-grade, scalable, and widely understood by engineers you'll hire later." },
+    { q: "Does Stacklyn help with product strategy and feature scoping?", a: "Yes. Feature scoping is a critical part of the MVP discovery phase. We help founders decide which features are truly 'minimum' versus nice-to-have, using prioritization frameworks like MoSCoW and user story mapping." },
+    { q: "Will my MVP be scalable?", a: "Yes. We architect MVPs to scale. The code is clean, the database schema is normalized, the API is well-designed, and the deployment is containerized. Adding features or users later doesn't require a rewrite." },
+    { q: "Does Stacklyn build MVPs for funded startups?", a: "Yes. We work with pre-seed, seed, and Series A startups. Many of our clients have raised funding after launching their Stacklyn-built MVP." },
+    { q: "Can Stacklyn build the MVP and continue as my technical team?", a: "Yes. Many clients continue with Stacklyn on a monthly retainer after MVP launch for feature development, scaling, and maintenance. We can serve as your complete technical team until you hire in-house engineers." },
+    { q: "What happens after the MVP is launched?", a: "After launch, Stacklyn provides 30 days of post-launch support. We then offer monthly retainers for ongoing development. We also provide a full code handoff, documentation, and a technical onboarding session for your team." },
+    { q: "Does Stacklyn integrate payment systems into MVPs?", a: "Yes. Payment integration is a standard MVP feature. We integrate Stripe for international payments and Razorpay for Indian payments, including subscription billing, one-time payments, and payment link generation." },
+    { q: "What is the no. 1 reason MVPs fail?", a: "Most MVPs fail because they solve the wrong problem or build too many features before validating the core value proposition. Stacklyn's discovery process specifically addresses this by forcing clarity on the core user problem and the minimum features needed to test it." },
+    { q: "Do I need a technical co-founder to work with Stacklyn?", a: "No. Many of our clients are non-technical founders who rely entirely on Stacklyn for technical leadership. We explain technical decisions in plain language and act as your technical co-founder without requiring you to write code." },
+    { q: "Does Stacklyn build B2B SaaS MVPs?", a: "Yes. B2B SaaS MVPs are our most common engagement. We build multi-tenant applications with team workspaces, role-based access control, subscription billing, admin dashboards, and API access." },
+    { q: "Can Stacklyn rebuild or improve an existing MVP?", a: "Yes. If you have an existing MVP that needs architectural improvements, performance fixes, or feature additions, Stacklyn can take over the codebase and improve it incrementally." },
+    { q: "How does Stacklyn handle MVP scope creep?", a: "We use a fixed-scope agreement for MVP projects. New feature requests are added to a post-MVP backlog rather than the current sprint. This keeps the project on time and on budget while capturing all ideas for future iterations." },
+    { q: "Does Stacklyn do mobile app MVPs?", a: "Yes. We build mobile MVPs using React Native (iOS and Android) or Flutter. Mobile MVPs use the same Node.js backend as web MVPs, allowing a single backend to serve both platforms." },
+    { q: "Does Stacklyn help with competitor analysis before building the MVP?", a: "We do a quick competitive landscape review during discovery to understand existing solutions and identify differentiation opportunities. This informs product decisions and helps sharpen the MVP scope." },
+    { q: "How do I start an MVP project with Stacklyn?", a: "Email veenaprasad@stacklyn.in with a brief description of your idea, target user, and desired timeline. We'll schedule a free discovery call within 24 hours and send a project proposal with scope, timeline, and pricing within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "AI Development", href: "/services/ai-development" },
+    { name: "Custom Software", href: "/services/custom-software-development" },
+    { name: "React Development", href: "/services/react-development" },
+    { name: "Node.js Development", href: "/services/nodejs-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/mvp-development")({
+  head: () => ({
+    meta: [
+      { title: "Startup MVP Development — 8–12 Weeks | Stacklyn India" },
+      { name: "description", content: "Stacklyn builds startup MVPs in 8–12 weeks. Full stack development, UI/UX design, cloud deployment. Fixed-price packages for pre-seed and seed-stage startups. Based in Kerala, India." },
+      { name: "keywords", content: "MVP development India, startup MVP development Kerala, minimum viable product development India, startup product development, MVP developer India, build MVP fast India" },
+      { property: "og:title", content: "Startup MVP Development in 8–12 Weeks | Stacklyn" },
+      { property: "og:description", content: "Ship your startup MVP in 8–12 weeks. Full stack, design, cloud deployment. Fixed-price packages from Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MVP Development Services | Stacklyn" },
+      { name: "twitter:description", content: "Idea to production in 8–12 weeks. Startup MVP development from India." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/mvp-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

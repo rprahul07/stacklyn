@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState } from "react";
+import { sendContactEmail } from "@/lib/api/contact.functions";
 
 const projectTypes = ["Web App", "Mobile App", "AI Solution", "Cloud / DevOps", "SaaS Product", "Other"];
 const budgets = ["< ₹2L", "₹2L – ₹5L", "₹5L – ₹15L", "₹15L+"];
@@ -9,40 +10,38 @@ const CONTACT_PHONE = "+91 99617 46849";
 const CONTACT_PHONE_RAW = "919961746849";
 const CONTACT_PERSON = "Veena Prasad";
 
+type Status = "idle" | "sending" | "success" | "error";
+
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (status === "sending") return;
+
     const fd = new FormData(e.currentTarget);
-    const name = String(fd.get("name") || "");
-    const email = String(fd.get("email") || "");
-    const company = String(fd.get("company") || "");
-    const type = String(fd.get("type") || "");
-    const budget = String(fd.get("budget") || "");
-    const timeline = String(fd.get("timeline") || "");
-    const description = String(fd.get("description") || "");
+    const data = {
+      name: String(fd.get("name") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      company: String(fd.get("company") ?? "") || undefined,
+      type: String(fd.get("type") ?? ""),
+      budget: String(fd.get("budget") ?? ""),
+      timeline: String(fd.get("timeline") ?? "") || undefined,
+      description: String(fd.get("description") ?? ""),
+    };
 
-    const subject = `New project inquiry — ${name}${company ? ` (${company})` : ""}`;
-    const body = [
-      `Hi ${CONTACT_PERSON},`,
-      ``,
-      `You have a new project inquiry via stacklyn.in:`,
-      ``,
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Company: ${company}`,
-      `Project Type: ${type}`,
-      `Budget: ${budget}`,
-      `Timeline: ${timeline}`,
-      ``,
-      `Project Description:`,
-      description,
-    ].join("\n");
+    setStatus("sending");
+    setErrorMsg("");
 
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
+    try {
+      await sendContactEmail({ data });
+      setStatus("success");
+      (e.target as HTMLFormElement).reset();
+    } catch {
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please email us directly.");
+    }
   };
 
   return (
@@ -110,7 +109,6 @@ export function Contact() {
         </div>
 
         <motion.form
-          ref={formRef}
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -118,39 +116,65 @@ export function Contact() {
           onSubmit={handleSubmit}
           className="lg:col-span-7 rounded-2xl border border-border bg-background p-8 shadow-card"
         >
-          <div className="grid md:grid-cols-2 gap-5">
-            <Field label="Name" name="name" placeholder="Jane Doe" />
-            <Field label="Email" name="email" type="email" placeholder="jane@company.com" />
-            <Field label="Company" name="company" placeholder="Acme Inc." required={false} />
-            <Select label="Project Type" name="type" options={projectTypes} />
-            <Select label="Budget" name="budget" options={budgets} />
-            <Field label="Timeline" name="timeline" placeholder="e.g. Q3 2026" required={false} />
-          </div>
-          <div className="mt-5">
-            <label htmlFor="description" className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              Project Description
-            </label>
-            <textarea
-              id="description"
-              name="description"
-              required
-              rows={5}
-              className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring focus:border-primary transition"
-              placeholder="Tell us about the problem you're solving, your users, and what success looks like."
-            />
-          </div>
-          <div className="mt-6 flex items-center justify-between gap-4 flex-wrap">
-            <p className="text-xs text-muted-foreground">
-              Submitting opens your email app and sends this directly to {CONTACT_EMAIL}.
-            </p>
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 h-11 text-sm font-medium shadow-glow hover:bg-primary-deep transition-colors"
-            >
-              {submitted ? "Email opened ✓" : "Send Inquiry"}
-              {!submitted && <span aria-hidden>→</span>}
-            </button>
-          </div>
+          {status === "success" ? (
+            <div className="flex flex-col items-center justify-center h-full min-h-64 text-center gap-4">
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">✓</div>
+              <h3 className="text-lg font-semibold">Message sent!</h3>
+              <p className="text-sm text-muted-foreground max-w-xs">
+                We received your inquiry and will get back to you within 24 hours.
+              </p>
+              <button
+                type="button"
+                onClick={() => setStatus("idle")}
+                className="mt-2 text-xs text-primary underline underline-offset-4"
+              >
+                Send another inquiry
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="grid md:grid-cols-2 gap-5">
+                <Field label="Name" name="name" placeholder="Jane Doe" />
+                <Field label="Email" name="email" type="email" placeholder="jane@company.com" />
+                <Field label="Company" name="company" placeholder="Acme Inc." required={false} />
+                <Select label="Project Type" name="type" options={projectTypes} />
+                <Select label="Budget" name="budget" options={budgets} />
+                <Field label="Timeline" name="timeline" placeholder="e.g. Q3 2026" required={false} />
+              </div>
+              <div className="mt-5">
+                <label htmlFor="description" className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Project Description
+                </label>
+                <textarea
+                  id="description"
+                  name="description"
+                  required
+                  rows={5}
+                  className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring focus:border-primary transition"
+                  placeholder="Tell us about the problem you're solving, your users, and what success looks like."
+                />
+              </div>
+              {status === "error" && (
+                <p className="mt-3 text-sm text-destructive">{errorMsg}</p>
+              )}
+              <div className="mt-6 flex items-center justify-end">
+                <button
+                  type="submit"
+                  disabled={status === "sending"}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 h-11 text-sm font-medium shadow-glow hover:bg-primary-deep transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {status === "sending" ? (
+                    <>
+                      <span className="h-4 w-4 rounded-full border-2 border-white/30 border-t-white animate-spin" />
+                      Sending…
+                    </>
+                  ) : (
+                    <>Send Inquiry <span aria-hidden>→</span></>
+                  )}
+                </button>
+              </div>
+            </>
+          )}
         </motion.form>
       </div>
     </section>

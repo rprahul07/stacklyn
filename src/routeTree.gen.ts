@@ -9,38 +9,326 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as HireReactDeveloperRouteImport } from './routes/hire-react-developer'
+import { Route as HireNodejsDeveloperRouteImport } from './routes/hire-nodejs-developer'
+import { Route as HireNextjsDeveloperRouteImport } from './routes/hire-nextjs-developer'
+import { Route as HireMernDeveloperRouteImport } from './routes/hire-mern-developer'
+import { Route as HireBackendDeveloperRouteImport } from './routes/hire-backend-developer'
+import { Route as HireAiDeveloperRouteImport } from './routes/hire-ai-developer'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as ServicesReactDevelopmentRouteImport } from './routes/services/react-development'
+import { Route as ServicesNodejsDevelopmentRouteImport } from './routes/services/nodejs-development'
+import { Route as ServicesNextjsDevelopmentRouteImport } from './routes/services/nextjs-development'
+import { Route as ServicesMvpDevelopmentRouteImport } from './routes/services/mvp-development'
+import { Route as ServicesMernDevelopmentRouteImport } from './routes/services/mern-development'
+import { Route as ServicesFullStackDevelopmentRouteImport } from './routes/services/full-stack-development'
+import { Route as ServicesCustomSoftwareDevelopmentRouteImport } from './routes/services/custom-software-development'
+import { Route as ServicesBackendDevelopmentRouteImport } from './routes/services/backend-development'
+import { Route as ServicesAiDevelopmentRouteImport } from './routes/services/ai-development'
 
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HireReactDeveloperRoute = HireReactDeveloperRouteImport.update({
+  id: '/hire-react-developer',
+  path: '/hire-react-developer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HireNodejsDeveloperRoute = HireNodejsDeveloperRouteImport.update({
+  id: '/hire-nodejs-developer',
+  path: '/hire-nodejs-developer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HireNextjsDeveloperRoute = HireNextjsDeveloperRouteImport.update({
+  id: '/hire-nextjs-developer',
+  path: '/hire-nextjs-developer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HireMernDeveloperRoute = HireMernDeveloperRouteImport.update({
+  id: '/hire-mern-developer',
+  path: '/hire-mern-developer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HireBackendDeveloperRoute = HireBackendDeveloperRouteImport.update({
+  id: '/hire-backend-developer',
+  path: '/hire-backend-developer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HireAiDeveloperRoute = HireAiDeveloperRouteImport.update({
+  id: '/hire-ai-developer',
+  path: '/hire-ai-developer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
+const ServicesReactDevelopmentRoute =
+  ServicesReactDevelopmentRouteImport.update({
+    id: '/react-development',
+    path: '/react-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesNodejsDevelopmentRoute =
+  ServicesNodejsDevelopmentRouteImport.update({
+    id: '/nodejs-development',
+    path: '/nodejs-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesNextjsDevelopmentRoute =
+  ServicesNextjsDevelopmentRouteImport.update({
+    id: '/nextjs-development',
+    path: '/nextjs-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesMvpDevelopmentRoute = ServicesMvpDevelopmentRouteImport.update({
+  id: '/mvp-development',
+  path: '/mvp-development',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesMernDevelopmentRoute = ServicesMernDevelopmentRouteImport.update({
+  id: '/mern-development',
+  path: '/mern-development',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesFullStackDevelopmentRoute =
+  ServicesFullStackDevelopmentRouteImport.update({
+    id: '/full-stack-development',
+    path: '/full-stack-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesCustomSoftwareDevelopmentRoute =
+  ServicesCustomSoftwareDevelopmentRouteImport.update({
+    id: '/custom-software-development',
+    path: '/custom-software-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesBackendDevelopmentRoute =
+  ServicesBackendDevelopmentRouteImport.update({
+    id: '/backend-development',
+    path: '/backend-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesAiDevelopmentRoute = ServicesAiDevelopmentRouteImport.update({
+  id: '/ai-development',
+  path: '/ai-development',
+  getParentRoute: () => ServicesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/hire-ai-developer': typeof HireAiDeveloperRoute
+  '/hire-backend-developer': typeof HireBackendDeveloperRoute
+  '/hire-mern-developer': typeof HireMernDeveloperRoute
+  '/hire-nextjs-developer': typeof HireNextjsDeveloperRoute
+  '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
+  '/hire-react-developer': typeof HireReactDeveloperRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/services/ai-development': typeof ServicesAiDevelopmentRoute
+  '/services/backend-development': typeof ServicesBackendDevelopmentRoute
+  '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
+  '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
+  '/services/mern-development': typeof ServicesMernDevelopmentRoute
+  '/services/mvp-development': typeof ServicesMvpDevelopmentRoute
+  '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
+  '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
+  '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/hire-ai-developer': typeof HireAiDeveloperRoute
+  '/hire-backend-developer': typeof HireBackendDeveloperRoute
+  '/hire-mern-developer': typeof HireMernDeveloperRoute
+  '/hire-nextjs-developer': typeof HireNextjsDeveloperRoute
+  '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
+  '/hire-react-developer': typeof HireReactDeveloperRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/services/ai-development': typeof ServicesAiDevelopmentRoute
+  '/services/backend-development': typeof ServicesBackendDevelopmentRoute
+  '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
+  '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
+  '/services/mern-development': typeof ServicesMernDevelopmentRoute
+  '/services/mvp-development': typeof ServicesMvpDevelopmentRoute
+  '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
+  '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
+  '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/hire-ai-developer': typeof HireAiDeveloperRoute
+  '/hire-backend-developer': typeof HireBackendDeveloperRoute
+  '/hire-mern-developer': typeof HireMernDeveloperRoute
+  '/hire-nextjs-developer': typeof HireNextjsDeveloperRoute
+  '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
+  '/hire-react-developer': typeof HireReactDeveloperRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/services/ai-development': typeof ServicesAiDevelopmentRoute
+  '/services/backend-development': typeof ServicesBackendDevelopmentRoute
+  '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
+  '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
+  '/services/mern-development': typeof ServicesMernDevelopmentRoute
+  '/services/mvp-development': typeof ServicesMvpDevelopmentRoute
+  '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
+  '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
+  '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/hire-ai-developer'
+    | '/hire-backend-developer'
+    | '/hire-mern-developer'
+    | '/hire-nextjs-developer'
+    | '/hire-nodejs-developer'
+    | '/hire-react-developer'
+    | '/services'
+    | '/services/ai-development'
+    | '/services/backend-development'
+    | '/services/custom-software-development'
+    | '/services/full-stack-development'
+    | '/services/mern-development'
+    | '/services/mvp-development'
+    | '/services/nextjs-development'
+    | '/services/nodejs-development'
+    | '/services/react-development'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/hire-ai-developer'
+    | '/hire-backend-developer'
+    | '/hire-mern-developer'
+    | '/hire-nextjs-developer'
+    | '/hire-nodejs-developer'
+    | '/hire-react-developer'
+    | '/services'
+    | '/services/ai-development'
+    | '/services/backend-development'
+    | '/services/custom-software-development'
+    | '/services/full-stack-development'
+    | '/services/mern-development'
+    | '/services/mvp-development'
+    | '/services/nextjs-development'
+    | '/services/nodejs-development'
+    | '/services/react-development'
+    | '/blog'
+  id:
+    | '__root__'
+    | '/'
+    | '/blog'
+    | '/hire-ai-developer'
+    | '/hire-backend-developer'
+    | '/hire-mern-developer'
+    | '/hire-nextjs-developer'
+    | '/hire-nodejs-developer'
+    | '/hire-react-developer'
+    | '/services'
+    | '/services/ai-development'
+    | '/services/backend-development'
+    | '/services/custom-software-development'
+    | '/services/full-stack-development'
+    | '/services/mern-development'
+    | '/services/mvp-development'
+    | '/services/nextjs-development'
+    | '/services/nodejs-development'
+    | '/services/react-development'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRouteWithChildren
+  HireAiDeveloperRoute: typeof HireAiDeveloperRoute
+  HireBackendDeveloperRoute: typeof HireBackendDeveloperRoute
+  HireMernDeveloperRoute: typeof HireMernDeveloperRoute
+  HireNextjsDeveloperRoute: typeof HireNextjsDeveloperRoute
+  HireNodejsDeveloperRoute: typeof HireNodejsDeveloperRoute
+  HireReactDeveloperRoute: typeof HireReactDeveloperRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hire-react-developer': {
+      id: '/hire-react-developer'
+      path: '/hire-react-developer'
+      fullPath: '/hire-react-developer'
+      preLoaderRoute: typeof HireReactDeveloperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hire-nodejs-developer': {
+      id: '/hire-nodejs-developer'
+      path: '/hire-nodejs-developer'
+      fullPath: '/hire-nodejs-developer'
+      preLoaderRoute: typeof HireNodejsDeveloperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hire-nextjs-developer': {
+      id: '/hire-nextjs-developer'
+      path: '/hire-nextjs-developer'
+      fullPath: '/hire-nextjs-developer'
+      preLoaderRoute: typeof HireNextjsDeveloperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hire-mern-developer': {
+      id: '/hire-mern-developer'
+      path: '/hire-mern-developer'
+      fullPath: '/hire-mern-developer'
+      preLoaderRoute: typeof HireMernDeveloperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hire-backend-developer': {
+      id: '/hire-backend-developer'
+      path: '/hire-backend-developer'
+      fullPath: '/hire-backend-developer'
+      preLoaderRoute: typeof HireBackendDeveloperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hire-ai-developer': {
+      id: '/hire-ai-developer'
+      path: '/hire-ai-developer'
+      fullPath: '/hire-ai-developer'
+      preLoaderRoute: typeof HireAiDeveloperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +336,128 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/services/react-development': {
+      id: '/services/react-development'
+      path: '/react-development'
+      fullPath: '/services/react-development'
+      preLoaderRoute: typeof ServicesReactDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/nodejs-development': {
+      id: '/services/nodejs-development'
+      path: '/nodejs-development'
+      fullPath: '/services/nodejs-development'
+      preLoaderRoute: typeof ServicesNodejsDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/nextjs-development': {
+      id: '/services/nextjs-development'
+      path: '/nextjs-development'
+      fullPath: '/services/nextjs-development'
+      preLoaderRoute: typeof ServicesNextjsDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/mvp-development': {
+      id: '/services/mvp-development'
+      path: '/mvp-development'
+      fullPath: '/services/mvp-development'
+      preLoaderRoute: typeof ServicesMvpDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/mern-development': {
+      id: '/services/mern-development'
+      path: '/mern-development'
+      fullPath: '/services/mern-development'
+      preLoaderRoute: typeof ServicesMernDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/full-stack-development': {
+      id: '/services/full-stack-development'
+      path: '/full-stack-development'
+      fullPath: '/services/full-stack-development'
+      preLoaderRoute: typeof ServicesFullStackDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/custom-software-development': {
+      id: '/services/custom-software-development'
+      path: '/custom-software-development'
+      fullPath: '/services/custom-software-development'
+      preLoaderRoute: typeof ServicesCustomSoftwareDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/backend-development': {
+      id: '/services/backend-development'
+      path: '/backend-development'
+      fullPath: '/services/backend-development'
+      preLoaderRoute: typeof ServicesBackendDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/ai-development': {
+      id: '/services/ai-development'
+      path: '/ai-development'
+      fullPath: '/services/ai-development'
+      preLoaderRoute: typeof ServicesAiDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
   }
 }
 
+interface BlogRouteChildren {
+  BlogIndexRoute: typeof BlogIndexRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogIndexRoute: BlogIndexRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface ServicesRouteChildren {
+  ServicesAiDevelopmentRoute: typeof ServicesAiDevelopmentRoute
+  ServicesBackendDevelopmentRoute: typeof ServicesBackendDevelopmentRoute
+  ServicesCustomSoftwareDevelopmentRoute: typeof ServicesCustomSoftwareDevelopmentRoute
+  ServicesFullStackDevelopmentRoute: typeof ServicesFullStackDevelopmentRoute
+  ServicesMernDevelopmentRoute: typeof ServicesMernDevelopmentRoute
+  ServicesMvpDevelopmentRoute: typeof ServicesMvpDevelopmentRoute
+  ServicesNextjsDevelopmentRoute: typeof ServicesNextjsDevelopmentRoute
+  ServicesNodejsDevelopmentRoute: typeof ServicesNodejsDevelopmentRoute
+  ServicesReactDevelopmentRoute: typeof ServicesReactDevelopmentRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesAiDevelopmentRoute: ServicesAiDevelopmentRoute,
+  ServicesBackendDevelopmentRoute: ServicesBackendDevelopmentRoute,
+  ServicesCustomSoftwareDevelopmentRoute:
+    ServicesCustomSoftwareDevelopmentRoute,
+  ServicesFullStackDevelopmentRoute: ServicesFullStackDevelopmentRoute,
+  ServicesMernDevelopmentRoute: ServicesMernDevelopmentRoute,
+  ServicesMvpDevelopmentRoute: ServicesMvpDevelopmentRoute,
+  ServicesNextjsDevelopmentRoute: ServicesNextjsDevelopmentRoute,
+  ServicesNodejsDevelopmentRoute: ServicesNodejsDevelopmentRoute,
+  ServicesReactDevelopmentRoute: ServicesReactDevelopmentRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRouteWithChildren,
+  HireAiDeveloperRoute: HireAiDeveloperRoute,
+  HireBackendDeveloperRoute: HireBackendDeveloperRoute,
+  HireMernDeveloperRoute: HireMernDeveloperRoute,
+  HireNextjsDeveloperRoute: HireNextjsDeveloperRoute,
+  HireNodejsDeveloperRoute: HireNodejsDeveloperRoute,
+  HireReactDeveloperRoute: HireReactDeveloperRoute,
+  ServicesRoute: ServicesRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,0 +1,106 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "MERN Stack Development",
+  slug: "mern-development",
+  headline: "MERN Stack Development Services for Modern Web Apps",
+  tagline: "MongoDB · Express · React · Node.js · Kerala, India",
+  intro:
+    "Stacklyn specializes in MERN stack development — MongoDB, Express.js, React, and Node.js. We build high-performance SaaS platforms, B2B dashboards, real-time web apps, and API-first products using the most popular JavaScript full stack.",
+  whatIs:
+    "MERN stack development is the practice of building full stack web applications using four JavaScript technologies: MongoDB (NoSQL database), Express.js (backend web framework), React (frontend UI library), and Node.js (JavaScript runtime). The MERN stack allows developers to use JavaScript across the entire application — client, server, and database.",
+  whyItMatters:
+    "The MERN stack is widely adopted because it uses a single programming language (JavaScript/TypeScript) throughout the entire application. This reduces context-switching, enables code sharing between frontend and backend, and allows smaller teams to build and maintain large-scale products efficiently.",
+  subServices: [
+    "MERN Stack SaaS Product Development",
+    "React Frontend Development with TypeScript",
+    "Node.js + Express.js API Development",
+    "MongoDB Database Design and Optimization",
+    "Real-time Applications with Socket.io",
+    "MERN Stack Admin Dashboards",
+    "REST API and GraphQL API Development",
+    "Authentication with JWT and OAuth",
+    "Cloud Deployment of MERN Apps",
+    "Legacy Stack Migration to MERN",
+  ],
+  benefits: [
+    { title: "Single Language Stack", desc: "JavaScript/TypeScript from database to UI. Less cognitive load, faster development, and easier team scaling." },
+    { title: "High Performance", desc: "Node.js non-blocking I/O and React's virtual DOM deliver fast, responsive applications that handle high concurrent loads." },
+    { title: "Rich Ecosystem", desc: "Access to the largest package ecosystem (npm) with millions of ready-made modules for virtually any use case." },
+    { title: "Flexible Data Modeling", desc: "MongoDB's document model adapts to changing requirements without painful schema migrations — ideal for fast-moving products." },
+    { title: "Component Reusability", desc: "React's component architecture means UI elements built once are reused across pages, reducing development time and ensuring consistency." },
+    { title: "Proven at Scale", desc: "The MERN stack powers products at companies like LinkedIn, Uber, and Netflix. It's proven at massive scale." },
+  ],
+  process: [
+    { step: "Requirements Analysis", desc: "Deep-dive into your product requirements, user flows, and data model to create a technical specification." },
+    { step: "Database Schema Design", desc: "Design MongoDB collections, indexes, and relationships optimized for your query patterns and scale requirements." },
+    { step: "API Development", desc: "Build Express.js REST APIs or GraphQL endpoints with authentication, validation, error handling, and documentation." },
+    { step: "React Frontend", desc: "Develop responsive React components, state management, routing, and API integrations with TypeScript." },
+    { step: "Integration & Testing", desc: "End-to-end integration, automated testing, and cross-browser QA to ensure everything works together seamlessly." },
+    { step: "Deployment & Monitoring", desc: "Deploy to AWS or Azure with Docker, configure monitoring, and set up automated CI/CD pipelines." },
+  ],
+  techStack: [
+    "React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Zustand", "React Query",
+    "Node.js", "Express.js", "NestJS", "Fastify",
+    "MongoDB", "Mongoose", "Redis",
+    "JWT", "Passport.js", "OAuth",
+    "Docker", "AWS", "Vercel", "GitHub Actions",
+  ],
+  whyStacklyn: [
+    { title: "MERN Specialists", desc: "MERN is our core stack. We've built dozens of products on it and know its patterns, pitfalls, and best practices deeply." },
+    { title: "TypeScript by Default", desc: "We always use TypeScript with MERN for type safety, better IDE support, and more maintainable code." },
+    { title: "Performance-First Architecture", desc: "We design APIs and data models for performance from the start — proper indexing, caching, and query optimization." },
+    { title: "Security-Hardened", desc: "All MERN apps include input validation, rate limiting, JWT security, CORS configuration, and OWASP-compliant code." },
+    { title: "Code That You Own", desc: "Clean, documented codebase delivered on GitHub. No lock-in, no obfuscated code. Your IP, your control." },
+    { title: "Post-Launch Support", desc: "We don't disappear after launch. Monthly retainers available for bug fixes, feature additions, and infrastructure management." },
+  ],
+  faqs: [
+    { q: "What is MERN stack development?", a: "MERN stack development is building web applications using MongoDB (database), Express.js (backend framework), React (frontend), and Node.js (runtime). It is a JavaScript-only full stack that enables rapid development of modern web apps." },
+    { q: "Is MERN stack good for building a SaaS product?", a: "Yes. MERN is an excellent choice for SaaS products due to MongoDB's flexible schema for evolving data models, Node.js's efficiency for API-heavy workloads, and React's component model for complex UIs. Many leading SaaS products are built on MERN." },
+    { q: "How long does it take to build a MERN stack application?", a: "A MERN MVP takes 8–12 weeks. A full product with authentication, subscriptions, dashboards, and integrations takes 3–5 months. Timeline depends on feature scope and design complexity." },
+    { q: "What is the difference between MERN and MEAN stack?", a: "MERN uses React for the frontend, while MEAN uses Angular. Both use MongoDB, Express.js, and Node.js. React is currently the more popular choice due to its flexibility, large ecosystem, and better performance characteristics." },
+    { q: "Does Stacklyn use TypeScript with MERN?", a: "Yes. We use TypeScript with all MERN projects. TypeScript adds static typing across both the React frontend and Node.js backend, catching errors earlier and making the codebase more maintainable." },
+    { q: "Can MERN handle real-time features like live notifications or chat?", a: "Yes. Node.js with Socket.io (WebSockets) handles real-time features like chat, live notifications, collaborative editing, and real-time dashboards efficiently." },
+    { q: "When should I use MongoDB vs PostgreSQL?", a: "Choose MongoDB when your data model is flexible or frequently changing, or when you need to store document-like data. Choose PostgreSQL when you have complex relational data, need ACID transactions, or require complex queries and joins. Stacklyn can advise on the best choice for your specific use case." },
+    { q: "Does Stacklyn build REST APIs with MERN?", a: "Yes. We design and build REST APIs using Express.js or NestJS with Node.js. All APIs include authentication, rate limiting, validation, error handling, and OpenAPI documentation." },
+    { q: "Can Stacklyn migrate my existing application to MERN stack?", a: "Yes. We handle full and partial migrations to MERN stack. We assess the existing codebase, plan the migration strategy, and execute it incrementally to minimize disruption to your running product." },
+    { q: "How does authentication work in MERN applications?", a: "Authentication in MERN apps is typically implemented using JWT (JSON Web Tokens) for stateless authentication, or OAuth for social logins (Google, GitHub, etc.). Libraries like Passport.js, Clerk, or Auth0 are integrated based on requirements." },
+    { q: "What hosting platforms do MERN apps run on?", a: "MERN applications can be deployed on AWS (EC2, ECS, Lambda), Azure, Google Cloud, Heroku, Railway, or Render. The frontend (React/Next.js) can be deployed on Vercel or Cloudflare Pages for optimal performance." },
+    { q: "Is MERN stack scalable?", a: "Yes. MERN stack scales horizontally. Node.js clusters handle multiple processes, MongoDB scales with sharding, and React frontends can be distributed via CDN. Companies like LinkedIn and Uber use Node.js at massive scale." },
+    { q: "What is the cost of MERN stack development in India?", a: "MERN stack development at Stacklyn starts at ₹2 lakh for simple MVPs. Full MERN SaaS products range from ₹5–25 lakh. We offer fixed-price projects for well-defined scopes and hourly retainers for ongoing development." },
+    { q: "Does Stacklyn use Next.js instead of plain React for MERN?", a: "We default to Next.js for production MERN applications because it adds SSR, SSG, built-in routing, and better SEO capabilities over plain Create React App. The backend (Node.js + Express) remains as the API layer." },
+    { q: "Does Stacklyn handle MongoDB performance optimization?", a: "Yes. MongoDB performance optimization is part of our service — including index design, query analysis with explain(), aggregation pipeline optimization, connection pooling, and schema restructuring for query efficiency." },
+    { q: "What state management does Stacklyn use in React?", a: "We use Zustand for client state and TanStack Query (React Query) for server state. For simpler projects, React Context is sufficient. We avoid Redux unless the project complexity genuinely requires it." },
+    { q: "Does Stacklyn build mobile apps with MERN?", a: "The MERN stack backend (Node.js APIs) can power mobile apps. For the frontend, we use React Native or Flutter for mobile — which connects to the same Node.js backend as the web app." },
+    { q: "How does Stacklyn handle MongoDB backups and data safety?", a: "We configure automated MongoDB backups using MongoDB Atlas's built-in backup or AWS S3 for self-hosted MongoDB. Backups run daily with point-in-time recovery capability." },
+    { q: "What security practices does Stacklyn follow for MERN apps?", a: "Security practices include: input validation and sanitization, parameterized queries (NoSQL injection prevention), rate limiting, HTTPS everywhere, JWT expiration and refresh, CORS configuration, Helmet.js headers, and regular dependency audits." },
+    { q: "How do I get started with a MERN stack project at Stacklyn?", a: "Contact Stacklyn via email at veenaprasad@stacklyn.in, WhatsApp +91 99617 46849, or the contact form on our website. We schedule a free 30-minute discovery call and send a detailed project proposal within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "Node.js Development", href: "/services/nodejs-development" },
+    { name: "React Development", href: "/services/react-development" },
+    { name: "Backend Development", href: "/services/backend-development" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+    { name: "Custom Software", href: "/services/custom-software-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/mern-development")({
+  head: () => ({
+    meta: [
+      { title: "MERN Stack Development Services | Stacklyn — India" },
+      { name: "description", content: "Expert MERN stack development by Stacklyn, Kerala, India. MongoDB, Express.js, React, Node.js — we build SaaS products, dashboards, and real-time web apps. Get a free quote." },
+      { name: "keywords", content: "MERN stack development India, MERN stack developers Kerala, MongoDB Express React Node.js development, MERN stack company India, hire MERN developers" },
+      { property: "og:title", content: "MERN Stack Development Services | Stacklyn" },
+      { property: "og:description", content: "Professional MERN stack development for SaaS and web products. MongoDB, Express.js, React, Node.js experts from Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MERN Stack Development Services | Stacklyn" },
+      { name: "twitter:description", content: "MongoDB, Express, React, Node.js — MERN stack experts from India." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/mern-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

@@ -1,0 +1,106 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "Full Stack Development",
+  slug: "full-stack-development",
+  headline: "Full Stack Development Services for Scalable Web Products",
+  tagline: "End-to-end web development · Kerala, India",
+  intro:
+    "Stacklyn delivers full stack development services for startups, SaaS companies, and enterprises. We build complete web applications — from React frontends to Node.js backends, PostgreSQL databases, and cloud deployments — under one roof.",
+  whatIs:
+    "Full stack development is the practice of building both the frontend (what users see) and backend (server, database, APIs) of a web application. A full stack developer or team handles the complete software product lifecycle — UI, business logic, data management, and infrastructure.",
+  whyItMatters:
+    "Businesses that invest in full stack development get a unified, consistent product with fewer integration issues, faster delivery, and a single point of accountability. It eliminates silos between frontend and backend teams, reducing miscommunication and accelerating time-to-market.",
+  subServices: [
+    "Web Application Development (React, Next.js, TypeScript)",
+    "REST API and GraphQL API Development",
+    "Backend Services (Node.js, Express, Fastify, NestJS)",
+    "Database Design (PostgreSQL, MongoDB, Redis)",
+    "Cloud Deployment (AWS, Azure, Vercel, Cloudflare)",
+    "Admin Dashboards and Internal Tools",
+    "SaaS Platform Architecture",
+    "Real-time Features (WebSockets, SSE)",
+    "Authentication and Authorization Systems",
+    "Third-party API Integrations",
+  ],
+  benefits: [
+    { title: "End-to-End Ownership", desc: "One team owns the entire product — no hand-offs, no communication gaps between frontend and backend teams." },
+    { title: "Faster Time to Market", desc: "Integrated development cycles mean fewer blockers. We ship faster because we control the entire stack." },
+    { title: "Modern, Scalable Architecture", desc: "Every project is architected to scale. We use proven patterns like microservices, event-driven design, and cloud-native deployment." },
+    { title: "Type-Safe Codebase", desc: "We build with TypeScript end-to-end, catching errors at compile time and making your codebase more maintainable over time." },
+    { title: "Cost Efficiency", desc: "A single full stack team in India is significantly more cost-effective than separate frontend and backend teams in the West." },
+    { title: "Long-term Maintainability", desc: "Clean, documented, test-covered code that your future team can maintain, extend, and build on confidently." },
+  ],
+  process: [
+    { step: "Discovery & Scoping", desc: "We understand your product goals, users, technical constraints, and business model in a 1-week discovery phase." },
+    { step: "Architecture Design", desc: "We design the system architecture, data models, API contracts, and tech stack decisions before writing a single line of code." },
+    { step: "UI/UX Design", desc: "We craft wireframes, design systems, and high-fidelity mockups aligned with your brand and user experience goals." },
+    { step: "Iterative Development", desc: "We build in 1–2 week sprints, shipping working features continuously with daily updates and weekly demos." },
+    { step: "Testing & QA", desc: "Automated unit tests, integration tests, and manual QA across all critical user paths before any release." },
+    { step: "Deployment & Launch", desc: "CI/CD pipelines, staging environments, and production deployment on your cloud provider of choice." },
+    { step: "Maintenance & Growth", desc: "Post-launch support, performance monitoring, and iterative feature development to keep your product growing." },
+  ],
+  techStack: [
+    "React", "Next.js", "TypeScript", "Tailwind CSS",
+    "Node.js", "Express.js", "Fastify", "NestJS",
+    "PostgreSQL", "MongoDB", "Redis", "Prisma",
+    "AWS", "Azure", "Vercel", "Cloudflare", "Docker", "GitHub Actions",
+  ],
+  whyStacklyn: [
+    { title: "Senior Engineers on Every Project", desc: "No juniors working unsupervised. Every project is led by senior full stack engineers with proven production experience." },
+    { title: "Modern Tech Stack", desc: "We use Next.js, Node.js, TypeScript, and modern cloud tools — not legacy LAMP stacks or outdated frameworks." },
+    { title: "AI-First Thinking", desc: "We integrate AI capabilities into products from day one, giving your product intelligent features that competitors lack." },
+    { title: "Transparent Communication", desc: "Weekly demos, Slack channels, GitHub PRs, and real-time project tracking. No surprises, no silent gaps." },
+    { title: "India-Based Cost Advantage", desc: "World-class engineering quality at India-based rates — typically 50–70% less than US/UK agencies for equivalent work." },
+    { title: "Built to Scale", desc: "Every architecture decision considers your growth path. We build for today's load and tomorrow's scale." },
+  ],
+  faqs: [
+    { q: "What is full stack development?", a: "Full stack development is building both the client-side (frontend) and server-side (backend) of a web application. It includes UI development, API design, database management, and cloud deployment." },
+    { q: "How long does a full stack web app project take?", a: "A well-scoped MVP takes 8–12 weeks. A full product with advanced features typically takes 3–6 months. Timeline depends on feature complexity, integrations, and design requirements." },
+    { q: "What frontend technologies does Stacklyn use?", a: "Stacklyn primarily uses React and Next.js with TypeScript for frontend development. We also use Tailwind CSS for styling, Framer Motion for animations, and Radix UI or shadcn/ui for component systems." },
+    { q: "What backend technologies does Stacklyn use?", a: "Stacklyn builds backends using Node.js with Express.js, Fastify, or NestJS. We use PostgreSQL for relational data, MongoDB for document storage, and Redis for caching and queues." },
+    { q: "Does Stacklyn build REST APIs?", a: "Yes. Stacklyn designs and builds REST APIs, GraphQL APIs, and WebSocket-based real-time APIs. All APIs are documented with OpenAPI/Swagger specifications." },
+    { q: "Can Stacklyn integrate third-party APIs into my project?", a: "Yes. Stacklyn has experience integrating payment gateways (Stripe, Razorpay), communication APIs (Twilio, SendGrid), CRM systems, authentication providers (Auth0, Clerk), and many other third-party services." },
+    { q: "Does Stacklyn do database design?", a: "Yes. Database design is a core part of every full stack project. We design normalized relational schemas in PostgreSQL or document structures in MongoDB, with performance indexing and migration strategies." },
+    { q: "What is the difference between full stack and MERN stack development?", a: "Full stack development is a broad term covering any combination of frontend and backend technologies. MERN stack is a specific full stack configuration using MongoDB, Express.js, React, and Node.js — a popular JavaScript-only approach." },
+    { q: "Can Stacklyn build a SaaS product end-to-end?", a: "Yes. Stacklyn has built complete SaaS products including multi-tenant architecture, subscription billing with Stripe, role-based access control, usage analytics, and cloud deployment. SaaS development is one of our core specializations." },
+    { q: "Does Stacklyn handle cloud deployment?", a: "Yes. We deploy to AWS, Azure, Google Cloud, Vercel, or Cloudflare depending on your requirements. Deployment includes CI/CD pipelines, environment configuration, SSL certificates, monitoring, and logging." },
+    { q: "What is the cost of full stack development in India?", a: "Full stack development projects at Stacklyn start at approximately ₹2 lakh for simple MVPs. Full product builds range from ₹5–30 lakh depending on scope. Our hourly rates are approximately ₹3,000–5,000 per hour for senior engineers." },
+    { q: "Does Stacklyn write tests for the code?", a: "Yes. We write unit tests, integration tests, and end-to-end tests as part of our development process. We use Jest, Vitest, Playwright, and Supertest depending on the project requirements." },
+    { q: "Can Stacklyn take over an existing codebase?", a: "Yes. Stacklyn regularly takes over legacy codebases, refactors poor-quality code, upgrades dependencies, and adds new features. We do a thorough code audit before beginning any work on existing projects." },
+    { q: "What is TypeScript and why does Stacklyn use it?", a: "TypeScript is a typed superset of JavaScript that catches errors at compile time rather than runtime. Stacklyn uses TypeScript for all projects because it makes codebases more maintainable, reduces bugs, and improves developer productivity on larger projects." },
+    { q: "Does Stacklyn build admin dashboards?", a: "Yes. Admin dashboards, analytics dashboards, and internal tools are a common deliverable. We use React with data visualization libraries like Recharts or Chart.js, connected to your existing backend APIs." },
+    { q: "How does Stacklyn handle project management?", a: "We use a combination of tools: GitHub for code and PRs, Notion or Linear for task tracking, Slack for communication, and weekly video calls for demos. Every project has a clear milestone plan from day one." },
+    { q: "Does Stacklyn offer post-launch support?", a: "Yes. Post-launch support is available as a monthly retainer. Services include bug fixes, performance monitoring, security patches, feature additions, and cloud infrastructure management." },
+    { q: "Can Stacklyn build real-time features like chat or live updates?", a: "Yes. Stacklyn builds real-time features using WebSockets (Socket.io), Server-Sent Events (SSE), and polling strategies. Use cases include live dashboards, chat systems, notifications, and collaborative tools." },
+    { q: "Is my source code owned by me after the project?", a: "Yes. Stacklyn clients own 100% of the source code, intellectual property, and all project deliverables. We provide full code handoff via a private GitHub repository at project completion." },
+    { q: "How do I get started with Stacklyn for full stack development?", a: "Contact us via the form on our website, email veenaprasad@stacklyn.in, or WhatsApp +91 99617 46849. We schedule a free discovery call within 24 hours and send a detailed project proposal within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "MERN Stack Development", href: "/services/mern-development" },
+    { name: "Backend Development", href: "/services/backend-development" },
+    { name: "React Development", href: "/services/react-development" },
+    { name: "Next.js Development", href: "/services/nextjs-development" },
+    { name: "SaaS MVP Development", href: "/services/mvp-development" },
+    { name: "AI Development", href: "/services/ai-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/full-stack-development")({
+  head: () => ({
+    meta: [
+      { title: "Full Stack Development Services in India | Stacklyn" },
+      { name: "description", content: "Stacklyn offers expert full stack development services in Kerala, India. We build scalable web apps using React, Next.js, Node.js, PostgreSQL, and AWS. Startups to enterprises. Get a free quote." },
+      { name: "keywords", content: "full stack development India, full stack developer Kerala, React Node.js development, full stack web application development, full stack software company India" },
+      { property: "og:title", content: "Full Stack Development Services in India | Stacklyn" },
+      { property: "og:description", content: "End-to-end full stack web development for startups and enterprises. React, Next.js, Node.js, PostgreSQL, AWS. Based in Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Full Stack Development Services | Stacklyn" },
+      { name: "twitter:description", content: "Expert full stack development in India. React, Next.js, Node.js, and cloud — under one roof." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/full-stack-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

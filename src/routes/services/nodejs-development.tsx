@@ -1,0 +1,107 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "Node.js Development",
+  slug: "nodejs-development",
+  headline: "Node.js Development Services — Fast, Scalable Backends",
+  tagline: "Node.js · Express · Fastify · NestJS · Kerala, India",
+  intro:
+    "Stacklyn builds high-performance Node.js backends for web applications, APIs, real-time systems, and microservices. Our Node.js engineers deliver production-ready backends on time, with clean architecture and scalable infrastructure.",
+  whatIs:
+    "Node.js is a JavaScript runtime built on Chrome's V8 engine that enables server-side JavaScript execution. It is event-driven and non-blocking by design, making it exceptionally efficient for I/O-intensive applications like APIs, real-time services, and microservices. Node.js allows the same language to be used across the full stack.",
+  whyItMatters:
+    "Node.js powers some of the world's largest web platforms — LinkedIn, Netflix, Uber, PayPal, and NASA. Its non-blocking I/O model handles thousands of concurrent connections efficiently, making it ideal for APIs, real-time apps, and microservices where response time and throughput matter.",
+  subServices: [
+    "REST API Development (Express.js, Fastify)",
+    "GraphQL API Development",
+    "Microservices Architecture with Node.js",
+    "Real-time Applications with WebSockets",
+    "Background Job Processing (Bull, BullMQ)",
+    "Authentication Services (JWT, OAuth)",
+    "Node.js + PostgreSQL Backend Systems",
+    "Node.js + MongoDB Backend Systems",
+    "Serverless Node.js (AWS Lambda, Cloudflare Workers)",
+    "Node.js Performance Optimization",
+  ],
+  benefits: [
+    { title: "High Throughput", desc: "Node.js non-blocking I/O handles thousands of concurrent requests efficiently — ideal for APIs and real-time applications." },
+    { title: "Unified Language", desc: "JavaScript on both frontend and backend. Shared types, shared validation logic, and developers who can contribute across the stack." },
+    { title: "Large Ecosystem", desc: "npm has over 2 million packages. Whatever you need — from authentication to PDF generation — there's a battle-tested library." },
+    { title: "Microservices-Ready", desc: "Node.js is lightweight and fast-starting, making it ideal for microservices architectures with many independent services." },
+    { title: "Real-time Capabilities", desc: "Built-in event loop and WebSocket support make Node.js the default choice for chat, live updates, and collaborative tools." },
+    { title: "Cost Effective", desc: "Less server resources needed vs thread-based servers. Node.js servers handle more requests per instance, reducing hosting costs." },
+  ],
+  process: [
+    { step: "API Design", desc: "Define endpoints, request/response schemas, authentication strategy, and error handling conventions." },
+    { step: "Architecture", desc: "Design service structure, middleware pipeline, database connection pooling, and monitoring setup." },
+    { step: "Development", desc: "Build API routes, business logic, database queries, and integrations using TypeScript for full type safety." },
+    { step: "Testing", desc: "Unit tests with Jest/Vitest, integration tests with Supertest, and load testing with k6 or Artillery." },
+    { step: "Documentation", desc: "Auto-generate OpenAPI/Swagger documentation for every endpoint. Clear developer documentation for your team." },
+    { step: "Deployment", desc: "Deploy with Docker and Nginx on AWS/Azure, or serverless on Lambda/Cloudflare Workers. CI/CD pipelines configured." },
+  ],
+  techStack: [
+    "Node.js 22", "TypeScript", "Express.js", "Fastify", "NestJS",
+    "PostgreSQL", "MongoDB", "Redis", "Prisma", "Drizzle ORM",
+    "JWT", "Passport.js", "OAuth 2.0",
+    "Bull / BullMQ", "Socket.io", "WebSockets",
+    "Jest", "Vitest", "Supertest",
+    "Docker", "AWS Lambda", "Cloudflare Workers",
+    "Swagger / OpenAPI",
+  ],
+  whyStacklyn: [
+    { title: "Node.js Since Day One", desc: "Our engineers have built Node.js backends for 5+ years. We know the gotchas, the patterns, and the performance tuning techniques." },
+    { title: "TypeScript-first", desc: "We write all Node.js code in TypeScript. Type-safe backends are more reliable, easier to refactor, and better documented." },
+    { title: "Security Standards", desc: "Every Node.js backend includes rate limiting, input validation, helmet.js security headers, and OWASP-compliant code." },
+    { title: "Performance Profiling", desc: "We profile and optimize Node.js applications using clinic.js, 0x, and custom benchmarks to identify and fix bottlenecks." },
+    { title: "Database Expertise", desc: "Deep PostgreSQL and MongoDB expertise ensures your database queries are optimized, indexed, and connection-pooled correctly." },
+    { title: "API Documentation", desc: "Every API we build comes with complete OpenAPI/Swagger documentation, making integration simple for your frontend team." },
+  ],
+  faqs: [
+    { q: "What is Node.js?", a: "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript on the server side. It uses Chrome's V8 engine and an event-driven, non-blocking I/O model that makes it efficient for web servers, APIs, and real-time applications." },
+    { q: "Why should I use Node.js for my backend?", a: "Node.js is ideal for API-heavy, I/O-bound applications. It handles high concurrency efficiently, uses the same language as your frontend, and has the world's largest package ecosystem (npm). It's proven at scale at companies like Netflix, LinkedIn, and Uber." },
+    { q: "What Node.js frameworks does Stacklyn use?", a: "Stacklyn uses Express.js for traditional REST APIs, Fastify for high-performance APIs (2–3x faster than Express), and NestJS for enterprise-grade applications that benefit from a structured, opinionated framework." },
+    { q: "Is Node.js good for real-time applications?", a: "Yes. Node.js is an excellent choice for real-time applications like chat, live notifications, collaborative editing, and streaming dashboards. The event loop and WebSocket support (Socket.io) make it natural for bidirectional real-time communication." },
+    { q: "Can Node.js handle high traffic?", a: "Yes. Node.js handles high traffic well for I/O-bound workloads. Applications like Netflix, PayPal, and Uber handle millions of requests per day on Node.js. For CPU-intensive work, we use worker threads or background queues to avoid blocking the event loop." },
+    { q: "What database does Node.js work best with?", a: "Node.js works with both SQL and NoSQL databases. We commonly use PostgreSQL with Prisma or Drizzle ORM for relational data, and MongoDB with Mongoose for document data. Redis is used for caching and queues." },
+    { q: "Does Stacklyn build serverless Node.js applications?", a: "Yes. Stacklyn builds serverless Node.js functions on AWS Lambda and Cloudflare Workers. Serverless is ideal for event-driven workloads, APIs with variable traffic, and cost-efficient infrastructure for early-stage products." },
+    { q: "How does Node.js handle authentication?", a: "Authentication in Node.js is handled using JWT (JSON Web Tokens) for stateless auth, session-based auth with Redis, or OAuth 2.0 for social logins. Libraries like Passport.js, Clerk, or custom JWT middleware are used depending on requirements." },
+    { q: "What is the difference between Express.js and Fastify?", a: "Express.js is the most widely-used Node.js framework — mature, flexible, and with a huge ecosystem. Fastify is 2–3x faster than Express with built-in TypeScript support, schema validation, and JSON serialization. Stacklyn defaults to Fastify for performance-critical APIs." },
+    { q: "What is NestJS and when does Stacklyn use it?", a: "NestJS is an opinionated Node.js framework built on TypeScript that follows Angular-like patterns (modules, controllers, services). We use NestJS for large enterprise applications where code organization, dependency injection, and team scalability matter." },
+    { q: "Does Stacklyn do Node.js performance optimization?", a: "Yes. We profile Node.js applications using clinic.js, 0x flamegraphs, and custom benchmarks. Common optimizations include fixing event loop blocking, optimizing database queries, adding Redis caching, and implementing connection pooling." },
+    { q: "Can Stacklyn build Node.js microservices?", a: "Yes. Stacklyn designs and builds Node.js microservices architectures with service-to-service communication via REST, gRPC, or message queues (RabbitMQ, Kafka, BullMQ). Each service is independently deployable via Docker containers." },
+    { q: "How does Stacklyn handle Node.js background jobs?", a: "Background jobs in Node.js are handled using Bull or BullMQ with Redis as the queue backend. Jobs can be delayed, retried, scheduled (cron), or prioritized. This is used for email sending, report generation, data processing, and webhooks." },
+    { q: "Does Stacklyn write tests for Node.js applications?", a: "Yes. We write unit tests (Jest or Vitest), integration tests (Supertest for API testing), and load tests (k6 or Artillery). Test coverage is maintained above 80% for critical business logic." },
+    { q: "How does Stacklyn document Node.js APIs?", a: "We use OpenAPI 3.0 / Swagger to auto-generate API documentation. Fastify and NestJS have native OpenAPI support. Express APIs are documented using swagger-jsdoc or manual OpenAPI specifications." },
+    { q: "What is the cost of Node.js development in India?", a: "Node.js development at Stacklyn starts at ₹1.5 lakh for simple API projects. Full backend systems range from ₹3–15 lakh depending on complexity. Hourly rates are ₹3,000–5,000 for senior Node.js engineers." },
+    { q: "Can Stacklyn upgrade or refactor an existing Node.js codebase?", a: "Yes. We regularly upgrade legacy Express/Node.js codebases — adding TypeScript, upgrading dependencies, refactoring to modern patterns, and improving test coverage." },
+    { q: "Does Node.js work with GraphQL?", a: "Yes. Node.js is commonly used with GraphQL via Apollo Server or Pothos GraphQL. We build GraphQL APIs when clients need flexible queries, real-time subscriptions, or a single endpoint for multiple data sources." },
+    { q: "What monitoring does Stacklyn set up for Node.js applications?", a: "We configure application monitoring with Datadog, New Relic, or Sentry for error tracking. Infrastructure monitoring with CloudWatch (AWS) or Azure Monitor. Logging with Winston or Pino, structured as JSON for log aggregation." },
+    { q: "How do I hire Stacklyn for Node.js development?", a: "Contact us at veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We offer a free technical consultation and project scoping call, followed by a detailed proposal within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "Backend Development", href: "/services/backend-development" },
+    { name: "MERN Stack Development", href: "/services/mern-development" },
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "AI Development", href: "/services/ai-development" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/nodejs-development")({
+  head: () => ({
+    meta: [
+      { title: "Node.js Development Services | Stacklyn — Kerala, India" },
+      { name: "description", content: "Expert Node.js development from Stacklyn, Kerala, India. REST APIs, GraphQL, real-time apps, microservices with Express.js, Fastify, and NestJS. Get a free quote." },
+      { name: "keywords", content: "Node.js development India, Node.js developers Kerala, Node.js API development, Express.js development India, Fastify NestJS developers, hire Node.js developer India" },
+      { property: "og:title", content: "Node.js Development Services | Stacklyn" },
+      { property: "og:description", content: "High-performance Node.js backends, APIs, and real-time systems. Express, Fastify, NestJS from Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Node.js Development Services | Stacklyn" },
+      { name: "twitter:description", content: "Node.js experts building fast, scalable backends. Express, Fastify, NestJS." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/nodejs-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

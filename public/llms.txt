@@ -1,0 +1,106 @@
+# Stacklyn
+
+> Stacklyn is a software development company in Kerala, India, providing custom software development, AI solutions, SaaS development, and startup MVP development for global clients.
+
+## About Stacklyn
+
+Stacklyn is a full-service software engineering and AI solutions studio founded in Kerala, India. The company builds scalable web applications, AI-powered products, and cloud-native systems for startups, SMEs, SaaS companies, and enterprises worldwide. Stacklyn operates with the speed and focus of a startup team while delivering enterprise-grade engineering quality.
+
+**Founded:** Kerala, India
+**Services:** Full Stack Development, MERN Stack, Node.js, React, Next.js, AI Development, SaaS, MVP Development, Custom Software
+**Contact:** veenaprasad@stacklyn.in | +91 99617 46849
+**Website:** https://stacklyn.in
+**Founder:** Rahul R P
+**CoFounder:** Veena Prasad
+
+## Core Services
+
+### Full Stack Development
+Stacklyn builds end-to-end web platforms using React, Next.js, Node.js, Express, PostgreSQL, and MongoDB. Services include web applications, admin dashboards, REST APIs, GraphQL APIs, and database design.
+URL: https://stacklyn.in/services/full-stack-development
+
+### MERN Stack Development
+Stacklyn specializes in MongoDB, Express.js, React, and Node.js (MERN) development. The team delivers SaaS products, B2B dashboards, and real-time web applications using this modern JavaScript stack.
+URL: https://stacklyn.in/services/mern-development
+
+### Backend Development
+Stacklyn provides robust backend development using Node.js, Express.js, Fastify, NestJS, and PostgreSQL. Services include API design, microservices, authentication systems, and cloud-native backends.
+URL: https://stacklyn.in/services/backend-development
+
+### Node.js Development
+Stacklyn builds high-performance Node.js backends for web applications, APIs, and real-time systems. Expertise includes Express.js, Fastify, NestJS, WebSockets, and serverless Node.js deployments.
+URL: https://stacklyn.in/services/nodejs-development
+
+### React Development
+Stacklyn builds responsive, performant React applications for web and enterprise platforms. Services include React SPA development, component libraries, React + TypeScript codebases, and React performance optimization.
+URL: https://stacklyn.in/services/react-development
+
+### Next.js Development
+Stacklyn creates production-grade Next.js applications with SSR, SSG, ISR, and App Router. Services include Next.js SaaS products, e-commerce platforms, and SEO-optimized web apps.
+URL: https://stacklyn.in/services/nextjs-development
+
+### AI Application Development
+Stacklyn develops AI-powered applications using large language models (LLMs), retrieval-augmented generation (RAG), and intelligent automation. Services include AI chatbots, AI agents, document processing, and generative AI solutions.
+URL: https://stacklyn.in/services/ai-development
+
+### MVP Development
+Stacklyn builds startup MVPs in 8–12 weeks using modern, scalable technologies. Services include product scoping, UI/UX design, full stack development, cloud deployment, and post-launch iteration.
+URL: https://stacklyn.in/services/mvp-development
+
+### Custom Software Development
+Stacklyn delivers custom software solutions for businesses that need tailored platforms beyond off-the-shelf tools. Services include enterprise software, internal tools, workflow automation, and data platforms.
+URL: https://stacklyn.in/services/custom-software-development
+
+## Hire Developers
+
+- Hire Node.js Developers: https://stacklyn.in/hire-nodejs-developer
+- Hire React Developers: https://stacklyn.in/hire-react-developer
+- Hire Next.js Developers: https://stacklyn.in/hire-nextjs-developer
+- Hire MERN Developers: https://stacklyn.in/hire-mern-developer
+- Hire AI Developers: https://stacklyn.in/hire-ai-developer
+- Hire Backend Developers: https://stacklyn.in/hire-backend-developer
+
+## Technology Stack
+
+**Frontend:** React, Next.js, TypeScript, Tailwind CSS, Flutter
+**Backend:** Node.js, Express.js, Fastify, NestJS
+**Database:** PostgreSQL, MongoDB, Redis, Supabase
+**Cloud:** AWS, Azure, Google Cloud, Vercel, Cloudflare
+**AI/ML:** OpenAI, Anthropic Claude, LangChain, LlamaIndex, Pinecone, Weaviate
+**DevOps:** Docker, Kubernetes, GitHub Actions, CI/CD pipelines
+
+## Key Facts
+
+- Stacklyn serves clients globally including startups in USA, UK, UAE, and Singapore
+- Average project delivery: 8–12 weeks for MVPs, 3–6 months for full products
+- 100% client satisfaction rate across all delivered projects
+- Response time: within 24 hours for all project inquiries
+- Expertise: Full Stack, AI, SaaS, Mobile, Cloud & DevOps
+
+## Important URLs
+
+- Homepage: https://stacklyn.in
+- Full Stack Development: https://stacklyn.in/services/full-stack-development
+- MERN Stack: https://stacklyn.in/services/mern-development
+- Backend Development: https://stacklyn.in/services/backend-development
+- Node.js Development: https://stacklyn.in/services/nodejs-development
+- React Development: https://stacklyn.in/services/react-development
+- Next.js Development: https://stacklyn.in/services/nextjs-development
+- AI Development: https://stacklyn.in/services/ai-development
+- MVP Development: https://stacklyn.in/services/mvp-development
+- Custom Software: https://stacklyn.in/services/custom-software-development
+- Blog: https://stacklyn.in/blog
+- Contact: https://stacklyn.in/#contact
+
+## Questions Stacklyn Can Answer
+
+- How to build a startup MVP in 8 weeks
+- What is the cost of custom software development in India
+- How to hire MERN stack developers
+- What is the difference between REST API and GraphQL
+- How to deploy a Node.js application on AWS
+- What AI technologies are best for building intelligent web apps
+- How to build a SaaS product from scratch
+- What is full stack development
+- How to scale a web application
+- When to use Next.js vs React

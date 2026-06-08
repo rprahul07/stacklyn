@@ -1,0 +1,107 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "AI Application Development",
+  slug: "ai-development",
+  headline: "AI Application Development Services for Intelligent Products",
+  tagline: "LLMs · RAG · AI Agents · Generative AI · Kerala, India",
+  intro:
+    "Stacklyn builds production-grade AI applications using large language models (LLMs), retrieval-augmented generation (RAG), AI agents, and generative AI integrations. We help businesses add intelligent capabilities to existing products or build AI-first software from scratch.",
+  whatIs:
+    "AI application development is the process of building software that uses artificial intelligence — including large language models (LLMs like GPT-4 and Claude), machine learning models, natural language processing, and computer vision — to deliver intelligent, automated, and personalized user experiences.",
+  whyItMatters:
+    "AI is no longer optional for competitive software products. Businesses that integrate AI capabilities — intelligent search, document processing, automated workflows, personalization, and AI assistants — deliver dramatically better user experiences and operational efficiency than those that don't.",
+  subServices: [
+    "AI Chatbot and Conversational AI Development",
+    "Retrieval-Augmented Generation (RAG) Systems",
+    "LLM Integration (OpenAI GPT-4, Claude, Gemini)",
+    "AI Agents and Multi-Agent Workflows",
+    "Document Intelligence and Processing",
+    "Vector Database Implementation (Pinecone, Weaviate)",
+    "Semantic Search Systems",
+    "Generative AI Content Pipelines",
+    "AI-powered API Development",
+    "AI Feature Integration into Existing Products",
+  ],
+  benefits: [
+    { title: "Competitive Differentiation", desc: "AI-powered features set your product apart from competitors still relying on manual processes and static content." },
+    { title: "Operational Efficiency", desc: "Automate repetitive tasks — document parsing, customer support, data extraction — freeing your team for higher-value work." },
+    { title: "Better User Experiences", desc: "Intelligent search, personalized recommendations, and conversational interfaces dramatically increase user engagement." },
+    { title: "Scalable Automation", desc: "AI systems handle increasing workloads without proportional cost increases, unlike human-staffed operations." },
+    { title: "Data-Driven Insights", desc: "AI systems extract structured insights from unstructured data — customer feedback, documents, logs — at scale." },
+    { title: "Faster Product Development", desc: "AI-assisted development tools and code generation accelerate your own engineering team's productivity." },
+  ],
+  process: [
+    { step: "AI Use Case Discovery", desc: "We identify the highest-impact AI use cases for your product — where AI adds real value, not just novelty." },
+    { step: "Model Selection", desc: "We evaluate OpenAI, Anthropic, Google, and open-source models to select the best fit for your use case, latency, and cost requirements." },
+    { step: "Data Pipeline Design", desc: "We design data ingestion, chunking, embedding, and retrieval pipelines for knowledge-grounded AI systems." },
+    { step: "Prototype & Validate", desc: "We build a working prototype and validate accuracy, latency, and behavior before full implementation." },
+    { step: "Production Integration", desc: "We integrate the AI system into your product with proper API design, error handling, rate limiting, and monitoring." },
+    { step: "Evaluation & Improvement", desc: "We implement evaluation frameworks to measure AI quality and continuously improve the system post-launch." },
+  ],
+  techStack: [
+    "OpenAI GPT-4o", "Anthropic Claude", "Google Gemini",
+    "LangChain", "LlamaIndex", "LangGraph",
+    "Pinecone", "Weaviate", "Qdrant", "pgvector",
+    "Node.js", "Python", "FastAPI",
+    "Vercel AI SDK", "Hugging Face", "Ollama",
+    "PostgreSQL", "MongoDB", "Redis",
+    "AWS Bedrock", "Azure OpenAI",
+  ],
+  whyStacklyn: [
+    { title: "Production AI Experience", desc: "We've shipped AI features in production — not just demos. We understand latency, cost, failure modes, and evaluation." },
+    { title: "Full Stack + AI", desc: "We build the AI features AND the full product around them. No separate AI consultant and web developer needed." },
+    { title: "Model-Agnostic Approach", desc: "We select the best model for your use case — OpenAI, Anthropic, Google, or open-source — based on quality and cost." },
+    { title: "RAG Specialists", desc: "We build sophisticated RAG systems that give your AI accurate, grounded responses from your proprietary data." },
+    { title: "Responsible AI", desc: "We implement content filtering, output validation, and guardrails to ensure your AI behaves safely and predictably." },
+    { title: "Cost-Optimized Implementations", desc: "LLM API costs can balloon quickly. We design systems with caching, model routing, and prompt optimization to minimize costs." },
+  ],
+  faqs: [
+    { q: "What is AI application development?", a: "AI application development is building software that uses artificial intelligence — LLMs, machine learning, or NLP — to deliver intelligent features like chatbots, intelligent search, document processing, or automated workflows." },
+    { q: "What AI models does Stacklyn work with?", a: "Stacklyn works with OpenAI (GPT-4o, GPT-4 Turbo), Anthropic (Claude 3.5 Sonnet, Claude 3 Opus), Google (Gemini), Meta (Llama), Mistral, and other open-source models. We select the best model for your specific use case and cost requirements." },
+    { q: "What is RAG and does Stacklyn build RAG systems?", a: "RAG (Retrieval-Augmented Generation) is a technique where an AI system retrieves relevant context from a knowledge base before generating a response. This allows LLMs to answer questions accurately based on your proprietary documents and data. Stacklyn builds production RAG systems using Pinecone, Weaviate, pgvector, and LangChain/LlamaIndex." },
+    { q: "Can Stacklyn build an AI chatbot for my business?", a: "Yes. Stacklyn builds AI chatbots for customer support, internal knowledge bases, lead qualification, and product assistance. Our chatbots use RAG for accurate, grounded responses and are integrated into web apps, mobile apps, or communication platforms." },
+    { q: "What is the cost of building an AI application?", a: "AI application development at Stacklyn starts at ₹3 lakh for basic AI integrations. Full AI-powered products range from ₹8–30 lakh depending on complexity. Ongoing LLM API costs (OpenAI, Anthropic) are billed to your account at provider rates." },
+    { q: "How long does it take to build an AI application?", a: "Simple AI integrations (adding an LLM-powered feature to an existing product) take 2–4 weeks. A full AI-powered product or RAG system takes 8–16 weeks. Complex multi-agent systems may take 3–6 months." },
+    { q: "What is an AI agent?", a: "An AI agent is an LLM-powered system that can plan, use tools, and take actions to accomplish goals autonomously. Examples include an AI that searches the web, reads emails, writes code, or interacts with external APIs to complete multi-step tasks without human intervention." },
+    { q: "Does Stacklyn build document intelligence systems?", a: "Yes. Stacklyn builds document intelligence systems that extract structured data from unstructured documents (PDFs, contracts, invoices, reports). We use LLMs with structured output generation and validate against schemas for reliability." },
+    { q: "What are vector databases and does Stacklyn use them?", a: "Vector databases store numerical representations (embeddings) of text, images, or other data to enable semantic similarity search. Stacklyn uses Pinecone, Weaviate, Qdrant, and pgvector (PostgreSQL extension) for RAG systems and semantic search applications." },
+    { q: "Can AI be added to my existing product?", a: "Yes. AI features can be added to existing products without rebuilding from scratch. Common integrations include adding an AI chatbot, intelligent search, document processing, or AI-assisted user flows to your current web or mobile app." },
+    { q: "What is semantic search and can Stacklyn build it?", a: "Semantic search uses embeddings to find results based on meaning rather than exact keyword matching. A search for 'budget management' would also return results about 'financial planning' or 'expense tracking'. Stacklyn builds semantic search systems for knowledge bases, product catalogs, and document repositories." },
+    { q: "How does Stacklyn evaluate AI system quality?", a: "We implement evaluation frameworks to measure AI accuracy, relevance, and behavior. This includes automated eval pipelines, human review samples, latency monitoring, and A/B testing of model configurations. We use tools like LangSmith and custom evaluation scripts." },
+    { q: "Does Stacklyn use LangChain or LlamaIndex?", a: "Yes. We use both LangChain and LlamaIndex depending on the use case. LangChain is used for complex agent workflows and chains. LlamaIndex is preferred for document ingestion and RAG pipelines. We also build custom solutions when these frameworks add unnecessary complexity." },
+    { q: "Can Stacklyn integrate OpenAI into my Node.js backend?", a: "Yes. Integrating OpenAI or any LLM provider into a Node.js backend is a core Stacklyn capability. We use the OpenAI SDK, implement streaming responses, handle rate limits and errors, and build cost-monitoring dashboards." },
+    { q: "What is the difference between fine-tuning and RAG?", a: "Fine-tuning trains a model on your specific data to change its behavior or knowledge. RAG retrieves relevant information at query time to ground the model's responses. RAG is generally preferred for knowledge-based applications as it's more cost-effective and keeps knowledge up-to-date without retraining." },
+    { q: "Does Stacklyn build AI features for mobile apps?", a: "Yes. AI features can be integrated into React Native or Flutter mobile apps. The AI processing typically happens on the backend (Node.js or Python FastAPI), with the mobile app consuming the AI-powered API endpoints." },
+    { q: "How does Stacklyn handle AI output validation?", a: "We use structured output generation (JSON mode, Zod schemas, instructor library) to ensure AI outputs conform to expected formats. We also implement guardrails for content filtering, factual grounding checks, and output validation before sending responses to users." },
+    { q: "Can Stacklyn reduce my LLM API costs?", a: "Yes. Common cost optimization strategies include: caching frequent queries, using smaller models for simpler tasks, optimizing prompt lengths, implementing model routing (cheap model first, expensive model as fallback), and batching requests where possible." },
+    { q: "What industries benefit most from AI development?", a: "All industries benefit, but we've seen the most impact in EdTech (AI tutors, grading), legal (contract analysis), healthcare (patient information), SaaS (AI-assisted workflows), e-commerce (product recommendations), and enterprise tools (internal knowledge bases)." },
+    { q: "How do I get started with AI development at Stacklyn?", a: "Contact us at veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We start with a free AI use case consultation where we identify the highest-value AI features for your product and provide a technical roadmap and project estimate." },
+  ],
+  relatedServices: [
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "Node.js Development", href: "/services/nodejs-development" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+    { name: "SaaS Development", href: "/services/custom-software-development" },
+    { name: "Backend Development", href: "/services/backend-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/ai-development")({
+  head: () => ({
+    meta: [
+      { title: "AI Application Development Services | Stacklyn — India" },
+      { name: "description", content: "Stacklyn builds production AI applications using OpenAI, Claude, LangChain, RAG, and AI agents. LLM integrations, chatbots, and generative AI solutions from Kerala, India." },
+      { name: "keywords", content: "AI application development India, AI development company Kerala, LLM development India, RAG development, AI chatbot development India, generative AI solutions, OpenAI integration India" },
+      { property: "og:title", content: "AI Application Development Services | Stacklyn" },
+      { property: "og:description", content: "Production-grade AI development: LLMs, RAG, AI agents, and generative AI. Based in Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AI Application Development | Stacklyn" },
+      { name: "twitter:description", content: "LLMs, RAG systems, AI agents, and generative AI — built for production." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/ai-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

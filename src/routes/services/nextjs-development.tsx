@@ -1,0 +1,107 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "Next.js Development",
+  slug: "nextjs-development",
+  headline: "Next.js Development Services for Production Web Apps",
+  tagline: "Next.js 15 · App Router · SSR · TypeScript · Kerala, India",
+  intro:
+    "Stacklyn builds production-grade Next.js applications with server-side rendering, static generation, API routes, and the App Router. From SaaS products and e-commerce to marketing sites and enterprise platforms, Next.js is our framework of choice for full-stack web development.",
+  whatIs:
+    "Next.js is an open-source React framework developed by Vercel that adds server-side rendering (SSR), static site generation (SSG), incremental static regeneration (ISR), file-based routing, API routes, and the App Router to React. Next.js is the most production-ready React framework available in 2026.",
+  whyItMatters:
+    "Next.js solves the core limitations of client-side React: poor SEO, slow initial page loads, and complex routing. With SSR and SSG, Next.js applications load faster, rank better on search engines, and provide better user experiences than traditional SPAs — while maintaining all the benefits of React's component model.",
+  subServices: [
+    "Next.js App Router Development",
+    "Next.js SSR and SSG Applications",
+    "Next.js SaaS Product Development",
+    "Next.js E-commerce Development",
+    "Next.js API Route Development",
+    "Next.js + Headless CMS Integration",
+    "Next.js Performance Optimization",
+    "Next.js SEO-Optimized Websites",
+    "Next.js Migration from CRA / Pages Router",
+    "Next.js Edge Functions and Middleware",
+  ],
+  benefits: [
+    { title: "SEO-Optimized by Default", desc: "Server-rendered HTML is immediately indexable by search engines — critical for content-heavy sites and marketing pages." },
+    { title: "Exceptional Performance", desc: "Automatic code splitting, image optimization, font optimization, and Edge Runtime reduce load times dramatically." },
+    { title: "Full Stack in One Project", desc: "API Routes and Server Actions in Next.js let you build backend logic in the same project as your frontend." },
+    { title: "Multiple Rendering Strategies", desc: "SSR, SSG, ISR, and client rendering — use the right strategy per page for the perfect balance of performance and freshness." },
+    { title: "Edge Deployment", desc: "Deploy globally on Vercel's Edge Network or Cloudflare Workers for sub-100ms response times worldwide." },
+    { title: "Vercel Integration", desc: "Seamless deployment on Vercel with automatic previews per branch, analytics, and one-click rollbacks." },
+  ],
+  process: [
+    { step: "Architecture Planning", desc: "Decide rendering strategy per route, App Router structure, server/client component boundaries, and data fetching patterns." },
+    { step: "Project Setup", desc: "Configure TypeScript, Tailwind CSS, ESLint, Prettier, environment variables, and deployment target." },
+    { step: "Component Development", desc: "Build server components, client components, layouts, loading states, and error boundaries." },
+    { step: "Data Layer", desc: "Implement Server Actions, API routes, ORM queries, and third-party data fetching with proper caching strategies." },
+    { step: "SEO & Performance", desc: "Metadata API configuration, structured data, sitemap, robots.txt, image optimization, and Core Web Vitals tuning." },
+    { step: "Deployment", desc: "Deploy to Vercel, AWS, or custom infrastructure with CI/CD, preview environments, and monitoring." },
+  ],
+  techStack: [
+    "Next.js 15", "React 19", "TypeScript", "Tailwind CSS",
+    "App Router", "Server Components", "Server Actions",
+    "Prisma", "Drizzle ORM", "PostgreSQL", "Supabase",
+    "Vercel", "Cloudflare", "AWS",
+    "Clerk", "Auth.js", "NextAuth",
+    "Stripe", "Sanity", "Contentful", "Notion API",
+    "Zod", "TanStack Query",
+  ],
+  whyStacklyn: [
+    { title: "Next.js App Router Experts", desc: "We're up-to-date on Next.js 15 App Router, React Server Components, and Server Actions — not stuck on the Pages Router." },
+    { title: "SEO-Optimized Implementations", desc: "Stacklyn's Next.js builds include complete SEO setup: metadata API, OpenGraph, structured data, sitemaps, and Core Web Vitals optimization." },
+    { title: "Performance by Default", desc: "We configure image optimization, font optimization, code splitting, and caching strategies from the start — not as afterthoughts." },
+    { title: "TypeScript End-to-End", desc: "Full type safety from server components to client components to API routes. Type-safe data fetching and mutation." },
+    { title: "Database Expertise", desc: "We use Prisma or Drizzle ORM with PostgreSQL for type-safe database access, migrations, and query optimization." },
+    { title: "Deployment Experience", desc: "We've deployed Next.js apps on Vercel, AWS (EC2, ECS, Lambda@Edge), Cloudflare, and bare-metal servers." },
+  ],
+  faqs: [
+    { q: "What is Next.js?", a: "Next.js is a React framework developed by Vercel that adds server-side rendering, static site generation, API routes, file-based routing, and full-stack capabilities to React. It is the most popular production-ready React framework." },
+    { q: "When should I choose Next.js over plain React?", a: "Choose Next.js when SEO matters, when you need server-side rendering for performance, when you want a full-stack solution, or when you're building a production SaaS or marketing site. Plain React (Vite SPA) is sufficient for internal tools or apps where SEO doesn't matter." },
+    { q: "What is the App Router in Next.js?", a: "The App Router is Next.js 13+ feature that uses React Server Components by default, provides nested layouts, streaming, and co-located server/client code. It replaces the older Pages Router and is the recommended approach for all new Next.js projects." },
+    { q: "What are React Server Components?", a: "React Server Components (RSC) run on the server, can access databases and APIs directly, and send only the rendered HTML to the client. They reduce client-side JavaScript bundle size and improve performance. Next.js App Router uses Server Components by default." },
+    { q: "What is the difference between SSR, SSG, and ISR in Next.js?", a: "SSR (Server-Side Rendering) generates pages on each request for always-fresh content. SSG (Static Site Generation) pre-renders pages at build time for maximum performance. ISR (Incremental Static Regeneration) pre-renders pages but revalidates them on a schedule. Stacklyn chooses the right strategy per page based on content freshness requirements." },
+    { q: "Does Stacklyn build Next.js SaaS products?", a: "Yes. SaaS development with Next.js is a core Stacklyn specialization. We build multi-tenant SaaS apps with authentication (Clerk/Auth.js), subscription billing (Stripe), team workspaces, role-based access control, and analytics." },
+    { q: "How does Next.js help with SEO?", a: "Next.js improves SEO through: server-rendered HTML that's immediately indexable, the Metadata API for canonical tags, OG images, and structured data, Next/Image for image optimization, and fast loading speeds that improve Google Core Web Vitals scores." },
+    { q: "Does Stacklyn optimize Core Web Vitals for Next.js?", a: "Yes. Core Web Vitals optimization is standard in all Stacklyn Next.js projects. We target: LCP under 2.5s, FID/INP under 200ms, and CLS under 0.1. Optimization includes lazy loading, image optimization, code splitting, and caching." },
+    { q: "Can Stacklyn deploy Next.js on AWS instead of Vercel?", a: "Yes. We deploy Next.js on AWS using ECS containers, Lambda@Edge, or EC2 with Nginx. This is preferred when you need more control over infrastructure, custom networking, or cost optimization at scale." },
+    { q: "Does Next.js support TypeScript?", a: "Yes. Next.js has built-in TypeScript support. Stacklyn always uses TypeScript with Next.js for type-safe components, API routes, server actions, and database queries." },
+    { q: "What is Next.js middleware and when is it used?", a: "Next.js middleware runs before a request is completed, enabling authentication checks, redirects, A/B testing, and geo-routing at the edge. It executes on Vercel's Edge Network for sub-millisecond latency." },
+    { q: "Does Stacklyn integrate headless CMS with Next.js?", a: "Yes. We integrate headless CMS platforms like Sanity, Contentful, Strapi, and Notion with Next.js. Content editors manage content via the CMS, and Next.js fetches and renders it with SSG/ISR for optimal performance." },
+    { q: "What is the cost of Next.js development at Stacklyn?", a: "Next.js development starts at ₹2 lakh for simple apps. Full Next.js SaaS products range from ₹5–25 lakh. Marketing sites and landing pages start at ₹1 lakh. We provide fixed-price quotes after discovery." },
+    { q: "Does Stacklyn use Prisma with Next.js?", a: "Yes. Prisma is our preferred ORM for Next.js applications using PostgreSQL. It provides type-safe queries, schema migrations, and excellent TypeScript integration. Drizzle ORM is an alternative for performance-critical queries." },
+    { q: "Can Stacklyn migrate my existing app to Next.js?", a: "Yes. We migrate from Create React App, Gatsby, or legacy Pages Router to Next.js App Router. Migrations are done incrementally to minimize risk and disruption." },
+    { q: "Does Next.js work with authentication?", a: "Yes. Authentication options for Next.js include Clerk (hosted auth with UI components), Auth.js (open-source, self-hosted), NextAuth, or custom JWT implementation. Stacklyn recommends Clerk for most projects for its developer experience." },
+    { q: "How does Stacklyn handle environment variables in Next.js?", a: "Environment variables in Next.js are managed via .env files (local), Vercel environment variables (production), or AWS Secrets Manager (self-hosted). Public variables use NEXT_PUBLIC_ prefix and server-only variables remain unexposed to the client." },
+    { q: "Does Stacklyn build e-commerce sites with Next.js?", a: "Yes. We build e-commerce sites with Next.js + Stripe for custom platforms, or Next.js + Shopify/Medusa for headless commerce. Next.js's SSG is ideal for product catalog pages with thousands of products." },
+    { q: "What monitoring does Stacklyn set up for Next.js apps?", a: "We configure Vercel Analytics or Google Analytics for user tracking, Sentry for error monitoring, Datadog or New Relic for performance monitoring, and custom dashboards for business metrics." },
+    { q: "How do I start a Next.js project with Stacklyn?", a: "Contact us at veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We schedule a free discovery call, review your requirements, and deliver a project proposal with scope, timeline, and pricing within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "React Development", href: "/services/react-development" },
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "SaaS Development", href: "/services/custom-software-development" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+    { name: "Node.js Development", href: "/services/nodejs-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/nextjs-development")({
+  head: () => ({
+    meta: [
+      { title: "Next.js Development Services | Stacklyn — India" },
+      { name: "description", content: "Expert Next.js development from Stacklyn, Kerala, India. App Router, SSR, SSG, SaaS products, and SEO-optimized web apps with Next.js 15 and TypeScript." },
+      { name: "keywords", content: "Next.js development India, Next.js developers Kerala, Next.js App Router development, Next.js SaaS development India, hire Next.js developer India" },
+      { property: "og:title", content: "Next.js Development Services | Stacklyn" },
+      { property: "og:description", content: "Production Next.js apps with App Router, SSR, SSG, and TypeScript. From Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Next.js Development Services | Stacklyn" },
+      { name: "twitter:description", content: "Next.js 15, App Router, Server Components — experts from India." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/nextjs-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

@@ -1,0 +1,107 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "Custom Software Development",
+  slug: "custom-software-development",
+  headline: "Custom Software Development for Unique Business Needs",
+  tagline: "Tailored software · Scalable architecture · Kerala, India",
+  intro:
+    "Stacklyn builds custom software solutions tailored precisely to your business requirements. When off-the-shelf tools don't fit, we engineer bespoke platforms, internal tools, workflow automation, and data systems that solve your specific problem with precision.",
+  whatIs:
+    "Custom software development is the process of designing, building, and deploying software specifically for a business's unique requirements, workflows, and users. Unlike off-the-shelf software (like Salesforce, Shopify, or QuickBooks), custom software is built entirely to your specifications with no unnecessary features and no compromises.",
+  whyItMatters:
+    "Off-the-shelf software forces your business to adapt to someone else's product decisions. Custom software adapts to your processes, integrates with your existing systems, and gives you a competitive advantage that competitors using the same tools can never replicate.",
+  subServices: [
+    "Enterprise Web Application Development",
+    "Internal Tools and Admin Platforms",
+    "Workflow Automation Systems",
+    "Data Management and Reporting Platforms",
+    "Multi-tenant SaaS Platform Development",
+    "Legacy System Modernization",
+    "ERP and CRM Custom Development",
+    "Integration and Middleware Development",
+    "Custom E-commerce Platform Development",
+    "Industry-Specific Software Solutions",
+  ],
+  benefits: [
+    { title: "Exact Fit for Your Needs", desc: "Every feature, workflow, and UI element is designed around your specific business processes — not a generic product's assumptions." },
+    { title: "Competitive Advantage", desc: "Software built for your unique requirements is a strategic asset. Competitors using the same SaaS tools can't replicate your advantage." },
+    { title: "Full Integration", desc: "Custom software integrates seamlessly with your existing systems — CRMs, ERPs, databases, and third-party APIs — without expensive middleware." },
+    { title: "You Own the IP", desc: "All source code and intellectual property belongs to you. No licensing fees, no vendor lock-in, no dependency on a third-party company's survival." },
+    { title: "Scales with Your Business", desc: "Custom software grows with you. Add features, users, and integrations on your timeline without migrating platforms." },
+    { title: "Cost Effective Long-term", desc: "Custom software often costs less long-term than accumulated SaaS subscription fees, especially for large teams or complex workflows." },
+  ],
+  process: [
+    { step: "Requirements Discovery", desc: "Deep analysis of your business processes, pain points, user needs, and success criteria." },
+    { step: "Technical Architecture", desc: "System design, data model, integration map, technology selection, and security architecture." },
+    { step: "Iterative Development", desc: "Build in sprints with regular demos. You see working software every 2 weeks, not at the end." },
+    { step: "Integration & Testing", desc: "System integration testing, user acceptance testing, performance testing, and security testing." },
+    { step: "Training & Rollout", desc: "User training, documentation, phased rollout, and change management support." },
+    { step: "Support & Evolution", desc: "Post-launch support, bug fixes, performance monitoring, and iterative feature development." },
+  ],
+  techStack: [
+    "Next.js", "React", "TypeScript", "Tailwind CSS",
+    "Node.js", "Express.js", "NestJS",
+    "PostgreSQL", "MongoDB", "Redis", "Prisma",
+    "AWS", "Azure", "Docker", "Kubernetes",
+    "OpenAI", "LangChain",
+    "Stripe", "Razorpay", "Twilio", "SendGrid",
+    "GitHub Actions", "CI/CD",
+  ],
+  whyStacklyn: [
+    { title: "Domain Agnostic Expertise", desc: "We've built software for EdTech, B2B SaaS, healthcare, logistics, fintech, and enterprise tools. Domain knowledge transfers." },
+    { title: "Scalable Architecture", desc: "We architect custom software to handle growth — from 10 users to 10,000 — without expensive rewrites." },
+    { title: "Integration Specialists", desc: "We've integrated with hundreds of third-party APIs and legacy systems. Complex integrations are our normal." },
+    { title: "Long-term Partnership", desc: "Custom software evolves. We offer ongoing maintenance, feature development, and technical leadership for years after launch." },
+    { title: "Clear Documentation", desc: "Complete technical documentation, API specs, and architecture guides delivered with every custom project." },
+    { title: "Transparent Pricing", desc: "Fixed-price for well-defined scopes. Time-and-materials for evolving requirements. No surprises." },
+  ],
+  faqs: [
+    { q: "What is custom software development?", a: "Custom software development is building software specifically designed for a business's unique requirements — distinct from off-the-shelf solutions like Salesforce or Shopify. Custom software is built to your exact specifications with full IP ownership." },
+    { q: "When should a business invest in custom software?", a: "Consider custom software when: off-the-shelf solutions don't fit your workflow, you're spending too much on SaaS subscriptions, you need competitive differentiation through technology, you have unique compliance requirements, or you're building a software product to sell." },
+    { q: "How much does custom software development cost?", a: "Custom software development at Stacklyn starts at ₹3 lakh for smaller internal tools. Enterprise applications and SaaS platforms range from ₹10–50 lakh. Cost depends on complexity, integrations, users, and timeline. We provide detailed estimates after discovery." },
+    { q: "How long does custom software development take?", a: "Simple custom tools take 6–10 weeks. Medium-complexity applications take 3–6 months. Enterprise-grade platforms with multiple integrations take 6–12 months. We provide timeline estimates in our project proposal." },
+    { q: "What is the ROI of custom software?", a: "ROI from custom software comes from: time saved by automating manual processes, revenue from selling the software (if it's a product), cost reduction vs. accumulated SaaS fees, and competitive advantages from unique capabilities. Most clients see ROI within 12–18 months." },
+    { q: "Does Stacklyn modernize legacy software systems?", a: "Yes. Legacy modernization is a common engagement — migrating from outdated PHP/Python/Java systems to modern Node.js/TypeScript stacks, improving performance, adding new features, and deploying to cloud infrastructure." },
+    { q: "What industries does Stacklyn build custom software for?", a: "Stacklyn has built custom software for: EdTech (learning platforms), B2B SaaS (automation tools), healthcare (patient management), logistics (tracking systems), fintech (payment platforms), and enterprise (workflow automation, internal tools)." },
+    { q: "Does Stacklyn build ERP systems?", a: "Yes. We build custom ERP and CRM systems for businesses that need more than Salesforce or HubSpot offers. Custom ERPs integrate directly with your existing systems, match your exact workflows, and scale with your data requirements." },
+    { q: "What is multi-tenant architecture?", a: "Multi-tenant architecture allows a single software instance to serve multiple customers (tenants) with data isolation. This is the standard architecture for SaaS products. Stacklyn implements multi-tenancy using row-level security in PostgreSQL or separate database schemas per tenant." },
+    { q: "Does Stacklyn integrate custom software with existing systems?", a: "Yes. Integration is a core part of custom software development. We integrate with CRMs (HubSpot, Salesforce), ERPs (SAP, Oracle), payment gateways, communication tools, and custom internal systems via REST APIs, webhooks, and ETL pipelines." },
+    { q: "Can Stacklyn build data reporting and analytics platforms?", a: "Yes. Custom data platforms include ETL pipelines for data ingestion, dashboards with charts and tables, scheduled reports, data exports, and AI-powered analytics. We use PostgreSQL, Redis, and visualization libraries like Recharts." },
+    { q: "Does Stacklyn build internal tools?", a: "Yes. Internal tools are faster and cheaper to build than consumer-facing products. Common internal tools we build: admin dashboards, CRM replacements, HR portals, inventory management, operations dashboards, and customer success platforms." },
+    { q: "What is workflow automation and can Stacklyn build it?", a: "Workflow automation is software that executes business processes automatically — approvals, notifications, data routing, report generation. Stacklyn builds custom workflow systems using event-driven architecture, message queues, and rule engines." },
+    { q: "Does Stacklyn do custom e-commerce development?", a: "Yes. When Shopify or WooCommerce doesn't fit, Stacklyn builds custom e-commerce platforms with unique product types, custom checkout flows, specialized pricing logic, multi-vendor marketplaces, or B2B purchasing workflows." },
+    { q: "What happens if my requirements change during development?", a: "We manage scope changes through a formal change request process. Minor changes are absorbed within sprint capacity. Major changes are scoped, estimated, and added to the project with timeline and cost adjustments agreed upfront." },
+    { q: "Does Stacklyn provide post-launch support?", a: "Yes. Post-launch support is available as a monthly retainer. Services include bug fixes, performance monitoring, security patches, feature additions, user support, and cloud infrastructure management." },
+    { q: "Do I own the source code?", a: "Yes. Stacklyn clients own 100% of the source code, documentation, and all intellectual property. Code is delivered via a private GitHub repository at project completion with no licensing restrictions." },
+    { q: "How does Stacklyn handle data security for custom software?", a: "Security measures include: data encryption at rest and in transit, role-based access control, audit logging, input validation, regular dependency audits, and compliance with relevant regulations (GDPR, HIPAA if applicable)." },
+    { q: "Can Stacklyn build custom software for international markets?", a: "Yes. Stacklyn has built software for clients in the USA, UK, UAE, Singapore, and Australia. We handle internationalization (i18n), multi-currency, timezone management, and regional compliance requirements." },
+    { q: "How do I start a custom software project with Stacklyn?", a: "Contact veenaprasad@stacklyn.in or WhatsApp +91 99617 46849 with a description of your software needs. We'll schedule a free discovery call, produce a requirements document, and deliver a detailed project proposal within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+    { name: "AI Development", href: "/services/ai-development" },
+    { name: "Backend Development", href: "/services/backend-development" },
+    { name: "Node.js Development", href: "/services/nodejs-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/custom-software-development")({
+  head: () => ({
+    meta: [
+      { title: "Custom Software Development Company | Stacklyn — India" },
+      { name: "description", content: "Stacklyn builds custom software solutions tailored to your business. Enterprise apps, internal tools, SaaS platforms, and workflow automation. Kerala, India. Get a free quote." },
+      { name: "keywords", content: "custom software development India, custom software company Kerala, bespoke software development India, enterprise software development India, custom web application development" },
+      { property: "og:title", content: "Custom Software Development | Stacklyn" },
+      { property: "og:description", content: "Tailored software solutions for businesses. Enterprise apps, internal tools, SaaS platforms. From Kerala, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Custom Software Development | Stacklyn" },
+      { name: "twitter:description", content: "Bespoke software built exactly for your business needs. Kerala, India." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/custom-software-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});

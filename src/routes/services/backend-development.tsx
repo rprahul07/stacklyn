@@ -1,0 +1,107 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ServicePage, type ServiceData } from "@/components/velora/ServicePageTemplate";
+
+const data: ServiceData = {
+  title: "Backend Development",
+  slug: "backend-development",
+  headline: "Backend Development Services — Scalable APIs & Systems",
+  tagline: "Node.js · Express · Fastify · PostgreSQL · Kerala, India",
+  intro:
+    "Stacklyn builds robust, scalable backend systems for web applications, mobile apps, and enterprise platforms. From REST APIs and GraphQL services to microservices architectures and real-time backends — we engineer backend systems that perform reliably at scale.",
+  whatIs:
+    "Backend development refers to the server-side of a web application — the part users don't see. It encompasses API design, business logic implementation, database management, authentication, server infrastructure, and integration with third-party services. A well-designed backend is the foundation of every reliable digital product.",
+  whyItMatters:
+    "The backend determines your product's reliability, security, performance, and scalability. A poorly designed backend leads to data loss, security vulnerabilities, slow response times, and difficult-to-maintain code. A well-designed backend scales seamlessly as your user base grows.",
+  subServices: [
+    "REST API Design and Development",
+    "GraphQL API Development",
+    "Database Design (PostgreSQL, MongoDB)",
+    "Authentication and Authorization Systems",
+    "Microservices Architecture Design",
+    "Message Queue Systems (BullMQ, RabbitMQ)",
+    "Webhook Systems and Event-Driven Architecture",
+    "Backend Performance Optimization",
+    "Third-party API Integration",
+    "Legacy Backend Migration and Modernization",
+  ],
+  benefits: [
+    { title: "Reliable Data Management", desc: "Properly designed databases with transactions, constraints, and backups ensure your data is always accurate and recoverable." },
+    { title: "Security at the Core", desc: "Authentication, authorization, input validation, rate limiting, and OWASP-compliant code protect your users and data." },
+    { title: "Horizontal Scalability", desc: "Stateless API design, connection pooling, and cloud-native deployment enable horizontal scaling as your traffic grows." },
+    { title: "API-First Architecture", desc: "Clean, well-documented APIs enable frontend, mobile, and partner integrations without backend coupling." },
+    { title: "Observability", desc: "Structured logging, distributed tracing, and performance monitoring give you full visibility into system behavior." },
+    { title: "Developer Experience", desc: "Well-designed backends with clear documentation and type-safe code make frontend development faster and less error-prone." },
+  ],
+  process: [
+    { step: "System Design", desc: "Design service boundaries, data models, API contracts, authentication flows, and integration points." },
+    { step: "Database Architecture", desc: "Schema design, index strategy, migration plan, and query optimization approach for PostgreSQL or MongoDB." },
+    { step: "API Development", desc: "Implement endpoints with validation, business logic, error handling, and comprehensive logging." },
+    { step: "Security Hardening", desc: "Input sanitization, rate limiting, CORS, authentication, authorization, and vulnerability scanning." },
+    { step: "Testing", desc: "Unit tests, integration tests, contract tests, and load testing to validate correctness and performance." },
+    { step: "Documentation & Deployment", desc: "OpenAPI documentation, deployment on AWS/Azure, monitoring setup, and team onboarding." },
+  ],
+  techStack: [
+    "Node.js", "TypeScript", "Express.js", "Fastify", "NestJS",
+    "PostgreSQL", "MongoDB", "Redis", "Prisma", "Drizzle ORM",
+    "JWT", "OAuth 2.0", "Passport.js",
+    "Bull / BullMQ", "RabbitMQ",
+    "Swagger / OpenAPI", "Zod",
+    "Jest", "Supertest", "k6",
+    "Docker", "AWS", "Azure",
+  ],
+  whyStacklyn: [
+    { title: "API Design Expertise", desc: "We design clean, versioned, well-documented APIs that your frontend and partner teams will love working with." },
+    { title: "Database Performance", desc: "Query optimization, index design, connection pooling — we ensure your database performs well at scale." },
+    { title: "Security-First", desc: "Every backend includes: input validation, parameterized queries, rate limiting, security headers, and OWASP compliance." },
+    { title: "Clean Architecture", desc: "We follow clean architecture patterns — controllers, services, repositories — that keep business logic testable and maintainable." },
+    { title: "Full Documentation", desc: "Complete OpenAPI/Swagger documentation, architecture diagrams, and database schema docs delivered with every project." },
+    { title: "Post-Launch Support", desc: "Monthly retainers available for ongoing backend maintenance, performance monitoring, and feature development." },
+  ],
+  faqs: [
+    { q: "What is backend development?", a: "Backend development is the server-side of a web application — APIs, databases, business logic, authentication, and infrastructure. It handles data storage, processing, and delivery to frontend applications." },
+    { q: "What backend technologies does Stacklyn specialize in?", a: "Stacklyn specializes in Node.js (Express.js, Fastify, NestJS) for APIs, PostgreSQL and MongoDB for databases, Redis for caching, and Docker/AWS for deployment." },
+    { q: "What is the difference between REST API and GraphQL?", a: "REST API uses multiple endpoints (one per resource) with HTTP methods (GET, POST, PUT, DELETE). GraphQL uses a single endpoint where clients specify exactly what data they need. REST is simpler and widely understood; GraphQL is more flexible for complex data requirements." },
+    { q: "Does Stacklyn design database schemas?", a: "Yes. Database schema design is a core backend service. We design normalized PostgreSQL schemas with proper foreign keys, constraints, and indexes, or document schemas for MongoDB optimized for your query patterns." },
+    { q: "How does Stacklyn handle API authentication?", a: "We implement JWT-based stateless authentication, session-based auth with Redis, or integrate OAuth providers (Google, GitHub, Apple). Authorization is handled with role-based access control (RBAC) or attribute-based access control (ABAC)." },
+    { q: "What is a microservices architecture?", a: "Microservices architecture splits a large application into small, independently deployable services that communicate via APIs or message queues. Each service handles a specific business domain and can be scaled, updated, and maintained independently." },
+    { q: "When should I use microservices vs monolith?", a: "Start with a monolith. Microservices add operational complexity and are only worthwhile when team size, deployment frequency, or scaling requirements demand it. Stacklyn recommends a 'modular monolith' for most startups — structured for extraction to microservices later." },
+    { q: "Does Stacklyn use PostgreSQL or MongoDB?", a: "We use both depending on the use case. PostgreSQL for relational data with complex queries and transactions. MongoDB for flexible document data, rapid schema evolution, or nested data structures. Many projects use both." },
+    { q: "How does Stacklyn handle background jobs in the backend?", a: "Background jobs are handled with Bull or BullMQ using Redis as the queue. Jobs include email sending, report generation, data processing, webhook delivery, and scheduled tasks (cron jobs)." },
+    { q: "What is rate limiting and does Stacklyn implement it?", a: "Rate limiting restricts how many API requests a client can make in a time window, protecting against abuse and DDoS attacks. We implement rate limiting at the API gateway or application level using express-rate-limit or Fastify's rate-limit plugin." },
+    { q: "Does Stacklyn build webhook systems?", a: "Yes. Webhook systems allow your platform to notify third-party services of events in real-time. We build webhook delivery systems with retry logic, signature verification, delivery logs, and developer dashboards." },
+    { q: "How does Stacklyn ensure backend security?", a: "Backend security practices include: input validation with Zod, parameterized queries (no SQL/NoSQL injection), rate limiting, HTTPS enforcement, JWT security, CORS configuration, helmet.js security headers, and regular dependency audits." },
+    { q: "Does Stacklyn write API documentation?", a: "Yes. We generate OpenAPI/Swagger documentation for all REST APIs using swagger-jsdoc, Fastify's built-in OpenAPI, or NestJS decorators. Documentation includes request/response schemas, authentication, error codes, and examples." },
+    { q: "Can Stacklyn migrate a legacy backend?", a: "Yes. We migrate legacy PHP, Python, Ruby, or outdated Node.js backends to modern Node.js TypeScript codebases. Migrations are done incrementally to minimize risk, with a strangler fig pattern for large monoliths." },
+    { q: "What is Prisma ORM and does Stacklyn use it?", a: "Prisma is a type-safe ORM for Node.js with TypeScript that generates database client code from your schema. Stacklyn uses Prisma for most PostgreSQL projects. It provides type-safe queries, migrations, and a visual database editor (Prisma Studio)." },
+    { q: "How does Stacklyn handle error handling in APIs?", a: "We implement standardized error responses with HTTP status codes, error codes, and messages. Global error handlers catch uncaught exceptions. Errors are logged to Sentry or Datadog with stack traces and request context." },
+    { q: "Does Stacklyn do backend performance optimization?", a: "Yes. Backend optimization services include query profiling, index analysis, N+1 query elimination, connection pool tuning, Redis caching implementation, and load testing with k6 or Artillery." },
+    { q: "What is connection pooling and why does it matter?", a: "Connection pooling maintains a pool of database connections that are reused across requests, rather than opening a new connection per request. Without connection pooling, high-traffic Node.js apps exhaust database connection limits. We use PgBouncer or Prisma's built-in connection pooling." },
+    { q: "Does Stacklyn support multi-tenant backend architectures?", a: "Yes. Multi-tenancy can be implemented with: row-level security (separate rows per tenant), schema-per-tenant (separate PostgreSQL schema), or database-per-tenant. We select the appropriate approach based on isolation requirements, scale, and cost." },
+    { q: "How do I get started with backend development at Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We'll schedule a free technical consultation to discuss your backend requirements and architecture goals, then send a detailed proposal within 48 hours." },
+  ],
+  relatedServices: [
+    { name: "Node.js Development", href: "/services/nodejs-development" },
+    { name: "Full Stack Development", href: "/services/full-stack-development" },
+    { name: "MERN Stack Development", href: "/services/mern-development" },
+    { name: "AI Development", href: "/services/ai-development" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+  ],
+};
+
+export const Route = createFileRoute("/services/backend-development")({
+  head: () => ({
+    meta: [
+      { title: "Backend Development Services | Stacklyn — Kerala, India" },
+      { name: "description", content: "Stacklyn builds scalable backend systems, REST APIs, GraphQL services, and microservices using Node.js, PostgreSQL, and AWS. Kerala, India. Get a free technical consultation." },
+      { name: "keywords", content: "backend development India, backend developer Kerala, REST API development India, Node.js backend development, API development company India" },
+      { property: "og:title", content: "Backend Development Services | Stacklyn" },
+      { property: "og:description", content: "Scalable APIs, databases, and backend systems from Kerala, India. Node.js, PostgreSQL, Redis." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Backend Development Services | Stacklyn" },
+      { name: "twitter:description", content: "REST APIs, GraphQL, databases, and microservices — built to scale." },
+    ],
+    links: [{ rel: "canonical", href: "https://stacklyn.in/services/backend-development" }],
+  }),
+  component: () => <ServicePage data={data} />,
+});
