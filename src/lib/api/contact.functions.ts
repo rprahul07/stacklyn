@@ -15,14 +15,32 @@ const ContactSchema = z.object({
 export const sendContactEmail = createServerFn({ method: "POST" })
   .inputValidator(ContactSchema)
   .handler(async ({ data }) => {
+    const host = process.env.SMTP_HOST;
+    const port = Number(process.env.SMTP_PORT ?? 465);
+    const user = process.env.SMTP_USER;
+    const pass = process.env.SMTP_PASS;
+    const from = process.env.EMAIL_FROM;
+    const to = process.env.EMAIL_TO;
+
+    if (!host || !user || !pass || !from || !to) {
+      const missing = [
+        !host && "SMTP_HOST",
+        !user && "SMTP_USER",
+        !pass && "SMTP_PASS",
+        !from && "EMAIL_FROM",
+        !to && "EMAIL_TO",
+      ].filter(Boolean).join(", ");
+      console.error("[contact] Missing env vars:", missing);
+      throw new Error(`Email not configured. Missing: ${missing}`);
+    }
+
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT ?? 465),
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
+      host,
+      port,
+      secure: port === 465,
+      auth: { user, pass },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
     });
 
     const html = `
@@ -42,19 +60,22 @@ export const sendContactEmail = createServerFn({ method: "POST" })
           <div style="color:#6b7280;margin-bottom:8px">Project Description</div>
           <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:16px;white-space:pre-wrap;line-height:1.6">${data.description}</div>
         </div>
-        <p style="margin-top:24px;font-size:12px;color:#9ca3af">
-          Submitted via stacklyn.in contact form
-        </p>
+        <p style="margin-top:24px;font-size:12px;color:#9ca3af">Submitted via stacklyn.in contact form</p>
       </div>
     `;
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_FROM,
-      to: process.env.EMAIL_TO,
-      replyTo: `${data.name} <${data.email}>`,
-      subject: `New inquiry from ${data.name}${data.company ? ` (${data.company})` : ""}`,
-      html,
-    });
+    try {
+      await transporter.sendMail({
+        from,
+        to,
+        replyTo: `${data.name} <${data.email}>`,
+        subject: `New inquiry from ${data.name}${data.company ? ` (${data.company})` : ""}`,
+        html,
+      });
+    } catch (err) {
+      console.error("[contact] SMTP send failed:", err);
+      throw new Error("Failed to send email. Please try again or contact us directly.");
+    }
 
     return { ok: true };
   });
