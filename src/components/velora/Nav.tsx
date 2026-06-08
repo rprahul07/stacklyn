@@ -29,11 +29,7 @@ export function Nav() {
             V
             <span className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-primary-soft ring-2 ring-background" />
           </span>
-<<<<<<< HEAD
-          <span className="font-semibold tracking-tight text-foreground">STACKLYN</span>
-=======
           <span className="font-semibold tracking-tight text-foreground">Stacklyn</span>
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           {links.map((l) => (

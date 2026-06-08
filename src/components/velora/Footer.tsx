@@ -5,11 +5,7 @@ export function Footer() {
         <div className="md:col-span-5">
           <div className="flex items-center gap-2.5">
             <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold text-sm">V</span>
-<<<<<<< HEAD
-            <span className="font-semibold tracking-tight">STACKLYN</span>
-=======
             <span className="font-semibold tracking-tight">Stacklyn</span>
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground leading-relaxed">
             Innovation in Motion. Building scalable software, intelligent systems, and digital experiences for the next generation of businesses.
@@ -42,11 +38,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
-<<<<<<< HEAD
-          <div>© {new Date().getFullYear()} STACKLYN. All rights reserved.</div>
-=======
           <div>© {new Date().getFullYear()} Stacklyn. All rights reserved.</div>
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
           <div>Crafted with intention.</div>
         </div>
       </div>

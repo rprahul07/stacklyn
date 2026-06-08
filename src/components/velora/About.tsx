@@ -30,15 +30,9 @@ export function About() {
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-<<<<<<< HEAD
-          eyebrow="About STACKLYN"
-          title="Engineering solutions that scale."
-          description="STACKLYN transforms ideas into production-ready digital products using modern technologies and proven engineering practices — end-to-end, with the rigor of an in-house team."
-=======
           eyebrow="About Stacklyn"
           title="Engineering solutions that scale."
           description="Stacklyn transforms ideas into production-ready digital products using modern technologies and proven engineering practices — end-to-end, with the rigor of an in-house team."
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
         />
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden border border-border">

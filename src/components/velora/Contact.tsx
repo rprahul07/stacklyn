@@ -65,11 +65,7 @@ export function Contact() {
           <div className="mt-8 rounded-xl border border-border bg-background px-5 py-4">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Contact Person</div>
             <div className="mt-1 text-base font-semibold text-foreground">{CONTACT_PERSON}</div>
-<<<<<<< HEAD
-            <div className="text-xs text-muted-foreground">Co-Founder · STACKLYN</div>
-=======
             <div className="text-xs text-muted-foreground">Co-Founder · Stacklyn</div>
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
           </div>
 
           <div className="mt-6 space-y-4">

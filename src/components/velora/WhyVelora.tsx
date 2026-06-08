@@ -15,11 +15,7 @@ export function WhyVelora() {
     <section className="py-24 md:py-32 bg-surface/60">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-<<<<<<< HEAD
-          eyebrow="Why STACKLYN"
-=======
           eyebrow="Why Stacklyn"
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
           title="The difference is in the engineering."
           description="A focused team that operates like an extension of yours — without the agency overhead."
         />
@@ -33,11 +29,7 @@ export function WhyVelora() {
         >
           <div className="grid grid-cols-12 px-6 md:px-8 py-4 border-b border-border bg-surface text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             <div className="col-span-6">Capability</div>
-<<<<<<< HEAD
-            <div className="col-span-3 text-center text-primary">STACKLYN</div>
-=======
             <div className="col-span-3 text-center text-primary">Stacklyn</div>
->>>>>>> fdf87caec5575d664952f1d0909b2725d7a76506
             <div className="col-span-3 text-center">Traditional Agencies</div>
           </div>
           {rows.map(([label, v, t], i) => (
