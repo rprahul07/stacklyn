@@ -13,7 +13,7 @@ const ContactSchema = z.object({
 });
 
 export const sendContactEmail = createServerFn({ method: "POST" })
-  .inputValidator(ContactSchema)
+  .validator(ContactSchema)
   .handler(async ({ data }) => {
     const host = process.env.SMTP_HOST;
     const port = Number(process.env.SMTP_PORT ?? 465);
