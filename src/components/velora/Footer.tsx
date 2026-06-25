@@ -1,3 +1,5 @@
+import { Logo } from "./Logo";
+
 const services = [
   { label: "Full Stack Development", href: "/services/full-stack-development" },
   { label: "MERN Stack", href: "/services/mern-development" },
@@ -34,9 +36,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-12 gap-10">
         {/* Brand */}
         <div className="md:col-span-3">
-          <a href="/" className="flex items-center gap-2.5">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold text-sm">S</span>
-            <span className="font-semibold tracking-tight">Stacklyn</span>
+          <a href="/" className="inline-flex items-center" aria-label="Stacklyn home">
+            <Logo />
           </a>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
             Custom software development company in Kerala, India. Building scalable web apps, AI solutions, and MVPs for global clients.

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Logo } from "./Logo";
 
 const links = [
   { href: "/#capabilities", label: "Services" },
@@ -39,12 +40,8 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2.5 group">
-          <span className="relative inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold text-sm shadow-elegant">
-            S
-            <span className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-primary-soft ring-2 ring-background" />
-          </span>
-          <span className="font-semibold tracking-tight text-foreground">Stacklyn</span>
+        <a href="/" className="inline-flex items-center group" aria-label="Stacklyn home">
+          <Logo />
         </a>
 
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground" aria-label="Main navigation">
