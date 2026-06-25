@@ -9,14 +9,7 @@ const projects = [
     stack: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
     accent: "from-primary/15 to-primary/0",
     url: "https://lenienttree.com",
-  },
-  {
-    name: "ONES Coaching",
-    kind: "Educational Platform",
-    blurb: "Student engagement features, performance optimization, and a responsive design system built for scale.",
-    stack: ["React", "Express", "MongoDB", "Docker"],
-    accent: "from-primary-soft/30 to-primary/0",
-    url: "https://www.onescoaching.com/",
+    glyph: "lenienttree",
   },
   {
     name: "Alumni Network",
@@ -24,7 +17,8 @@ const projects = [
     blurb: "End-to-end authentication, social networking primitives, and a clean, opinionated database architecture.",
     stack: ["Next.js", "Auth.js", "Postgres", "Azure"],
     accent: "from-navy/10 to-primary/0",
-    url: "https://www.onescoaching.com/",
+    url: "#",
+    glyph: "alumni",
   },
   {
     name: "ThinkerRoot Ideathon 2025",
@@ -33,6 +27,7 @@ const projects = [
     stack: ["React", "Node.js", "Vercel", "PostgreSQL"],
     accent: "from-primary/20 to-primary-soft/10",
     url: "https://thinker-root-2025.vercel.app/",
+    glyph: "thinkerroot",
   },
 ];
 
@@ -65,11 +60,11 @@ export function Work() {
                       <span className="h-2 w-2 rounded-full bg-yellow-400/80" />
                       <span className="h-2 w-2 rounded-full bg-green-400/80" />
                       <span className="ml-2 flex-1 rounded bg-surface border border-border px-2 py-0.5 text-[9px] text-muted-foreground truncate">
-                        {p.url.replace("https://", "")}
+                        {p.url.startsWith("http") ? p.url.replace("https://", "").replace("http://", "") : `${p.name.toLowerCase().replace(/\s+/g, "-")}.com`}
                       </span>
                     </div>
                     <div className="bg-background/60 backdrop-blur-sm flex items-center justify-center py-2">
-                      <ProjectGlyph index={i} />
+                      <ProjectGlyph glyph={p.glyph} index={i} />
                     </div>
                   </div>
                 </div>
@@ -88,17 +83,19 @@ export function Work() {
                     </span>
                   ))}
                 </div>
-                <div className="mt-8">
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-deep transition-colors"
-                  >
-                    View Work
-                    <span className="transition-transform group-hover:translate-x-1">→</span>
-                  </a>
-                </div>
+                {p.url && p.url !== "#" && (
+                  <div className="mt-8">
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-deep transition-colors"
+                    >
+                      View Work
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.article>
           ))}
@@ -108,7 +105,7 @@ export function Work() {
   );
 }
 
-function ProjectGlyph({ index }: { index: number }) {
+function ProjectGlyph({ glyph, index }: { glyph: string; index: number }) {
   return (
     <svg viewBox="0 0 200 160" className="h-32 w-full opacity-90">
       <defs>
@@ -117,7 +114,7 @@ function ProjectGlyph({ index }: { index: number }) {
           <stop offset="100%" stopColor="oklch(0.78 0.12 255)" />
         </linearGradient>
       </defs>
-      {index === 0 && (
+      {glyph === "lenienttree" && (
         <>
           <rect x="30" y="20" width="140" height="16" rx="4" fill="white" stroke="oklch(0.55 0.24 263)" strokeWidth="1.2" />
           <rect x="30" y="46" width="90" height="80" rx="4" fill="white" stroke="oklch(0.55 0.24 263)" strokeWidth="1.2" />
@@ -125,16 +122,7 @@ function ProjectGlyph({ index }: { index: number }) {
           <circle cx="150" cy="86" r="6" fill="white" />
         </>
       )}
-      {index === 1 && (
-        <>
-          <circle cx="100" cy="80" r="55" fill="none" stroke="oklch(0.55 0.24 263)" strokeWidth="1.2" />
-          <circle cx="100" cy="80" r="35" fill="none" stroke="oklch(0.55 0.24 263)" strokeWidth="1.2" strokeDasharray="3 5" />
-          <circle cx="100" cy="80" r="18" fill={`url(#pg-${index})`} />
-          <circle cx="155" cy="80" r="5" fill="oklch(0.55 0.24 263)" />
-          <circle cx="45" cy="80" r="5" fill="oklch(0.55 0.24 263)" />
-        </>
-      )}
-      {index === 2 && (
+      {glyph === "alumni" && (
         <>
           {[
             [100, 30], [50, 80], [150, 80], [100, 130], [65, 50], [135, 110],
@@ -147,7 +135,7 @@ function ProjectGlyph({ index }: { index: number }) {
           <circle cx="100" cy="80" r="10" fill={`url(#pg-${index})`} />
         </>
       )}
-      {index === 3 && (
+      {glyph === "thinkerroot" && (
         <>
           <circle cx="100" cy="72" r="38" fill="none" stroke="oklch(0.55 0.24 263)" strokeWidth="1.5" />
           <circle cx="100" cy="72" r="38" fill={`url(#pg-${index})`} opacity="0.15" />
