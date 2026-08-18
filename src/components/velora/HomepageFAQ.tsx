@@ -35,7 +35,7 @@ const homepageFAQs = [
   },
   {
     q: "How do I hire Stacklyn for my project?",
-    a: "To hire Stacklyn, send an inquiry through the contact form on our website, email veenaprasad@stacklyn.in, or WhatsApp +91 99617 46849. We respond within 24 hours. The process is: (1) Free discovery call to understand your requirements, (2) Proposal and estimate, (3) Contract and kickoff, (4) Weekly demo-based development.",
+    a: "To hire Stacklyn, send an inquiry through the contact form on our website, email rahulrp@stacklyn.in, or WhatsApp +91 95444 51720. We respond within 24 hours. The process is: (1) Free discovery call to understand your requirements, (2) Proposal and estimate, (3) Contract and kickoff, (4) Weekly demo-based development.",
   },
   {
     q: "Does Stacklyn offer maintenance and support after launch?",

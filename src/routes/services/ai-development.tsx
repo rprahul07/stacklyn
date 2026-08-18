@@ -77,7 +77,7 @@ const data: ServiceData = {
     { q: "How does Stacklyn handle AI output validation?", a: "We use structured output generation (JSON mode, Zod schemas, instructor library) to ensure AI outputs conform to expected formats. We also implement guardrails for content filtering, factual grounding checks, and output validation before sending responses to users." },
     { q: "Can Stacklyn reduce my LLM API costs?", a: "Yes. Common cost optimization strategies include: caching frequent queries, using smaller models for simpler tasks, optimizing prompt lengths, implementing model routing (cheap model first, expensive model as fallback), and batching requests where possible." },
     { q: "What industries benefit most from AI development?", a: "All industries benefit, but we've seen the most impact in EdTech (AI tutors, grading), legal (contract analysis), healthcare (patient information), SaaS (AI-assisted workflows), e-commerce (product recommendations), and enterprise tools (internal knowledge bases)." },
-    { q: "How do I get started with AI development at Stacklyn?", a: "Contact us at veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We start with a free AI use case consultation where we identify the highest-value AI features for your product and provide a technical roadmap and project estimate." },
+    { q: "How do I get started with AI development at Stacklyn?", a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 95444 51720. We start with a free AI use case consultation where we identify the highest-value AI features for your product and provide a technical roadmap and project estimate." },
   ],
   relatedServices: [
     { name: "Full Stack Development", href: "/services/full-stack-development" },

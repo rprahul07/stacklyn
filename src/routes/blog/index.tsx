@@ -609,7 +609,7 @@ function BlogIndex() {
             Subscribe to our newsletter to get notified when new posts are published.
           </p>
           <a
-            href="mailto:veenaprasad@stacklyn.in?subject=Subscribe to Stacklyn Blog"
+            href="mailto:rahulrp@stacklyn.in?subject=Subscribe to Stacklyn Blog"
             className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
           >
             Get notified
@@ -666,7 +666,7 @@ function BlogIndex() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:veenaprasad@stacklyn.in"
+              href="mailto:rahulrp@stacklyn.in"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-colors"
             >
               Talk to an engineer

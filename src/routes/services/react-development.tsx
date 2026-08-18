@@ -76,7 +76,7 @@ const data: ServiceData = {
     { q: "What is Framer Motion and does Stacklyn use it?", a: "Framer Motion is a React animation library for declarative animations, page transitions, and interactive micro-animations. Stacklyn uses Framer Motion for polished, performant animations in our React projects." },
     { q: "Does Stacklyn do React Native (mobile) development?", a: "Yes. Stacklyn builds mobile apps with React Native, sharing logic and components with the React web app where possible. React Native connects to the same Node.js backend API as the web frontend." },
     { q: "What is the cost of React development at Stacklyn?", a: "React frontend development starts at ₹1.5 lakh for simple UIs. Full SaaS frontends range from ₹3–12 lakh depending on complexity, number of pages, and feature richness." },
-    { q: "How do I start a React project with Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849 with your project brief. We'll schedule a free call to discuss requirements and send a proposal within 48 hours." },
+    { q: "How do I start a React project with Stacklyn?", a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with your project brief. We'll schedule a free call to discuss requirements and send a proposal within 48 hours." },
   ],
   relatedServices: [
     { name: "Next.js Development", href: "/services/nextjs-development" },

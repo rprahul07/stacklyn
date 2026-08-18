@@ -56,7 +56,7 @@ const data: HireData = {
     { q: "How does Stacklyn evaluate AI system quality?", a: "We implement evaluation pipelines with automated test sets, human review sampling, latency monitoring, and accuracy metrics. Tools like LangSmith are used for tracing and evaluation." },
     { q: "Can Stacklyn build AI agents?", a: "Yes. AI agents that use tools, browse the web, execute code, or interact with external APIs are built using LangChain Agent framework or LangGraph for multi-agent coordination." },
     { q: "Does Stacklyn do AI consulting?", a: "Yes. If you need a technical review of your AI architecture, model selection guidance, RAG strategy, or LLM cost optimization, we offer consulting engagements." },
-    { q: "How do I hire an AI developer from Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. Describe your AI use case and we'll respond with a technical assessment and proposal within 24 hours." },
+    { q: "How do I hire an AI developer from Stacklyn?", a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Describe your AI use case and we'll respond with a technical assessment and proposal within 24 hours." },
   ],
   relatedHire: [
     { name: "Hire Node.js Developer", href: "/hire-nodejs-developer" },

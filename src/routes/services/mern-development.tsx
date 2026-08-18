@@ -75,7 +75,7 @@ const data: ServiceData = {
     { q: "Does Stacklyn build mobile apps with MERN?", a: "The MERN stack backend (Node.js APIs) can power mobile apps. For the frontend, we use React Native or Flutter for mobile — which connects to the same Node.js backend as the web app." },
     { q: "How does Stacklyn handle MongoDB backups and data safety?", a: "We configure automated MongoDB backups using MongoDB Atlas's built-in backup or AWS S3 for self-hosted MongoDB. Backups run daily with point-in-time recovery capability." },
     { q: "What security practices does Stacklyn follow for MERN apps?", a: "Security practices include: input validation and sanitization, parameterized queries (NoSQL injection prevention), rate limiting, HTTPS everywhere, JWT expiration and refresh, CORS configuration, Helmet.js headers, and regular dependency audits." },
-    { q: "How do I get started with a MERN stack project at Stacklyn?", a: "Contact Stacklyn via email at veenaprasad@stacklyn.in, WhatsApp +91 99617 46849, or the contact form on our website. We schedule a free 30-minute discovery call and send a detailed project proposal within 48 hours." },
+    { q: "How do I get started with a MERN stack project at Stacklyn?", a: "Contact Stacklyn via email at rahulrp@stacklyn.in, WhatsApp +91 95444 51720, or the contact form on our website. We schedule a free 30-minute discovery call and send a detailed project proposal within 48 hours." },
   ],
   relatedServices: [
     { name: "Full Stack Development", href: "/services/full-stack-development" },

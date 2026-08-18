@@ -50,7 +50,7 @@ const data: HireData = {
     { q: "What Node.js frameworks does Stacklyn work with?", a: "We work with Express.js (most common), Fastify (high-performance), and NestJS (enterprise-grade structured applications). We recommend the right framework based on your project's performance and scalability needs." },
     { q: "Does Stacklyn build microservices with Node.js?", a: "Yes. We design and implement Node.js microservices with Docker containerization, inter-service communication via REST or message queues (BullMQ, RabbitMQ), and Kubernetes deployment." },
     { q: "Can I hire a Node.js developer for just one month?", a: "Yes. We offer flexible month-to-month retainers with no long-term lock-in. We ask for a minimum 1-month commitment to ensure productive onboarding." },
-    { q: "How do I hire a Node.js developer from Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849 with your requirements. We respond within 24 hours with a proposal and engineer profiles." },
+    { q: "How do I hire a Node.js developer from Stacklyn?", a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with your requirements. We respond within 24 hours with a proposal and engineer profiles." },
   ],
   relatedHire: [
     { name: "Hire React Developer", href: "/hire-react-developer" },

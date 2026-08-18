@@ -52,7 +52,7 @@ const data: HireData = {
     { q: "Can Stacklyn integrate third-party services into React apps?", a: "Yes. Common integrations: authentication (Clerk, Auth0), payments (Stripe), analytics (Mixpanel, PostHog), maps, customer support (Intercom), and custom backend APIs." },
     { q: "Does Stacklyn write tests for React components?", a: "Yes. We write component tests with React Testing Library, visual tests with Storybook, and E2E tests with Playwright for critical user flows." },
     { q: "How does Stacklyn handle responsive design in React?", a: "All React applications are mobile-first and fully responsive. We use Tailwind CSS breakpoints and test on multiple screen sizes during development." },
-    { q: "How do I start hiring a React developer from Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. Share your project requirements and we'll send a proposal within 24 hours." },
+    { q: "How do I start hiring a React developer from Stacklyn?", a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Share your project requirements and we'll send a proposal within 24 hours." },
   ],
   relatedHire: [
     { name: "Hire Node.js Developer", href: "/hire-nodejs-developer" },

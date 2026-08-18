@@ -53,7 +53,7 @@ const data: HireData = {
     { q: "Does Stacklyn do Next.js migrations from Pages Router to App Router?", a: "Yes. We migrate existing Next.js Pages Router apps to the App Router incrementally, minimizing disruption to your production application." },
     { q: "What database does Stacklyn use with Next.js?", a: "We use PostgreSQL with Prisma ORM for most Next.js projects. Supabase is recommended for rapid MVP development. Drizzle ORM is an alternative for performance-critical queries." },
     { q: "Does Stacklyn integrate Stripe with Next.js?", a: "Yes. Stripe integration (subscriptions, one-time payments, webhooks) with Next.js is a common service. We implement checkout, billing portal, and invoice management." },
-    { q: "How do I hire a Next.js developer from Stacklyn?", a: "Contact us at veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. Describe your project and we'll send a proposal within 24 hours." },
+    { q: "How do I hire a Next.js developer from Stacklyn?", a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Describe your project and we'll send a proposal within 24 hours." },
   ],
   relatedHire: [
     { name: "Hire React Developer", href: "/hire-react-developer" },

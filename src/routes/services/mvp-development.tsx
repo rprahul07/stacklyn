@@ -76,7 +76,7 @@ const data: ServiceData = {
     { q: "How does Stacklyn handle MVP scope creep?", a: "We use a fixed-scope agreement for MVP projects. New feature requests are added to a post-MVP backlog rather than the current sprint. This keeps the project on time and on budget while capturing all ideas for future iterations." },
     { q: "Does Stacklyn do mobile app MVPs?", a: "Yes. We build mobile MVPs using React Native (iOS and Android) or Flutter. Mobile MVPs use the same Node.js backend as web MVPs, allowing a single backend to serve both platforms." },
     { q: "Does Stacklyn help with competitor analysis before building the MVP?", a: "We do a quick competitive landscape review during discovery to understand existing solutions and identify differentiation opportunities. This informs product decisions and helps sharpen the MVP scope." },
-    { q: "How do I start an MVP project with Stacklyn?", a: "Email veenaprasad@stacklyn.in with a brief description of your idea, target user, and desired timeline. We'll schedule a free discovery call within 24 hours and send a project proposal with scope, timeline, and pricing within 48 hours." },
+    { q: "How do I start an MVP project with Stacklyn?", a: "Email rahulrp@stacklyn.in with a brief description of your idea, target user, and desired timeline. We'll schedule a free discovery call within 24 hours and send a project proposal with scope, timeline, and pricing within 48 hours." },
   ],
   relatedServices: [
     { name: "Full Stack Development", href: "/services/full-stack-development" },

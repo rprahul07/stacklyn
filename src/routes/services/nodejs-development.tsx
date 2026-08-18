@@ -77,7 +77,7 @@ const data: ServiceData = {
     { q: "Can Stacklyn upgrade or refactor an existing Node.js codebase?", a: "Yes. We regularly upgrade legacy Express/Node.js codebases — adding TypeScript, upgrading dependencies, refactoring to modern patterns, and improving test coverage." },
     { q: "Does Node.js work with GraphQL?", a: "Yes. Node.js is commonly used with GraphQL via Apollo Server or Pothos GraphQL. We build GraphQL APIs when clients need flexible queries, real-time subscriptions, or a single endpoint for multiple data sources." },
     { q: "What monitoring does Stacklyn set up for Node.js applications?", a: "We configure application monitoring with Datadog, New Relic, or Sentry for error tracking. Infrastructure monitoring with CloudWatch (AWS) or Azure Monitor. Logging with Winston or Pino, structured as JSON for log aggregation." },
-    { q: "How do I hire Stacklyn for Node.js development?", a: "Contact us at veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We offer a free technical consultation and project scoping call, followed by a detailed proposal within 48 hours." },
+    { q: "How do I hire Stacklyn for Node.js development?", a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 95444 51720. We offer a free technical consultation and project scoping call, followed by a detailed proposal within 48 hours." },
   ],
   relatedServices: [
     { name: "Backend Development", href: "/services/backend-development" },

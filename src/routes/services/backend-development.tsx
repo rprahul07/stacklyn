@@ -77,7 +77,7 @@ const data: ServiceData = {
     { q: "Does Stacklyn do backend performance optimization?", a: "Yes. Backend optimization services include query profiling, index analysis, N+1 query elimination, connection pool tuning, Redis caching implementation, and load testing with k6 or Artillery." },
     { q: "What is connection pooling and why does it matter?", a: "Connection pooling maintains a pool of database connections that are reused across requests, rather than opening a new connection per request. Without connection pooling, high-traffic Node.js apps exhaust database connection limits. We use PgBouncer or Prisma's built-in connection pooling." },
     { q: "Does Stacklyn support multi-tenant backend architectures?", a: "Yes. Multi-tenancy can be implemented with: row-level security (separate rows per tenant), schema-per-tenant (separate PostgreSQL schema), or database-per-tenant. We select the appropriate approach based on isolation requirements, scale, and cost." },
-    { q: "How do I get started with backend development at Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We'll schedule a free technical consultation to discuss your backend requirements and architecture goals, then send a detailed proposal within 48 hours." },
+    { q: "How do I get started with backend development at Stacklyn?", a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. We'll schedule a free technical consultation to discuss your backend requirements and architecture goals, then send a detailed proposal within 48 hours." },
   ],
   relatedServices: [
     { name: "Node.js Development", href: "/services/nodejs-development" },

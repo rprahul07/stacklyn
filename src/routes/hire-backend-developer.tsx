@@ -53,7 +53,7 @@ const data: HireData = {
     { q: "Does Stacklyn build microservices?", a: "Yes. We design and build Node.js microservices with Docker containerization, inter-service communication via REST, gRPC, or message queues, and orchestration with Docker Compose or Kubernetes." },
     { q: "Can Stacklyn take over an existing backend codebase?", a: "Yes. We regularly take over legacy backends for refactoring, adding TypeScript, improving test coverage, and adding new features." },
     { q: "Does Stacklyn implement authentication systems?", a: "Yes. Authentication systems including JWT, OAuth 2.0, social login, multi-factor authentication, and role-based access control are standard backend services." },
-    { q: "How do I hire a backend developer from Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. Share your requirements and we'll send a proposal with engineer profile within 24 hours." },
+    { q: "How do I hire a backend developer from Stacklyn?", a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Share your requirements and we'll send a proposal with engineer profile within 24 hours." },
   ],
   relatedHire: [
     { name: "Hire Node.js Developer", href: "/hire-nodejs-developer" },

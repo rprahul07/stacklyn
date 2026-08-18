@@ -52,7 +52,7 @@ const data: HireData = {
     { q: "What is the difference between MERN and Next.js?", a: "MERN uses React as a standalone SPA. Next.js is a React framework with SSR, SSG, and built-in API routes. Many MERN developers at Stacklyn work with Next.js as the React layer of their full-stack projects." },
     { q: "Does Stacklyn build real-time features in MERN apps?", a: "Yes. Real-time features like chat, live notifications, and collaborative tools are built using Socket.io with the MERN stack." },
     { q: "How do I assess a MERN developer's skills before hiring?", a: "We provide developer profiles with project examples. We can also arrange a short technical interview where the developer discusses your stack and requirements before you commit." },
-    { q: "How do I hire a MERN developer from Stacklyn?", a: "Email veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We'll respond within 24 hours with a proposal and developer profile." },
+    { q: "How do I hire a MERN developer from Stacklyn?", a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. We'll respond within 24 hours with a proposal and developer profile." },
   ],
   relatedHire: [
     { name: "Hire Node.js Developer", href: "/hire-nodejs-developer" },

@@ -77,7 +77,7 @@ const data: ServiceData = {
     { q: "Do I own the source code?", a: "Yes. Stacklyn clients own 100% of the source code, documentation, and all intellectual property. Code is delivered via a private GitHub repository at project completion with no licensing restrictions." },
     { q: "How does Stacklyn handle data security for custom software?", a: "Security measures include: data encryption at rest and in transit, role-based access control, audit logging, input validation, regular dependency audits, and compliance with relevant regulations (GDPR, HIPAA if applicable)." },
     { q: "Can Stacklyn build custom software for international markets?", a: "Yes. Stacklyn has built software for clients in the USA, UK, UAE, Singapore, and Australia. We handle internationalization (i18n), multi-currency, timezone management, and regional compliance requirements." },
-    { q: "How do I start a custom software project with Stacklyn?", a: "Contact veenaprasad@stacklyn.in or WhatsApp +91 99617 46849 with a description of your software needs. We'll schedule a free discovery call, produce a requirements document, and deliver a detailed project proposal within 48 hours." },
+    { q: "How do I start a custom software project with Stacklyn?", a: "Contact rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with a description of your software needs. We'll schedule a free discovery call, produce a requirements document, and deliver a detailed project proposal within 48 hours." },
   ],
   relatedServices: [
     { name: "Full Stack Development", href: "/services/full-stack-development" },

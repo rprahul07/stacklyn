@@ -5,10 +5,10 @@ import { sendContactEmail } from "@/lib/api/contact.functions";
 const projectTypes = ["Web App", "Mobile App", "AI Solution", "Cloud / DevOps", "SaaS Product", "Other"];
 const budgets = ["< ₹2L", "₹2L – ₹5L", "₹5L – ₹15L", "₹15L+"];
 
-const CONTACT_EMAIL = "veenaprasad@stacklyn.in";
-const CONTACT_PHONE = "+91 99617 46849";
-const CONTACT_PHONE_RAW = "919961746849";
-const CONTACT_PERSON = "Veena Prasad";
+const CONTACT_EMAIL = "rahulrp@stacklyn.in";
+const CONTACT_PHONE = "+91 95444 51720";
+const CONTACT_PHONE_RAW = "919544451720";
+const CONTACT_PERSON = "Rahul R P";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -64,7 +64,7 @@ export function Contact() {
           <div className="mt-8 rounded-xl border border-border bg-background px-5 py-4">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Contact Person</div>
             <div className="mt-1 text-base font-semibold text-foreground">{CONTACT_PERSON}</div>
-            <div className="text-xs text-muted-foreground">Co-Founder · Stacklyn</div>
+            <div className="text-xs text-muted-foreground">Founder & CEO · Stacklyn</div>
           </div>
 
           <div className="mt-6 space-y-4">

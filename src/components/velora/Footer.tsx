@@ -43,9 +43,9 @@ export function Footer() {
             Custom software development company in Kerala, India. Building scalable web apps, AI solutions, and MVPs for global clients.
           </p>
           <div className="mt-5 flex flex-col gap-1.5 text-sm text-muted-foreground">
-            <a href="mailto:veenaprasad@stacklyn.in" className="hover:text-primary transition-colors">veenaprasad@stacklyn.in</a>
-            <a href="tel:+919961746849" className="hover:text-primary transition-colors">+91 99617 46849</a>
-            <a href="https://wa.me/919961746849" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">WhatsApp</a>
+            <a href="mailto:rahulrp@stacklyn.in" className="hover:text-primary transition-colors">rahulrp@stacklyn.in</a>
+            <a href="tel:+919544451720" className="hover:text-primary transition-colors">+91 95444 51720</a>
+            <a href="https://wa.me/919544451720" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">WhatsApp</a>
           </div>
         </div>
 
@@ -85,8 +85,8 @@ export function Footer() {
           </ul>
           <div className="mt-8">
             <div className="text-xs font-semibold uppercase tracking-wider text-foreground">Contact</div>
-            <div className="mt-3 text-sm font-medium text-foreground">Veena Prasad</div>
-            <div className="text-xs text-muted-foreground">Co-Founder · Stacklyn</div>
+            <div className="mt-3 text-sm font-medium text-foreground">Rahul R P</div>
+            <div className="text-xs text-muted-foreground">Founder & CEO · Stacklyn</div>
           </div>
         </div>
       </div>

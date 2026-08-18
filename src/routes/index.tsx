@@ -16,6 +16,15 @@ import { SchemaMarkup } from "@/components/velora/SchemaMarkup";
 
 const BASE_URL = "https://stacklyn.in";
 
+const FOUNDER_BIO =
+  "Rahul R P is the Founder and CEO of Stacklyn, a custom software development and AI engineering studio based in Kerala, India. " +
+  "A hands-on full stack engineer with deep expertise in React, Next.js, Node.js, TypeScript, cloud infrastructure, and AI/LLM application development, " +
+  "Rahul personally leads product scoping, architecture, and delivery on every Stacklyn engagement — partnering directly with " +
+  "founders and product teams from the first discovery call through production launch. " +
+  "He has built and shipped 10+ production software products across SaaS, edtech, fintech, and AI domains for clients in India, the US, the UAE, and Singapore. " +
+  "Rahul holds a degree from Cochin University of Science and Technology (CUSAT), Kerala. " +
+  "He is reachable directly at rahulrp@stacklyn.in or +91 95444 51720, and on LinkedIn at linkedin.com/in/rahulrp07.";
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -46,34 +55,15 @@ const organizationSchema = {
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+91-99617-46849",
+          "telephone": "+91-95444-51720",
           "contactType": "customer service",
-          "email": "veenaprasad@stacklyn.in",
+          "email": "rahulrp@stacklyn.in",
           "availableLanguage": ["English"],
           "areaServed": "Worldwide",
         },
       ],
-      "founder": {
-        "@type": "Person",
-        "@id": `${BASE_URL}/#rahul-rp`,
-        "name": "Rahul R P",
-        "jobTitle": "Founder & CEO",
-        "worksFor": { "@id": `${BASE_URL}/#organization` },
-        "knowsAbout": [
-          "Software Engineering", "AI Development", "Backend Development",
-          "MERN Stack", "Cloud Architecture", "Node.js", "React", "Next.js",
-        ],
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Cochin University of Science and Technology",
-        },
-      },
-      "member": {
-        "@type": "Person",
-        "name": "Veena Prasad",
-        "jobTitle": "Co-Founder",
-        "worksFor": { "@id": `${BASE_URL}/#organization` },
-      },
+      "founder": { "@id": `${BASE_URL}/#rahul-rp` },
+      "employee": { "@id": `${BASE_URL}/#rahul-rp` },
       "areaServed": ["IN", "US", "GB", "AE", "SG", "AU", "Worldwide"],
       "priceRange": "$$",
       "currenciesAccepted": "INR, USD",
@@ -95,6 +85,51 @@ const organizationSchema = {
         ],
       },
       "sameAs": [BASE_URL],
+    },
+    {
+      "@type": "Person",
+      "@id": `${BASE_URL}/#rahul-rp`,
+      "name": "Rahul R P",
+      "givenName": "Rahul",
+      "familyName": "R P",
+      "jobTitle": "Founder & CEO",
+      "description": FOUNDER_BIO,
+      "email": "rahulrp@stacklyn.in",
+      "telephone": "+91-95444-51720",
+      "url": `${BASE_URL}/#contact`,
+      "image": `${BASE_URL}/favicon.png`,
+      "nationality": {
+        "@type": "Country",
+        "name": "India",
+      },
+      "worksFor": { "@id": `${BASE_URL}/#organization` },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN",
+      },
+      "knowsAbout": [
+        "Software Engineering", "AI Development", "Backend Development",
+        "MERN Stack", "Cloud Architecture", "Node.js", "React", "Next.js",
+        "TypeScript", "SaaS Development", "Startup MVP Development",
+        "Full Stack Development", "LLM Application Development",
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Cochin University of Science and Technology",
+        "alternateName": "CUSAT",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kochi",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN",
+        },
+      },
+      "founder": [{ "@id": `${BASE_URL}/#organization` }],
+      "sameAs": [
+        "https://www.linkedin.com/in/rahulrp07/",
+        BASE_URL,
+      ],
     },
     {
       "@type": "WebSite",

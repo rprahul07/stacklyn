@@ -8,10 +8,24 @@ Stacklyn is a full-service software engineering and AI solutions studio founded 
 
 **Founded:** Kerala, India
 **Services:** Full Stack Development, MERN Stack, Node.js, React, Next.js, AI Development, SaaS, MVP Development, Custom Software
-**Contact:** veenaprasad@stacklyn.in | +91 99617 46849
+**Contact:** rahulrp@stacklyn.in | +91 95444 51720
 **Website:** https://stacklyn.in
-**Founder:** Rahul R P
-**CoFounder:** Veena Prasad
+**Founder & CEO:** Rahul R P
+**Founder Contact:** rahulrp@stacklyn.in | +91 95444 51720
+**Founder LinkedIn:** https://www.linkedin.com/in/rahulrp07/
+
+## Founder
+
+**Rahul R P — Founder & CEO, Stacklyn**
+
+Rahul R P is the founder and CEO of Stacklyn, a custom software development and AI engineering studio based in Kerala, India. A hands-on full stack engineer working across React, Next.js, Node.js, cloud infrastructure, and AI/LLM application development, Rahul personally leads product scoping, architecture, and delivery on every Stacklyn engagement — partnering directly with founders and product teams from the first discovery call through production launch. Clients work with a senior engineer, not an account manager.
+
+**Role:** Founder & CEO
+**Focus areas:** Full stack engineering, AI application development, cloud architecture, MVP and SaaS delivery
+**Education:** Cochin University of Science and Technology
+**Email:** rahulrp@stacklyn.in
+**Phone / WhatsApp:** +91 95444 51720
+**LinkedIn:** https://www.linkedin.com/in/rahulrp07/
 
 ## Core Services
 
@@ -76,6 +90,7 @@ URL: https://stacklyn.in/services/custom-software-development
 - 100% client satisfaction rate across all delivered projects
 - Response time: within 24 hours for all project inquiries
 - Expertise: Full Stack, AI, SaaS, Mobile, Cloud & DevOps
+- Founded and led by Rahul R P (Founder & CEO), who works directly on client engagements
 
 ## Important URLs
 
@@ -104,3 +119,4 @@ URL: https://stacklyn.in/services/custom-software-development
 - What is full stack development
 - How to scale a web application
 - When to use Next.js vs React
+- Who is the founder of Stacklyn (Rahul R P, Founder & CEO)

@@ -77,7 +77,7 @@ const data: ServiceData = {
     { q: "How does Stacklyn handle environment variables in Next.js?", a: "Environment variables in Next.js are managed via .env files (local), Vercel environment variables (production), or AWS Secrets Manager (self-hosted). Public variables use NEXT_PUBLIC_ prefix and server-only variables remain unexposed to the client." },
     { q: "Does Stacklyn build e-commerce sites with Next.js?", a: "Yes. We build e-commerce sites with Next.js + Stripe for custom platforms, or Next.js + Shopify/Medusa for headless commerce. Next.js's SSG is ideal for product catalog pages with thousands of products." },
     { q: "What monitoring does Stacklyn set up for Next.js apps?", a: "We configure Vercel Analytics or Google Analytics for user tracking, Sentry for error monitoring, Datadog or New Relic for performance monitoring, and custom dashboards for business metrics." },
-    { q: "How do I start a Next.js project with Stacklyn?", a: "Contact us at veenaprasad@stacklyn.in or WhatsApp +91 99617 46849. We schedule a free discovery call, review your requirements, and deliver a project proposal with scope, timeline, and pricing within 48 hours." },
+    { q: "How do I start a Next.js project with Stacklyn?", a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 95444 51720. We schedule a free discovery call, review your requirements, and deliver a project proposal with scope, timeline, and pricing within 48 hours." },
   ],
   relatedServices: [
     { name: "React Development", href: "/services/react-development" },

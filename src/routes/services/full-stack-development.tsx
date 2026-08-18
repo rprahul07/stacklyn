@@ -75,7 +75,7 @@ const data: ServiceData = {
     { q: "Does Stacklyn offer post-launch support?", a: "Yes. Post-launch support is available as a monthly retainer. Services include bug fixes, performance monitoring, security patches, feature additions, and cloud infrastructure management." },
     { q: "Can Stacklyn build real-time features like chat or live updates?", a: "Yes. Stacklyn builds real-time features using WebSockets (Socket.io), Server-Sent Events (SSE), and polling strategies. Use cases include live dashboards, chat systems, notifications, and collaborative tools." },
     { q: "Is my source code owned by me after the project?", a: "Yes. Stacklyn clients own 100% of the source code, intellectual property, and all project deliverables. We provide full code handoff via a private GitHub repository at project completion." },
-    { q: "How do I get started with Stacklyn for full stack development?", a: "Contact us via the form on our website, email veenaprasad@stacklyn.in, or WhatsApp +91 99617 46849. We schedule a free discovery call within 24 hours and send a detailed project proposal within 48 hours." },
+    { q: "How do I get started with Stacklyn for full stack development?", a: "Contact us via the form on our website, email rahulrp@stacklyn.in, or WhatsApp +91 95444 51720. We schedule a free discovery call within 24 hours and send a detailed project proposal within 48 hours." },
   ],
   relatedServices: [
     { name: "MERN Stack Development", href: "/services/mern-development" },
