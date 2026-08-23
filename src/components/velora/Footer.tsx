@@ -21,6 +21,13 @@ const hireDev = [
   { label: "Hire Backend Developer", href: "/hire-backend-developer" },
 ];
 
+const industries = [
+  { label: "Oil & Gas Software", href: "/industries/oil-gas-software" },
+  { label: "Mining Software", href: "/industries/mining-software" },
+  { label: "Workforce Management", href: "/industries/workforce-management-software" },
+  { label: "EPC & Engineering", href: "/industries/epc-engineering-software" },
+];
+
 const company = [
   { label: "About", href: "/#about" },
   { label: "Work", href: "/#work" },
@@ -50,7 +57,7 @@ export function Footer() {
         </div>
 
         {/* Services */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-2">
           <div className="text-xs font-semibold uppercase tracking-wider text-foreground">Services</div>
           <ul className="mt-4 space-y-2">
             {services.map((s) => (
@@ -61,8 +68,20 @@ export function Footer() {
           </ul>
         </div>
 
+        {/* Industries */}
+        <div className="md:col-span-2">
+          <div className="text-xs font-semibold uppercase tracking-wider text-foreground">Industries</div>
+          <ul className="mt-4 space-y-2">
+            {industries.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">{s.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Hire Developers */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-2">
           <div className="text-xs font-semibold uppercase tracking-wider text-foreground">Hire Developers</div>
           <ul className="mt-4 space-y-2">
             {hireDev.map((s) => (

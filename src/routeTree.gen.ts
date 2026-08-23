@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as HireReactDeveloperRouteImport } from './routes/hire-react-developer'
 import { Route as HireNodejsDeveloperRouteImport } from './routes/hire-nodejs-developer'
 import { Route as HireNextjsDeveloperRouteImport } from './routes/hire-nextjs-developer'
@@ -18,6 +19,7 @@ import { Route as HireBackendDeveloperRouteImport } from './routes/hire-backend-
 import { Route as HireAiDeveloperRouteImport } from './routes/hire-ai-developer'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as ServicesReactDevelopmentRouteImport } from './routes/services/react-development'
 import { Route as ServicesNodejsDevelopmentRouteImport } from './routes/services/nodejs-development'
@@ -28,10 +30,19 @@ import { Route as ServicesFullStackDevelopmentRouteImport } from './routes/servi
 import { Route as ServicesCustomSoftwareDevelopmentRouteImport } from './routes/services/custom-software-development'
 import { Route as ServicesBackendDevelopmentRouteImport } from './routes/services/backend-development'
 import { Route as ServicesAiDevelopmentRouteImport } from './routes/services/ai-development'
+import { Route as IndustriesWorkforceManagementSoftwareRouteImport } from './routes/industries/workforce-management-software'
+import { Route as IndustriesOilGasSoftwareRouteImport } from './routes/industries/oil-gas-software'
+import { Route as IndustriesMiningSoftwareRouteImport } from './routes/industries/mining-software'
+import { Route as IndustriesEpcEngineeringSoftwareRouteImport } from './routes/industries/epc-engineering-software'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HireReactDeveloperRoute = HireReactDeveloperRouteImport.update({
@@ -73,6 +84,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => IndustriesRoute,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
@@ -130,6 +146,30 @@ const ServicesAiDevelopmentRoute = ServicesAiDevelopmentRouteImport.update({
   path: '/ai-development',
   getParentRoute: () => ServicesRoute,
 } as any)
+const IndustriesWorkforceManagementSoftwareRoute =
+  IndustriesWorkforceManagementSoftwareRouteImport.update({
+    id: '/workforce-management-software',
+    path: '/workforce-management-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesOilGasSoftwareRoute =
+  IndustriesOilGasSoftwareRouteImport.update({
+    id: '/oil-gas-software',
+    path: '/oil-gas-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesMiningSoftwareRoute =
+  IndustriesMiningSoftwareRouteImport.update({
+    id: '/mining-software',
+    path: '/mining-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesEpcEngineeringSoftwareRoute =
+  IndustriesEpcEngineeringSoftwareRouteImport.update({
+    id: '/epc-engineering-software',
+    path: '/epc-engineering-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -140,7 +180,12 @@ export interface FileRoutesByFullPath {
   '/hire-nextjs-developer': typeof HireNextjsDeveloperRoute
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
+  '/industries': typeof IndustriesRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
+  '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
+  '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
@@ -151,6 +196,7 @@ export interface FileRoutesByFullPath {
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
   '/blog/': typeof BlogIndexRoute
+  '/industries/': typeof IndustriesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -161,6 +207,10 @@ export interface FileRoutesByTo {
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/services': typeof ServicesRouteWithChildren
+  '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
+  '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
+  '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
@@ -171,6 +221,7 @@ export interface FileRoutesByTo {
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
   '/blog': typeof BlogIndexRoute
+  '/industries': typeof IndustriesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -182,7 +233,12 @@ export interface FileRoutesById {
   '/hire-nextjs-developer': typeof HireNextjsDeveloperRoute
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
+  '/industries': typeof IndustriesRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
+  '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
+  '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
@@ -193,6 +249,7 @@ export interface FileRoutesById {
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
   '/blog/': typeof BlogIndexRoute
+  '/industries/': typeof IndustriesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -205,7 +262,12 @@ export interface FileRouteTypes {
     | '/hire-nextjs-developer'
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
+    | '/industries'
     | '/services'
+    | '/industries/epc-engineering-software'
+    | '/industries/mining-software'
+    | '/industries/oil-gas-software'
+    | '/industries/workforce-management-software'
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
@@ -216,6 +278,7 @@ export interface FileRouteTypes {
     | '/services/nodejs-development'
     | '/services/react-development'
     | '/blog/'
+    | '/industries/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -226,6 +289,10 @@ export interface FileRouteTypes {
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
     | '/services'
+    | '/industries/epc-engineering-software'
+    | '/industries/mining-software'
+    | '/industries/oil-gas-software'
+    | '/industries/workforce-management-software'
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
@@ -236,6 +303,7 @@ export interface FileRouteTypes {
     | '/services/nodejs-development'
     | '/services/react-development'
     | '/blog'
+    | '/industries'
   id:
     | '__root__'
     | '/'
@@ -246,7 +314,12 @@ export interface FileRouteTypes {
     | '/hire-nextjs-developer'
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
+    | '/industries'
     | '/services'
+    | '/industries/epc-engineering-software'
+    | '/industries/mining-software'
+    | '/industries/oil-gas-software'
+    | '/industries/workforce-management-software'
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
@@ -257,6 +330,7 @@ export interface FileRouteTypes {
     | '/services/nodejs-development'
     | '/services/react-development'
     | '/blog/'
+    | '/industries/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -268,6 +342,7 @@ export interface RootRouteChildren {
   HireNextjsDeveloperRoute: typeof HireNextjsDeveloperRoute
   HireNodejsDeveloperRoute: typeof HireNodejsDeveloperRoute
   HireReactDeveloperRoute: typeof HireReactDeveloperRoute
+  IndustriesRoute: typeof IndustriesRouteWithChildren
   ServicesRoute: typeof ServicesRouteWithChildren
 }
 
@@ -278,6 +353,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hire-react-developer': {
@@ -335,6 +417,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/industries/': {
+      id: '/industries/'
+      path: '/'
+      fullPath: '/industries/'
+      preLoaderRoute: typeof IndustriesIndexRouteImport
+      parentRoute: typeof IndustriesRoute
     }
     '/blog/': {
       id: '/blog/'
@@ -406,6 +495,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesAiDevelopmentRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/industries/workforce-management-software': {
+      id: '/industries/workforce-management-software'
+      path: '/workforce-management-software'
+      fullPath: '/industries/workforce-management-software'
+      preLoaderRoute: typeof IndustriesWorkforceManagementSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/oil-gas-software': {
+      id: '/industries/oil-gas-software'
+      path: '/oil-gas-software'
+      fullPath: '/industries/oil-gas-software'
+      preLoaderRoute: typeof IndustriesOilGasSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/mining-software': {
+      id: '/industries/mining-software'
+      path: '/mining-software'
+      fullPath: '/industries/mining-software'
+      preLoaderRoute: typeof IndustriesMiningSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/epc-engineering-software': {
+      id: '/industries/epc-engineering-software'
+      path: '/epc-engineering-software'
+      fullPath: '/industries/epc-engineering-software'
+      preLoaderRoute: typeof IndustriesEpcEngineeringSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
   }
 }
 
@@ -418,6 +535,27 @@ const BlogRouteChildren: BlogRouteChildren = {
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface IndustriesRouteChildren {
+  IndustriesEpcEngineeringSoftwareRoute: typeof IndustriesEpcEngineeringSoftwareRoute
+  IndustriesMiningSoftwareRoute: typeof IndustriesMiningSoftwareRoute
+  IndustriesOilGasSoftwareRoute: typeof IndustriesOilGasSoftwareRoute
+  IndustriesWorkforceManagementSoftwareRoute: typeof IndustriesWorkforceManagementSoftwareRoute
+  IndustriesIndexRoute: typeof IndustriesIndexRoute
+}
+
+const IndustriesRouteChildren: IndustriesRouteChildren = {
+  IndustriesEpcEngineeringSoftwareRoute: IndustriesEpcEngineeringSoftwareRoute,
+  IndustriesMiningSoftwareRoute: IndustriesMiningSoftwareRoute,
+  IndustriesOilGasSoftwareRoute: IndustriesOilGasSoftwareRoute,
+  IndustriesWorkforceManagementSoftwareRoute:
+    IndustriesWorkforceManagementSoftwareRoute,
+  IndustriesIndexRoute: IndustriesIndexRoute,
+}
+
+const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
+  IndustriesRouteChildren,
+)
 
 interface ServicesRouteChildren {
   ServicesAiDevelopmentRoute: typeof ServicesAiDevelopmentRoute
@@ -457,6 +595,7 @@ const rootRouteChildren: RootRouteChildren = {
   HireNextjsDeveloperRoute: HireNextjsDeveloperRoute,
   HireNodejsDeveloperRoute: HireNodejsDeveloperRoute,
   HireReactDeveloperRoute: HireReactDeveloperRoute,
+  IndustriesRoute: IndustriesRouteWithChildren,
   ServicesRoute: ServicesRouteWithChildren,
 }
 export const routeTree = rootRouteImport

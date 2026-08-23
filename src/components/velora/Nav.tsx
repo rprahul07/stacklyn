@@ -22,9 +22,17 @@ const serviceLinks = [
   { href: "/services/custom-software-development", label: "Custom Software" },
 ];
 
+const industryLinks = [
+  { href: "/industries/oil-gas-software", label: "Oil & Gas" },
+  { href: "/industries/mining-software", label: "Mining" },
+  { href: "/industries/workforce-management-software", label: "Workforce Management" },
+  { href: "/industries/epc-engineering-software", label: "EPC & Engineering" },
+];
+
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -60,6 +68,33 @@ export function Nav() {
             {servicesOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-56 rounded-xl border border-border bg-background shadow-card p-2">
                 {serviceLinks.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Industries dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIndustriesOpen(true)}
+            onMouseLeave={() => setIndustriesOpen(false)}
+          >
+            <a href="/industries" className="hover:text-foreground transition-colors flex items-center gap-1">
+              Industries
+              <svg className="h-3 w-3 opacity-60" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+              </svg>
+            </a>
+            {industriesOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-56 rounded-xl border border-border bg-background shadow-card p-2">
+                {industryLinks.map((l) => (
                   <a
                     key={l.href}
                     href={l.href}
