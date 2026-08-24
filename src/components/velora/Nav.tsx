@@ -25,8 +25,16 @@ const serviceLinks = [
 const industryLinks = [
   { href: "/industries/oil-gas-software", label: "Oil & Gas" },
   { href: "/industries/mining-software", label: "Mining" },
-  { href: "/industries/workforce-management-software", label: "Workforce Management" },
+  { href: "/industries/construction-software", label: "Construction" },
   { href: "/industries/epc-engineering-software", label: "EPC & Engineering" },
+  { href: "/industries/manufacturing-software", label: "Manufacturing" },
+  { href: "/industries/logistics-supply-chain-software", label: "Logistics & Supply Chain" },
+  { href: "/industries/marine-shipping-software", label: "Marine & Shipping" },
+  { href: "/industries/renewable-energy-software", label: "Renewable Energy" },
+  { href: "/industries/facility-management-software", label: "Facility Management" },
+  { href: "/industries/field-service-management-software", label: "Field Service" },
+  { href: "/industries/hse-compliance-software", label: "HSE & Compliance" },
+  { href: "/industries/workforce-management-software", label: "Workforce Management" },
 ];
 
 export function Nav() {
@@ -93,16 +101,24 @@ export function Nav() {
               </svg>
             </a>
             {industriesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-56 rounded-xl border border-border bg-background shadow-card p-2">
-                {industryLinks.map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
-                  >
-                    {l.label}
-                  </a>
-                ))}
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[30rem] rounded-xl border border-border bg-background shadow-card p-2">
+                <div className="grid grid-cols-2 gap-x-1">
+                  {industryLinks.map((l) => (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+                <a
+                  href="/industries"
+                  className="mt-1 block rounded-lg border-t border-border px-3 pt-3 pb-2 text-sm font-medium text-primary hover:bg-surface transition-colors"
+                >
+                  All industries →
+                </a>
               </div>
             )}
           </div>

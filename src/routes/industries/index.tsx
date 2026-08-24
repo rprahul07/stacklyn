@@ -60,30 +60,148 @@ const industries = [
     ),
     keywords: ["Document control", "EPC project management", "Primavera integration", "Vendor management", "Commissioning"],
   },
+  {
+    name: "Construction",
+    href: "/industries/construction-software",
+    tagline: "Project controls · Digital DPR · BOQ billing · QA/QC · Plant & material",
+    desc: "Project controls platforms, digital daily progress reporting, BOQ and subcontractor billing, QA/QC and snagging apps, and material and plant tracking for contractors and infrastructure developers.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M2 20h20M5 20V9l7-5 7 5v11M9 20v-5h6v5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 4v4" strokeLinecap="round" />
+      </svg>
+    ),
+    keywords: ["Project controls", "Digital DPR", "BOQ & RA bills", "Snagging app", "Measurement book"],
+  },
+  {
+    name: "Manufacturing",
+    href: "/industries/manufacturing-software",
+    tagline: "MES · OEE dashboards · SCADA integration · Traceability · CMMS",
+    desc: "Manufacturing execution systems, real-time OEE dashboards, PLC and SCADA connectivity, batch traceability and quality platforms, CMMS maintenance systems, and AI predictive maintenance for plants.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M2 20h20M4 20V11l5 3V11l5 3V6l6 4v10" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    keywords: ["Custom MES", "OEE dashboard", "OPC-UA / Modbus", "Batch traceability", "Predictive maintenance"],
+  },
+  {
+    name: "Logistics & Supply Chain",
+    href: "/industries/logistics-supply-chain-software",
+    tagline: "TMS · WMS · Fleet tracking · Driver apps · Customer portals",
+    desc: "Transport and warehouse management systems, live consignment tracking, driver and POD apps, freight forwarding platforms, and customer visibility portals for 3PL and transport operators.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M1 8h11v9H1zM12 11h5l4 3v3h-9z" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="5.5" cy="19" r="1.8" />
+        <circle cx="17" cy="19" r="1.8" />
+      </svg>
+    ),
+    keywords: ["Custom TMS", "WMS", "Fleet tracking", "Driver POD app", "E-way bill integration"],
+  },
+  {
+    name: "Marine & Shipping",
+    href: "/industries/marine-shipping-software",
+    tagline: "Fleet ops · Crew certification · PMS · Voyage & bunker · Port calls",
+    desc: "Fleet operations dashboards, crew management and certification tracking, planned maintenance systems, voyage and bunker analytics, and offline vessel inspection apps built for satellite bandwidth.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M3 18c1.5 1.5 3 1.5 4.5 0S10.5 16.5 12 18s3 1.5 4.5 0S19.5 16.5 21 18" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M5 14l1-6h12l1 6M12 3v5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    keywords: ["Fleet operations", "Crew certification", "PMS", "Voyage analytics", "Port call platform"],
+  },
+  {
+    name: "Renewable Energy & Utilities",
+    href: "/industries/renewable-energy-software",
+    tagline: "Plant monitoring · Inverter & SCADA data · Loss analytics · O&M",
+    desc: "Portfolio performance monitoring, multi-OEM inverter and SCADA integration, yield and loss diagnostics, O&M ticketing with offline field apps, and automated generation and PPA reporting.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="4" />
+      </svg>
+    ),
+    keywords: ["Solar monitoring", "Performance ratio", "SCADA integration", "O&M ticketing", "PPA reporting"],
+  },
+  {
+    name: "Facility Management",
+    href: "/industries/facility-management-software",
+    tagline: "CAFM · CMMS · PPM scheduling · Helpdesk · SLA dashboards",
+    desc: "CAFM and CMMS platforms, QR-tagged asset registers, preventive maintenance scheduling, offline technician apps, tenant helpdesk portals, and SLA and penalty tracking for multi-site portfolios.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M3 21V7l7-4 7 4v14M21 21H3M8 21v-5h4v5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M7 10h.01M13 10h.01M7 14h.01M13 14h.01" strokeLinecap="round" />
+      </svg>
+    ),
+    keywords: ["CAFM", "CMMS", "PPM scheduling", "SLA tracking", "QR asset register"],
+  },
+  {
+    name: "Field Service Management",
+    href: "/industries/field-service-management-software",
+    tagline: "Dispatch · Technician apps · AMC contracts · Spare parts · Billing",
+    desc: "Job scheduling and dispatch consoles, offline technician apps, AMC and warranty contract management, van stock and spare parts tracking, customer portals, and service profitability analytics.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M14.7 6.3a4 4 0 01-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 015.4-5.4l-2.6 2.6 2 2 2.6-2.6a4 4 0 01-5-5z" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    keywords: ["FSM software", "Technician app", "AMC management", "First-time fix", "Service billing"],
+  },
+  {
+    name: "HSE & Compliance",
+    href: "/industries/hse-compliance-software",
+    tagline: "Permit to work · Incidents · Audits · Risk assessment · Competency",
+    desc: "Digital permit-to-work, incident and near-miss reporting, audit and inspection apps, JSA and HIRA tools, training and competency matrices, and contractor compliance portals with audit-grade evidence.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    keywords: ["Digital PTW", "Incident reporting", "ISO 45001 audits", "JSA / HIRA", "Contractor compliance"],
+  },
 ];
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-    { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${BASE_URL}/industries#list`,
+      "name": "Industries Stacklyn Builds Software For",
+      "itemListElement": industries.map((industry, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": `${industry.name} Software Development`,
+        "url": `${BASE_URL}${industry.href}`,
+      })),
+    },
   ],
 };
 
 export const Route = createFileRoute("/industries/")({
   head: () => ({
     meta: [
-      { title: "Industry Software Solutions | Oil & Gas, Mining, Workforce Management | Stacklyn" },
+      { title: "Industry Software Solutions | Oil & Gas, Mining, Manufacturing, Logistics | Stacklyn" },
       {
         name: "description",
         content:
-          "Stacklyn builds custom software for industrial MNCs: oil & gas digital oilfield platforms, mining operations systems, industrial workforce management, and EPC project management tools. Kerala, India.",
+          "Stacklyn builds custom software for industrial MNCs across 12 sectors: oil & gas, mining, construction, EPC, manufacturing, logistics, marine, renewable energy, facility management, field service, HSE, and workforce management. Kerala, India.",
       },
       {
         name: "keywords",
         content:
-          "industrial software development India, oil gas software company Kerala, mining software India, workforce management software construction, EPC software development India, MNC software development India, industrial digital transformation software",
+          "industrial software development India, oil gas software company Kerala, mining software India, construction software development company, manufacturing MES software India, logistics TMS software development, marine shipping software development, renewable energy software India, facility management CAFM software, field service management software India, HSE permit to work software, workforce management software construction, EPC software development India, MNC software development India, industrial digital transformation software",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/industries` },
@@ -91,7 +209,7 @@ export const Route = createFileRoute("/industries/")({
       {
         property: "og:description",
         content:
-          "Custom software for oil & gas, mining, industrial workforce, and EPC companies. Enterprise-grade platforms from Kerala, India.",
+          "Custom software for oil & gas, mining, construction, manufacturing, logistics, marine, energy, FM, field service, and HSE. Enterprise-grade platforms from Kerala, India.",
       },
       { property: "og:image", content: `${BASE_URL}/og-image.png` },
       { property: "og:site_name", content: "Stacklyn" },
@@ -99,7 +217,7 @@ export const Route = createFileRoute("/industries/")({
       { name: "twitter:title", content: "Industry Software Solutions | Stacklyn" },
       {
         name: "twitter:description",
-        content: "Custom software for oil & gas, mining, industrial workforce, and EPC companies. From Kerala, India.",
+        content: "Custom software for oil & gas, mining, construction, manufacturing, logistics, marine, energy, FM, and HSE. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries` }],
@@ -151,9 +269,10 @@ function IndustriesIndexPage() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
             >
-              Stacklyn builds custom software for the world's most demanding industries — oil & gas, mining, industrial
-              construction, and EPC. We combine enterprise-grade architecture with deep domain knowledge to deliver
-              software that actually fits how your operations work.
+              Stacklyn builds custom software for the world's most demanding industries — oil & gas, mining,
+              construction, EPC, manufacturing, logistics, marine, renewable energy, facility management, field service,
+              and HSE. We combine enterprise-grade architecture with deep domain knowledge to deliver software that
+              actually fits how your operations work.
             </motion.p>
 
             <motion.div
@@ -232,9 +351,10 @@ function IndustriesIndexPage() {
               Why Heavy Industry Needs Custom Software
             </h2>
             <p className="max-w-2xl text-muted-foreground leading-relaxed mb-12">
-              Generic enterprise software is built for the average business. Oil & gas operators, mining companies, and
-              EPC contractors are not average businesses. They need software that understands their operational
-              vocabulary, their regulatory environment, and the realities of field operations.
+              Generic enterprise software is built for the average business. Oil & gas operators, mining companies,
+              manufacturers, logistics networks, shipping managers, and EPC contractors are not average businesses. They
+              need software that understands their operational vocabulary, their regulatory environment, and the
+              realities of field operations.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {[

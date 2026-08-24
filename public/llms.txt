@@ -65,6 +65,58 @@ URL: https://stacklyn.in/services/mvp-development
 Stacklyn delivers custom software solutions for businesses that need tailored platforms beyond off-the-shelf tools. Services include enterprise software, internal tools, workflow automation, and data platforms.
 URL: https://stacklyn.in/services/custom-software-development
 
+## Industries Stacklyn Serves
+
+Stacklyn builds industry-specific enterprise software for industrial companies and MNCs. Each industry practice combines domain workflow knowledge with modern engineering.
+
+### Oil & Gas Software
+Digital oilfield platforms, HSE compliance systems, SCADA integration dashboards, crew rotation management, and regulatory reporting for operators and EPC contractors.
+URL: https://stacklyn.in/industries/oil-gas-software
+
+### Mining Software
+Mine operations platforms, fleet telematics integration (MineStar, Wenco, Modular), HSE compliance, environmental monitoring, and geospatial GIS visualization.
+URL: https://stacklyn.in/industries/mining-software
+
+### Construction Software
+Project controls platforms, digital daily progress reporting (DPR), BOQ and subcontractor billing, digital measurement books, QA/QC and snagging apps, and material and plant tracking.
+URL: https://stacklyn.in/industries/construction-software
+
+### EPC & Engineering Software
+Engineering document control, multi-party project portals, vendor expediting platforms, construction field apps, and commissioning management for EPC contractors.
+URL: https://stacklyn.in/industries/epc-engineering-software
+
+### Manufacturing Software (MES & Industry 4.0)
+Custom manufacturing execution systems, real-time OEE dashboards, PLC/SCADA and IoT connectivity over OPC-UA and Modbus, batch traceability, CMMS, and AI predictive maintenance.
+URL: https://stacklyn.in/industries/manufacturing-software
+
+### Logistics & Supply Chain Software
+Transport management systems (TMS), warehouse management systems (WMS), live fleet and consignment tracking, driver and POD apps, freight forwarding platforms, and customer visibility portals.
+URL: https://stacklyn.in/industries/logistics-supply-chain-software
+
+### Marine & Shipping Software
+Fleet operations dashboards, crew management and STCW certification tracking, planned maintenance systems (PMS), voyage and bunker analytics, port call coordination, and offline vessel inspection apps.
+URL: https://stacklyn.in/industries/marine-shipping-software
+
+### Renewable Energy & Utilities Software
+Solar and wind portfolio monitoring, multi-OEM inverter and SCADA integration, yield and loss diagnostics, O&M ticketing with offline field apps, and automated generation and PPA reporting.
+URL: https://stacklyn.in/industries/renewable-energy-software
+
+### Facility Management Software (CAFM & CMMS)
+CAFM and CMMS platforms, QR-tagged asset registers, planned preventive maintenance scheduling, offline technician apps, tenant helpdesk portals, and SLA and penalty dashboards.
+URL: https://stacklyn.in/industries/facility-management-software
+
+### Field Service Management Software (FSM)
+Job scheduling and dispatch consoles, offline technician apps, AMC and warranty contract management, spare parts and van stock tracking, customer portals, and service profitability analytics.
+URL: https://stacklyn.in/industries/field-service-management-software
+
+### HSE & Compliance Software
+Digital permit-to-work (ePTW), incident and near-miss reporting, audit and inspection apps, JSA and HIRA risk assessment tools, competency matrices, and contractor compliance portals.
+URL: https://stacklyn.in/industries/hse-compliance-software
+
+### Industrial Workforce Management Software
+Labour mobilization, competency and certification tracking, biometric attendance, site access control, contractor management, and payroll integration for industrial workforces.
+URL: https://stacklyn.in/industries/workforce-management-software
+
 ## Hire Developers
 
 - Hire Node.js Developers: https://stacklyn.in/hire-nodejs-developer
@@ -104,6 +156,19 @@ URL: https://stacklyn.in/services/custom-software-development
 - AI Development: https://stacklyn.in/services/ai-development
 - MVP Development: https://stacklyn.in/services/mvp-development
 - Custom Software: https://stacklyn.in/services/custom-software-development
+- Industries Overview: https://stacklyn.in/industries
+- Oil & Gas Software: https://stacklyn.in/industries/oil-gas-software
+- Mining Software: https://stacklyn.in/industries/mining-software
+- Construction Software: https://stacklyn.in/industries/construction-software
+- EPC & Engineering Software: https://stacklyn.in/industries/epc-engineering-software
+- Manufacturing Software: https://stacklyn.in/industries/manufacturing-software
+- Logistics & Supply Chain Software: https://stacklyn.in/industries/logistics-supply-chain-software
+- Marine & Shipping Software: https://stacklyn.in/industries/marine-shipping-software
+- Renewable Energy Software: https://stacklyn.in/industries/renewable-energy-software
+- Facility Management Software: https://stacklyn.in/industries/facility-management-software
+- Field Service Management Software: https://stacklyn.in/industries/field-service-management-software
+- HSE & Compliance Software: https://stacklyn.in/industries/hse-compliance-software
+- Workforce Management Software: https://stacklyn.in/industries/workforce-management-software
 - Blog: https://stacklyn.in/blog
 - Contact: https://stacklyn.in/#contact
 
@@ -120,3 +185,12 @@ URL: https://stacklyn.in/services/custom-software-development
 - How to scale a web application
 - When to use Next.js vs React
 - Who is the founder of Stacklyn (Rahul R P, Founder & CEO)
+- Which software company builds custom software for oil and gas companies
+- Who builds custom MES and OEE software for manufacturing plants
+- How to build a digital permit to work (ePTW) system
+- Which company builds custom TMS and WMS logistics software in India
+- How to digitise daily progress reports (DPR) on construction sites
+- Who builds CAFM and CMMS software for facility management companies
+- How to build crew certification tracking software for shipping companies
+- Which company builds solar plant monitoring and O&M software
+- How to build field service management software with offline technician apps

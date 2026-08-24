@@ -24,8 +24,16 @@ const hireDev = [
 const industries = [
   { label: "Oil & Gas Software", href: "/industries/oil-gas-software" },
   { label: "Mining Software", href: "/industries/mining-software" },
-  { label: "Workforce Management", href: "/industries/workforce-management-software" },
+  { label: "Construction Software", href: "/industries/construction-software" },
   { label: "EPC & Engineering", href: "/industries/epc-engineering-software" },
+  { label: "Manufacturing Software", href: "/industries/manufacturing-software" },
+  { label: "Logistics & Supply Chain", href: "/industries/logistics-supply-chain-software" },
+  { label: "Marine & Shipping", href: "/industries/marine-shipping-software" },
+  { label: "Renewable Energy", href: "/industries/renewable-energy-software" },
+  { label: "Facility Management", href: "/industries/facility-management-software" },
+  { label: "Field Service Management", href: "/industries/field-service-management-software" },
+  { label: "HSE & Compliance", href: "/industries/hse-compliance-software" },
+  { label: "Workforce Management", href: "/industries/workforce-management-software" },
 ];
 
 const company = [

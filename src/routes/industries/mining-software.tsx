@@ -156,6 +156,14 @@ const schemaMarkup = {
       "serviceType": "Custom Software Development for Mining Industry",
     },
     {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
+        { "@type": "ListItem", "position": 3, "name": "Mining Software", "item": `${BASE_URL}/industries/mining-software` },
+      ],
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": data.faqs.map((faq) => ({
         "@type": "Question",

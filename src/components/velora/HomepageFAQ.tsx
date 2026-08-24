@@ -6,6 +6,14 @@ const homepageFAQs = [
     a: "Stacklyn is a custom software development company based in Kerala, India. We build scalable web applications, AI-powered products, SaaS platforms, and startup MVPs for clients worldwide. Our team specializes in full stack development, MERN stack, Node.js, React, Next.js, and AI application development.",
   },
   {
+    q: "Who is the founder of Stacklyn?",
+    a: "Stacklyn was founded by Rahul R P, who serves as Founder and CEO. Rahul is a hands-on full stack engineer working across React, Next.js, Node.js, cloud infrastructure, and AI/LLM application development, and personally leads product scoping, architecture, and delivery on every Stacklyn engagement. Clients work directly with a senior engineer rather than an account manager. Direct contact: rahulrp@stacklyn.in or +91 95444 51720.",
+  },
+  {
+    q: "Which industries does Stacklyn build software for?",
+    a: "Stacklyn builds industry-specific enterprise software for oil and gas, mining, construction, EPC and engineering, manufacturing, logistics and supply chain, marine and shipping, renewable energy and utilities, facility management, field service management, HSE and compliance, and industrial workforce management. Each industry practice combines domain workflow knowledge with modern engineering.",
+  },
+  {
     q: "What services does Stacklyn offer?",
     a: "Stacklyn offers full stack development, MERN stack development, Node.js development, React development, Next.js development, AI application development, SaaS product development, startup MVP development, backend development, API design, cloud deployment, and DevOps services.",
   },

@@ -31,9 +31,17 @@ import { Route as ServicesCustomSoftwareDevelopmentRouteImport } from './routes/
 import { Route as ServicesBackendDevelopmentRouteImport } from './routes/services/backend-development'
 import { Route as ServicesAiDevelopmentRouteImport } from './routes/services/ai-development'
 import { Route as IndustriesWorkforceManagementSoftwareRouteImport } from './routes/industries/workforce-management-software'
+import { Route as IndustriesRenewableEnergySoftwareRouteImport } from './routes/industries/renewable-energy-software'
 import { Route as IndustriesOilGasSoftwareRouteImport } from './routes/industries/oil-gas-software'
 import { Route as IndustriesMiningSoftwareRouteImport } from './routes/industries/mining-software'
+import { Route as IndustriesMarineShippingSoftwareRouteImport } from './routes/industries/marine-shipping-software'
+import { Route as IndustriesManufacturingSoftwareRouteImport } from './routes/industries/manufacturing-software'
+import { Route as IndustriesLogisticsSupplyChainSoftwareRouteImport } from './routes/industries/logistics-supply-chain-software'
+import { Route as IndustriesHseComplianceSoftwareRouteImport } from './routes/industries/hse-compliance-software'
+import { Route as IndustriesFieldServiceManagementSoftwareRouteImport } from './routes/industries/field-service-management-software'
+import { Route as IndustriesFacilityManagementSoftwareRouteImport } from './routes/industries/facility-management-software'
 import { Route as IndustriesEpcEngineeringSoftwareRouteImport } from './routes/industries/epc-engineering-software'
+import { Route as IndustriesConstructionSoftwareRouteImport } from './routes/industries/construction-software'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -152,6 +160,12 @@ const IndustriesWorkforceManagementSoftwareRoute =
     path: '/workforce-management-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
+const IndustriesRenewableEnergySoftwareRoute =
+  IndustriesRenewableEnergySoftwareRouteImport.update({
+    id: '/renewable-energy-software',
+    path: '/renewable-energy-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
 const IndustriesOilGasSoftwareRoute =
   IndustriesOilGasSoftwareRouteImport.update({
     id: '/oil-gas-software',
@@ -164,10 +178,52 @@ const IndustriesMiningSoftwareRoute =
     path: '/mining-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
+const IndustriesMarineShippingSoftwareRoute =
+  IndustriesMarineShippingSoftwareRouteImport.update({
+    id: '/marine-shipping-software',
+    path: '/marine-shipping-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesManufacturingSoftwareRoute =
+  IndustriesManufacturingSoftwareRouteImport.update({
+    id: '/manufacturing-software',
+    path: '/manufacturing-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesLogisticsSupplyChainSoftwareRoute =
+  IndustriesLogisticsSupplyChainSoftwareRouteImport.update({
+    id: '/logistics-supply-chain-software',
+    path: '/logistics-supply-chain-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesHseComplianceSoftwareRoute =
+  IndustriesHseComplianceSoftwareRouteImport.update({
+    id: '/hse-compliance-software',
+    path: '/hse-compliance-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesFieldServiceManagementSoftwareRoute =
+  IndustriesFieldServiceManagementSoftwareRouteImport.update({
+    id: '/field-service-management-software',
+    path: '/field-service-management-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesFacilityManagementSoftwareRoute =
+  IndustriesFacilityManagementSoftwareRouteImport.update({
+    id: '/facility-management-software',
+    path: '/facility-management-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
 const IndustriesEpcEngineeringSoftwareRoute =
   IndustriesEpcEngineeringSoftwareRouteImport.update({
     id: '/epc-engineering-software',
     path: '/epc-engineering-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesConstructionSoftwareRoute =
+  IndustriesConstructionSoftwareRouteImport.update({
+    id: '/construction-software',
+    path: '/construction-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
 
@@ -182,9 +238,17 @@ export interface FileRoutesByFullPath {
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
   '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
+  '/industries/facility-management-software': typeof IndustriesFacilityManagementSoftwareRoute
+  '/industries/field-service-management-software': typeof IndustriesFieldServiceManagementSoftwareRoute
+  '/industries/hse-compliance-software': typeof IndustriesHseComplianceSoftwareRoute
+  '/industries/logistics-supply-chain-software': typeof IndustriesLogisticsSupplyChainSoftwareRoute
+  '/industries/manufacturing-software': typeof IndustriesManufacturingSoftwareRoute
+  '/industries/marine-shipping-software': typeof IndustriesMarineShippingSoftwareRoute
   '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
   '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
@@ -207,9 +271,17 @@ export interface FileRoutesByTo {
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/services': typeof ServicesRouteWithChildren
+  '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
   '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
+  '/industries/facility-management-software': typeof IndustriesFacilityManagementSoftwareRoute
+  '/industries/field-service-management-software': typeof IndustriesFieldServiceManagementSoftwareRoute
+  '/industries/hse-compliance-software': typeof IndustriesHseComplianceSoftwareRoute
+  '/industries/logistics-supply-chain-software': typeof IndustriesLogisticsSupplyChainSoftwareRoute
+  '/industries/manufacturing-software': typeof IndustriesManufacturingSoftwareRoute
+  '/industries/marine-shipping-software': typeof IndustriesMarineShippingSoftwareRoute
   '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
   '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
@@ -235,9 +307,17 @@ export interface FileRoutesById {
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
   '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
+  '/industries/facility-management-software': typeof IndustriesFacilityManagementSoftwareRoute
+  '/industries/field-service-management-software': typeof IndustriesFieldServiceManagementSoftwareRoute
+  '/industries/hse-compliance-software': typeof IndustriesHseComplianceSoftwareRoute
+  '/industries/logistics-supply-chain-software': typeof IndustriesLogisticsSupplyChainSoftwareRoute
+  '/industries/manufacturing-software': typeof IndustriesManufacturingSoftwareRoute
+  '/industries/marine-shipping-software': typeof IndustriesMarineShippingSoftwareRoute
   '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
   '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
@@ -264,9 +344,17 @@ export interface FileRouteTypes {
     | '/hire-react-developer'
     | '/industries'
     | '/services'
+    | '/industries/construction-software'
     | '/industries/epc-engineering-software'
+    | '/industries/facility-management-software'
+    | '/industries/field-service-management-software'
+    | '/industries/hse-compliance-software'
+    | '/industries/logistics-supply-chain-software'
+    | '/industries/manufacturing-software'
+    | '/industries/marine-shipping-software'
     | '/industries/mining-software'
     | '/industries/oil-gas-software'
+    | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
     | '/services/ai-development'
     | '/services/backend-development'
@@ -289,9 +377,17 @@ export interface FileRouteTypes {
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
     | '/services'
+    | '/industries/construction-software'
     | '/industries/epc-engineering-software'
+    | '/industries/facility-management-software'
+    | '/industries/field-service-management-software'
+    | '/industries/hse-compliance-software'
+    | '/industries/logistics-supply-chain-software'
+    | '/industries/manufacturing-software'
+    | '/industries/marine-shipping-software'
     | '/industries/mining-software'
     | '/industries/oil-gas-software'
+    | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
     | '/services/ai-development'
     | '/services/backend-development'
@@ -316,9 +412,17 @@ export interface FileRouteTypes {
     | '/hire-react-developer'
     | '/industries'
     | '/services'
+    | '/industries/construction-software'
     | '/industries/epc-engineering-software'
+    | '/industries/facility-management-software'
+    | '/industries/field-service-management-software'
+    | '/industries/hse-compliance-software'
+    | '/industries/logistics-supply-chain-software'
+    | '/industries/manufacturing-software'
+    | '/industries/marine-shipping-software'
     | '/industries/mining-software'
     | '/industries/oil-gas-software'
+    | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
     | '/services/ai-development'
     | '/services/backend-development'
@@ -502,6 +606,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesWorkforceManagementSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/industries/renewable-energy-software': {
+      id: '/industries/renewable-energy-software'
+      path: '/renewable-energy-software'
+      fullPath: '/industries/renewable-energy-software'
+      preLoaderRoute: typeof IndustriesRenewableEnergySoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
     '/industries/oil-gas-software': {
       id: '/industries/oil-gas-software'
       path: '/oil-gas-software'
@@ -516,11 +627,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesMiningSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/industries/marine-shipping-software': {
+      id: '/industries/marine-shipping-software'
+      path: '/marine-shipping-software'
+      fullPath: '/industries/marine-shipping-software'
+      preLoaderRoute: typeof IndustriesMarineShippingSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/manufacturing-software': {
+      id: '/industries/manufacturing-software'
+      path: '/manufacturing-software'
+      fullPath: '/industries/manufacturing-software'
+      preLoaderRoute: typeof IndustriesManufacturingSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/logistics-supply-chain-software': {
+      id: '/industries/logistics-supply-chain-software'
+      path: '/logistics-supply-chain-software'
+      fullPath: '/industries/logistics-supply-chain-software'
+      preLoaderRoute: typeof IndustriesLogisticsSupplyChainSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/hse-compliance-software': {
+      id: '/industries/hse-compliance-software'
+      path: '/hse-compliance-software'
+      fullPath: '/industries/hse-compliance-software'
+      preLoaderRoute: typeof IndustriesHseComplianceSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/field-service-management-software': {
+      id: '/industries/field-service-management-software'
+      path: '/field-service-management-software'
+      fullPath: '/industries/field-service-management-software'
+      preLoaderRoute: typeof IndustriesFieldServiceManagementSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/facility-management-software': {
+      id: '/industries/facility-management-software'
+      path: '/facility-management-software'
+      fullPath: '/industries/facility-management-software'
+      preLoaderRoute: typeof IndustriesFacilityManagementSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
     '/industries/epc-engineering-software': {
       id: '/industries/epc-engineering-software'
       path: '/epc-engineering-software'
       fullPath: '/industries/epc-engineering-software'
       preLoaderRoute: typeof IndustriesEpcEngineeringSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/construction-software': {
+      id: '/industries/construction-software'
+      path: '/construction-software'
+      fullPath: '/industries/construction-software'
+      preLoaderRoute: typeof IndustriesConstructionSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
   }
@@ -537,17 +697,37 @@ const BlogRouteChildren: BlogRouteChildren = {
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface IndustriesRouteChildren {
+  IndustriesConstructionSoftwareRoute: typeof IndustriesConstructionSoftwareRoute
   IndustriesEpcEngineeringSoftwareRoute: typeof IndustriesEpcEngineeringSoftwareRoute
+  IndustriesFacilityManagementSoftwareRoute: typeof IndustriesFacilityManagementSoftwareRoute
+  IndustriesFieldServiceManagementSoftwareRoute: typeof IndustriesFieldServiceManagementSoftwareRoute
+  IndustriesHseComplianceSoftwareRoute: typeof IndustriesHseComplianceSoftwareRoute
+  IndustriesLogisticsSupplyChainSoftwareRoute: typeof IndustriesLogisticsSupplyChainSoftwareRoute
+  IndustriesManufacturingSoftwareRoute: typeof IndustriesManufacturingSoftwareRoute
+  IndustriesMarineShippingSoftwareRoute: typeof IndustriesMarineShippingSoftwareRoute
   IndustriesMiningSoftwareRoute: typeof IndustriesMiningSoftwareRoute
   IndustriesOilGasSoftwareRoute: typeof IndustriesOilGasSoftwareRoute
+  IndustriesRenewableEnergySoftwareRoute: typeof IndustriesRenewableEnergySoftwareRoute
   IndustriesWorkforceManagementSoftwareRoute: typeof IndustriesWorkforceManagementSoftwareRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
 }
 
 const IndustriesRouteChildren: IndustriesRouteChildren = {
+  IndustriesConstructionSoftwareRoute: IndustriesConstructionSoftwareRoute,
   IndustriesEpcEngineeringSoftwareRoute: IndustriesEpcEngineeringSoftwareRoute,
+  IndustriesFacilityManagementSoftwareRoute:
+    IndustriesFacilityManagementSoftwareRoute,
+  IndustriesFieldServiceManagementSoftwareRoute:
+    IndustriesFieldServiceManagementSoftwareRoute,
+  IndustriesHseComplianceSoftwareRoute: IndustriesHseComplianceSoftwareRoute,
+  IndustriesLogisticsSupplyChainSoftwareRoute:
+    IndustriesLogisticsSupplyChainSoftwareRoute,
+  IndustriesManufacturingSoftwareRoute: IndustriesManufacturingSoftwareRoute,
+  IndustriesMarineShippingSoftwareRoute: IndustriesMarineShippingSoftwareRoute,
   IndustriesMiningSoftwareRoute: IndustriesMiningSoftwareRoute,
   IndustriesOilGasSoftwareRoute: IndustriesOilGasSoftwareRoute,
+  IndustriesRenewableEnergySoftwareRoute:
+    IndustriesRenewableEnergySoftwareRoute,
   IndustriesWorkforceManagementSoftwareRoute:
     IndustriesWorkforceManagementSoftwareRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
