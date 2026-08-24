@@ -3,7 +3,7 @@ import { useState } from "react";
 import { sendContactEmail } from "@/lib/api/contact.functions";
 
 const projectTypes = ["Web App", "Mobile App", "AI Solution", "Cloud / DevOps", "SaaS Product", "Other"];
-const budgets = ["< ₹2L", "₹2L – ₹5L", "₹5L – ₹15L", "₹15L+"];
+const budgets = ["< $2,000", "$2,000 – $5,000", "$5,000 – $15,000", "$15,000+"];
 
 const CONTACT_EMAIL = "rahulrp@stacklyn.in";
 const CONTACT_PHONE = "+91 95444 51720";

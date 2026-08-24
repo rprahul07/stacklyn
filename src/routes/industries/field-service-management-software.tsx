@@ -119,7 +119,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom field service management software cost?",
-      a: "A focused build with dispatch and a technician app starts from ₹6-12 lakh. A full FSM platform with AMC management, spare parts, customer portal, billing integration, and analytics typically ranges from ₹18-60 lakh depending on technician count and integrations.",
+      a: "A focused build with dispatch and a technician app starts from $7,000-14,000. A full FSM platform with AMC management, spare parts, customer portal, billing integration, and analytics typically ranges from $22,000-72,000 depending on technician count and integrations.",
     },
     {
       q: "How do I start a field service software project with Stacklyn?",

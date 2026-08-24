@@ -27,9 +27,9 @@ const data: HireData = {
     { title: "Full Documentation", desc: "OpenAPI/Swagger docs, architecture diagrams, and database schemas delivered with every project." },
   ],
   engagementModels: [
-    { name: "Project-Based", desc: "Fixed-price backend development for APIs, databases, and complete backend systems.", price: "From ₹1.5L" },
-    { name: "Monthly Retainer", desc: "Dedicated backend developer for ongoing API development and system maintenance.", price: "₹80K–1.2L/mo" },
-    { name: "Consulting", desc: "Architecture reviews, API audits, database optimization, or security assessments.", price: "₹3–5K/hr" },
+    { name: "Project-Based", desc: "Fixed-price backend development for APIs, databases, and complete backend systems.", price: "From $1,800" },
+    { name: "Monthly Retainer", desc: "Dedicated backend developer for ongoing API development and system maintenance.", price: "$950–1,450/mo" },
+    { name: "Consulting", desc: "Architecture reviews, API audits, database optimization, or security assessments.", price: "$35–60/hr" },
   ],
   process: [
     { step: "Requirements", desc: "Share your API requirements, data model, and performance expectations." },
@@ -46,7 +46,7 @@ const data: HireData = {
   faqs: [
     { q: "What does a backend developer do?", a: "A backend developer builds the server-side of web applications — APIs, databases, authentication systems, business logic, and cloud infrastructure. The backend is what makes your product work under the hood." },
     { q: "Why hire a backend developer from India?", a: "India has a large pool of experienced backend developers at significantly lower rates than Western markets. Stacklyn backend developers have production experience with Node.js, PostgreSQL, Redis, and cloud deployment." },
-    { q: "What is the cost of hiring a backend developer from Stacklyn?", a: "Backend developer retainers start at ₹80,000/month (~$960 USD). Full-time dedicated backend developers cost ₹1–1.2 lakh/month. Project-based work starts at ₹1.5 lakh." },
+    { q: "What is the cost of hiring a backend developer from Stacklyn?", a: "Backend developer retainers start at $950/month. Full-time dedicated backend developers cost $1,200–1,450/month. Project-based work starts at $1,800." },
     { q: "Does Stacklyn build REST APIs?", a: "Yes. REST API design and development is a core backend service. We build versioned, documented, secure REST APIs with proper error handling and OpenAPI/Swagger documentation." },
     { q: "Does Stacklyn use PostgreSQL?", a: "Yes. PostgreSQL is our primary relational database. We use Prisma or Drizzle ORM for type-safe queries, design normalized schemas, and implement proper indexing and connection pooling." },
     { q: "Can Stacklyn optimize my existing backend performance?", a: "Yes. Backend performance audits are a common engagement. We profile queries, add missing indexes, implement caching with Redis, fix N+1 problems, and optimize connection pooling." },

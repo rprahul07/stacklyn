@@ -119,7 +119,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom HSE software development cost?",
-      a: "A focused module such as incident reporting or digital inspections starts from ₹5-10 lakh. A full HSE suite with ePTW, incidents, audits, risk assessment, competency, and contractor portals typically ranges from ₹18-65 lakh depending on site count and integrations.",
+      a: "A focused module such as incident reporting or digital inspections starts from $6,000-12,000. A full HSE suite with ePTW, incidents, audits, risk assessment, competency, and contractor portals typically ranges from $22,000-78,000 depending on site count and integrations.",
     },
     {
       q: "How do I start an HSE software project with Stacklyn?",

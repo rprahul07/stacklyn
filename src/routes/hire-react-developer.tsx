@@ -26,9 +26,9 @@ const data: HireData = {
     { title: "Fast Onboarding", desc: "Start within 1–3 days. We review your existing codebase, understand your design system, and contribute from day one." },
   ],
   engagementModels: [
-    { name: "Project-Based", desc: "Fixed scope and price for complete React frontend projects.", price: "From ₹1.5L" },
-    { name: "Monthly Retainer", desc: "Dedicated React developer for ongoing UI development, 80+ hours/month.", price: "₹75K–1.1L/mo" },
-    { name: "Hourly Consulting", desc: "Code reviews, performance audits, or targeted React consulting.", price: "₹3–5K/hr" },
+    { name: "Project-Based", desc: "Fixed scope and price for complete React frontend projects.", price: "From $1,800" },
+    { name: "Monthly Retainer", desc: "Dedicated React developer for ongoing UI development, 80+ hours/month.", price: "$900–1,300/mo" },
+    { name: "Hourly Consulting", desc: "Code reviews, performance audits, or targeted React consulting.", price: "$35–60/hr" },
   ],
   process: [
     { step: "Share Requirements", desc: "Tell us about your product, design files, and stack." },
@@ -44,7 +44,7 @@ const data: HireData = {
   ],
   faqs: [
     { q: "Why hire a React developer from India?", a: "India has a large pool of highly skilled React developers at rates significantly below US/UK market rates. Stacklyn's React developers are senior-level with TypeScript expertise, production experience, and strong communication skills." },
-    { q: "What is the cost of hiring a React developer from Stacklyn?", a: "React developer retainers start at ₹75,000/month (~$900 USD). Full-time dedicated React developers cost ₹1–1.1 lakh/month. Project-based work starts at ₹1.5 lakh for defined-scope frontend projects." },
+    { q: "What is the cost of hiring a React developer from Stacklyn?", a: "React developer retainers start at $900/month. Full-time dedicated React developers cost $1,200–1,300/month. Project-based work starts at $1,800 for defined-scope frontend projects." },
     { q: "Does Stacklyn use TypeScript for React development?", a: "Yes. TypeScript is mandatory for all Stacklyn React projects. This ensures type safety, better tooling, and long-term maintainability of your frontend codebase." },
     { q: "Can Stacklyn work from existing Figma designs?", a: "Yes. We implement React components directly from Figma designs, maintaining pixel-perfect fidelity, consistent spacing, and responsive behavior across breakpoints." },
     { q: "Does Stacklyn build React Native apps as well?", a: "Yes. We build React Native apps alongside or separately from React web apps. Shared business logic and API calls reduce duplication." },

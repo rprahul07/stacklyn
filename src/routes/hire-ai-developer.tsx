@@ -28,9 +28,9 @@ const data: HireData = {
     { title: "Responsible AI", desc: "We implement guardrails, content filtering, and output validation for safe, predictable AI behavior." },
   ],
   engagementModels: [
-    { name: "Project-Based", desc: "Fixed-price AI feature development — chatbots, RAG systems, document intelligence.", price: "From ₹3L" },
-    { name: "Monthly Retainer", desc: "Dedicated AI developer for ongoing AI product development and iteration.", price: "₹1L–1.5L/mo" },
-    { name: "AI Consulting", desc: "Architecture review, model selection, RAG strategy, or LLM cost optimization.", price: "₹5–8K/hr" },
+    { name: "Project-Based", desc: "Fixed-price AI feature development — chatbots, RAG systems, document intelligence.", price: "From $3,600" },
+    { name: "Monthly Retainer", desc: "Dedicated AI developer for ongoing AI product development and iteration.", price: "$1,200–1,800/mo" },
+    { name: "AI Consulting", desc: "Architecture review, model selection, RAG strategy, or LLM cost optimization.", price: "$60–95/hr" },
   ],
   process: [
     { step: "AI Use Case Discovery", desc: "Define what AI capabilities you need and what success looks like." },
@@ -49,7 +49,7 @@ const data: HireData = {
   faqs: [
     { q: "What does an AI developer at Stacklyn do?", a: "Stacklyn AI developers build production AI applications — LLM integrations, RAG systems, AI chatbots, document intelligence, AI agents, and generative AI features for web and SaaS products." },
     { q: "What AI frameworks does Stacklyn use?", a: "We use LangChain for complex agent workflows, LlamaIndex for document RAG pipelines, LangGraph for multi-agent systems, and the Vercel AI SDK for Next.js/React streaming integrations." },
-    { q: "What is the cost of hiring an AI developer from Stacklyn?", a: "AI developer retainers start at ₹1 lakh/month. Project-based AI features start at ₹3 lakh. Consulting rates are ₹5,000–8,000/hour for architecture reviews and model strategy." },
+    { q: "What is the cost of hiring an AI developer from Stacklyn?", a: "AI developer retainers start at $1,200/month. Project-based AI features start at $3,600. Consulting rates are $60–95/hour for architecture reviews and model strategy." },
     { q: "Does Stacklyn build RAG systems?", a: "Yes. RAG (Retrieval-Augmented Generation) systems are a core AI service. We design document ingestion pipelines, vector storage with Pinecone/Weaviate, and retrieval-enhanced LLM responses." },
     { q: "Can Stacklyn integrate OpenAI into my existing product?", a: "Yes. LLM integration into existing Node.js, Next.js, or React applications is a common engagement. We handle streaming, error handling, rate limits, and cost monitoring." },
     { q: "Does Stacklyn work with open-source AI models?", a: "Yes. We work with open-source models like Llama, Mistral, and Qwen via Hugging Face and Ollama for use cases where data privacy or cost optimization requires self-hosted models." },

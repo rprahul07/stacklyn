@@ -114,7 +114,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom construction software development cost?",
-      a: "Focused construction modules start from ₹5-10 lakh. Integrated project controls platforms with ERP and scheduling integrations, offline mobile apps, and multi-project support typically range from ₹20-70 lakh. We provide a fixed scoped estimate after discovery.",
+      a: "Focused construction modules start from $6,000-12,000. Integrated project controls platforms with ERP and scheduling integrations, offline mobile apps, and multi-project support typically range from $25,000-85,000. We provide a fixed scoped estimate after discovery.",
     },
     {
       q: "Is custom software better than off-the-shelf construction ERP?",

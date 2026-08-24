@@ -118,7 +118,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does renewable energy software development cost?",
-      a: "A focused module such as a monitoring dashboard or O&M ticketing system starts from ₹6-12 lakh. A full portfolio platform with multi-OEM data acquisition, loss analytics, field apps, and automated reporting typically ranges from ₹20-70 lakh depending on site count and integrations.",
+      a: "A focused module such as a monitoring dashboard or O&M ticketing system starts from $7,000-14,000. A full portfolio platform with multi-OEM data acquisition, loss analytics, field apps, and automated reporting typically ranges from $25,000-85,000 depending on site count and integrations.",
     },
     {
       q: "How do I start a renewable energy software project with Stacklyn?",

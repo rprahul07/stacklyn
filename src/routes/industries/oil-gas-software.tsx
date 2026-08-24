@@ -116,7 +116,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom oil & gas software cost?",
-      a: "Focused modules (HSE system, workforce scheduling) start from ₹5–10 lakh. Integrated digital oilfield platforms with SCADA connectivity and multi-module scope range from ₹20–60 lakh. Contact us for a scoped estimate based on your specific requirements.",
+      a: "Focused modules (HSE system, workforce scheduling) start from $6,000–12,000. Integrated digital oilfield platforms with SCADA connectivity and multi-module scope range from $25,000–72,000. Contact us for a scoped estimate based on your specific requirements.",
     },
     {
       q: "How do I start a software project with Stacklyn for my oil & gas company?",

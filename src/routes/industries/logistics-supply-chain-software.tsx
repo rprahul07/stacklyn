@@ -119,7 +119,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom logistics software development cost?",
-      a: "Focused logistics modules start from ₹5-12 lakh. Full TMS or WMS platforms with driver apps, telematics integration, customer portals, and billing engines typically range from ₹20-80 lakh depending on scope and network size.",
+      a: "Focused logistics modules start from $6,000-14,000. Full TMS or WMS platforms with driver apps, telematics integration, customer portals, and billing engines typically range from $25,000-95,000 depending on scope and network size.",
     },
     {
       q: "How do I start a logistics software project with Stacklyn?",

@@ -118,7 +118,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom manufacturing software development cost?",
-      a: "A focused module such as an OEE dashboard or digital quality inspection starts from ₹6-12 lakh. A full MES with machine connectivity, traceability, maintenance, and multi-plant rollout typically ranges from ₹25-90 lakh depending on line count and integration complexity.",
+      a: "A focused module such as an OEE dashboard or digital quality inspection starts from $7,000-14,000. A full MES with machine connectivity, traceability, maintenance, and multi-plant rollout typically ranges from $30,000-110,000 depending on line count and integration complexity.",
     },
     {
       q: "How do I start a manufacturing software project with Stacklyn?",

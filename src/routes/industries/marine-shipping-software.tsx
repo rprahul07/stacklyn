@@ -119,7 +119,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom marine or shipping software cost?",
-      a: "A focused module such as crew certification tracking or an inspection app starts from ₹6-12 lakh. An integrated fleet platform covering crewing, PMS, voyage analytics, and ship-shore sync typically ranges from ₹25-80 lakh depending on fleet size and integrations.",
+      a: "A focused module such as crew certification tracking or an inspection app starts from $7,000-14,000. An integrated fleet platform covering crewing, PMS, voyage analytics, and ship-shore sync typically ranges from $30,000-95,000 depending on fleet size and integrations.",
     },
     {
       q: "How do I start a marine software project with Stacklyn?",

@@ -119,7 +119,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom facility management software cost?",
-      a: "A focused module such as a helpdesk with technician app or a PPM scheduler starts from ₹5-10 lakh. A full CAFM platform with SLA engine, tenant portal, energy tracking, and workforce modules typically ranges from ₹18-60 lakh depending on portfolio size and integrations.",
+      a: "A focused module such as a helpdesk with technician app or a PPM scheduler starts from $6,000-12,000. A full CAFM platform with SLA engine, tenant portal, energy tracking, and workforce modules typically ranges from $22,000-72,000 depending on portfolio size and integrations.",
     },
     {
       q: "How do I start a facility management software project with Stacklyn?",

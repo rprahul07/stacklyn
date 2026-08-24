@@ -119,7 +119,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom workforce management software cost?",
-      a: "Focused modules start from ₹4–8 lakh. Full workforce management platforms with biometric integration, contractor portal, payroll engine, and analytics dashboards range from ₹15–50 lakh. Contact us for a scoped estimate.",
+      a: "Focused modules start from $5,000–10,000. Full workforce management platforms with biometric integration, contractor portal, payroll engine, and analytics dashboards range from $18,000–60,000. Contact us for a scoped estimate.",
     },
     {
       q: "How do I start a workforce management software project with Stacklyn?",

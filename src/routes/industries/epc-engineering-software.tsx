@@ -118,7 +118,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does EPC software development cost?",
-      a: "Focused modules (EDCS, vendor tracking, field inspection app) start from ₹6–12 lakh. Full integrated EPC project management platforms range from ₹20–70 lakh depending on scope and integrations. Contact us for a detailed estimate.",
+      a: "Focused modules (EDCS, vendor tracking, field inspection app) start from $7,000–14,000. Full integrated EPC project management platforms range from $25,000–85,000 depending on scope and integrations. Contact us for a detailed estimate.",
     },
     {
       q: "How do I start a software project with Stacklyn for my EPC company?",

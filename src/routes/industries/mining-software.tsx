@@ -114,7 +114,7 @@ const data: IndustryData = {
     },
     {
       q: "How much does custom mining software development cost?",
-      a: "Focused mining software modules start from ₹5–10 lakh. Integrated operations platforms with fleet telematics, GIS visualization, and multi-site support range from ₹20–80 lakh. Contact us for a scoped estimate.",
+      a: "Focused mining software modules start from $6,000–12,000. Integrated operations platforms with fleet telematics, GIS visualization, and multi-site support range from $25,000–95,000. Contact us for a scoped estimate.",
     },
     {
       q: "Can Stacklyn build GIS and spatial mapping features for mine operations?",

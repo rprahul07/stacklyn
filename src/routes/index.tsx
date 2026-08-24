@@ -66,7 +66,7 @@ const organizationSchema = {
       "employee": { "@id": `${BASE_URL}/#rahul-rp` },
       "areaServed": ["IN", "US", "GB", "AE", "SG", "AU", "Worldwide"],
       "priceRange": "$$",
-      "currenciesAccepted": "INR, USD",
+      "currenciesAccepted": "USD, INR",
       "paymentAccepted": "Bank Transfer, Wire Transfer",
       "serviceType": [
         "Full Stack Development", "MERN Stack Development", "Node.js Development",
