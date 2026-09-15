@@ -94,6 +94,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", sizes: "512x512", href: "/favicon.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
     ],
+    // Google Analytics 4 on every page — production builds only, so local dev visits aren't recorded.
+    scripts: import.meta.env.PROD
+      ? [
+          { src: "https://www.googletagmanager.com/gtag/js?id=G-KJDV28CTWL", async: true },
+          {
+            children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KJDV28CTWL');`,
+          },
+        ]
+      : [],
   }),
   shellComponent: RootShell,
   component: RootComponent,
