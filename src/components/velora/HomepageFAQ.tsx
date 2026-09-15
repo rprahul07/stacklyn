@@ -11,7 +11,11 @@ const homepageFAQs = [
   },
   {
     q: "Which industries does Stacklyn build software for?",
-    a: "Stacklyn builds industry-specific enterprise software for oil and gas, mining, construction, EPC and engineering, manufacturing, logistics and supply chain, marine and shipping, renewable energy and utilities, facility management, field service management, HSE and compliance, and industrial workforce management. Each industry practice combines domain workflow knowledge with modern engineering.",
+    a: "Stacklyn builds industry-specific enterprise software for oil and gas, mining, construction, EPC and engineering, manufacturing, logistics and supply chain, marine and shipping, renewable energy and utilities, facility management, field service management, HSE and compliance, industrial workforce management, healthcare, fintech and BFSI, e-commerce and retail, edtech, insurance, and real estate. Each industry practice combines domain workflow knowledge with modern engineering.",
+  },
+  {
+    q: "Does Stacklyn provide AI and automation services in Kerala?",
+    a: "Yes. Stacklyn is a Kerala-based AI and software company building AI chatbots, AI agents, WhatsApp automation, Malayalam chat and voice assistants, AI document processing, Tally and GST automation, CRM and HR automation, and business process automation for companies across Kerala, India, and the Gulf.",
   },
   {
     q: "What services does Stacklyn offer?",

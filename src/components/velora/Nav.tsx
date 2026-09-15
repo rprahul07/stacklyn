@@ -3,6 +3,7 @@ import { Logo } from "./Logo";
 
 const links = [
   { href: "/#capabilities", label: "Services" },
+  { href: "/ai-automation", label: "AI Automation" },
   { href: "/#work", label: "Work" },
   { href: "/#stack", label: "Technology" },
   { href: "/#process", label: "Process" },
@@ -35,6 +36,12 @@ const industryLinks = [
   { href: "/industries/field-service-management-software", label: "Field Service" },
   { href: "/industries/hse-compliance-software", label: "HSE & Compliance" },
   { href: "/industries/workforce-management-software", label: "Workforce Management" },
+  { href: "/industries/healthcare-software", label: "Healthcare" },
+  { href: "/industries/fintech-software", label: "Fintech & BFSI" },
+  { href: "/industries/ecommerce-retail-software", label: "E-commerce & Retail" },
+  { href: "/industries/edtech-software", label: "EdTech & Education" },
+  { href: "/industries/insurance-software", label: "Insurance" },
+  { href: "/industries/proptech-real-estate-software", label: "Real Estate & PropTech" },
 ];
 
 export function Nav() {
@@ -60,7 +67,7 @@ export function Nav() {
           <Logo />
         </a>
 
-        <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground" aria-label="Main navigation">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-7 text-sm text-muted-foreground" aria-label="Main navigation">
           {/* Services dropdown */}
           <div
             className="relative"

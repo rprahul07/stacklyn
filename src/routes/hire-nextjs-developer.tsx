@@ -27,8 +27,8 @@ const data: HireData = {
   ],
   engagementModels: [
     { name: "Project-Based", desc: "Fixed scope for complete Next.js apps, SaaS products, or marketing sites.", price: "From $2,400" },
-    { name: "Monthly Retainer", desc: "Dedicated Next.js developer for ongoing full-stack development, 80+ hours/month.", price: "$1,000–1,450/mo" },
-    { name: "Hourly Consulting", desc: "Architecture reviews, performance audits, or Next.js migration consulting.", price: "$35–60/hr" },
+    { name: "Monthly Retainer", desc: "Dedicated Next.js developer for ongoing full-stack development, 80+ hours/month.", price: "$2,600–4,000/mo" },
+    { name: "Hourly Consulting", desc: "Architecture reviews, performance audits, or Next.js migration consulting.", price: "$65–95/hr" },
   ],
   process: [
     { step: "Requirements", desc: "Share your project requirements, designs, and technical constraints." },
@@ -45,7 +45,7 @@ const data: HireData = {
   ],
   faqs: [
     { q: "Why hire a Next.js developer from India?", a: "Indian Next.js developers offer world-class skills at significantly lower rates than US/UK developers. Stacklyn's engineers are trained on the latest Next.js App Router and can deliver production-grade applications fast." },
-    { q: "What is the cost of hiring a Next.js developer from Stacklyn?", a: "Monthly retainers start at $1,000 for part-time engagement. Full-time dedicated Next.js developers cost $1,200–1,450/month. Project-based work starts at $2,400." },
+    { q: "What is the cost of hiring a Next.js developer from Stacklyn?", a: "Monthly retainers start at $2,600 for a part-time engagement. Full-time dedicated Next.js developers cost $3,000–4,000/month. Project-based work starts at $2,400, and consulting is billed at $65–95/hour." },
     { q: "Does Stacklyn use the Next.js App Router?", a: "Yes. All new Next.js projects use the App Router with React Server Components and Server Actions. We do not use the deprecated Pages Router for new projects." },
     { q: "Can Stacklyn build a Next.js SaaS product?", a: "Yes. SaaS development with Next.js is a core Stacklyn specialization — multi-tenancy, Stripe subscriptions, auth, dashboards, and API routes all in one Next.js project." },
     { q: "Does Stacklyn handle Next.js SEO optimization?", a: "Yes. SEO is built into every Stacklyn Next.js project: metadata API, canonical URLs, OpenGraph, structured data (JSON-LD), sitemaps, and Core Web Vitals optimization." },

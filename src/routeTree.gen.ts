@@ -18,9 +18,11 @@ import { Route as HireMernDeveloperRouteImport } from './routes/hire-mern-develo
 import { Route as HireBackendDeveloperRouteImport } from './routes/hire-backend-developer'
 import { Route as HireAiDeveloperRouteImport } from './routes/hire-ai-developer'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AiAutomationRouteImport } from './routes/ai-automation'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as AiAutomationIndexRouteImport } from './routes/ai-automation/index'
 import { Route as ServicesReactDevelopmentRouteImport } from './routes/services/react-development'
 import { Route as ServicesNodejsDevelopmentRouteImport } from './routes/services/nodejs-development'
 import { Route as ServicesNextjsDevelopmentRouteImport } from './routes/services/nextjs-development'
@@ -32,16 +34,23 @@ import { Route as ServicesBackendDevelopmentRouteImport } from './routes/service
 import { Route as ServicesAiDevelopmentRouteImport } from './routes/services/ai-development'
 import { Route as IndustriesWorkforceManagementSoftwareRouteImport } from './routes/industries/workforce-management-software'
 import { Route as IndustriesRenewableEnergySoftwareRouteImport } from './routes/industries/renewable-energy-software'
+import { Route as IndustriesProptechRealEstateSoftwareRouteImport } from './routes/industries/proptech-real-estate-software'
 import { Route as IndustriesOilGasSoftwareRouteImport } from './routes/industries/oil-gas-software'
 import { Route as IndustriesMiningSoftwareRouteImport } from './routes/industries/mining-software'
 import { Route as IndustriesMarineShippingSoftwareRouteImport } from './routes/industries/marine-shipping-software'
 import { Route as IndustriesManufacturingSoftwareRouteImport } from './routes/industries/manufacturing-software'
 import { Route as IndustriesLogisticsSupplyChainSoftwareRouteImport } from './routes/industries/logistics-supply-chain-software'
+import { Route as IndustriesInsuranceSoftwareRouteImport } from './routes/industries/insurance-software'
 import { Route as IndustriesHseComplianceSoftwareRouteImport } from './routes/industries/hse-compliance-software'
+import { Route as IndustriesHealthcareSoftwareRouteImport } from './routes/industries/healthcare-software'
+import { Route as IndustriesFintechSoftwareRouteImport } from './routes/industries/fintech-software'
 import { Route as IndustriesFieldServiceManagementSoftwareRouteImport } from './routes/industries/field-service-management-software'
 import { Route as IndustriesFacilityManagementSoftwareRouteImport } from './routes/industries/facility-management-software'
 import { Route as IndustriesEpcEngineeringSoftwareRouteImport } from './routes/industries/epc-engineering-software'
+import { Route as IndustriesEdtechSoftwareRouteImport } from './routes/industries/edtech-software'
+import { Route as IndustriesEcommerceRetailSoftwareRouteImport } from './routes/industries/ecommerce-retail-software'
 import { Route as IndustriesConstructionSoftwareRouteImport } from './routes/industries/construction-software'
+import { Route as AiAutomationSlugRouteImport } from './routes/ai-automation/$slug'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -88,6 +97,11 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiAutomationRoute = AiAutomationRouteImport.update({
+  id: '/ai-automation',
+  path: '/ai-automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -102,6 +116,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => BlogRoute,
+} as any)
+const AiAutomationIndexRoute = AiAutomationIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AiAutomationRoute,
 } as any)
 const ServicesReactDevelopmentRoute =
   ServicesReactDevelopmentRouteImport.update({
@@ -166,6 +185,12 @@ const IndustriesRenewableEnergySoftwareRoute =
     path: '/renewable-energy-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
+const IndustriesProptechRealEstateSoftwareRoute =
+  IndustriesProptechRealEstateSoftwareRouteImport.update({
+    id: '/proptech-real-estate-software',
+    path: '/proptech-real-estate-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
 const IndustriesOilGasSoftwareRoute =
   IndustriesOilGasSoftwareRouteImport.update({
     id: '/oil-gas-software',
@@ -196,10 +221,28 @@ const IndustriesLogisticsSupplyChainSoftwareRoute =
     path: '/logistics-supply-chain-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
+const IndustriesInsuranceSoftwareRoute =
+  IndustriesInsuranceSoftwareRouteImport.update({
+    id: '/insurance-software',
+    path: '/insurance-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
 const IndustriesHseComplianceSoftwareRoute =
   IndustriesHseComplianceSoftwareRouteImport.update({
     id: '/hse-compliance-software',
     path: '/hse-compliance-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesHealthcareSoftwareRoute =
+  IndustriesHealthcareSoftwareRouteImport.update({
+    id: '/healthcare-software',
+    path: '/healthcare-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesFintechSoftwareRoute =
+  IndustriesFintechSoftwareRouteImport.update({
+    id: '/fintech-software',
+    path: '/fintech-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
 const IndustriesFieldServiceManagementSoftwareRoute =
@@ -220,15 +263,33 @@ const IndustriesEpcEngineeringSoftwareRoute =
     path: '/epc-engineering-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
+const IndustriesEdtechSoftwareRoute =
+  IndustriesEdtechSoftwareRouteImport.update({
+    id: '/edtech-software',
+    path: '/edtech-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesEcommerceRetailSoftwareRoute =
+  IndustriesEcommerceRetailSoftwareRouteImport.update({
+    id: '/ecommerce-retail-software',
+    path: '/ecommerce-retail-software',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
 const IndustriesConstructionSoftwareRoute =
   IndustriesConstructionSoftwareRouteImport.update({
     id: '/construction-software',
     path: '/construction-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
+const AiAutomationSlugRoute = AiAutomationSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AiAutomationRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-automation': typeof AiAutomationRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/hire-ai-developer': typeof HireAiDeveloperRoute
   '/hire-backend-developer': typeof HireBackendDeveloperRoute
@@ -238,16 +299,23 @@ export interface FileRoutesByFullPath {
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/ai-automation/$slug': typeof AiAutomationSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
+  '/industries/ecommerce-retail-software': typeof IndustriesEcommerceRetailSoftwareRoute
+  '/industries/edtech-software': typeof IndustriesEdtechSoftwareRoute
   '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
   '/industries/facility-management-software': typeof IndustriesFacilityManagementSoftwareRoute
   '/industries/field-service-management-software': typeof IndustriesFieldServiceManagementSoftwareRoute
+  '/industries/fintech-software': typeof IndustriesFintechSoftwareRoute
+  '/industries/healthcare-software': typeof IndustriesHealthcareSoftwareRoute
   '/industries/hse-compliance-software': typeof IndustriesHseComplianceSoftwareRoute
+  '/industries/insurance-software': typeof IndustriesInsuranceSoftwareRoute
   '/industries/logistics-supply-chain-software': typeof IndustriesLogisticsSupplyChainSoftwareRoute
   '/industries/manufacturing-software': typeof IndustriesManufacturingSoftwareRoute
   '/industries/marine-shipping-software': typeof IndustriesMarineShippingSoftwareRoute
   '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
   '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/proptech-real-estate-software': typeof IndustriesProptechRealEstateSoftwareRoute
   '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
@@ -259,6 +327,7 @@ export interface FileRoutesByFullPath {
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
 }
@@ -271,16 +340,23 @@ export interface FileRoutesByTo {
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/services': typeof ServicesRouteWithChildren
+  '/ai-automation/$slug': typeof AiAutomationSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
+  '/industries/ecommerce-retail-software': typeof IndustriesEcommerceRetailSoftwareRoute
+  '/industries/edtech-software': typeof IndustriesEdtechSoftwareRoute
   '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
   '/industries/facility-management-software': typeof IndustriesFacilityManagementSoftwareRoute
   '/industries/field-service-management-software': typeof IndustriesFieldServiceManagementSoftwareRoute
+  '/industries/fintech-software': typeof IndustriesFintechSoftwareRoute
+  '/industries/healthcare-software': typeof IndustriesHealthcareSoftwareRoute
   '/industries/hse-compliance-software': typeof IndustriesHseComplianceSoftwareRoute
+  '/industries/insurance-software': typeof IndustriesInsuranceSoftwareRoute
   '/industries/logistics-supply-chain-software': typeof IndustriesLogisticsSupplyChainSoftwareRoute
   '/industries/manufacturing-software': typeof IndustriesManufacturingSoftwareRoute
   '/industries/marine-shipping-software': typeof IndustriesMarineShippingSoftwareRoute
   '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
   '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/proptech-real-estate-software': typeof IndustriesProptechRealEstateSoftwareRoute
   '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
@@ -292,12 +368,14 @@ export interface FileRoutesByTo {
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/ai-automation': typeof AiAutomationIndexRoute
   '/blog': typeof BlogIndexRoute
   '/industries': typeof IndustriesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-automation': typeof AiAutomationRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/hire-ai-developer': typeof HireAiDeveloperRoute
   '/hire-backend-developer': typeof HireBackendDeveloperRoute
@@ -307,16 +385,23 @@ export interface FileRoutesById {
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/ai-automation/$slug': typeof AiAutomationSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
+  '/industries/ecommerce-retail-software': typeof IndustriesEcommerceRetailSoftwareRoute
+  '/industries/edtech-software': typeof IndustriesEdtechSoftwareRoute
   '/industries/epc-engineering-software': typeof IndustriesEpcEngineeringSoftwareRoute
   '/industries/facility-management-software': typeof IndustriesFacilityManagementSoftwareRoute
   '/industries/field-service-management-software': typeof IndustriesFieldServiceManagementSoftwareRoute
+  '/industries/fintech-software': typeof IndustriesFintechSoftwareRoute
+  '/industries/healthcare-software': typeof IndustriesHealthcareSoftwareRoute
   '/industries/hse-compliance-software': typeof IndustriesHseComplianceSoftwareRoute
+  '/industries/insurance-software': typeof IndustriesInsuranceSoftwareRoute
   '/industries/logistics-supply-chain-software': typeof IndustriesLogisticsSupplyChainSoftwareRoute
   '/industries/manufacturing-software': typeof IndustriesManufacturingSoftwareRoute
   '/industries/marine-shipping-software': typeof IndustriesMarineShippingSoftwareRoute
   '/industries/mining-software': typeof IndustriesMiningSoftwareRoute
   '/industries/oil-gas-software': typeof IndustriesOilGasSoftwareRoute
+  '/industries/proptech-real-estate-software': typeof IndustriesProptechRealEstateSoftwareRoute
   '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
@@ -328,6 +413,7 @@ export interface FileRoutesById {
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
 }
@@ -335,6 +421,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/ai-automation'
     | '/blog'
     | '/hire-ai-developer'
     | '/hire-backend-developer'
@@ -344,16 +431,23 @@ export interface FileRouteTypes {
     | '/hire-react-developer'
     | '/industries'
     | '/services'
+    | '/ai-automation/$slug'
     | '/industries/construction-software'
+    | '/industries/ecommerce-retail-software'
+    | '/industries/edtech-software'
     | '/industries/epc-engineering-software'
     | '/industries/facility-management-software'
     | '/industries/field-service-management-software'
+    | '/industries/fintech-software'
+    | '/industries/healthcare-software'
     | '/industries/hse-compliance-software'
+    | '/industries/insurance-software'
     | '/industries/logistics-supply-chain-software'
     | '/industries/manufacturing-software'
     | '/industries/marine-shipping-software'
     | '/industries/mining-software'
     | '/industries/oil-gas-software'
+    | '/industries/proptech-real-estate-software'
     | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
     | '/services/ai-development'
@@ -365,6 +459,7 @@ export interface FileRouteTypes {
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/ai-automation/'
     | '/blog/'
     | '/industries/'
   fileRoutesByTo: FileRoutesByTo
@@ -377,16 +472,23 @@ export interface FileRouteTypes {
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
     | '/services'
+    | '/ai-automation/$slug'
     | '/industries/construction-software'
+    | '/industries/ecommerce-retail-software'
+    | '/industries/edtech-software'
     | '/industries/epc-engineering-software'
     | '/industries/facility-management-software'
     | '/industries/field-service-management-software'
+    | '/industries/fintech-software'
+    | '/industries/healthcare-software'
     | '/industries/hse-compliance-software'
+    | '/industries/insurance-software'
     | '/industries/logistics-supply-chain-software'
     | '/industries/manufacturing-software'
     | '/industries/marine-shipping-software'
     | '/industries/mining-software'
     | '/industries/oil-gas-software'
+    | '/industries/proptech-real-estate-software'
     | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
     | '/services/ai-development'
@@ -398,11 +500,13 @@ export interface FileRouteTypes {
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/ai-automation'
     | '/blog'
     | '/industries'
   id:
     | '__root__'
     | '/'
+    | '/ai-automation'
     | '/blog'
     | '/hire-ai-developer'
     | '/hire-backend-developer'
@@ -412,16 +516,23 @@ export interface FileRouteTypes {
     | '/hire-react-developer'
     | '/industries'
     | '/services'
+    | '/ai-automation/$slug'
     | '/industries/construction-software'
+    | '/industries/ecommerce-retail-software'
+    | '/industries/edtech-software'
     | '/industries/epc-engineering-software'
     | '/industries/facility-management-software'
     | '/industries/field-service-management-software'
+    | '/industries/fintech-software'
+    | '/industries/healthcare-software'
     | '/industries/hse-compliance-software'
+    | '/industries/insurance-software'
     | '/industries/logistics-supply-chain-software'
     | '/industries/manufacturing-software'
     | '/industries/marine-shipping-software'
     | '/industries/mining-software'
     | '/industries/oil-gas-software'
+    | '/industries/proptech-real-estate-software'
     | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
     | '/services/ai-development'
@@ -433,12 +544,14 @@ export interface FileRouteTypes {
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/ai-automation/'
     | '/blog/'
     | '/industries/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiAutomationRoute: typeof AiAutomationRouteWithChildren
   BlogRoute: typeof BlogRouteWithChildren
   HireAiDeveloperRoute: typeof HireAiDeveloperRoute
   HireBackendDeveloperRoute: typeof HireBackendDeveloperRoute
@@ -515,6 +628,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-automation': {
+      id: '/ai-automation'
+      path: '/ai-automation'
+      fullPath: '/ai-automation'
+      preLoaderRoute: typeof AiAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -535,6 +655,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/ai-automation/': {
+      id: '/ai-automation/'
+      path: '/'
+      fullPath: '/ai-automation/'
+      preLoaderRoute: typeof AiAutomationIndexRouteImport
+      parentRoute: typeof AiAutomationRoute
     }
     '/services/react-development': {
       id: '/services/react-development'
@@ -613,6 +740,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesRenewableEnergySoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/industries/proptech-real-estate-software': {
+      id: '/industries/proptech-real-estate-software'
+      path: '/proptech-real-estate-software'
+      fullPath: '/industries/proptech-real-estate-software'
+      preLoaderRoute: typeof IndustriesProptechRealEstateSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
     '/industries/oil-gas-software': {
       id: '/industries/oil-gas-software'
       path: '/oil-gas-software'
@@ -648,11 +782,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesLogisticsSupplyChainSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/industries/insurance-software': {
+      id: '/industries/insurance-software'
+      path: '/insurance-software'
+      fullPath: '/industries/insurance-software'
+      preLoaderRoute: typeof IndustriesInsuranceSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
     '/industries/hse-compliance-software': {
       id: '/industries/hse-compliance-software'
       path: '/hse-compliance-software'
       fullPath: '/industries/hse-compliance-software'
       preLoaderRoute: typeof IndustriesHseComplianceSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/healthcare-software': {
+      id: '/industries/healthcare-software'
+      path: '/healthcare-software'
+      fullPath: '/industries/healthcare-software'
+      preLoaderRoute: typeof IndustriesHealthcareSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/fintech-software': {
+      id: '/industries/fintech-software'
+      path: '/fintech-software'
+      fullPath: '/industries/fintech-software'
+      preLoaderRoute: typeof IndustriesFintechSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
     '/industries/field-service-management-software': {
@@ -676,6 +831,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesEpcEngineeringSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/industries/edtech-software': {
+      id: '/industries/edtech-software'
+      path: '/edtech-software'
+      fullPath: '/industries/edtech-software'
+      preLoaderRoute: typeof IndustriesEdtechSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/ecommerce-retail-software': {
+      id: '/industries/ecommerce-retail-software'
+      path: '/ecommerce-retail-software'
+      fullPath: '/industries/ecommerce-retail-software'
+      preLoaderRoute: typeof IndustriesEcommerceRetailSoftwareRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
     '/industries/construction-software': {
       id: '/industries/construction-software'
       path: '/construction-software'
@@ -683,8 +852,29 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesConstructionSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/ai-automation/$slug': {
+      id: '/ai-automation/$slug'
+      path: '/$slug'
+      fullPath: '/ai-automation/$slug'
+      preLoaderRoute: typeof AiAutomationSlugRouteImport
+      parentRoute: typeof AiAutomationRoute
+    }
   }
 }
+
+interface AiAutomationRouteChildren {
+  AiAutomationSlugRoute: typeof AiAutomationSlugRoute
+  AiAutomationIndexRoute: typeof AiAutomationIndexRoute
+}
+
+const AiAutomationRouteChildren: AiAutomationRouteChildren = {
+  AiAutomationSlugRoute: AiAutomationSlugRoute,
+  AiAutomationIndexRoute: AiAutomationIndexRoute,
+}
+
+const AiAutomationRouteWithChildren = AiAutomationRoute._addFileChildren(
+  AiAutomationRouteChildren,
+)
 
 interface BlogRouteChildren {
   BlogIndexRoute: typeof BlogIndexRoute
@@ -698,15 +888,21 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface IndustriesRouteChildren {
   IndustriesConstructionSoftwareRoute: typeof IndustriesConstructionSoftwareRoute
+  IndustriesEcommerceRetailSoftwareRoute: typeof IndustriesEcommerceRetailSoftwareRoute
+  IndustriesEdtechSoftwareRoute: typeof IndustriesEdtechSoftwareRoute
   IndustriesEpcEngineeringSoftwareRoute: typeof IndustriesEpcEngineeringSoftwareRoute
   IndustriesFacilityManagementSoftwareRoute: typeof IndustriesFacilityManagementSoftwareRoute
   IndustriesFieldServiceManagementSoftwareRoute: typeof IndustriesFieldServiceManagementSoftwareRoute
+  IndustriesFintechSoftwareRoute: typeof IndustriesFintechSoftwareRoute
+  IndustriesHealthcareSoftwareRoute: typeof IndustriesHealthcareSoftwareRoute
   IndustriesHseComplianceSoftwareRoute: typeof IndustriesHseComplianceSoftwareRoute
+  IndustriesInsuranceSoftwareRoute: typeof IndustriesInsuranceSoftwareRoute
   IndustriesLogisticsSupplyChainSoftwareRoute: typeof IndustriesLogisticsSupplyChainSoftwareRoute
   IndustriesManufacturingSoftwareRoute: typeof IndustriesManufacturingSoftwareRoute
   IndustriesMarineShippingSoftwareRoute: typeof IndustriesMarineShippingSoftwareRoute
   IndustriesMiningSoftwareRoute: typeof IndustriesMiningSoftwareRoute
   IndustriesOilGasSoftwareRoute: typeof IndustriesOilGasSoftwareRoute
+  IndustriesProptechRealEstateSoftwareRoute: typeof IndustriesProptechRealEstateSoftwareRoute
   IndustriesRenewableEnergySoftwareRoute: typeof IndustriesRenewableEnergySoftwareRoute
   IndustriesWorkforceManagementSoftwareRoute: typeof IndustriesWorkforceManagementSoftwareRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
@@ -714,18 +910,26 @@ interface IndustriesRouteChildren {
 
 const IndustriesRouteChildren: IndustriesRouteChildren = {
   IndustriesConstructionSoftwareRoute: IndustriesConstructionSoftwareRoute,
+  IndustriesEcommerceRetailSoftwareRoute:
+    IndustriesEcommerceRetailSoftwareRoute,
+  IndustriesEdtechSoftwareRoute: IndustriesEdtechSoftwareRoute,
   IndustriesEpcEngineeringSoftwareRoute: IndustriesEpcEngineeringSoftwareRoute,
   IndustriesFacilityManagementSoftwareRoute:
     IndustriesFacilityManagementSoftwareRoute,
   IndustriesFieldServiceManagementSoftwareRoute:
     IndustriesFieldServiceManagementSoftwareRoute,
+  IndustriesFintechSoftwareRoute: IndustriesFintechSoftwareRoute,
+  IndustriesHealthcareSoftwareRoute: IndustriesHealthcareSoftwareRoute,
   IndustriesHseComplianceSoftwareRoute: IndustriesHseComplianceSoftwareRoute,
+  IndustriesInsuranceSoftwareRoute: IndustriesInsuranceSoftwareRoute,
   IndustriesLogisticsSupplyChainSoftwareRoute:
     IndustriesLogisticsSupplyChainSoftwareRoute,
   IndustriesManufacturingSoftwareRoute: IndustriesManufacturingSoftwareRoute,
   IndustriesMarineShippingSoftwareRoute: IndustriesMarineShippingSoftwareRoute,
   IndustriesMiningSoftwareRoute: IndustriesMiningSoftwareRoute,
   IndustriesOilGasSoftwareRoute: IndustriesOilGasSoftwareRoute,
+  IndustriesProptechRealEstateSoftwareRoute:
+    IndustriesProptechRealEstateSoftwareRoute,
   IndustriesRenewableEnergySoftwareRoute:
     IndustriesRenewableEnergySoftwareRoute,
   IndustriesWorkforceManagementSoftwareRoute:
@@ -768,6 +972,7 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiAutomationRoute: AiAutomationRouteWithChildren,
   BlogRoute: BlogRouteWithChildren,
   HireAiDeveloperRoute: HireAiDeveloperRoute,
   HireBackendDeveloperRoute: HireBackendDeveloperRoute,

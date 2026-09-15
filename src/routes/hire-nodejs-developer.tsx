@@ -25,8 +25,8 @@ const data: HireData = {
   ],
   engagementModels: [
     { name: "Project-Based", desc: "Fixed scope, fixed price. Ideal for well-defined projects with clear requirements.", price: "From $1,800" },
-    { name: "Monthly Retainer", desc: "Dedicated Node.js developer for 80+ hours/month. Ongoing development, maintenance, and scaling.", price: "$950–1,450/mo" },
-    { name: "Hourly Consulting", desc: "Pay-as-you-go for audits, code reviews, architecture consulting, or specific technical problems.", price: "$35–60/hr" },
+    { name: "Monthly Retainer", desc: "Dedicated Node.js developer for 80+ hours/month. Ongoing development, maintenance, and scaling.", price: "$2,500–4,000/mo" },
+    { name: "Hourly Consulting", desc: "Pay-as-you-go for audits, code reviews, architecture consulting, or specific technical problems.", price: "$65–95/hr" },
   ],
   process: [
     { step: "Contact Us", desc: "Share your project requirements via email, WhatsApp, or contact form." },
@@ -42,7 +42,7 @@ const data: HireData = {
   ],
   faqs: [
     { q: "Why hire a Node.js developer from India?", a: "India offers world-class Node.js engineers at significantly lower rates than the US or UK. Stacklyn's engineers are senior-level, work in TypeScript, and have production experience with Node.js APIs, microservices, and real-time systems." },
-    { q: "What is the cost of hiring a Node.js developer from Stacklyn?", a: "Monthly retainers start at $950 per month for part-time engagement. Full-time dedicated developers range from $1,200–1,800/month. Hourly rates are $35–60 for consulting." },
+    { q: "What is the cost of hiring a Node.js developer from Stacklyn?", a: "Monthly retainers start at $2,500 per month for a part-time engagement. Full-time dedicated developers range from $3,000–4,500/month. Hourly rates are $65–95 for consulting." },
     { q: "How quickly can Stacklyn start a Node.js project?", a: "We can typically start within 1–3 business days after contract signing. The onboarding process is fast — we review your codebase, set up access, and have a kickoff call on day one." },
     { q: "Does Stacklyn use TypeScript with Node.js?", a: "Yes. All Stacklyn Node.js projects use TypeScript. TypeScript with Node.js provides type-safe APIs, better IDE support, and significantly more maintainable code." },
     { q: "Can Stacklyn take over my existing Node.js codebase?", a: "Yes. We regularly take over and maintain existing Node.js codebases. We start with a code audit to assess quality, identify issues, and propose improvements." },

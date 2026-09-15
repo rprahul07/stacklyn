@@ -27,8 +27,8 @@ const data: HireData = {
   ],
   engagementModels: [
     { name: "Project-Based", desc: "Fixed-price MERN project with defined scope, timeline, and deliverables.", price: "From $2,400" },
-    { name: "Monthly Retainer", desc: "Dedicated MERN developer for ongoing product development, 80+ hours/month.", price: "$950–1,450/mo" },
-    { name: "Hourly", desc: "Code reviews, architectural consulting, or feature sprints billed hourly.", price: "$35–60/hr" },
+    { name: "Monthly Retainer", desc: "Dedicated MERN developer for ongoing product development, 80+ hours/month.", price: "$2,500–4,000/mo" },
+    { name: "Hourly", desc: "Code reviews, architectural consulting, or feature sprints billed hourly.", price: "$65–95/hr" },
   ],
   process: [
     { step: "Project Brief", desc: "Share what you're building, your current stack, and timeline requirements." },
@@ -45,7 +45,7 @@ const data: HireData = {
   faqs: [
     { q: "What is a MERN stack developer?", a: "A MERN stack developer is a full-stack JavaScript engineer who works with MongoDB, Express.js, React, and Node.js — the four technologies that make up the MERN stack." },
     { q: "Why hire a MERN developer from India?", a: "India has a large pool of experienced MERN developers at rates 50–70% lower than US/UK markets. Stacklyn's MERN developers have production experience with SaaS products, real-time apps, and API platforms." },
-    { q: "What is the cost of hiring a MERN developer from Stacklyn?", a: "MERN developer retainers start at $950/month. Full-time dedicated MERN developers cost $1,200–1,450/month. Project-based engagements start at $2,400." },
+    { q: "What is the cost of hiring a MERN developer from Stacklyn?", a: "MERN developer retainers start at $2,500/month for a part-time engagement. Full-time dedicated MERN developers cost $3,000–4,000/month. Project-based engagements start at $2,400, and hourly work is billed at $65–95/hour." },
     { q: "Can one MERN developer build a complete product?", a: "Yes. A senior MERN developer can build a complete full-stack product — React frontend, Node.js/Express backend, MongoDB database, and cloud deployment. This is cost-effective for MVPs and early-stage products." },
     { q: "Does Stacklyn's MERN team use TypeScript?", a: "Yes. All our MERN projects use TypeScript on both the React frontend and Node.js backend for type-safe, maintainable code." },
     { q: "Can Stacklyn add MERN features to an existing application?", a: "Yes. We regularly extend existing MERN codebases with new features, refactor legacy code, add TypeScript, or migrate to modern patterns." },

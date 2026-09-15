@@ -117,6 +117,83 @@ URL: https://stacklyn.in/industries/hse-compliance-software
 Labour mobilization, competency and certification tracking, biometric attendance, site access control, contractor management, and payroll integration for industrial workforces.
 URL: https://stacklyn.in/industries/workforce-management-software
 
+### Healthcare Software
+Hospital management systems, EMR and EHR platforms, telemedicine, patient portals, lab and radiology information systems, and HL7, FHIR, and ABDM interoperability.
+URL: https://stacklyn.in/industries/healthcare-software
+
+### Fintech & BFSI Software
+Loan origination and management systems, payments and settlement infrastructure, digital KYC and onboarding, collections platforms, wealth dashboards, and regulatory reporting.
+URL: https://stacklyn.in/industries/fintech-software
+
+### E-commerce & Retail Software
+Headless Next.js storefronts, B2B and B2C marketplaces, order management, multi-location inventory, POS and omnichannel tools, and D2C apps.
+URL: https://stacklyn.in/industries/ecommerce-retail-software
+
+### EdTech Software
+Learning management systems, assessment and proctoring engines, live class platforms, school and campus ERP, student and parent apps, and learning analytics.
+URL: https://stacklyn.in/industries/edtech-software
+
+### Insurance Software
+Policy administration systems, quote and bind engines, claims management, underwriting workbenches, agent and broker portals, commission engines, and renewals.
+URL: https://stacklyn.in/industries/insurance-software
+
+### Real Estate & PropTech Software
+Unit inventory and sales CRM, booking to registration workflows, construction-linked collections, channel partner portals, lease management, and property marketplaces.
+URL: https://stacklyn.in/industries/proptech-real-estate-software
+
+## AI & Automation (Kerala & India)
+
+Stacklyn is a Kerala-based AI and automation company. AI solutions are grounded in each client's own data, evaluated before launch, and use human approval for financial and compliance actions. Malayalam, Hindi, and English are supported for chat and voice.
+Hub: https://stacklyn.in/ai-automation
+
+### AI Chatbot Development
+Stacklyn builds custom AI chatbots for Kerala and Indian businesses — website, WhatsApp, and in-app assistants trained on your own data, with Malayalam, Hindi, and English support.
+URL: https://stacklyn.in/ai-automation/ai-chatbot-development
+
+### WhatsApp AI Chatbot & Automation
+Stacklyn builds WhatsApp AI chatbots and automation on the official WhatsApp Business Platform — lead capture, order updates, payment reminders, and catalogue sales for Kerala and Indian businesses.
+URL: https://stacklyn.in/ai-automation/whatsapp-ai-chatbot
+
+### Malayalam AI Chatbot & Voice Bot
+Stacklyn builds Malayalam AI chatbots and voice bots for Kerala businesses and service organisations — handling Malayalam script, Manglish, and English in text and speech.
+URL: https://stacklyn.in/ai-automation/malayalam-ai-chatbot
+
+### AI Agent Development
+Stacklyn builds AI agents that complete multi-step business tasks — researching, updating CRMs, processing documents, and coordinating workflows — with human approval and audit trails. Kerala, India.
+URL: https://stacklyn.in/ai-automation/ai-agent-development
+
+### RAG & Private Knowledge Base AI
+Stacklyn builds retrieval-augmented generation (RAG) systems that let teams ask questions of company documents, SOPs, contracts, and databases with cited answers and access controls. Kerala, India.
+URL: https://stacklyn.in/ai-automation/rag-knowledge-base-ai
+
+### AI Voice Agents & Call Automation
+Stacklyn builds AI voice agents for inbound and outbound calls — appointment booking, lead qualification, payment reminders, and support — in English, Hindi, and Malayalam, integrated with Indian telephony.
+URL: https://stacklyn.in/ai-automation/ai-voice-agent
+
+### Business Process Automation
+Stacklyn automates repetitive business processes for Kerala and Indian companies — approvals, data entry, reporting, invoicing, and follow-ups — connecting Tally, Zoho, WhatsApp, email, and spreadsheets.
+URL: https://stacklyn.in/ai-automation/business-process-automation
+
+### n8n, Make & Zapier Automation
+Stacklyn builds, deploys, and maintains n8n, Make, and Zapier automations for Indian businesses — AI workflows, CRM and WhatsApp integrations, and self-hosted n8n in Indian cloud regions.
+URL: https://stacklyn.in/ai-automation/n8n-automation-agency
+
+### Tally & GST Automation
+Stacklyn automates Tally and GST workflows — invoice data entry, e-invoice and e-way bill generation, GSTR-2B reconciliation, outstanding reminders, and MIS reports — for Kerala and Indian businesses.
+URL: https://stacklyn.in/ai-automation/tally-gst-automation
+
+### AI Document Processing & Invoice Automation
+Stacklyn builds AI document processing that extracts data from invoices, purchase orders, KYC documents, forms, and contracts — including scanned and handwritten pages — and pushes it into your systems.
+URL: https://stacklyn.in/ai-automation/invoice-document-ai
+
+### CRM & Sales Automation
+Stacklyn sets up and automates CRMs for Kerala and Indian sales teams — lead capture from IndiaMART, Meta ads, and WhatsApp, instant assignment, follow-up sequences, and AI-assisted sales insights.
+URL: https://stacklyn.in/ai-automation/crm-sales-automation
+
+### HR & Recruitment Automation
+Stacklyn automates HR and recruitment for Indian companies — AI-assisted resume screening, interview scheduling, onboarding workflows, leave and attendance automation, and employee helpdesk assistants.
+URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
+
 ## Hire Developers
 
 - Hire Node.js Developers: https://stacklyn.in/hire-nodejs-developer
@@ -169,6 +246,25 @@ URL: https://stacklyn.in/industries/workforce-management-software
 - Field Service Management Software: https://stacklyn.in/industries/field-service-management-software
 - HSE & Compliance Software: https://stacklyn.in/industries/hse-compliance-software
 - Workforce Management Software: https://stacklyn.in/industries/workforce-management-software
+- Healthcare Software: https://stacklyn.in/industries/healthcare-software
+- Fintech & BFSI Software: https://stacklyn.in/industries/fintech-software
+- E-commerce & Retail Software: https://stacklyn.in/industries/ecommerce-retail-software
+- EdTech Software: https://stacklyn.in/industries/edtech-software
+- Insurance Software: https://stacklyn.in/industries/insurance-software
+- Real Estate & PropTech Software: https://stacklyn.in/industries/proptech-real-estate-software
+- AI & Automation Hub: https://stacklyn.in/ai-automation
+- AI Chatbot Development: https://stacklyn.in/ai-automation/ai-chatbot-development
+- WhatsApp AI Chatbot & Automation: https://stacklyn.in/ai-automation/whatsapp-ai-chatbot
+- Malayalam AI Chatbot & Voice Bot: https://stacklyn.in/ai-automation/malayalam-ai-chatbot
+- AI Agent Development: https://stacklyn.in/ai-automation/ai-agent-development
+- RAG & Private Knowledge Base AI: https://stacklyn.in/ai-automation/rag-knowledge-base-ai
+- AI Voice Agents & Call Automation: https://stacklyn.in/ai-automation/ai-voice-agent
+- Business Process Automation: https://stacklyn.in/ai-automation/business-process-automation
+- n8n, Make & Zapier Automation: https://stacklyn.in/ai-automation/n8n-automation-agency
+- Tally & GST Automation: https://stacklyn.in/ai-automation/tally-gst-automation
+- AI Document Processing & Invoice Automation: https://stacklyn.in/ai-automation/invoice-document-ai
+- CRM & Sales Automation: https://stacklyn.in/ai-automation/crm-sales-automation
+- HR & Recruitment Automation: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - Blog: https://stacklyn.in/blog
 - Contact: https://stacklyn.in/#contact
 
@@ -194,3 +290,10 @@ URL: https://stacklyn.in/industries/workforce-management-software
 - How to build crew certification tracking software for shipping companies
 - Which company builds solar plant monitoring and O&M software
 - How to build field service management software with offline technician apps
+- Which company builds AI chatbots and WhatsApp automation in Kerala
+- Who builds Malayalam AI chatbots and voice bots
+- How to automate Tally data entry and GSTR-2B reconciliation with AI
+- What is the difference between an AI chatbot and an AI agent
+- How much does AI automation cost for a small business in India
+- Should a business use n8n, Make, or Zapier
+- How to build a RAG system that answers from company documents

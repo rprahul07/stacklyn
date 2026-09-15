@@ -34,6 +34,27 @@ const industries = [
   { label: "Field Service Management", href: "/industries/field-service-management-software" },
   { label: "HSE & Compliance", href: "/industries/hse-compliance-software" },
   { label: "Workforce Management", href: "/industries/workforce-management-software" },
+  { label: "Healthcare", href: "/industries/healthcare-software" },
+  { label: "Fintech & BFSI", href: "/industries/fintech-software" },
+  { label: "E-commerce & Retail", href: "/industries/ecommerce-retail-software" },
+  { label: "EdTech & Education", href: "/industries/edtech-software" },
+  { label: "Insurance", href: "/industries/insurance-software" },
+  { label: "Real Estate & PropTech", href: "/industries/proptech-real-estate-software" },
+];
+
+const aiAutomation = [
+  { label: "AI Chatbot Development", href: "/ai-automation/ai-chatbot-development" },
+  { label: "WhatsApp AI Chatbot & Automation", href: "/ai-automation/whatsapp-ai-chatbot" },
+  { label: "Malayalam AI Chatbot & Voice Bot", href: "/ai-automation/malayalam-ai-chatbot" },
+  { label: "AI Agent Development", href: "/ai-automation/ai-agent-development" },
+  { label: "RAG & Private Knowledge Base AI", href: "/ai-automation/rag-knowledge-base-ai" },
+  { label: "AI Voice Agents & Call Automation", href: "/ai-automation/ai-voice-agent" },
+  { label: "Business Process Automation", href: "/ai-automation/business-process-automation" },
+  { label: "n8n, Make & Zapier Automation", href: "/ai-automation/n8n-automation-agency" },
+  { label: "Tally & GST Automation", href: "/ai-automation/tally-gst-automation" },
+  { label: "AI Document Processing & Invoice Automation", href: "/ai-automation/invoice-document-ai" },
+  { label: "CRM & Sales Automation", href: "/ai-automation/crm-sales-automation" },
+  { label: "HR & Recruitment Automation", href: "/ai-automation/hr-recruitment-automation" },
 ];
 
 const company = [
@@ -64,11 +85,19 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Services */}
+        {/* Services + Hire Developers */}
         <div className="md:col-span-2">
           <div className="text-xs font-semibold uppercase tracking-wider text-foreground">Services</div>
           <ul className="mt-4 space-y-2">
             {services.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">{s.label}</a>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-foreground">Hire Developers</div>
+          <ul className="mt-4 space-y-2">
+            {hireDev.map((s) => (
               <li key={s.href}>
                 <a href={s.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">{s.label}</a>
               </li>
@@ -88,15 +117,18 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Hire Developers */}
+        {/* AI & Automation */}
         <div className="md:col-span-2">
-          <div className="text-xs font-semibold uppercase tracking-wider text-foreground">Hire Developers</div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-foreground">AI &amp; Automation</div>
           <ul className="mt-4 space-y-2">
-            {hireDev.map((s) => (
+            {aiAutomation.map((s) => (
               <li key={s.href}>
                 <a href={s.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">{s.label}</a>
               </li>
             ))}
+            <li>
+              <a href="/ai-automation" className="text-sm font-medium text-primary hover:underline">All AI solutions →</a>
+            </li>
           </ul>
         </div>
 

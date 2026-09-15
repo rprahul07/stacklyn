@@ -163,6 +163,78 @@ const industries = [
     ),
     keywords: ["Digital PTW", "Incident reporting", "ISO 45001 audits", "JSA / HIRA", "Contractor compliance"],
   },
+  {
+    name: "Healthcare",
+    href: "/industries/healthcare-software",
+    tagline: "HMS · EMR/EHR · Telemedicine · LIS · HL7/FHIR",
+    desc: "Hospital management systems, EMR and EHR platforms, telemedicine, patient portals, lab and radiology systems, and HL7, FHIR, and ABDM interoperability for hospitals and healthtech.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 5.5 5.5 5.5 0 0121.5 12C19 16.5 12 21 12 21z" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 9v5M9.5 11.5h5" strokeLinecap="round" />
+      </svg>
+    ),
+    keywords: ["Hospital management", "EMR / EHR", "Telemedicine", "LIS / RIS", "HL7 / FHIR"],
+  },
+  {
+    name: "Fintech & BFSI",
+    href: "/industries/fintech-software",
+    tagline: "LOS/LMS · Payments · Digital KYC · Collections · Reporting",
+    desc: "Loan origination and management systems, payments and settlement infrastructure, digital KYC journeys, collections platforms, and reconciliation-grade ledgers for lenders and fintechs.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20M6 15h4" strokeLinecap="round" />
+      </svg>
+    ),
+    keywords: ["Lending platforms", "Digital KYC", "Payments & UPI", "Collections", "Reconciliation"],
+  },
+  {
+    name: "E-commerce & Retail",
+    href: "/industries/ecommerce-retail-software",
+    tagline: "Headless storefronts · Marketplaces · OMS · Inventory · POS",
+    desc: "Headless Next.js storefronts, B2B and B2C marketplaces, order and inventory management, POS and omnichannel tools, and D2C apps for brands that outgrew hosted platforms.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M3 4h2l2.4 11.2a2 2 0 002 1.6h7.7a2 2 0 002-1.5L21 8H6" strokeLinecap="round" strokeLinejoin="round" /><circle cx="10" cy="20" r="1.2" /><circle cx="17" cy="20" r="1.2" />
+      </svg>
+    ),
+    keywords: ["Headless commerce", "Marketplace", "Order management", "Inventory sync", "POS"],
+  },
+  {
+    name: "EdTech & Education",
+    href: "/industries/edtech-software",
+    tagline: "LMS · Assessments · Live classes · School ERP · Analytics",
+    desc: "Learning management systems, assessment and proctoring engines, live class platforms, school and campus ERP, student apps, and learning analytics for edtech and institutions.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M2 9l10-5 10 5-10 5z" strokeLinecap="round" strokeLinejoin="round" /><path d="M6 11v5c3 2 9 2 12 0v-5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    keywords: ["Custom LMS", "Online assessments", "School ERP", "Live classes", "Learning analytics"],
+  },
+  {
+    name: "Insurance",
+    href: "/industries/insurance-software",
+    tagline: "Policy admin · Claims · Quote & bind · Broker portals · Renewals",
+    desc: "Policy administration systems, quote and bind engines, claims management, underwriting workbenches, broker portals, commission engines, and renewal platforms for insurers and brokers.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6z" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 8v8M8 12h8" strokeLinecap="round" />
+      </svg>
+    ),
+    keywords: ["Policy administration", "Claims management", "Quote & bind", "Broker portal", "Commission engine"],
+  },
+  {
+    name: "Real Estate & PropTech",
+    href: "/industries/proptech-real-estate-software",
+    tagline: "Inventory CRM · Bookings · Collections · Broker portals · Lease",
+    desc: "Unit inventory and sales CRM, booking to registration workflows, construction-linked collections, channel partner portals, lease management, and property marketplaces.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M3 21V10l9-7 9 7v11" strokeLinecap="round" strokeLinejoin="round" /><path d="M9 21v-6h6v6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    keywords: ["Sales CRM", "Unit inventory", "Collections", "Broker portal", "Lease management"],
+  },
 ];
 
 const breadcrumbSchema = {
@@ -196,7 +268,7 @@ export const Route = createFileRoute("/industries/")({
       {
         name: "description",
         content:
-          "Stacklyn builds custom software for industrial MNCs across 12 sectors: oil & gas, mining, construction, EPC, manufacturing, logistics, marine, renewable energy, facility management, field service, HSE, and workforce management. Kerala, India.",
+          "Stacklyn builds custom software for industrial MNCs across 18 sectors: oil & gas, mining, construction, EPC, manufacturing, logistics, marine, renewable energy, facility management, field service, HSE, workforce management, healthcare, fintech, e-commerce, edtech, insurance, and real estate. Kerala, India.",
       },
       {
         name: "keywords",
@@ -271,7 +343,7 @@ function IndustriesIndexPage() {
             >
               Stacklyn builds custom software for the world's most demanding industries — oil & gas, mining,
               construction, EPC, manufacturing, logistics, marine, renewable energy, facility management, field service,
-              and HSE. We combine enterprise-grade architecture with deep domain knowledge to deliver software that
+              HSE, healthcare, fintech, e-commerce, edtech, insurance, and real estate. We combine enterprise-grade architecture with deep domain knowledge to deliver software that
               actually fits how your operations work.
             </motion.p>
 
