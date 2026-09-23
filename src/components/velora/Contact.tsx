@@ -168,9 +168,9 @@ export function Contact() {
           ) : (
             <>
               <div className="grid md:grid-cols-2 gap-5">
-                <Field label="Name" name="name" placeholder="Jane Doe" />
-                <Field label="Email" name="email" type="email" placeholder="jane@company.com" />
-                <Field label="Company" name="company" placeholder="Acme Inc." required={false} />
+                <Field label="Name" name="name" placeholder="Jane Doe" autoComplete="name" />
+                <Field label="Email" name="email" type="email" placeholder="jane@company.com" autoComplete="email" />
+                <Field label="Company" name="company" placeholder="Acme Inc." required={false} autoComplete="organization" />
                 <Select label="Project Type" name="type" options={projectTypes} />
                 <Select label="Budget" name="budget" options={budgets} />
                 <Field label="Timeline" name="timeline" placeholder="e.g. Q1 2027" required={false} />
@@ -184,6 +184,7 @@ export function Contact() {
                   name="description"
                   required
                   rows={5}
+                  autoComplete="off"
                   className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring focus:border-primary transition"
                   placeholder="Tell us about the problem you're solving, your users, and what success looks like."
                 />
@@ -230,15 +231,15 @@ export function Contact() {
 }
 
 function Field({
-  label, name, type = "text", placeholder, required = true,
-}: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
+  label, name, type = "text", placeholder, required = true, autoComplete = "off",
+}: { label: string; name: string; type?: string; placeholder?: string; required?: boolean; autoComplete?: string }) {
   return (
     <div>
       <label htmlFor={name} className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
         {label}
       </label>
       <input
-        id={name} name={name} type={type} placeholder={placeholder} required={required}
+        id={name} name={name} type={type} placeholder={placeholder} required={required} autoComplete={autoComplete}
         className="mt-2 w-full rounded-lg border border-input bg-background px-4 h-11 text-sm outline-none focus:ring-2 focus:ring-ring focus:border-primary transition"
       />
     </div>
@@ -252,7 +253,7 @@ function Select({ label, name, options }: { label: string; name: string; options
         {label}
       </label>
       <select
-        id={name} name={name} required
+        id={name} name={name} required autoComplete="off"
         className="mt-2 w-full rounded-lg border border-input bg-background px-4 h-11 text-sm outline-none focus:ring-2 focus:ring-ring focus:border-primary transition"
       >
         <option value="">Select…</option>
