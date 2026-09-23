@@ -9,7 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MarketsRouteImport } from './routes/markets'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as HireReactDeveloperRouteImport } from './routes/hire-react-developer'
@@ -20,11 +22,13 @@ import { Route as HireBackendDeveloperRouteImport } from './routes/hire-backend-
 import { Route as HireAiDeveloperRouteImport } from './routes/hire-ai-developer'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AiAutomationRouteImport } from './routes/ai-automation'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MarketsIndexRouteImport } from './routes/markets/index'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as AiAutomationIndexRouteImport } from './routes/ai-automation/index'
+import { Route as ToolsSoftwareCostEstimatorRouteImport } from './routes/tools/software-cost-estimator'
 import { Route as ServicesReactDevelopmentRouteImport } from './routes/services/react-development'
 import { Route as ServicesNodejsDevelopmentRouteImport } from './routes/services/nodejs-development'
 import { Route as ServicesNextjsDevelopmentRouteImport } from './routes/services/nextjs-development'
@@ -53,11 +57,22 @@ import { Route as IndustriesEpcEngineeringSoftwareRouteImport } from './routes/i
 import { Route as IndustriesEdtechSoftwareRouteImport } from './routes/industries/edtech-software'
 import { Route as IndustriesEcommerceRetailSoftwareRouteImport } from './routes/industries/ecommerce-retail-software'
 import { Route as IndustriesConstructionSoftwareRouteImport } from './routes/industries/construction-software'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as AiAutomationSlugRouteImport } from './routes/ai-automation/$slug'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MarketsRoute = MarketsRouteImport.update({
@@ -110,6 +125,11 @@ const AiAutomationRoute = AiAutomationRouteImport.update({
   path: '/ai-automation',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -135,6 +155,12 @@ const AiAutomationIndexRoute = AiAutomationIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AiAutomationRoute,
 } as any)
+const ToolsSoftwareCostEstimatorRoute =
+  ToolsSoftwareCostEstimatorRouteImport.update({
+    id: '/tools/software-cost-estimator',
+    path: '/tools/software-cost-estimator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesReactDevelopmentRoute =
   ServicesReactDevelopmentRouteImport.update({
     id: '/react-development',
@@ -299,6 +325,11 @@ const IndustriesConstructionSoftwareRoute =
     path: '/construction-software',
     getParentRoute: () => IndustriesRoute,
   } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 const AiAutomationSlugRoute = AiAutomationSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -307,6 +338,7 @@ const AiAutomationSlugRoute = AiAutomationSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/ai-automation': typeof AiAutomationRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/hire-ai-developer': typeof HireAiDeveloperRoute
@@ -317,8 +349,11 @@ export interface FileRoutesByFullPath {
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
   '/markets': typeof MarketsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRouteWithChildren
+  '/terms': typeof TermsRoute
   '/ai-automation/$slug': typeof AiAutomationSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
   '/industries/ecommerce-retail-software': typeof IndustriesEcommerceRetailSoftwareRoute
   '/industries/edtech-software': typeof IndustriesEdtechSoftwareRoute
@@ -347,6 +382,7 @@ export interface FileRoutesByFullPath {
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/tools/software-cost-estimator': typeof ToolsSoftwareCostEstimatorRoute
   '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
@@ -354,14 +390,18 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/hire-ai-developer': typeof HireAiDeveloperRoute
   '/hire-backend-developer': typeof HireBackendDeveloperRoute
   '/hire-mern-developer': typeof HireMernDeveloperRoute
   '/hire-nextjs-developer': typeof HireNextjsDeveloperRoute
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRouteWithChildren
+  '/terms': typeof TermsRoute
   '/ai-automation/$slug': typeof AiAutomationSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
   '/industries/ecommerce-retail-software': typeof IndustriesEcommerceRetailSoftwareRoute
   '/industries/edtech-software': typeof IndustriesEdtechSoftwareRoute
@@ -390,6 +430,7 @@ export interface FileRoutesByTo {
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/tools/software-cost-estimator': typeof ToolsSoftwareCostEstimatorRoute
   '/ai-automation': typeof AiAutomationIndexRoute
   '/blog': typeof BlogIndexRoute
   '/industries': typeof IndustriesIndexRoute
@@ -398,6 +439,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/ai-automation': typeof AiAutomationRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/hire-ai-developer': typeof HireAiDeveloperRoute
@@ -408,8 +450,11 @@ export interface FileRoutesById {
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
   '/markets': typeof MarketsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRouteWithChildren
+  '/terms': typeof TermsRoute
   '/ai-automation/$slug': typeof AiAutomationSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
   '/industries/ecommerce-retail-software': typeof IndustriesEcommerceRetailSoftwareRoute
   '/industries/edtech-software': typeof IndustriesEdtechSoftwareRoute
@@ -438,6 +483,7 @@ export interface FileRoutesById {
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/tools/software-cost-estimator': typeof ToolsSoftwareCostEstimatorRoute
   '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
@@ -447,6 +493,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/ai-automation'
     | '/blog'
     | '/hire-ai-developer'
@@ -457,8 +504,11 @@ export interface FileRouteTypes {
     | '/hire-react-developer'
     | '/industries'
     | '/markets'
+    | '/privacy-policy'
     | '/services'
+    | '/terms'
     | '/ai-automation/$slug'
+    | '/blog/$slug'
     | '/industries/construction-software'
     | '/industries/ecommerce-retail-software'
     | '/industries/edtech-software'
@@ -487,6 +537,7 @@ export interface FileRouteTypes {
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/tools/software-cost-estimator'
     | '/ai-automation/'
     | '/blog/'
     | '/industries/'
@@ -494,14 +545,18 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/hire-ai-developer'
     | '/hire-backend-developer'
     | '/hire-mern-developer'
     | '/hire-nextjs-developer'
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
+    | '/privacy-policy'
     | '/services'
+    | '/terms'
     | '/ai-automation/$slug'
+    | '/blog/$slug'
     | '/industries/construction-software'
     | '/industries/ecommerce-retail-software'
     | '/industries/edtech-software'
@@ -530,6 +585,7 @@ export interface FileRouteTypes {
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/tools/software-cost-estimator'
     | '/ai-automation'
     | '/blog'
     | '/industries'
@@ -537,6 +593,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/ai-automation'
     | '/blog'
     | '/hire-ai-developer'
@@ -547,8 +604,11 @@ export interface FileRouteTypes {
     | '/hire-react-developer'
     | '/industries'
     | '/markets'
+    | '/privacy-policy'
     | '/services'
+    | '/terms'
     | '/ai-automation/$slug'
+    | '/blog/$slug'
     | '/industries/construction-software'
     | '/industries/ecommerce-retail-software'
     | '/industries/edtech-software'
@@ -577,6 +637,7 @@ export interface FileRouteTypes {
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/tools/software-cost-estimator'
     | '/ai-automation/'
     | '/blog/'
     | '/industries/'
@@ -585,6 +646,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AiAutomationRoute: typeof AiAutomationRouteWithChildren
   BlogRoute: typeof BlogRouteWithChildren
   HireAiDeveloperRoute: typeof HireAiDeveloperRoute
@@ -595,16 +657,33 @@ export interface RootRouteChildren {
   HireReactDeveloperRoute: typeof HireReactDeveloperRoute
   IndustriesRoute: typeof IndustriesRouteWithChildren
   MarketsRoute: typeof MarketsRouteWithChildren
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRouteWithChildren
+  TermsRoute: typeof TermsRoute
+  ToolsSoftwareCostEstimatorRoute: typeof ToolsSoftwareCostEstimatorRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/markets': {
@@ -677,6 +756,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AiAutomationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -711,6 +797,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/ai-automation/'
       preLoaderRoute: typeof AiAutomationIndexRouteImport
       parentRoute: typeof AiAutomationRoute
+    }
+    '/tools/software-cost-estimator': {
+      id: '/tools/software-cost-estimator'
+      path: '/tools/software-cost-estimator'
+      fullPath: '/tools/software-cost-estimator'
+      preLoaderRoute: typeof ToolsSoftwareCostEstimatorRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/services/react-development': {
       id: '/services/react-development'
@@ -908,6 +1001,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesConstructionSoftwareRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/ai-automation/$slug': {
       id: '/ai-automation/$slug'
       path: '/$slug'
@@ -933,10 +1033,12 @@ const AiAutomationRouteWithChildren = AiAutomationRoute._addFileChildren(
 )
 
 interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 
@@ -1041,6 +1143,7 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AiAutomationRoute: AiAutomationRouteWithChildren,
   BlogRoute: BlogRouteWithChildren,
   HireAiDeveloperRoute: HireAiDeveloperRoute,
@@ -1051,7 +1154,10 @@ const rootRouteChildren: RootRouteChildren = {
   HireReactDeveloperRoute: HireReactDeveloperRoute,
   IndustriesRoute: IndustriesRouteWithChildren,
   MarketsRoute: MarketsRouteWithChildren,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRouteWithChildren,
+  TermsRoute: TermsRoute,
+  ToolsSoftwareCostEstimatorRoute: ToolsSoftwareCostEstimatorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

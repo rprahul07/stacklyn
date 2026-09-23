@@ -140,6 +140,12 @@ export function Contact() {
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             Response within 24 hours · Working hours overlap with the UAE, Saudi Arabia, Qatar, and Oman
           </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Want a ballpark first?{" "}
+            <a href="/tools/software-cost-estimator" className="text-primary underline underline-offset-4">
+              Try the free cost estimator →
+            </a>
+          </p>
         </div>
 
         <motion.form

@@ -141,6 +141,31 @@ URL: https://stacklyn.in/industries/insurance-software
 Unit inventory and sales CRM, booking to registration workflows, construction-linked collections, channel partner portals, lease management, and property marketplaces.
 URL: https://stacklyn.in/industries/proptech-real-estate-software
 
+## Guides and Tools
+
+### How Much Does Custom Oil & Gas and HSE Software Cost? (2026 Guide)
+With an India-based engineering team, a focused oil and gas or HSE module — such as a digital permit to work, incident management, or ICV reporting tool — typically costs $6,000–14,000 to build. Integrated platforms covering several modules, sites, and integrations usually cost $25,000–85,000. Offline apps, Arabic interfaces, integrations, and the number of sites drive the price.
+URL: https://stacklyn.in/blog/custom-oil-gas-software-cost
+
+### Outsourcing Oil & Gas Software Development to India: A Buyer's Checklist
+Outsourcing oil and gas software to India works best when the partner understands industrial workflows such as permits, isolations, and HSE reporting. They should build inside your cloud, sign an NDA and assign the IP to you, show working software every week, and deliver in fixed-price phases starting with a small pilot. Time-zone overlap with the Gulf and Europe is a practical bonus.
+URL: https://stacklyn.in/blog/outsource-oil-gas-software-development-india
+
+### What Is a Permit to Work System? A Practical Guide for Oil & Gas Contractors
+A permit to work (PTW) system is a formal written process for controlling high-risk, non-routine work such as hot work, confined space entry, work at height, and electrical isolation. Before work starts, hazards are assessed, isolations and gas tests are completed, and named people authorise the job. Afterwards, the area is formally handed back as safe.
+URL: https://stacklyn.in/blog/what-is-permit-to-work-system
+
+### How the UAE ICV Certificate and Score Work: A Guide for Suppliers
+The UAE ICV certificate measures how much a company contributes to the UAE economy. Under the National In-Country Value Program run by MoIAT, approved certification bodies calculate a score from audited financial statements. It covers UAE goods and third-party spend, investment, Emiratisation, expatriate contribution, and bonus factors. A higher score improves how you are evaluated in tenders.
+URL: https://stacklyn.in/blog/uae-icv-certificate-score-guide
+
+### Oil & Gas Software Cost Estimator (free tool)
+Interactive estimator for the cost and timeline of custom oil and gas, HSE, permit to work, ICV reporting, and industrial software, based on Stacklyn's published USD price ranges.
+URL: https://stacklyn.in/tools/software-cost-estimator
+
+### About Stacklyn
+URL: https://stacklyn.in/about
+
 ## Gulf & Global Oil and Gas Markets
 
 Stacklyn builds custom oil and gas and industrial software for operators, EPC contractors, and service companies in the UAE, Saudi Arabia, Qatar, and Oman, and for companies in the US, UK, Canada, Australia, and Norway that outsource development to India. Software is designed around each market's operator requirements (such as ADNOC and Saudi Aramco contractor HSE practice), localisation programmes (UAE ICV, Saudi IKTVA, Qatar TAWTEEN, Oman ICV), and data protection laws. India is 1.5 hours ahead of the UAE and Oman and 2.5 hours ahead of Saudi Arabia and Qatar.
@@ -301,6 +326,14 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - Oman Oil & Gas Software: https://stacklyn.in/markets/oil-gas-software-oman
 - ICV Reporting Software (UAE): https://stacklyn.in/markets/icv-reporting-software-uae
 - Outsource Oil & Gas Software to India: https://stacklyn.in/markets/oil-gas-software-outsourcing-india
+- Software Cost Estimator: https://stacklyn.in/tools/software-cost-estimator
+- How Much Does Custom Oil & Gas and HSE Software Cost? (2026 Guide): https://stacklyn.in/blog/custom-oil-gas-software-cost
+- Outsourcing Oil & Gas Software Development to India: A Buyer's Checklist: https://stacklyn.in/blog/outsource-oil-gas-software-development-india
+- What Is a Permit to Work System? A Practical Guide for Oil & Gas Contractors: https://stacklyn.in/blog/what-is-permit-to-work-system
+- How the UAE ICV Certificate and Score Work: A Guide for Suppliers: https://stacklyn.in/blog/uae-icv-certificate-score-guide
+- About: https://stacklyn.in/about
+- Privacy Policy: https://stacklyn.in/privacy-policy
+- Terms of Use: https://stacklyn.in/terms
 - Blog: https://stacklyn.in/blog
 - Contact: https://stacklyn.in/#contact
 

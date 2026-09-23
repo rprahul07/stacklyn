@@ -39,6 +39,12 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    // One canonical host: www.stacklyn.in would otherwise serve a duplicate of every page.
+    const url = new URL(request.url);
+    if (url.hostname === "www.stacklyn.in") {
+      url.hostname = "stacklyn.in";
+      return Response.redirect(url.toString(), 301);
+    }
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

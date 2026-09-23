@@ -67,11 +67,12 @@ const markets = [
 ];
 
 const company = [
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
   { label: "Work", href: "/#work" },
   { label: "Technology", href: "/#stack" },
   { label: "Process", href: "/#process" },
   { label: "Blog", href: "/blog" },
+  { label: "Cost Estimator", href: "/tools/software-cost-estimator" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -165,10 +166,12 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Stacklyn. All rights reserved. Registered in Kerala, India.</div>
-          <div className="flex gap-4">
-            <span>Custom Software Development</span>
-            <span>·</span>
+          <div className="flex flex-wrap gap-4">
             <span>Kerala, India</span>
+            <span>·</span>
+            <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <span>·</span>
+            <a href="/terms" className="hover:text-primary transition-colors">Terms</a>
             <span>·</span>
             <a href="/sitemap.xml" className="hover:text-primary transition-colors">Sitemap</a>
           </div>

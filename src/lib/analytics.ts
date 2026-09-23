@@ -4,7 +4,7 @@ declare global {
   }
 }
 
-export type LeadMethod = "whatsapp" | "phone" | "email" | "contact_form" | "whatsapp_fallback";
+export type LeadMethod = "whatsapp" | "phone" | "email" | "contact_form" | "whatsapp_fallback" | "estimator";
 
 /**
  * Sends a GA4 `generate_lead` event. Mark `generate_lead` as a key event in
