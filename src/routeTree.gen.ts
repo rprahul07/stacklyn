@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as MarketsRouteImport } from './routes/markets'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as HireReactDeveloperRouteImport } from './routes/hire-react-developer'
 import { Route as HireNodejsDeveloperRouteImport } from './routes/hire-nodejs-developer'
@@ -20,6 +21,7 @@ import { Route as HireAiDeveloperRouteImport } from './routes/hire-ai-developer'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AiAutomationRouteImport } from './routes/ai-automation'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MarketsIndexRouteImport } from './routes/markets/index'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as AiAutomationIndexRouteImport } from './routes/ai-automation/index'
@@ -32,6 +34,7 @@ import { Route as ServicesFullStackDevelopmentRouteImport } from './routes/servi
 import { Route as ServicesCustomSoftwareDevelopmentRouteImport } from './routes/services/custom-software-development'
 import { Route as ServicesBackendDevelopmentRouteImport } from './routes/services/backend-development'
 import { Route as ServicesAiDevelopmentRouteImport } from './routes/services/ai-development'
+import { Route as MarketsSlugRouteImport } from './routes/markets/$slug'
 import { Route as IndustriesWorkforceManagementSoftwareRouteImport } from './routes/industries/workforce-management-software'
 import { Route as IndustriesRenewableEnergySoftwareRouteImport } from './routes/industries/renewable-energy-software'
 import { Route as IndustriesProptechRealEstateSoftwareRouteImport } from './routes/industries/proptech-real-estate-software'
@@ -55,6 +58,11 @@ import { Route as AiAutomationSlugRouteImport } from './routes/ai-automation/$sl
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsRoute = MarketsRouteImport.update({
+  id: '/markets',
+  path: '/markets',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndustriesRoute = IndustriesRouteImport.update({
@@ -106,6 +114,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsIndexRoute = MarketsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => MarketsRoute,
 } as any)
 const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
   id: '/',
@@ -172,6 +185,11 @@ const ServicesAiDevelopmentRoute = ServicesAiDevelopmentRouteImport.update({
   id: '/ai-development',
   path: '/ai-development',
   getParentRoute: () => ServicesRoute,
+} as any)
+const MarketsSlugRoute = MarketsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => MarketsRoute,
 } as any)
 const IndustriesWorkforceManagementSoftwareRoute =
   IndustriesWorkforceManagementSoftwareRouteImport.update({
@@ -298,6 +316,7 @@ export interface FileRoutesByFullPath {
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
+  '/markets': typeof MarketsRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
   '/ai-automation/$slug': typeof AiAutomationSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
@@ -318,6 +337,7 @@ export interface FileRoutesByFullPath {
   '/industries/proptech-real-estate-software': typeof IndustriesProptechRealEstateSoftwareRoute
   '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
+  '/markets/$slug': typeof MarketsSlugRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
@@ -330,6 +350,7 @@ export interface FileRoutesByFullPath {
   '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
+  '/markets/': typeof MarketsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -359,6 +380,7 @@ export interface FileRoutesByTo {
   '/industries/proptech-real-estate-software': typeof IndustriesProptechRealEstateSoftwareRoute
   '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
+  '/markets/$slug': typeof MarketsSlugRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
@@ -371,6 +393,7 @@ export interface FileRoutesByTo {
   '/ai-automation': typeof AiAutomationIndexRoute
   '/blog': typeof BlogIndexRoute
   '/industries': typeof IndustriesIndexRoute
+  '/markets': typeof MarketsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -384,6 +407,7 @@ export interface FileRoutesById {
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/industries': typeof IndustriesRouteWithChildren
+  '/markets': typeof MarketsRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
   '/ai-automation/$slug': typeof AiAutomationSlugRoute
   '/industries/construction-software': typeof IndustriesConstructionSoftwareRoute
@@ -404,6 +428,7 @@ export interface FileRoutesById {
   '/industries/proptech-real-estate-software': typeof IndustriesProptechRealEstateSoftwareRoute
   '/industries/renewable-energy-software': typeof IndustriesRenewableEnergySoftwareRoute
   '/industries/workforce-management-software': typeof IndustriesWorkforceManagementSoftwareRoute
+  '/markets/$slug': typeof MarketsSlugRoute
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
@@ -416,6 +441,7 @@ export interface FileRoutesById {
   '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
+  '/markets/': typeof MarketsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -430,6 +456,7 @@ export interface FileRouteTypes {
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
     | '/industries'
+    | '/markets'
     | '/services'
     | '/ai-automation/$slug'
     | '/industries/construction-software'
@@ -450,6 +477,7 @@ export interface FileRouteTypes {
     | '/industries/proptech-real-estate-software'
     | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
+    | '/markets/$slug'
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
@@ -462,6 +490,7 @@ export interface FileRouteTypes {
     | '/ai-automation/'
     | '/blog/'
     | '/industries/'
+    | '/markets/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -491,6 +520,7 @@ export interface FileRouteTypes {
     | '/industries/proptech-real-estate-software'
     | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
+    | '/markets/$slug'
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
@@ -503,6 +533,7 @@ export interface FileRouteTypes {
     | '/ai-automation'
     | '/blog'
     | '/industries'
+    | '/markets'
   id:
     | '__root__'
     | '/'
@@ -515,6 +546,7 @@ export interface FileRouteTypes {
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
     | '/industries'
+    | '/markets'
     | '/services'
     | '/ai-automation/$slug'
     | '/industries/construction-software'
@@ -535,6 +567,7 @@ export interface FileRouteTypes {
     | '/industries/proptech-real-estate-software'
     | '/industries/renewable-energy-software'
     | '/industries/workforce-management-software'
+    | '/markets/$slug'
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
@@ -547,6 +580,7 @@ export interface FileRouteTypes {
     | '/ai-automation/'
     | '/blog/'
     | '/industries/'
+    | '/markets/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -560,6 +594,7 @@ export interface RootRouteChildren {
   HireNodejsDeveloperRoute: typeof HireNodejsDeveloperRoute
   HireReactDeveloperRoute: typeof HireReactDeveloperRoute
   IndustriesRoute: typeof IndustriesRouteWithChildren
+  MarketsRoute: typeof MarketsRouteWithChildren
   ServicesRoute: typeof ServicesRouteWithChildren
 }
 
@@ -570,6 +605,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets': {
+      id: '/markets'
+      path: '/markets'
+      fullPath: '/markets'
+      preLoaderRoute: typeof MarketsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries': {
@@ -641,6 +683,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/markets/': {
+      id: '/markets/'
+      path: '/'
+      fullPath: '/markets/'
+      preLoaderRoute: typeof MarketsIndexRouteImport
+      parentRoute: typeof MarketsRoute
     }
     '/industries/': {
       id: '/industries/'
@@ -725,6 +774,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/services/ai-development'
       preLoaderRoute: typeof ServicesAiDevelopmentRouteImport
       parentRoute: typeof ServicesRoute
+    }
+    '/markets/$slug': {
+      id: '/markets/$slug'
+      path: '/$slug'
+      fullPath: '/markets/$slug'
+      preLoaderRoute: typeof MarketsSlugRouteImport
+      parentRoute: typeof MarketsRoute
     }
     '/industries/workforce-management-software': {
       id: '/industries/workforce-management-software'
@@ -941,6 +997,19 @@ const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
   IndustriesRouteChildren,
 )
 
+interface MarketsRouteChildren {
+  MarketsSlugRoute: typeof MarketsSlugRoute
+  MarketsIndexRoute: typeof MarketsIndexRoute
+}
+
+const MarketsRouteChildren: MarketsRouteChildren = {
+  MarketsSlugRoute: MarketsSlugRoute,
+  MarketsIndexRoute: MarketsIndexRoute,
+}
+
+const MarketsRouteWithChildren =
+  MarketsRoute._addFileChildren(MarketsRouteChildren)
+
 interface ServicesRouteChildren {
   ServicesAiDevelopmentRoute: typeof ServicesAiDevelopmentRoute
   ServicesBackendDevelopmentRoute: typeof ServicesBackendDevelopmentRoute
@@ -981,6 +1050,7 @@ const rootRouteChildren: RootRouteChildren = {
   HireNodejsDeveloperRoute: HireNodejsDeveloperRoute,
   HireReactDeveloperRoute: HireReactDeveloperRoute,
   IndustriesRoute: IndustriesRouteWithChildren,
+  MarketsRoute: MarketsRouteWithChildren,
   ServicesRoute: ServicesRouteWithChildren,
 }
 export const routeTree = rootRouteImport

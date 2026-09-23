@@ -141,6 +141,35 @@ URL: https://stacklyn.in/industries/insurance-software
 Unit inventory and sales CRM, booking to registration workflows, construction-linked collections, channel partner portals, lease management, and property marketplaces.
 URL: https://stacklyn.in/industries/proptech-real-estate-software
 
+## Gulf & Global Oil and Gas Markets
+
+Stacklyn builds custom oil and gas and industrial software for operators, EPC contractors, and service companies in the UAE, Saudi Arabia, Qatar, and Oman, and for companies in the US, UK, Canada, Australia, and Norway that outsource development to India. Software is designed around each market's operator requirements (such as ADNOC and Saudi Aramco contractor HSE practice), localisation programmes (UAE ICV, Saudi IKTVA, Qatar TAWTEEN, Oman ICV), and data protection laws. India is 1.5 hours ahead of the UAE and Oman and 2.5 hours ahead of Saudi Arabia and Qatar.
+Hub: https://stacklyn.in/markets
+
+### UAE Oil & Gas Software
+Custom oil and gas software for UAE operators, EPC contractors, and ADNOC suppliers — digital permit to work, HSE, ICV reporting, crew rotation, and operations dashboards. Arabic and English. Built by Stacklyn.
+URL: https://stacklyn.in/markets/oil-gas-software-uae
+
+### Saudi Arabia Oil & Gas Software
+Custom oil and gas software for Saudi Arabia — digital work permits aligned to Aramco GI 2.100 practice, HSE and incident management, IKTVA data, and Arabic-first operations systems for contractors in Dhahran, Jubail, and Yanbu.
+URL: https://stacklyn.in/markets/oil-gas-software-saudi-arabia
+
+### Qatar Oil & Gas Software
+Custom oil, gas, and LNG software for Qatar — permit to work, HSE management, contractor compliance, TAWTEEN supplier data, and project dashboards for companies in Ras Laffan, Mesaieed, and Doha.
+URL: https://stacklyn.in/markets/oil-gas-software-qatar
+
+### Oman Oil & Gas Software
+Custom oil and gas software for Oman — HSE management for PDO contractors, permit to work, ICV and Omanisation reporting, JSRS supplier compliance, and field operations apps for Muscat, Sohar, and Duqm.
+URL: https://stacklyn.in/markets/oil-gas-software-oman
+
+### ICV Reporting Software (UAE)
+Custom ICV reporting software for UAE suppliers and ADNOC contractors — track local spend, supplier ICV certificates, workforce and Emiratisation data, simulate your ICV score, and prepare certification audits.
+URL: https://stacklyn.in/markets/icv-reporting-software-uae
+
+### Outsource Oil & Gas Software to India
+Outsource oil and gas software development to an India-based engineering team — HSE, permit to work, field apps, SCADA dashboards, and operations platforms for companies in the US, UK, Canada, Australia, Norway, and the Gulf.
+URL: https://stacklyn.in/markets/oil-gas-software-outsourcing-india
+
 ## AI & Automation (Kerala & India)
 
 Stacklyn is a Kerala-based AI and automation company. AI solutions are grounded in each client's own data, evaluated before launch, and use human approval for financial and compliance actions. Malayalam, Hindi, and English are supported for chat and voice.
@@ -265,6 +294,13 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - AI Document Processing & Invoice Automation: https://stacklyn.in/ai-automation/invoice-document-ai
 - CRM & Sales Automation: https://stacklyn.in/ai-automation/crm-sales-automation
 - HR & Recruitment Automation: https://stacklyn.in/ai-automation/hr-recruitment-automation
+- Gulf & Global Markets: https://stacklyn.in/markets
+- UAE Oil & Gas Software: https://stacklyn.in/markets/oil-gas-software-uae
+- Saudi Arabia Oil & Gas Software: https://stacklyn.in/markets/oil-gas-software-saudi-arabia
+- Qatar Oil & Gas Software: https://stacklyn.in/markets/oil-gas-software-qatar
+- Oman Oil & Gas Software: https://stacklyn.in/markets/oil-gas-software-oman
+- ICV Reporting Software (UAE): https://stacklyn.in/markets/icv-reporting-software-uae
+- Outsource Oil & Gas Software to India: https://stacklyn.in/markets/oil-gas-software-outsourcing-india
 - Blog: https://stacklyn.in/blog
 - Contact: https://stacklyn.in/#contact
 
@@ -297,3 +333,8 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - How much does AI automation cost for a small business in India
 - Should a business use n8n, Make, or Zapier
 - How to build a RAG system that answers from company documents
+- Which company builds custom oil and gas software for the UAE, Saudi Arabia, Qatar, or Oman
+- Who builds digital permit to work software for Saudi Aramco contractors
+- What is ICV reporting software and how does it help UAE suppliers
+- Can an Indian software company build software for Gulf oil and gas companies
+- How to outsource oil and gas software development to India

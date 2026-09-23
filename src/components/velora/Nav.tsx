@@ -126,6 +126,12 @@ export function Nav() {
                 >
                   All industries →
                 </a>
+                <a
+                  href="/markets"
+                  className="block rounded-lg px-3 pb-2 text-sm font-medium text-primary hover:bg-surface transition-colors"
+                >
+                  Oil &amp; gas software for the Gulf &amp; global markets →
+                </a>
               </div>
             )}
           </div>

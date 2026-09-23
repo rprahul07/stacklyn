@@ -64,7 +64,7 @@ const organizationSchema = {
       ],
       "founder": { "@id": `${BASE_URL}/#rahul-rp` },
       "employee": { "@id": `${BASE_URL}/#rahul-rp` },
-      "areaServed": ["IN", "US", "GB", "AE", "SG", "AU", "Worldwide"],
+      "areaServed": ["IN", "AE", "SA", "QA", "OM", "KW", "BH", "US", "GB", "CA", "AU", "NO", "SG", "Worldwide"],
       "priceRange": "$$",
       "currenciesAccepted": "USD, INR",
       "paymentAccepted": "Bank Transfer, Wire Transfer",
@@ -149,7 +149,7 @@ const organizationSchema = {
       "@type": "WebPage",
       "@id": `${BASE_URL}/#webpage`,
       "url": BASE_URL,
-      "name": "Stacklyn — Custom Software Development Company | Kerala, India",
+      "name": "Stacklyn — Oil & Gas, Industrial & AI Software Development | India & GCC",
       "isPartOf": { "@id": `${BASE_URL}/#website` },
       "about": { "@id": `${BASE_URL}/#organization` },
       "description": "Stacklyn builds scalable web apps, AI solutions, SaaS products, and MVPs. MERN stack, Node.js, React, and Next.js experts based in Kerala, India.",
@@ -163,17 +163,17 @@ const organizationSchema = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Stacklyn — Custom Software Development Company | Kerala, India" },
+      { title: "Stacklyn — Oil & Gas, Industrial & AI Software Development | India & GCC" },
       {
         name: "description",
         content:
-          "Stacklyn is a custom software development company in Kerala, India. We build scalable web apps, AI solutions, SaaS products, and startup MVPs. Expert MERN stack, Node.js, React, and Next.js developers. Serving global clients.",
+          "Stacklyn builds custom oil and gas, industrial, and AI automation software for companies in the UAE, Saudi Arabia, Qatar, Oman, and worldwide — permit to work, HSE, ICV reporting, operations dashboards, and AI agents. Engineering team based in Kerala, India.",
       },
-      { name: "keywords", content: "software development company Kerala, custom software development India, MERN stack developers, Node.js developers India, React developers, Next.js developers, AI development company, startup MVP development India, SaaS development agency, full stack developers India, hire software developers India" },
+      { name: "keywords", content: "software development company Kerala, custom software development India, MERN stack developers, Node.js developers India, React developers, Next.js developers, AI development company, startup MVP development India, SaaS development agency, full stack developers India, hire software developers India, oil and gas software development UAE, oil and gas software Saudi Arabia, permit to work software GCC, ICV reporting software UAE, outsource oil and gas software development India" },
       // Open Graph
       { property: "og:type", content: "website" },
       { property: "og:url", content: BASE_URL },
-      { property: "og:title", content: "Stacklyn — Custom Software Development Company | Kerala, India" },
+      { property: "og:title", content: "Stacklyn — Oil & Gas, Industrial & AI Software Development | India & GCC" },
       { property: "og:description", content: "Custom software development company in Kerala, India. We build scalable web apps, AI solutions, SaaS products, and startup MVPs using React, Node.js, and modern cloud technologies." },
       { property: "og:image", content: `${BASE_URL}/og-image.png` },
       { property: "og:image:width", content: "1200" },

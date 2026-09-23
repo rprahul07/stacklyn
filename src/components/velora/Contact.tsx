@@ -1,27 +1,63 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { sendContactEmail } from "@/lib/api/contact.functions";
+import { trackLead } from "@/lib/analytics";
 
-const projectTypes = ["Web App", "Mobile App", "AI Solution", "Cloud / DevOps", "SaaS Product", "Other"];
+const projectTypes = [
+  "Oil & Gas / Industrial Software",
+  "Business Automation",
+  "AI Solution",
+  "Web App",
+  "Mobile App",
+  "SaaS Product",
+  "Cloud / DevOps",
+  "Other",
+];
 const budgets = ["< $2,000", "$2,000 – $5,000", "$5,000 – $15,000", "$15,000+"];
 
 const CONTACT_EMAIL = "rahulrp@stacklyn.in";
 const CONTACT_PHONE = "+91 95444 51720";
 const CONTACT_PHONE_RAW = "919544451720";
-const CONTACT_PERSON = "Rahul R P";
 
 type Status = "idle" | "sending" | "success" | "error";
 
+type Enquiry = {
+  name: string;
+  email: string;
+  company?: string;
+  type: string;
+  budget: string;
+  timeline?: string;
+  description: string;
+};
+
+/** Pre-fills a WhatsApp message with the whole enquiry, so a failed form submission never loses the lead. */
+function whatsappFallbackHref(enquiry: Enquiry) {
+  const lines = [
+    "Hi Stacklyn, I tried to send this through your website form:",
+    `Name: ${enquiry.name}`,
+    enquiry.company ? `Company: ${enquiry.company}` : null,
+    `Email: ${enquiry.email}`,
+    `Project: ${enquiry.type}`,
+    `Budget: ${enquiry.budget}`,
+    enquiry.timeline ? `Timeline: ${enquiry.timeline}` : null,
+    "",
+    enquiry.description,
+  ].filter((line): line is string => line !== null);
+  return `https://wa.me/${CONTACT_PHONE_RAW}?text=${encodeURIComponent(lines.join("\n"))}`;
+}
+
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
-  const [errorMsg, setErrorMsg] = useState("");
+  const [lastEnquiry, setLastEnquiry] = useState<Enquiry | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (status === "sending") return;
 
-    const fd = new FormData(e.currentTarget);
-    const data = {
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const data: Enquiry = {
       name: String(fd.get("name") ?? ""),
       email: String(fd.get("email") ?? ""),
       company: String(fd.get("company") ?? "") || undefined,
@@ -32,15 +68,15 @@ export function Contact() {
     };
 
     setStatus("sending");
-    setErrorMsg("");
+    setLastEnquiry(data);
 
     try {
       await sendContactEmail({ data });
       setStatus("success");
-      (e.target as HTMLFormElement).reset();
+      trackLead("contact_form");
+      form.reset();
     } catch {
       setStatus("error");
-      setErrorMsg("Something went wrong. Please email us directly.");
     }
   };
 
@@ -58,18 +94,27 @@ export function Contact() {
             Let's build something <span className="text-primary">exceptional.</span>
           </motion.h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            Tell us about your project. Your inquiry comes straight to my inbox — I respond personally, usually within 24 hours.
+            Tell us about your project. Your enquiry goes straight to our engineering team, and we reply within 24 hours —
+            usually much sooner on WhatsApp.
           </p>
 
-          <div className="mt-8 rounded-xl border border-border bg-background px-5 py-4">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Contact Person</div>
-            <div className="mt-1 text-base font-semibold text-foreground">{CONTACT_PERSON}</div>
-            <div className="text-xs text-muted-foreground">Founder & CEO · Stacklyn</div>
-          </div>
-
-          <div className="mt-6 space-y-4">
+          <div className="mt-8 space-y-4">
+            <a
+              href={`https://wa.me/${CONTACT_PHONE_RAW}`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackLead("whatsapp")}
+              className="group flex items-center justify-between rounded-xl border border-primary/30 bg-background px-5 py-4 hover:border-primary/60 transition-colors"
+            >
+              <div>
+                <div className="text-xs uppercase tracking-wider text-primary">WhatsApp · Fastest reply</div>
+                <div className="mt-1 text-sm font-medium text-foreground">{CONTACT_PHONE}</div>
+              </div>
+              <span className="text-primary transition-transform group-hover:translate-x-1">→</span>
+            </a>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
+              onClick={() => trackLead("email")}
               className="group flex items-center justify-between rounded-xl border border-border bg-background px-5 py-4 hover:border-primary/40 transition-colors"
             >
               <div>
@@ -80,6 +125,7 @@ export function Contact() {
             </a>
             <a
               href={`tel:+${CONTACT_PHONE_RAW}`}
+              onClick={() => trackLead("phone")}
               className="group flex items-center justify-between rounded-xl border border-border bg-background px-5 py-4 hover:border-primary/40 transition-colors"
             >
               <div>
@@ -88,23 +134,11 @@ export function Contact() {
               </div>
               <span className="text-primary transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a
-              href={`https://wa.me/${CONTACT_PHONE_RAW}`}
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center justify-between rounded-xl border border-border bg-background px-5 py-4 hover:border-primary/40 transition-colors"
-            >
-              <div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
-                <div className="mt-1 text-sm font-medium text-foreground">{CONTACT_PHONE}</div>
-              </div>
-              <span className="text-primary transition-transform group-hover:translate-x-1">→</span>
-            </a>
           </div>
 
           <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Response within 24 hours
+            Response within 24 hours · Working hours overlap with the UAE, Saudi Arabia, Qatar, and Oman
           </div>
         </div>
 
@@ -121,14 +155,14 @@ export function Contact() {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">✓</div>
               <h3 className="text-lg font-semibold">Message sent!</h3>
               <p className="text-sm text-muted-foreground max-w-xs">
-                We received your inquiry and will get back to you within 24 hours.
+                We received your enquiry and will get back to you within 24 hours.
               </p>
               <button
                 type="button"
                 onClick={() => setStatus("idle")}
                 className="mt-2 text-xs text-primary underline underline-offset-4"
               >
-                Send another inquiry
+                Send another enquiry
               </button>
             </div>
           ) : (
@@ -139,7 +173,7 @@ export function Contact() {
                 <Field label="Company" name="company" placeholder="Acme Inc." required={false} />
                 <Select label="Project Type" name="type" options={projectTypes} />
                 <Select label="Budget" name="budget" options={budgets} />
-                <Field label="Timeline" name="timeline" placeholder="e.g. Q3 2026" required={false} />
+                <Field label="Timeline" name="timeline" placeholder="e.g. Q1 2027" required={false} />
               </div>
               <div className="mt-5">
                 <label htmlFor="description" className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
@@ -154,8 +188,22 @@ export function Contact() {
                   placeholder="Tell us about the problem you're solving, your users, and what success looks like."
                 />
               </div>
-              {status === "error" && (
-                <p className="mt-3 text-sm text-destructive">{errorMsg}</p>
+              {status === "error" && lastEnquiry && (
+                <div className="mt-4 rounded-xl border border-destructive/30 bg-destructive/5 p-4">
+                  <p className="text-sm text-foreground">
+                    Our form couldn't send your message just now. Your details are ready to send on WhatsApp instead — one tap:
+                  </p>
+                  <a
+                    href={whatsappFallbackHref(lastEnquiry)}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => trackLead("whatsapp_fallback")}
+                    className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 h-10 text-sm font-semibold text-white hover:bg-[#1ebe5b] transition-colors"
+                  >
+                    Send via WhatsApp <span aria-hidden>→</span>
+                  </a>
+                  <p className="mt-2 text-xs text-muted-foreground">Or email us at {CONTACT_EMAIL}.</p>
+                </div>
               )}
               <div className="mt-6 flex items-center justify-end">
                 <button
@@ -169,7 +217,7 @@ export function Contact() {
                       Sending…
                     </>
                   ) : (
-                    <>Send Inquiry <span aria-hidden>→</span></>
+                    <>Send Enquiry <span aria-hidden>→</span></>
                   )}
                 </button>
               </div>

@@ -57,6 +57,15 @@ const aiAutomation = [
   { label: "HR & Recruitment Automation", href: "/ai-automation/hr-recruitment-automation" },
 ];
 
+const markets = [
+  { label: "UAE Oil & Gas Software", href: "/markets/oil-gas-software-uae" },
+  { label: "Saudi Arabia Oil & Gas Software", href: "/markets/oil-gas-software-saudi-arabia" },
+  { label: "Qatar Oil & Gas Software", href: "/markets/oil-gas-software-qatar" },
+  { label: "Oman Oil & Gas Software", href: "/markets/oil-gas-software-oman" },
+  { label: "ICV Reporting Software (UAE)", href: "/markets/icv-reporting-software-uae" },
+  { label: "Outsource Oil & Gas Software to India", href: "/markets/oil-gas-software-outsourcing-india" },
+];
+
 const company = [
   { label: "About", href: "/#about" },
   { label: "Work", href: "/#work" },
@@ -142,11 +151,14 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <div className="mt-8">
-            <div className="text-xs font-semibold uppercase tracking-wider text-foreground">Contact</div>
-            <div className="mt-3 text-sm font-medium text-foreground">Rahul R P</div>
-            <div className="text-xs text-muted-foreground">Founder & CEO · Stacklyn</div>
-          </div>
+          <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-foreground">Gulf &amp; Global Markets</div>
+          <ul className="mt-4 space-y-2">
+            {markets.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">{s.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
