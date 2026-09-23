@@ -95,18 +95,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", sizes: "512x512", href: "/favicon.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
     ],
-    // Google Analytics 4 on every page — production builds only, so local dev visits aren't recorded.
-    scripts: import.meta.env.PROD
-      ? [
-          { src: "https://www.googletagmanager.com/gtag/js?id=G-KJDV28CTWL", async: true },
-          {
-            children: `window.dataLayer = window.dataLayer || [];
+    scripts: [
+      // After a deploy, an open tab can request code chunks that no longer exist.
+      // Reload once to pick up the new version; the 10s guard prevents a reload loop.
+      {
+        children: `window.addEventListener("vite:preloadError", function (event) {
+  try {
+    var key = "stacklyn-chunk-reload";
+    if (Date.now() - Number(sessionStorage.getItem(key) || 0) < 10000) return;
+    sessionStorage.setItem(key, String(Date.now()));
+  } catch (e) { return; }
+  event.preventDefault();
+  window.location.reload();
+});`,
+      },
+      // Google Analytics 4 on every page — production builds only, so local dev visits aren't recorded.
+      ...(import.meta.env.PROD
+        ? [
+            { src: "https://www.googletagmanager.com/gtag/js?id=G-KJDV28CTWL", async: true },
+            {
+              children: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-KJDV28CTWL');`,
-          },
-        ]
-      : [],
+            },
+          ]
+        : []),
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
