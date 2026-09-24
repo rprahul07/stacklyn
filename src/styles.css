@@ -120,11 +120,8 @@
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  /* Static dashes: animating stroke-dashoffset repainted the hero SVG every frame and slowed page load. */
   .dash-flow {
     stroke-dasharray: 6 8;
-    animation: dash 4s linear infinite;
-  }
-  @keyframes dash {
-    to { stroke-dashoffset: -56; }
   }
 }

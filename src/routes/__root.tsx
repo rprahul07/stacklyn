@@ -110,14 +110,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });`,
       },
       // Google Analytics 4 on every page — production builds only, so local dev visits aren't recorded.
+      // gtag() queues events immediately; the 170 KB library loads after the page is idle or on first
+      // interaction, because loading it up front added ~600 ms of blocking time on mobile.
       ...(import.meta.env.PROD
         ? [
-            { src: "https://www.googletagmanager.com/gtag/js?id=G-KJDV28CTWL", async: true },
             {
               children: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-KJDV28CTWL');`,
+gtag('config', 'G-KJDV28CTWL');
+(function () {
+  var loaded = false;
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-KJDV28CTWL";
+    document.head.appendChild(s);
+  }
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (e) {
+    window.addEventListener(e, load, { once: true, passive: true });
+  });
+  window.addEventListener("load", function () {
+    if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 4000 });
+    else setTimeout(load, 3000);
+  });
+})();`,
             },
           ]
         : []),
