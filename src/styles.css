@@ -152,7 +152,7 @@
   /* AEO: speakable regions are identified in JSON-LD; the class itself carries no visual style */
   .speakable-intro,
   .speakable-answer {
-    /* intentionally no visual override */
+    display: flow-root; /* no-op block formatting; class is purely semantic / JSON-LD marker */
   }
 }
 
