@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const links = [
-  { href: "/#capabilities", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/ai-automation", label: "AI Automation" },
   { href: "/#work", label: "Work" },
   { href: "/#stack", label: "Technology" },
@@ -67,17 +67,27 @@ export function Nav() {
           <Logo />
         </a>
 
-        <nav className="hidden md:flex items-center gap-5 lg:gap-7 text-sm text-muted-foreground" aria-label="Main navigation">
+        <nav
+          className="hidden md:flex items-center gap-5 lg:gap-7 text-sm text-muted-foreground"
+          aria-label="Main navigation"
+        >
           {/* Services dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <a href="/#capabilities" className="hover:text-foreground transition-colors flex items-center gap-1">
+            <a
+              href="/services"
+              className="hover:text-foreground transition-colors flex items-center gap-1"
+            >
               Services
               <svg className="h-3 w-3 opacity-60" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
               </svg>
             </a>
             {servicesOpen && (
@@ -101,10 +111,17 @@ export function Nav() {
             onMouseEnter={() => setIndustriesOpen(true)}
             onMouseLeave={() => setIndustriesOpen(false)}
           >
-            <a href="/industries" className="hover:text-foreground transition-colors flex items-center gap-1">
+            <a
+              href="/industries"
+              className="hover:text-foreground transition-colors flex items-center gap-1"
+            >
               Industries
               <svg className="h-3 w-3 opacity-60" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
               </svg>
             </a>
             {industriesOpen && (

@@ -40,7 +40,9 @@ export function TechStack() {
                     className="flex items-center justify-between text-sm font-medium text-foreground py-2 border-b border-border last:border-b-0 group cursor-default"
                   >
                     <span>{it}</span>
-                    <span className="text-muted-foreground text-xs opacity-0 group-hover:opacity-100 transition-opacity">in-house</span>
+                    <span className="text-muted-foreground text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                      in-house
+                    </span>
                   </li>
                 ))}
               </ul>

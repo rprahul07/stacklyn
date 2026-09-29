@@ -55,9 +55,21 @@ export const usMarketPosts: BlogPost[] = [
         table: {
           headers: ["Period", "Outcome", "What to measure"],
           rows: [
-            ["Days 1–30", "Workflow map, data boundary, baseline, and prototype", "Current volume, time per task, error types, and decision owner"],
-            ["Days 31–60", "Supervised pilot on live or representative work", "Accuracy, escalation rate, reviewer time, and cost per completed task"],
-            ["Days 61–90", "Controlled rollout or decision to stop", "Business result, reliability trend, exceptions, and support burden"],
+            [
+              "Days 1–30",
+              "Workflow map, data boundary, baseline, and prototype",
+              "Current volume, time per task, error types, and decision owner",
+            ],
+            [
+              "Days 31–60",
+              "Supervised pilot on live or representative work",
+              "Accuracy, escalation rate, reviewer time, and cost per completed task",
+            ],
+            [
+              "Days 61–90",
+              "Controlled rollout or decision to stop",
+              "Business result, reliability trend, exceptions, and support burden",
+            ],
           ],
         },
       },
@@ -70,14 +82,32 @@ export const usMarketPosts: BlogPost[] = [
       },
     ],
     faqs: [
-      { q: "What is the best AI automation for a small business?", a: "The best first project is a high-volume, repetitive workflow with clear inputs, a measurable result, and a human exception path. Document intake, customer support triage, CRM updates, and internal knowledge search are common starting points." },
-      { q: "How much does AI automation cost for a small business?", a: "A focused workflow automation generally starts from about $2,500. A supervised AI agent pilot with multiple integrations and evaluation usually starts from $6,000. Model and software usage costs depend on volume." },
-      { q: "How long does an AI automation project take?", a: "A narrow workflow can often be discovered and piloted in four to eight weeks. A 90-day plan gives the business time to measure, supervise, and decide whether the system should scale." },
-      { q: "Do small businesses need AI governance?", a: "Yes, but it can be lightweight. Name an owner, define the use case and data boundary, test real examples, require human review for consequential actions, and monitor results after release." },
-      { q: "Can AI automation connect to our CRM or help desk?", a: "Usually, yes, through approved APIs or controlled exports. The project should assess permissions, data fields, audit needs, and failure handling before integration is enabled." },
+      {
+        q: "What is the best AI automation for a small business?",
+        a: "The best first project is a high-volume, repetitive workflow with clear inputs, a measurable result, and a human exception path. Document intake, customer support triage, CRM updates, and internal knowledge search are common starting points.",
+      },
+      {
+        q: "How much does AI automation cost for a small business?",
+        a: "A focused workflow automation generally starts from about $2,500. A supervised AI agent pilot with multiple integrations and evaluation usually starts from $6,000. Model and software usage costs depend on volume.",
+      },
+      {
+        q: "How long does an AI automation project take?",
+        a: "A narrow workflow can often be discovered and piloted in four to eight weeks. A 90-day plan gives the business time to measure, supervise, and decide whether the system should scale.",
+      },
+      {
+        q: "Do small businesses need AI governance?",
+        a: "Yes, but it can be lightweight. Name an owner, define the use case and data boundary, test real examples, require human review for consequential actions, and monitor results after release.",
+      },
+      {
+        q: "Can AI automation connect to our CRM or help desk?",
+        a: "Usually, yes, through approved APIs or controlled exports. The project should assess permissions, data fields, audit needs, and failure handling before integration is enabled.",
+      },
     ],
     related: [
-      { name: "AI Automation Services for US Businesses", href: "/markets/ai-automation-services-usa" },
+      {
+        name: "AI Automation Services for US Businesses",
+        href: "/markets/ai-automation-services-usa",
+      },
       { name: "AI Agent Development", href: "/ai-automation/ai-agent-development" },
       { name: "Business Process Automation", href: "/ai-automation/business-process-automation" },
       { name: "Estimate your project", href: "/tools/software-cost-estimator" },
@@ -114,10 +144,26 @@ export const usMarketPosts: BlogPost[] = [
         table: {
           headers: ["Need", "Best fit", "What to avoid"],
           rows: [
-            ["One well-defined feature", "Fixed-scope sprint", "Open-ended hourly work with no acceptance criteria"],
-            ["A recurring technical backlog", "Dedicated senior developer", "A developer who only receives tickets without product context"],
-            ["A product launch or major rebuild", "Small cross-functional product team", "Splitting interconnected work across uncoordinated freelancers"],
-            ["AI feature or automation", "Team with evaluation and integration experience", "A demo-only prototype without data, monitoring, or ownership"],
+            [
+              "One well-defined feature",
+              "Fixed-scope sprint",
+              "Open-ended hourly work with no acceptance criteria",
+            ],
+            [
+              "A recurring technical backlog",
+              "Dedicated senior developer",
+              "A developer who only receives tickets without product context",
+            ],
+            [
+              "A product launch or major rebuild",
+              "Small cross-functional product team",
+              "Splitting interconnected work across uncoordinated freelancers",
+            ],
+            [
+              "AI feature or automation",
+              "Team with evaluation and integration experience",
+              "A demo-only prototype without data, monitoring, or ownership",
+            ],
           ],
         },
       },
@@ -144,14 +190,32 @@ export const usMarketPosts: BlogPost[] = [
       },
     ],
     faqs: [
-      { q: "Can US startups hire software developers in India?", a: "Yes. US startups commonly use India-based contractors and development teams. The engagement should define source-code ownership, cloud access, IP assignment, scope, communication rhythm, acceptance criteria, and how work is handed over." },
-      { q: "Is it better to hire a freelancer or a development team?", a: "Use a freelancer for a narrow standalone task. Use a stable team when the roadmap spans multiple systems, releases, testing, deployment, and ongoing product decisions. The correct answer depends on the size and interdependence of the work." },
-      { q: "How do US teams work with India time zones?", a: "Set a recurring overlap window for decisions and reviews, then use written briefs, issue tracking, pull requests, demos, and recorded decisions so development can continue while the US team is offline." },
-      { q: "Who owns the code when working with an offshore developer?", a: "The contract should assign project source code and intellectual property to the client. In practice, keep code in the client's repository and deploy in accounts the client controls." },
-      { q: "What should a US startup ask before hiring an offshore team?", a: "Ask how the team handles source-code ownership, cloud access, communication windows, code review, testing, security, handover, and what will be demonstrated each week. Ask to start with a small, observable project." },
+      {
+        q: "Can US startups hire software developers in India?",
+        a: "Yes. US startups commonly use India-based contractors and development teams. The engagement should define source-code ownership, cloud access, IP assignment, scope, communication rhythm, acceptance criteria, and how work is handed over.",
+      },
+      {
+        q: "Is it better to hire a freelancer or a development team?",
+        a: "Use a freelancer for a narrow standalone task. Use a stable team when the roadmap spans multiple systems, releases, testing, deployment, and ongoing product decisions. The correct answer depends on the size and interdependence of the work.",
+      },
+      {
+        q: "How do US teams work with India time zones?",
+        a: "Set a recurring overlap window for decisions and reviews, then use written briefs, issue tracking, pull requests, demos, and recorded decisions so development can continue while the US team is offline.",
+      },
+      {
+        q: "Who owns the code when working with an offshore developer?",
+        a: "The contract should assign project source code and intellectual property to the client. In practice, keep code in the client's repository and deploy in accounts the client controls.",
+      },
+      {
+        q: "What should a US startup ask before hiring an offshore team?",
+        a: "Ask how the team handles source-code ownership, cloud access, communication windows, code review, testing, security, handover, and what will be demonstrated each week. Ask to start with a small, observable project.",
+      },
     ],
     related: [
-      { name: "Hire Indian Developers for US Startups", href: "/markets/hire-indian-developers-usa" },
+      {
+        name: "Hire Indian Developers for US Startups",
+        href: "/markets/hire-indian-developers-usa",
+      },
       { name: "Hire AI Developers", href: "/hire-ai-developer" },
       { name: "Hire Backend Developers", href: "/hire-backend-developer" },
       { name: "Custom Software Development", href: "/services/custom-software-development" },
@@ -219,14 +283,32 @@ export const usMarketPosts: BlogPost[] = [
       },
     ],
     faqs: [
-      { q: "What is AI agent governance?", a: "AI agent governance is the set of ownership, data, permission, testing, human-review, monitoring, and incident-response controls used to ensure an agent behaves within an approved business purpose." },
-      { q: "Do small businesses need AI agent governance?", a: "Yes, but it can be lightweight. Every business should name an owner, limit access, test representative tasks, define approvals for consequential actions, log material outcomes, and be able to pause the agent." },
-      { q: "How do you test an AI agent?", a: "Test the agent against representative historical cases and edge cases, measure task-specific accuracy and escalation behavior, then repeat the tests whenever the model, tools, prompts, data, or policy changes." },
-      { q: "What should an AI agent never do without approval?", a: "An AI agent should not independently take actions that create material safety, legal, financial, employment, or customer-impact consequences unless the organisation has explicitly designed, validated, and governed that authority." },
-      { q: "What is the NIST AI RMF?", a: "The NIST AI Risk Management Framework is a voluntary framework for managing AI risks. Its core functions are govern, map, measure, and manage." },
+      {
+        q: "What is AI agent governance?",
+        a: "AI agent governance is the set of ownership, data, permission, testing, human-review, monitoring, and incident-response controls used to ensure an agent behaves within an approved business purpose.",
+      },
+      {
+        q: "Do small businesses need AI agent governance?",
+        a: "Yes, but it can be lightweight. Every business should name an owner, limit access, test representative tasks, define approvals for consequential actions, log material outcomes, and be able to pause the agent.",
+      },
+      {
+        q: "How do you test an AI agent?",
+        a: "Test the agent against representative historical cases and edge cases, measure task-specific accuracy and escalation behavior, then repeat the tests whenever the model, tools, prompts, data, or policy changes.",
+      },
+      {
+        q: "What should an AI agent never do without approval?",
+        a: "An AI agent should not independently take actions that create material safety, legal, financial, employment, or customer-impact consequences unless the organisation has explicitly designed, validated, and governed that authority.",
+      },
+      {
+        q: "What is the NIST AI RMF?",
+        a: "The NIST AI Risk Management Framework is a voluntary framework for managing AI risks. Its core functions are govern, map, measure, and manage.",
+      },
     ],
     related: [
-      { name: "AI Automation Services for US Businesses", href: "/markets/ai-automation-services-usa" },
+      {
+        name: "AI Automation Services for US Businesses",
+        href: "/markets/ai-automation-services-usa",
+      },
       { name: "AI Agent Development", href: "/ai-automation/ai-agent-development" },
       { name: "RAG & Private Knowledge Base AI", href: "/ai-automation/rag-knowledge-base-ai" },
     ],
@@ -290,15 +372,36 @@ export const usMarketPosts: BlogPost[] = [
       },
     ],
     faqs: [
-      { q: "How is AI used in oil and gas operations?", a: "AI can help process documents, analyse trusted operational data, search procedures, classify inspections, draft reports, support maintenance planning, and connect engineers to relevant information. It should be governed and validated for the specific workflow." },
-      { q: "Can AI approve a permit to work?", a: "AI can help prepare a permit, check it for missing information, and retrieve relevant procedure text. A qualified person should remain responsible for approval, safety controls, and final authorisation." },
-      { q: "What is the safest first AI project for an oil and gas company?", a: "A bounded document or reporting workflow is often the safest first project: inspection extraction, source-linked procedure search, report drafting, or maintenance request triage with human review." },
-      { q: "Can AI work with SCADA or production data?", a: "Yes, through governed, usually read-only integrations and trusted data pipelines. The initial use should assist interpretation or reporting rather than directly controlling an operational system." },
-      { q: "How much does oil and gas AI automation cost?", a: "Focused document or knowledge workflow pilots generally start from $6,000. Larger integrations are best delivered in phases after the data quality, controls, and operational users are understood." },
+      {
+        q: "How is AI used in oil and gas operations?",
+        a: "AI can help process documents, analyse trusted operational data, search procedures, classify inspections, draft reports, support maintenance planning, and connect engineers to relevant information. It should be governed and validated for the specific workflow.",
+      },
+      {
+        q: "Can AI approve a permit to work?",
+        a: "AI can help prepare a permit, check it for missing information, and retrieve relevant procedure text. A qualified person should remain responsible for approval, safety controls, and final authorisation.",
+      },
+      {
+        q: "What is the safest first AI project for an oil and gas company?",
+        a: "A bounded document or reporting workflow is often the safest first project: inspection extraction, source-linked procedure search, report drafting, or maintenance request triage with human review.",
+      },
+      {
+        q: "Can AI work with SCADA or production data?",
+        a: "Yes, through governed, usually read-only integrations and trusted data pipelines. The initial use should assist interpretation or reporting rather than directly controlling an operational system.",
+      },
+      {
+        q: "How much does oil and gas AI automation cost?",
+        a: "Focused document or knowledge workflow pilots generally start from $6,000. Larger integrations are best delivered in phases after the data quality, controls, and operational users are understood.",
+      },
     ],
     related: [
-      { name: "Oil & Gas Software for US Operators", href: "/markets/oil-gas-software-united-states" },
-      { name: "AI Automation Services for US Businesses", href: "/markets/ai-automation-services-usa" },
+      {
+        name: "Oil & Gas Software for US Operators",
+        href: "/markets/oil-gas-software-united-states",
+      },
+      {
+        name: "AI Automation Services for US Businesses",
+        href: "/markets/ai-automation-services-usa",
+      },
       { name: "Oil & Gas Software", href: "/industries/oil-gas-software" },
       { name: "Permit to Work Guide", href: "/blog/what-is-permit-to-work-system" },
     ],

@@ -40,9 +40,17 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex items-center gap-2 text-xs text-muted-foreground">
-                <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+                <li>
+                  <a href="/" className="hover:text-primary transition-colors">
+                    Home
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
-                <li><a href="/industries" className="hover:text-primary transition-colors">Industries</a></li>
+                <li>
+                  <a href="/industries" className="hover:text-primary transition-colors">
+                    Industries
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
                 <li className="text-foreground font-medium">{data.industry}</li>
               </ol>
@@ -104,20 +112,30 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
         <section className="py-20 md:py-24 border-b border-border">
           <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Industry Background</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Industry Background
+              </div>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
                 Software Challenges in the {data.industry} Sector
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">{data.industryContext}</p>
             </div>
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Who We Serve</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Who We Serve
+              </div>
               <h3 className="text-xl font-semibold mb-5">Our {data.industry} Clients</h3>
               <ul className="space-y-3">
                 {data.clients.map((c) => (
                   <li key={c} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <span className="mt-0.5 h-5 w-5 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                      <svg viewBox="0 0 20 20" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <svg
+                        viewBox="0 0 20 20"
+                        className="h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      >
                         <path d="M4 10.5l4 4 8-9" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
@@ -132,7 +150,9 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
         {/* Pain Points */}
         <section className="py-20 md:py-24 bg-surface/60">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Industry Pain Points</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Industry Pain Points
+            </div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
               Problems We Solve for {data.industry} Companies
             </h2>
@@ -147,7 +167,13 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
                   className="rounded-2xl border border-border bg-background p-7"
                 >
                   <div className="h-9 w-9 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4">
-                    <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      viewBox="0 0 20 20"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <path d="M10 3v7m0 4h.01" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
@@ -162,7 +188,9 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
         {/* Solutions */}
         <section className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">What We Build</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              What We Build
+            </div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
               Software Solutions for {data.industry} Companies
             </h2>
@@ -176,7 +204,9 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
                   transition={{ duration: 0.5, delay: i * 0.06 }}
                   className="relative rounded-2xl border border-border bg-background p-7 hover:border-primary/30 transition-colors"
                 >
-                  <div className="text-4xl font-bold text-primary/10 mb-3">{String(i + 1).padStart(2, "0")}</div>
+                  <div className="text-4xl font-bold text-primary/10 mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
                   <h3 className="text-base font-semibold">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                 </motion.div>
@@ -188,11 +218,18 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
         {/* Tech Stack */}
         <section className="py-16 md:py-20 bg-surface/60 border-y border-border">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Technologies</div>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">Tech Stack We Use</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Technologies
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+              Tech Stack We Use
+            </h2>
             <div className="flex flex-wrap gap-3">
               {data.techStack.map((t) => (
-                <span key={t} className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground">
+                <span
+                  key={t}
+                  className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground"
+                >
                   {t}
                 </span>
               ))}
@@ -203,7 +240,9 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
         {/* Why Stacklyn */}
         <section className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Why Stacklyn</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Why Stacklyn
+            </div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
               Why {data.industry} Companies Choose Stacklyn
             </h2>
@@ -218,7 +257,13 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
                   className="flex gap-4 p-6 rounded-2xl border border-border bg-background hover:bg-surface transition-colors"
                 >
                   <div className="h-8 w-8 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                    <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2">
+                    <svg
+                      viewBox="0 0 20 20"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                    >
                       <path d="M4 10.5l4 4 8-9" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
@@ -239,7 +284,9 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
               <h2 className="text-2xl font-semibold">
                 See How Stacklyn Builds for {data.industry}
               </h2>
-              <p className="mt-2 text-muted-foreground text-sm">Real products built and shipped by Stacklyn for industrial clients.</p>
+              <p className="mt-2 text-muted-foreground text-sm">
+                Real products built and shipped by Stacklyn for industrial clients.
+              </p>
             </div>
             <a
               href="/#work"
@@ -251,14 +298,22 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
         </section>
 
         {/* FAQ */}
-        <FAQ items={data.faqs} title={`${data.industry} Software — Frequently Asked Questions`} includeSchema={false} />
+        <FAQ
+          items={data.faqs}
+          title={`${data.industry} Software — Frequently Asked Questions`}
+          includeSchema={false}
+        />
 
         {/* Related Industries */}
         <section className="py-16 border-t border-border">
           <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Related Industries</div>
-              <h2 className="text-2xl font-semibold tracking-tight mb-6">Other Industries We Serve</h2>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Related Industries
+              </div>
+              <h2 className="text-2xl font-semibold tracking-tight mb-6">
+                Other Industries We Serve
+              </h2>
               <div className="flex flex-wrap gap-3">
                 {data.relatedIndustries.map((i) => (
                   <a
@@ -272,7 +327,9 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
               </div>
             </div>
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Related Services</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Related Services
+              </div>
               <h2 className="text-2xl font-semibold tracking-tight mb-6">Our Core Services</h2>
               <div className="flex flex-wrap gap-3">
                 {data.relatedServices.map((s) => (
@@ -298,13 +355,16 @@ export function IndustryPage({ data, schema }: IndustryPageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">Get Started</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">
+                Get Started
+              </div>
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-balance">
                 Ready to build software for your{" "}
                 <span className="text-primary">{data.industry}</span> operations?
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                Tell us about your project and we'll respond with a detailed technical proposal within 24 hours.
+                Tell us about your project and we'll respond with a detailed technical proposal
+                within 24 hours.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <a

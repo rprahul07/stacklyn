@@ -7,18 +7,37 @@ const data: IndustryData = {
   industry: "Industrial Workforce Management",
   slug: "workforce-management-software",
   headline: "Custom Workforce Management Software for Industrial & Field Operations",
-  tagline: "Labour Mobilization · Shift Scheduling · Competency Tracking · Payroll Integration · Compliance",
+  tagline:
+    "Labour Mobilization · Shift Scheduling · Competency Tracking · Payroll Integration · Compliance",
   intro:
     "Stacklyn builds enterprise workforce management platforms for companies that deploy large-scale manual labour and field workforces — including construction firms, industrial contractors, oil & gas operators, mining companies, and facility management MNCs. We digitize crew scheduling, mobilization, competency management, attendance, and compliance into integrated platforms that replace spreadsheet chaos.",
   industryContext:
     "Industries reliant on large manual labour workforces — construction, oil & gas, mining, manufacturing, and facilities management — face unique workforce challenges. Managing thousands of workers across geographically dispersed sites, tracking qualifications and certifications in real time, ensuring regulatory compliance (OSHA, HSE, local labour laws), and processing payroll for multi-contract, multi-rate workforces are problems that generic HR software simply cannot solve. These industries need purpose-built workforce management systems.",
   painPoints: [
-    { title: "Certification & Competency Tracking", desc: "Workers operating dangerous equipment or hazardous environments require specific certifications (OSHA 10/30, IPAF, OPITO, NEBOSH). Tracking expiry dates manually creates safety risk and compliance liability." },
-    { title: "Labour Mobilization Complexity", desc: "Deploying the right number of skilled workers to the right location on time — across multiple sites, shifts, and contract types — requires real-time scheduling intelligence that spreadsheets can't provide." },
-    { title: "Site Access & Badging", desc: "Controlling who is on site at any given time, verifying inductions and qualifications before site entry, and generating real-time site population reports for emergency muster." },
-    { title: "Multi-Contractor Payroll Complexity", desc: "Industrial sites often have dozens of sub-contractors with different pay rates, overtime rules, allowances, and deductions. Calculating payroll accurately requires rule-based automation." },
-    { title: "Attendance & Biometric Integration", desc: "Manual timesheets are fraudulent and inaccurate. Integrating biometric readers, GPS check-ins, and turnstile access into a unified attendance system is a critical operational need." },
-    { title: "Workforce Reporting & Analytics", desc: "Senior management needs real-time visibility into headcount, overtime costs, absenteeism, training compliance rates, and labour cost per project — data that paper and spreadsheet systems can't produce." },
+    {
+      title: "Certification & Competency Tracking",
+      desc: "Workers operating dangerous equipment or hazardous environments require specific certifications (OSHA 10/30, IPAF, OPITO, NEBOSH). Tracking expiry dates manually creates safety risk and compliance liability.",
+    },
+    {
+      title: "Labour Mobilization Complexity",
+      desc: "Deploying the right number of skilled workers to the right location on time — across multiple sites, shifts, and contract types — requires real-time scheduling intelligence that spreadsheets can't provide.",
+    },
+    {
+      title: "Site Access & Badging",
+      desc: "Controlling who is on site at any given time, verifying inductions and qualifications before site entry, and generating real-time site population reports for emergency muster.",
+    },
+    {
+      title: "Multi-Contractor Payroll Complexity",
+      desc: "Industrial sites often have dozens of sub-contractors with different pay rates, overtime rules, allowances, and deductions. Calculating payroll accurately requires rule-based automation.",
+    },
+    {
+      title: "Attendance & Biometric Integration",
+      desc: "Manual timesheets are fraudulent and inaccurate. Integrating biometric readers, GPS check-ins, and turnstile access into a unified attendance system is a critical operational need.",
+    },
+    {
+      title: "Workforce Reporting & Analytics",
+      desc: "Senior management needs real-time visibility into headcount, overtime costs, absenteeism, training compliance rates, and labour cost per project — data that paper and spreadsheet systems can't produce.",
+    },
   ],
   solutions: [
     {
@@ -55,12 +74,21 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "Redis", "Prisma ORM",
-    "REST API", "GraphQL", "WebSockets",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Redis",
+    "Prisma ORM",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Biometric SDK Integration (ZKTeco, Suprema, IDEMIA)",
     "GPS / Geofencing (Google Maps API)",
-    "AWS", "Azure", "Docker",
+    "AWS",
+    "Azure",
+    "Docker",
     "React Native (Mobile Field Apps)",
     "PDF Generation (Reports & Certificates)",
     "Recharts / D3.js (Analytics Dashboards)",
@@ -77,12 +105,30 @@ const data: IndustryData = {
     "Port and logistics terminal operators",
   ],
   whyStacklyn: [
-    { title: "Industrial Workforce Domain Expertise", desc: "We understand trade classifications, shift patterns, multi-contractor environments, industrial certifications, and the specific compliance requirements of high-risk workforces." },
-    { title: "Biometric & Hardware Integration", desc: "We integrate with biometric access control systems (ZKTeco, Suprema, IDEMIA), RFID readers, and turnstile systems — bridging the gap between physical access control and digital workforce management." },
-    { title: "Regulation-Ready Compliance Modules", desc: "Our workforce management platforms are built with OSHA, HSE, NEBOSH, OPITO, and local labour law compliance in mind. Automated alerts and reports keep you audit-ready." },
-    { title: "Multi-Site, Multi-Contractor Architecture", desc: "We design multi-tenant platforms that support hundreds of contractors and dozens of sites with role-based access, site isolation, and consolidated management reporting." },
-    { title: "Offline-First Mobile Apps", desc: "Field supervisors and security guards on industrial sites need apps that work without reliable internet. We build offline-capable React Native apps that sync when connectivity is restored." },
-    { title: "SAP / Oracle Integration", desc: "Large MNCs run SAP or Oracle as their enterprise backbone. We build workforce management platforms that integrate seamlessly via APIs and data pipelines, without replacing your core ERP." },
+    {
+      title: "Industrial Workforce Domain Expertise",
+      desc: "We understand trade classifications, shift patterns, multi-contractor environments, industrial certifications, and the specific compliance requirements of high-risk workforces.",
+    },
+    {
+      title: "Biometric & Hardware Integration",
+      desc: "We integrate with biometric access control systems (ZKTeco, Suprema, IDEMIA), RFID readers, and turnstile systems — bridging the gap between physical access control and digital workforce management.",
+    },
+    {
+      title: "Regulation-Ready Compliance Modules",
+      desc: "Our workforce management platforms are built with OSHA, HSE, NEBOSH, OPITO, and local labour law compliance in mind. Automated alerts and reports keep you audit-ready.",
+    },
+    {
+      title: "Multi-Site, Multi-Contractor Architecture",
+      desc: "We design multi-tenant platforms that support hundreds of contractors and dozens of sites with role-based access, site isolation, and consolidated management reporting.",
+    },
+    {
+      title: "Offline-First Mobile Apps",
+      desc: "Field supervisors and security guards on industrial sites need apps that work without reliable internet. We build offline-capable React Native apps that sync when connectivity is restored.",
+    },
+    {
+      title: "SAP / Oracle Integration",
+      desc: "Large MNCs run SAP or Oracle as their enterprise backbone. We build workforce management platforms that integrate seamlessly via APIs and data pipelines, without replacing your core ERP.",
+    },
   ],
   faqs: [
     {
@@ -145,33 +191,38 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/workforce-management-software#service`,
-      "name": "Industrial Workforce Management Software Development",
-      "provider": {
+      name: "Industrial Workforce Management Software Development",
+      provider: {
         "@type": "Organization",
-        "name": "Stacklyn",
-        "url": BASE_URL,
+        name: "Stacklyn",
+        url: BASE_URL,
       },
-      "description":
+      description:
         "Custom workforce management software for industrial companies: labour mobilization, competency tracking, biometric attendance, site access control, payroll integration, and workforce analytics.",
-      "areaServed": ["IN", "AE", "GB", "AU", "US", "SG"],
-      "serviceType": "Custom Software Development for Industrial Workforce Management",
+      areaServed: ["IN", "AE", "GB", "AU", "US", "SG"],
+      serviceType: "Custom Software Development for Industrial Workforce Management",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Workforce Management Software", "item": `${BASE_URL}/industries/workforce-management-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Workforce Management Software",
+          item: `${BASE_URL}/industries/workforce-management-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": {
+        name: faq.q,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": faq.a,
+          text: faq.a,
         },
       })),
     },
@@ -210,9 +261,7 @@ export const Route = createFileRoute("/industries/workforce-management-software"
           "Labour mobilization, competency tracking, biometric attendance, contractor management for industrial MNCs. From Kerala, India.",
       },
     ],
-    links: [
-      { rel: "canonical", href: `${BASE_URL}/industries/workforce-management-software` },
-    ],
+    links: [{ rel: "canonical", href: `${BASE_URL}/industries/workforce-management-software` }],
   }),
   component: () => <IndustryPage data={data} schema={schemaMarkup} />,
 });

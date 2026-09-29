@@ -18,11 +18,13 @@ export const aiCategories: Array<{ name: AICategory; blurb: string }> = [
   },
   {
     name: "Business Automation",
-    blurb: "Workflow, finance, sales, and HR automation connecting the tools Indian businesses already use.",
+    blurb:
+      "Workflow, finance, sales, and HR automation connecting the tools Indian businesses already use.",
   },
   {
     name: "AI for Kerala Industries",
-    blurb: "AI and automation shaped around Kerala's key sectors — tourism, healthcare, jewellery, exports, and education.",
+    blurb:
+      "AI and automation shaped around Kerala's key sectors — tourism, healthcare, jewellery, exports, and education.",
   },
 ];
 

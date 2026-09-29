@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "EPC (Engineering, Procurement, and Construction) projects are among the most complex undertakings in the industrial world — spanning multiple engineering disciplines, hundreds of vendors, thousands of deliverables, and multi-year timelines. Traditional project management tools like Primavera and Aconex are expensive, heavily licensed, and not built for your specific project structure. Custom EPC software gives project teams the exact workflows, data visibility, and integrations they need to deliver projects on time and under budget.",
   painPoints: [
-    { title: "Document Control Chaos", desc: "Engineering documents (P&IDs, IFCs, MDRs) transmitted via email and shared drives with no formal version control, transmittal tracking, or approval workflows." },
-    { title: "Multi-Party Coordination Complexity", desc: "Coordinating between owners, PMC, EPC contractors, sub-contractors, and vendors with no unified platform for RFI management, submittals, and action tracking." },
-    { title: "Progress & Physical Completion Tracking", desc: "Manually updating progress S-curves and physical completion percentages for thousands of work packages across multiple engineering disciplines." },
-    { title: "Vendor Management Fragmentation", desc: "Managing hundreds of equipment vendors, FAT inspections, delivery tracking, and vendor document submittals through spreadsheets and email chains." },
-    { title: "Cost Control Visibility", desc: "No real-time visibility into committed costs, earned value, and cost-at-completion across project phases. Variance identification happens weeks after the fact." },
-    { title: "Field Construction Control", desc: "Field construction teams recording inspection test records, punch lists, and quality reports on paper that can't be analysed or tracked in real time from the project office." },
+    {
+      title: "Document Control Chaos",
+      desc: "Engineering documents (P&IDs, IFCs, MDRs) transmitted via email and shared drives with no formal version control, transmittal tracking, or approval workflows.",
+    },
+    {
+      title: "Multi-Party Coordination Complexity",
+      desc: "Coordinating between owners, PMC, EPC contractors, sub-contractors, and vendors with no unified platform for RFI management, submittals, and action tracking.",
+    },
+    {
+      title: "Progress & Physical Completion Tracking",
+      desc: "Manually updating progress S-curves and physical completion percentages for thousands of work packages across multiple engineering disciplines.",
+    },
+    {
+      title: "Vendor Management Fragmentation",
+      desc: "Managing hundreds of equipment vendors, FAT inspections, delivery tracking, and vendor document submittals through spreadsheets and email chains.",
+    },
+    {
+      title: "Cost Control Visibility",
+      desc: "No real-time visibility into committed costs, earned value, and cost-at-completion across project phases. Variance identification happens weeks after the fact.",
+    },
+    {
+      title: "Field Construction Control",
+      desc: "Field construction teams recording inspection test records, punch lists, and quality reports on paper that can't be analysed or tracked in real time from the project office.",
+    },
   ],
   solutions: [
     {
@@ -55,10 +73,19 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "Redis", "Prisma ORM",
-    "REST API", "GraphQL", "WebSockets",
-    "AWS", "Azure", "Docker",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Redis",
+    "Prisma ORM",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
+    "AWS",
+    "Azure",
+    "Docker",
     "PDF Generation (Drawing Transmittals, Reports)",
     "Primavera P6 Data Integration",
     "React Native (Field Mobile Apps)",
@@ -76,12 +103,30 @@ const data: IndustryData = {
     "Construction management companies",
   ],
   whyStacklyn: [
-    { title: "EPC Project Structure Understanding", desc: "We understand the owner-PMC-EPC-subcontractor hierarchy, engineering deliverable workflows, procurement gate reviews, and construction discipline structures — not just generic project management." },
-    { title: "Document Control Expertise", desc: "Engineering document control is a specialised discipline. We build EDCS systems with proper revision states, transmittal logic, drawing registers, and MTO/MDR management." },
-    { title: "Primavera & MS Project Integration", desc: "We integrate with scheduling tools including Primavera P6 and MS Project to pull schedule data for progress tracking dashboards, S-curve updates, and earned value reporting." },
-    { title: "Multi-Party Access Architecture", desc: "EPC projects span dozens of companies. We build platforms with granular role-based access where each party (owner, PMC, contractor, vendor) sees exactly what they need and nothing more." },
-    { title: "Field-Ready Mobile Applications", desc: "Construction sites are not office environments. We build rugged, offline-capable mobile apps for field engineers, inspectors, and HSE officers — designed for tablet use in dusty, high-temperature environments." },
-    { title: "Rapid MVP to Production", desc: "EPC projects can't wait 18 months for custom software. We deliver working core modules in 8–12 weeks and expand iteratively, so your team starts getting value immediately." },
+    {
+      title: "EPC Project Structure Understanding",
+      desc: "We understand the owner-PMC-EPC-subcontractor hierarchy, engineering deliverable workflows, procurement gate reviews, and construction discipline structures — not just generic project management.",
+    },
+    {
+      title: "Document Control Expertise",
+      desc: "Engineering document control is a specialised discipline. We build EDCS systems with proper revision states, transmittal logic, drawing registers, and MTO/MDR management.",
+    },
+    {
+      title: "Primavera & MS Project Integration",
+      desc: "We integrate with scheduling tools including Primavera P6 and MS Project to pull schedule data for progress tracking dashboards, S-curve updates, and earned value reporting.",
+    },
+    {
+      title: "Multi-Party Access Architecture",
+      desc: "EPC projects span dozens of companies. We build platforms with granular role-based access where each party (owner, PMC, contractor, vendor) sees exactly what they need and nothing more.",
+    },
+    {
+      title: "Field-Ready Mobile Applications",
+      desc: "Construction sites are not office environments. We build rugged, offline-capable mobile apps for field engineers, inspectors, and HSE officers — designed for tablet use in dusty, high-temperature environments.",
+    },
+    {
+      title: "Rapid MVP to Production",
+      desc: "EPC projects can't wait 18 months for custom software. We deliver working core modules in 8–12 weeks and expand iteratively, so your team starts getting value immediately.",
+    },
   ],
   faqs: [
     {
@@ -144,33 +189,38 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/epc-engineering-software#service`,
-      "name": "EPC & Engineering Software Development",
-      "provider": {
+      name: "EPC & Engineering Software Development",
+      provider: {
         "@type": "Organization",
-        "name": "Stacklyn",
-        "url": BASE_URL,
+        name: "Stacklyn",
+        url: BASE_URL,
       },
-      "description":
+      description:
         "Custom software for EPC contractors and engineering companies: document control systems, project management portals, vendor management, progress tracking, field inspection apps, and commissioning management.",
-      "areaServed": ["AE", "IN", "GB", "US", "AU", "SG"],
-      "serviceType": "Custom Software Development for EPC and Engineering Industry",
+      areaServed: ["AE", "IN", "GB", "US", "AU", "SG"],
+      serviceType: "Custom Software Development for EPC and Engineering Industry",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "EPC & Engineering Software", "item": `${BASE_URL}/industries/epc-engineering-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "EPC & Engineering Software",
+          item: `${BASE_URL}/industries/epc-engineering-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": {
+        name: faq.q,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": faq.a,
+          text: faq.a,
         },
       })),
     },
@@ -209,9 +259,7 @@ export const Route = createFileRoute("/industries/epc-engineering-software")({
           "Document control, project portals, vendor management, commissioning systems for EPC contractors. From Kerala, India.",
       },
     ],
-    links: [
-      { rel: "canonical", href: `${BASE_URL}/industries/epc-engineering-software` },
-    ],
+    links: [{ rel: "canonical", href: `${BASE_URL}/industries/epc-engineering-software` }],
   }),
   component: () => <IndustryPage data={data} schema={schemaMarkup} />,
 });

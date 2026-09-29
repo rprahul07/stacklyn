@@ -6,8 +6,8 @@ import { usMarketPosts } from "./us-market";
 export type { BlogPost, BlogSection } from "./types";
 
 /** Newest first. */
-export const blogPosts: BlogPost[] = [...usMarketPosts, ...oilGasPosts, ...buyingGuidePosts].sort((a, b) =>
-  b.datePublished.localeCompare(a.datePublished),
+export const blogPosts: BlogPost[] = [...usMarketPosts, ...oilGasPosts, ...buyingGuidePosts].sort(
+  (a, b) => b.datePublished.localeCompare(a.datePublished),
 );
 
 const bySlug = new Map(blogPosts.map((post) => [post.slug, post]));

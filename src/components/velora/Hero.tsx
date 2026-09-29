@@ -21,9 +21,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Stacklyn builds custom software for oil and gas, industrial, and growing businesses — digital permit to
-            work, HSE, ICV reporting, operations dashboards, and AI automation. Senior engineers in Kerala, India,
-            fixed-price phases, and a reply within 24 hours.
+            Stacklyn builds custom software for oil and gas, industrial, and growing businesses —
+            digital permit to work, HSE, ICV reporting, operations dashboards, and AI automation.
+            Senior engineers in Kerala, India, fixed-price phases, and a reply within 24 hours.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">

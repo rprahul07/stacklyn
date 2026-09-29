@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Real estate sales fail in the gap between marketing and finance. Leads arrive from a dozen sources, site visits are logged in notebooks, a unit gets blocked verbally over a phone call, and by the time the booking reaches accounts nobody is certain what discount was promised or whether that unit was already held for someone else. Meanwhile collections depend on construction milestones that live in a different system entirely. Custom software fixes this by making unit inventory the single locked source of truth, and by tying every booking, discount, demand, and receipt to it.",
   painPoints: [
-    { title: "Double-Blocked Units", desc: "Units held verbally by different sales agents with no system-level locking, producing customer-facing embarrassment and cancelled bookings." },
-    { title: "Lead Leakage Across Sources", desc: "Portal, campaign, walk-in, and channel partner leads landing in separate inboxes with no attribution, so marketing spend cannot be judged." },
-    { title: "Discount Approvals by WhatsApp", desc: "Price concessions agreed informally with no approval trail, surfacing only when finance reconciles the booking against the price list." },
-    { title: "Milestone Collections Slipping", desc: "Construction-linked demand generation done manually, so demand letters go late and collections lag behind the build programme." },
-    { title: "Channel Partner Friction", desc: "Brokers without visibility of live inventory, their own lead status, or brokerage payouts, generating constant calls to the sales desk." },
-    { title: "Post-Sales Silence", desc: "Customers with no visibility of payment schedule, construction progress, or documentation status, driving complaints and escalations." },
+    {
+      title: "Double-Blocked Units",
+      desc: "Units held verbally by different sales agents with no system-level locking, producing customer-facing embarrassment and cancelled bookings.",
+    },
+    {
+      title: "Lead Leakage Across Sources",
+      desc: "Portal, campaign, walk-in, and channel partner leads landing in separate inboxes with no attribution, so marketing spend cannot be judged.",
+    },
+    {
+      title: "Discount Approvals by WhatsApp",
+      desc: "Price concessions agreed informally with no approval trail, surfacing only when finance reconciles the booking against the price list.",
+    },
+    {
+      title: "Milestone Collections Slipping",
+      desc: "Construction-linked demand generation done manually, so demand letters go late and collections lag behind the build programme.",
+    },
+    {
+      title: "Channel Partner Friction",
+      desc: "Brokers without visibility of live inventory, their own lead status, or brokerage payouts, generating constant calls to the sales desk.",
+    },
+    {
+      title: "Post-Sales Silence",
+      desc: "Customers with no visibility of payment schedule, construction progress, or documentation status, driving complaints and escalations.",
+    },
   ],
   solutions: [
     {
@@ -55,17 +73,28 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "PostGIS", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "PostGIS",
+    "MongoDB",
+    "Redis",
     "Mapbox / Google Maps (Map-Based Discovery)",
     "React Native (Sales, Broker & Customer Apps)",
     "Document Generation & E-Signature",
     "Payment Gateway & NACH Integration",
     "WhatsApp / SMS / Email Automation",
     "Tally / SAP / Zoho Books Integration",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Structured Data & SEO for Listings",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Recharts / D3.js (Sales & Collection Dashboards)",
   ],
   clients: [
@@ -78,12 +107,30 @@ const data: IndustryData = {
     "Property management and society administrators",
   ],
   whyStacklyn: [
-    { title: "Inventory Is Locked, Not Negotiated", desc: "Unit blocking is enforced by the system with expiry timers and audit history, which removes the single most damaging failure in developer sales operations." },
-    { title: "Every Discount Has an Approval Trail", desc: "Concessions route through configurable approval hierarchies before a booking can proceed, so finance never discovers a price variance after the fact." },
-    { title: "Collections Follow the Build", desc: "Demand generation is driven by construction milestones, turning collections into an automated schedule rather than a monthly manual exercise." },
-    { title: "Channel Partners Serve Themselves", desc: "Brokers get live inventory, lead ownership clarity, and payout visibility, which reduces sales desk call volume and improves partner loyalty." },
-    { title: "Post-Sales Is a Retention Asset", desc: "Customers who can see their schedule, receipts, and construction progress escalate less and refer more — the cheapest lead source a developer has." },
-    { title: "Listings Built to Be Found", desc: "Marketplace pages are built with structured data, clean URLs, and server-side rendering, because property discovery still begins with a search engine." },
+    {
+      title: "Inventory Is Locked, Not Negotiated",
+      desc: "Unit blocking is enforced by the system with expiry timers and audit history, which removes the single most damaging failure in developer sales operations.",
+    },
+    {
+      title: "Every Discount Has an Approval Trail",
+      desc: "Concessions route through configurable approval hierarchies before a booking can proceed, so finance never discovers a price variance after the fact.",
+    },
+    {
+      title: "Collections Follow the Build",
+      desc: "Demand generation is driven by construction milestones, turning collections into an automated schedule rather than a monthly manual exercise.",
+    },
+    {
+      title: "Channel Partners Serve Themselves",
+      desc: "Brokers get live inventory, lead ownership clarity, and payout visibility, which reduces sales desk call volume and improves partner loyalty.",
+    },
+    {
+      title: "Post-Sales Is a Retention Asset",
+      desc: "Customers who can see their schedule, receipts, and construction progress escalate less and refer more — the cheapest lead source a developer has.",
+    },
+    {
+      title: "Listings Built to Be Found",
+      desc: "Marketplace pages are built with structured data, clean URLs, and server-side rendering, because property discovery still begins with a search engine.",
+    },
   ],
   faqs: [
     {
@@ -147,27 +194,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/proptech-real-estate-software#service`,
-      "name": "Real Estate & PropTech Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Real Estate & PropTech Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom real estate and proptech software development: unit inventory and sales CRM, booking to registration workflows, construction-linked collections, channel partner portals, lease management, customer portals, and property marketplaces.",
-      "areaServed": ["IN", "AE", "SA", "QA", "OM", "GB", "SG"],
-      "serviceType": "Custom Software Development for Real Estate and PropTech",
+      areaServed: ["IN", "AE", "SA", "QA", "OM", "GB", "SG"],
+      serviceType: "Custom Software Development for Real Estate and PropTech",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Real Estate & PropTech Software", "item": `${BASE_URL}/industries/proptech-real-estate-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Real Estate & PropTech Software",
+          item: `${BASE_URL}/industries/proptech-real-estate-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -201,7 +258,8 @@ export const Route = createFileRoute("/industries/proptech-real-estate-software"
       { name: "twitter:title", content: "Real Estate & PropTech Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "Inventory and sales CRM, bookings, collections, broker portals, and lease management. From Kerala, India.",
+        content:
+          "Inventory and sales CRM, bookings, collections, broker portals, and lease management. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/proptech-real-estate-software` }],

@@ -89,14 +89,19 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
-  .text-balance { text-wrap: balance; }
+  .text-balance {
+    text-wrap: balance;
+  }
   .grid-bg {
     background-image:
       linear-gradient(to right, oklch(0.93 0.012 255 / 0.6) 1px, transparent 1px),
@@ -111,15 +116,25 @@
     will-change: transform;
   }
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
   .reveal-up {
     animation: revealUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
   @keyframes revealUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   /* Static dashes: animating stroke-dashoffset repainted the hero SVG every frame and slowed page load. */
   .dash-flow {
@@ -152,4 +167,3 @@
     scroll-behavior: auto !important;
   }
 }
-

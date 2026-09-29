@@ -15,10 +15,7 @@ export function Process() {
   return (
     <section id="process" className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeading
-          eyebrow="Process"
-          title="A clear path from idea to impact."
-        />
+        <SectionHeading eyebrow="Process" title="A clear path from idea to impact." />
 
         <div className="mt-16 relative">
           <div className="absolute left-0 right-0 top-6 hidden md:block h-px bg-border" />

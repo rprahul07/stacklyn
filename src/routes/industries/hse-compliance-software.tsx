@@ -7,18 +7,37 @@ const data: IndustryData = {
   industry: "HSE & Compliance",
   slug: "hse-compliance-software",
   headline: "Custom HSE, Safety & Compliance Software Development",
-  tagline: "Permit to Work · Incident Reporting · Audits & Inspections · Risk Assessment · Training Matrix",
+  tagline:
+    "Permit to Work · Incident Reporting · Audits & Inspections · Risk Assessment · Training Matrix",
   intro:
     "Stacklyn builds custom HSE and compliance software for industrial enterprises, contractors, and multi-site operators. We deliver digital permit-to-work systems, incident and near-miss reporting platforms, audit and inspection apps, risk assessment and JSA tools, training and competency matrices, and compliance dashboards that hold audit-grade evidence for every safety obligation.",
   industryContext:
     "Safety performance is judged on evidence, not intent. Regulators, clients, and insurers all ask the same question after an incident: show me the permit, the risk assessment, the training record, and the close-out of the last three observations. Most organisations can produce those documents eventually, from files, registers, and email — which is exactly why audits consume weeks and why leading indicators never inform decisions in time. Digital HSE systems change the economics: evidence is captured at the point of work, leading indicators become live, and audit preparation turns into a report export.",
   painPoints: [
-    { title: "Paper Permits at the Work Face", desc: "Permit-to-work issued on paper with signatures collected physically, making live visibility of active high-risk work impossible for control rooms." },
-    { title: "Under-Reported Near Misses", desc: "Reporting friction so high that near misses go unrecorded, removing the leading indicator that prevents the next serious incident." },
-    { title: "Observation Close-Out Drift", desc: "Safety observations and audit findings raised enthusiastically then left open for months with no owner, due date, or escalation." },
-    { title: "Training & Competency Gaps", desc: "Certificates and inductions tracked in spreadsheets, so unqualified personnel reach restricted work areas undetected." },
-    { title: "Contractor Compliance Exposure", desc: "Contractor documentation, insurance, inductions, and worker qualifications verified manually at gates, leaving legal exposure on multi-contractor sites." },
-    { title: "Audit Preparation Fire Drills", desc: "Weeks of manual document assembly before every client audit, regulatory inspection, or ISO 45001 certification review." },
+    {
+      title: "Paper Permits at the Work Face",
+      desc: "Permit-to-work issued on paper with signatures collected physically, making live visibility of active high-risk work impossible for control rooms.",
+    },
+    {
+      title: "Under-Reported Near Misses",
+      desc: "Reporting friction so high that near misses go unrecorded, removing the leading indicator that prevents the next serious incident.",
+    },
+    {
+      title: "Observation Close-Out Drift",
+      desc: "Safety observations and audit findings raised enthusiastically then left open for months with no owner, due date, or escalation.",
+    },
+    {
+      title: "Training & Competency Gaps",
+      desc: "Certificates and inductions tracked in spreadsheets, so unqualified personnel reach restricted work areas undetected.",
+    },
+    {
+      title: "Contractor Compliance Exposure",
+      desc: "Contractor documentation, insurance, inductions, and worker qualifications verified manually at gates, leaving legal exposure on multi-contractor sites.",
+    },
+    {
+      title: "Audit Preparation Fire Drills",
+      desc: "Weeks of manual document assembly before every client audit, regulatory inspection, or ISO 45001 certification review.",
+    },
   ],
   solutions: [
     {
@@ -55,16 +74,26 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
     "React Native (Offline Field Apps)",
     "QR / NFC Asset & Location Tagging",
     "Geofencing & Location Verification",
     "Digital Signature & Approval Workflows",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "SAP / SuccessFactors / HRMS Integration",
     "Power BI / Metabase Export",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Recharts / D3.js (Safety KPI Dashboards)",
   ],
   clients: [
@@ -77,12 +106,30 @@ const data: IndustryData = {
     "Multi-contractor industrial facilities",
   ],
   whyStacklyn: [
-    { title: "Configurable to Your HSE Management System", desc: "Permit types, risk matrices, checklist templates, and escalation rules are configuration, not code — because no two HSE management systems classify risk identically." },
-    { title: "Designed to Reduce Reporting Friction", desc: "If reporting a near miss takes more than a minute on a phone with gloves on, it does not get reported. Interface speed is treated as a safety feature." },
-    { title: "Works at the Work Face", desc: "Confined spaces, plant rooms, and remote sites have no signal. Field apps run fully offline with location and time capture preserved for audit integrity." },
-    { title: "Audit-Grade Evidence Trail", desc: "Immutable records, user attribution, timestamps, and photo evidence are built into the data model, so ISO 45001, client, and regulatory audits become exports rather than exercises." },
-    { title: "Leading Indicators, Not Just Lagging", desc: "Observation rates, permit compliance, action closure speed, and training currency are surfaced live — the metrics that move before an incident, not after." },
-    { title: "Contractor-Inclusive by Design", desc: "Most industrial incidents involve contractor personnel. Contractors get portal access, compliance gating, and their own performance dashboards inside the same system." },
+    {
+      title: "Configurable to Your HSE Management System",
+      desc: "Permit types, risk matrices, checklist templates, and escalation rules are configuration, not code — because no two HSE management systems classify risk identically.",
+    },
+    {
+      title: "Designed to Reduce Reporting Friction",
+      desc: "If reporting a near miss takes more than a minute on a phone with gloves on, it does not get reported. Interface speed is treated as a safety feature.",
+    },
+    {
+      title: "Works at the Work Face",
+      desc: "Confined spaces, plant rooms, and remote sites have no signal. Field apps run fully offline with location and time capture preserved for audit integrity.",
+    },
+    {
+      title: "Audit-Grade Evidence Trail",
+      desc: "Immutable records, user attribution, timestamps, and photo evidence are built into the data model, so ISO 45001, client, and regulatory audits become exports rather than exercises.",
+    },
+    {
+      title: "Leading Indicators, Not Just Lagging",
+      desc: "Observation rates, permit compliance, action closure speed, and training currency are surfaced live — the metrics that move before an incident, not after.",
+    },
+    {
+      title: "Contractor-Inclusive by Design",
+      desc: "Most industrial incidents involve contractor personnel. Contractors get portal access, compliance gating, and their own performance dashboards inside the same system.",
+    },
   ],
   faqs: [
     {
@@ -146,27 +193,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/hse-compliance-software#service`,
-      "name": "HSE & Compliance Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "HSE & Compliance Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom HSE and compliance software development: digital permit to work, incident and near-miss reporting, audit and inspection apps, risk assessment and JSA tools, competency matrices, contractor compliance portals, and safety analytics dashboards.",
-      "areaServed": ["IN", "AE", "SA", "QA", "OM", "GB", "AU", "ZA"],
-      "serviceType": "Custom Software Development for HSE and Compliance",
+      areaServed: ["IN", "AE", "SA", "QA", "OM", "GB", "AU", "ZA"],
+      serviceType: "Custom Software Development for HSE and Compliance",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "HSE & Compliance Software", "item": `${BASE_URL}/industries/hse-compliance-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "HSE & Compliance Software",
+          item: `${BASE_URL}/industries/hse-compliance-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -200,7 +257,8 @@ export const Route = createFileRoute("/industries/hse-compliance-software")({
       { name: "twitter:title", content: "HSE & Safety Compliance Software | Stacklyn" },
       {
         name: "twitter:description",
-        content: "ePTW, incident reporting, audits, JSA, and contractor compliance software for industry. From Kerala, India.",
+        content:
+          "ePTW, incident reporting, audits, JSA, and contractor compliance software for industry. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/hse-compliance-software` }],

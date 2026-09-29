@@ -15,10 +15,20 @@ const NODES: Node[] = [
 ];
 
 const EDGES: [string, string][] = [
-  ["core", "api"], ["core", "ai"], ["core", "db"], ["core", "cloud"],
-  ["core", "web"], ["core", "mobile"], ["core", "edge"], ["core", "auth"],
-  ["api", "db"], ["ai", "cloud"], ["web", "api"], ["mobile", "auth"],
-  ["edge", "db"], ["cloud", "auth"],
+  ["core", "api"],
+  ["core", "ai"],
+  ["core", "db"],
+  ["core", "cloud"],
+  ["core", "web"],
+  ["core", "mobile"],
+  ["core", "edge"],
+  ["core", "auth"],
+  ["api", "db"],
+  ["ai", "cloud"],
+  ["web", "api"],
+  ["mobile", "auth"],
+  ["edge", "db"],
+  ["cloud", "auth"],
 ];
 
 export function NetworkVisual() {
@@ -60,7 +70,10 @@ export function NetworkVisual() {
   return (
     <div className="relative aspect-square w-full max-w-[560px] mx-auto">
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-surface to-background border border-border shadow-card" />
-      <div className="absolute inset-6 rounded-2xl grid-bg opacity-60" style={{ maskImage: "radial-gradient(circle at center, black 40%, transparent 80%)" }} />
+      <div
+        className="absolute inset-6 rounded-2xl grid-bg opacity-60"
+        style={{ maskImage: "radial-gradient(circle at center, black 40%, transparent 80%)" }}
+      />
 
       <svg ref={ref} viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
         <defs>
@@ -82,12 +95,20 @@ export function NetworkVisual() {
           return (
             <g key={i}>
               <line
-                x1={na.x} y1={na.y} x2={nb.x} y2={nb.y}
-                stroke="url(#edgeGrad)" strokeWidth="0.25"
+                x1={na.x}
+                y1={na.y}
+                x2={nb.x}
+                y2={nb.y}
+                stroke="url(#edgeGrad)"
+                strokeWidth="0.25"
               />
               <line
-                x1={na.x} y1={na.y} x2={nb.x} y2={nb.y}
-                stroke="oklch(0.55 0.24 263)" strokeWidth="0.18"
+                x1={na.x}
+                y1={na.y}
+                x2={nb.x}
+                y2={nb.y}
+                stroke="oklch(0.55 0.24 263)"
+                strokeWidth="0.18"
                 strokeOpacity="0.6"
                 className="dash-flow"
                 style={{ animationDelay: `${i * 0.3}s` }}
@@ -100,13 +121,19 @@ export function NetworkVisual() {
           <g key={n.id}>
             <circle cx={n.x} cy={n.y} r={n.r * 0.6} fill="oklch(0.55 0.24 263)" opacity="0.15" />
             <circle
-              cx={n.x} cy={n.y} r={n.r * 0.32}
+              cx={n.x}
+              cy={n.y}
+              r={n.r * 0.32}
               fill={n.id === "core" ? "oklch(0.55 0.24 263)" : "white"}
-              stroke="oklch(0.55 0.24 263)" strokeWidth="0.3"
+              stroke="oklch(0.55 0.24 263)"
+              strokeWidth="0.3"
             />
             <text
-              x={n.x} y={n.y - n.r * 0.6 - 0.5}
-              textAnchor="middle" fontSize="2" fill="oklch(0.5 0.03 257)"
+              x={n.x}
+              y={n.y - n.r * 0.6 - 0.5}
+              textAnchor="middle"
+              fontSize="2"
+              fill="oklch(0.5 0.03 257)"
               fontWeight={500}
             >
               {n.label}

@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Insurance runs on two clocks that rarely align: the sales clock, where a quote must be issued in seconds to win the customer, and the servicing clock, where a policy must be administered correctly for years. Most operators handle the first with a slick front end and the second with legacy systems and email. The result is familiar — quotes that cannot be bound without manual intervention, endorsements processed on spreadsheets, claims status invisible to the customer, and commission statements that brokers dispute every month. Custom software earns its place by making the policy record authoritative across the entire lifecycle.",
   painPoints: [
-    { title: "Quote-to-Bind Drop-Off", desc: "Quotes generated quickly but requiring manual underwriting touches to bind, losing customers in the gap between interest and issuance." },
-    { title: "Endorsements on Spreadsheets", desc: "Mid-term changes, additions, and deletions handled manually outside the policy system, so the record of truth drifts from what was actually sold." },
-    { title: "Opaque Claims Journeys", desc: "Customers and brokers unable to see claim status, document requirements, or next steps, generating call volume and complaints." },
-    { title: "Commission Disputes Every Cycle", desc: "Channel commission calculated across slabs, overrides, and clawbacks in spreadsheets, producing monthly disputes with agents and brokers." },
-    { title: "Renewals Lost by Silence", desc: "No structured renewal pipeline or lapse-risk signal, so persistency erodes through inaction rather than competition." },
-    { title: "Underwriting Without Context", desc: "Underwriters assessing risk without consolidated claims history, exposure, or prior decisioning, producing inconsistent outcomes across the book." },
+    {
+      title: "Quote-to-Bind Drop-Off",
+      desc: "Quotes generated quickly but requiring manual underwriting touches to bind, losing customers in the gap between interest and issuance.",
+    },
+    {
+      title: "Endorsements on Spreadsheets",
+      desc: "Mid-term changes, additions, and deletions handled manually outside the policy system, so the record of truth drifts from what was actually sold.",
+    },
+    {
+      title: "Opaque Claims Journeys",
+      desc: "Customers and brokers unable to see claim status, document requirements, or next steps, generating call volume and complaints.",
+    },
+    {
+      title: "Commission Disputes Every Cycle",
+      desc: "Channel commission calculated across slabs, overrides, and clawbacks in spreadsheets, producing monthly disputes with agents and brokers.",
+    },
+    {
+      title: "Renewals Lost by Silence",
+      desc: "No structured renewal pipeline or lapse-risk signal, so persistency erodes through inaction rather than competition.",
+    },
+    {
+      title: "Underwriting Without Context",
+      desc: "Underwriters assessing risk without consolidated claims history, exposure, or prior decisioning, producing inconsistent outcomes across the book.",
+    },
   ],
   solutions: [
     {
@@ -55,17 +73,27 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "Redis", "Event-Driven Architecture",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Redis",
+    "Event-Driven Architecture",
     "Configurable Rating & Rules Engines",
     "Versioned Policy & Ledger Design",
     "React Native (Customer & Surveyor Apps)",
     "Document Generation & E-Signature",
     "Payment Gateway & NACH Integration",
     "WhatsApp / SMS / Email Notification APIs",
-    "REST API", "GraphQL", "Webhooks",
+    "REST API",
+    "GraphQL",
+    "Webhooks",
     "OCR & Document Intelligence",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Python (Risk Scoring & Analytics)",
   ],
   clients: [
@@ -78,12 +106,30 @@ const data: IndustryData = {
     "Bancassurance and channel distribution partners",
   ],
   whyStacklyn: [
-    { title: "The Policy Record Stays Authoritative", desc: "Endorsements, adjustments, and cancellations are versioned against the policy rather than tracked beside it, so the system always reflects what was actually sold." },
-    { title: "Rating as Configuration", desc: "Rate tables, loadings, discounts, and referral rules are maintained by your product team, so a pricing revision does not wait for an engineering release cycle." },
-    { title: "Straight-Through Where It Is Safe", desc: "We automate issuance for risks that clear the rules and route only genuine exceptions to underwriters, which is where quote-to-bind conversion is won." },
-    { title: "Commission Maths That Survives Scrutiny", desc: "Slabs, overrides, clawbacks, and deductions are computed deterministically with full drill-down, ending the monthly reconciliation argument with channel partners." },
-    { title: "Claims Visibility Reduces Call Volume", desc: "When customers and brokers can see status, required documents, and next steps, the servicing team stops answering the same question by phone." },
-    { title: "Clear on the Regulatory Line", desc: "We build the technical controls, audit trails, and reporting outputs your compliance function requires, and document them. Regulatory licensing and product approval remain with your organisation, and we support that process with evidence." },
+    {
+      title: "The Policy Record Stays Authoritative",
+      desc: "Endorsements, adjustments, and cancellations are versioned against the policy rather than tracked beside it, so the system always reflects what was actually sold.",
+    },
+    {
+      title: "Rating as Configuration",
+      desc: "Rate tables, loadings, discounts, and referral rules are maintained by your product team, so a pricing revision does not wait for an engineering release cycle.",
+    },
+    {
+      title: "Straight-Through Where It Is Safe",
+      desc: "We automate issuance for risks that clear the rules and route only genuine exceptions to underwriters, which is where quote-to-bind conversion is won.",
+    },
+    {
+      title: "Commission Maths That Survives Scrutiny",
+      desc: "Slabs, overrides, clawbacks, and deductions are computed deterministically with full drill-down, ending the monthly reconciliation argument with channel partners.",
+    },
+    {
+      title: "Claims Visibility Reduces Call Volume",
+      desc: "When customers and brokers can see status, required documents, and next steps, the servicing team stops answering the same question by phone.",
+    },
+    {
+      title: "Clear on the Regulatory Line",
+      desc: "We build the technical controls, audit trails, and reporting outputs your compliance function requires, and document them. Regulatory licensing and product approval remain with your organisation, and we support that process with evidence.",
+    },
   ],
   faqs: [
     {
@@ -147,27 +193,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/insurance-software#service`,
-      "name": "Insurance Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Insurance Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom insurance software development: policy administration systems, quote and bind engines, claims management, underwriting workbenches, agent and broker portals, commission engines, and renewal and persistency platforms.",
-      "areaServed": ["IN", "AE", "SA", "GB", "SG", "US", "QA"],
-      "serviceType": "Custom Software Development for Insurance",
+      areaServed: ["IN", "AE", "SA", "GB", "SG", "US", "QA"],
+      serviceType: "Custom Software Development for Insurance",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Insurance Software", "item": `${BASE_URL}/industries/insurance-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Insurance Software",
+          item: `${BASE_URL}/industries/insurance-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -201,7 +257,8 @@ export const Route = createFileRoute("/industries/insurance-software")({
       { name: "twitter:title", content: "Insurance Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "PAS, quote and bind, claims, underwriting, and broker portals. From Kerala, India.",
+        content:
+          "PAS, quote and bind, claims, underwriting, and broker portals. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/insurance-software` }],

@@ -22,47 +22,57 @@ function buildSchema(post: BlogPost) {
       {
         "@type": "BlogPosting",
         "@id": `${url}#article`,
-        "headline": post.title,
-        "description": post.metaDescription,
-        "datePublished": post.datePublished,
-        "dateModified": post.dateModified,
-        "articleSection": post.category,
-        "keywords": post.keywords,
-        "inLanguage": "en",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": url },
-        "image": { "@type": "ImageObject", "url": `${BASE_URL}/og-image.png`, "width": 1200, "height": 630 },
-        "wordCount": post.readMinutes * 200,
-        "timeRequired": `PT${post.readMinutes}M`,
-        "author": { "@type": "Organization", "@id": `${BASE_URL}/#organization`, "name": "Stacklyn", "url": BASE_URL },
-        "publisher": {
+        headline: post.title,
+        description: post.metaDescription,
+        datePublished: post.datePublished,
+        dateModified: post.dateModified,
+        articleSection: post.category,
+        keywords: post.keywords,
+        inLanguage: "en",
+        mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        image: {
+          "@type": "ImageObject",
+          url: `${BASE_URL}/og-image.png`,
+          width: 1200,
+          height: 630,
+        },
+        wordCount: post.readMinutes * 200,
+        timeRequired: `PT${post.readMinutes}M`,
+        author: {
           "@type": "Organization",
           "@id": `${BASE_URL}/#organization`,
-          "name": "Stacklyn",
-          "logo": { "@type": "ImageObject", "url": `${BASE_URL}/favicon.png`, "width": 512, "height": 512 },
+          name: "Stacklyn",
+          url: BASE_URL,
         },
-        "speakable": {
+        publisher: {
+          "@type": "Organization",
+          "@id": `${BASE_URL}/#organization`,
+          name: "Stacklyn",
+          logo: { "@type": "ImageObject", url: `${BASE_URL}/favicon.png`, width: 512, height: 512 },
+        },
+        speakable: {
           "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-answer", "h1"],
+          cssSelector: [".speakable-answer", "h1"],
         },
-        "potentialAction": {
+        potentialAction: {
           "@type": "ReadAction",
-          "target": [url],
+          target: [url],
         },
       },
       {
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blog` },
-          { "@type": "ListItem", "position": 3, "name": post.title, "item": url },
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE_URL}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: url },
         ],
       },
       {
         "@type": "FAQPage",
-        "mainEntity": post.faqs.map((faq) => ({
+        mainEntity: post.faqs.map((faq) => ({
           "@type": "Question",
-          "name": faq.q,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+          name: faq.q,
+          acceptedAnswer: { "@type": "Answer", text: faq.a },
         })),
       },
     ],
@@ -83,35 +93,60 @@ export function BlogPostView({ post }: { post: BlogPost }) {
         <article className="mx-auto max-w-3xl px-6">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-              <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+              <li>
+                <a href="/" className="hover:text-primary transition-colors">
+                  Home
+                </a>
+              </li>
               <li className="opacity-40">/</li>
-              <li><a href="/blog" className="hover:text-primary transition-colors">Blog</a></li>
+              <li>
+                <a href="/blog" className="hover:text-primary transition-colors">
+                  Blog
+                </a>
+              </li>
               <li className="opacity-40">/</li>
               <li className="text-foreground font-medium">{post.category}</li>
             </ol>
           </nav>
 
           <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-            <span className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 font-medium text-primary">{post.category}</span>
+            <span className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 font-medium text-primary">
+              {post.category}
+            </span>
             <time dateTime={post.dateModified}>Updated {formatPostDate(post.dateModified)}</time>
             <span aria-hidden>·</span>
             <span>{post.readMinutes} min read</span>
           </div>
 
-          <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight text-balance leading-[1.1]">{post.title}</h1>
+          <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight text-balance leading-[1.1]">
+            {post.title}
+          </h1>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">{post.dek}</p>
 
-          <aside className="speakable-answer mt-10 rounded-2xl border border-primary/30 bg-primary/5 p-6" aria-label="Short answer">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary">Short answer</div>
+          <aside
+            className="speakable-answer mt-10 rounded-2xl border border-primary/30 bg-primary/5 p-6"
+            aria-label="Short answer"
+          >
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+              Short answer
+            </div>
             <p className="mt-2 text-base text-foreground leading-relaxed">{post.shortAnswer}</p>
           </aside>
 
-          <nav aria-label="Contents" className="mt-10 rounded-2xl border border-border bg-surface/60 p-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">In this guide</div>
+          <nav
+            aria-label="Contents"
+            className="mt-10 rounded-2xl border border-border bg-surface/60 p-6"
+          >
+            <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              In this guide
+            </div>
             <ol className="mt-3 space-y-1.5 text-sm list-decimal pl-5">
               {post.sections.map((section) => (
                 <li key={section.heading}>
-                  <a href={`#${headingId(section.heading)}`} className="text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href={`#${headingId(section.heading)}`}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {section.heading}
                   </a>
                 </li>
@@ -121,11 +156,16 @@ export function BlogPostView({ post }: { post: BlogPost }) {
 
           {post.sections.map((section) => (
             <section key={section.heading} className="mt-12">
-              <h2 id={headingId(section.heading)} className="scroll-mt-28 text-2xl md:text-3xl font-semibold tracking-tight">
+              <h2
+                id={headingId(section.heading)}
+                className="scroll-mt-28 text-2xl md:text-3xl font-semibold tracking-tight"
+              >
                 {section.heading}
               </h2>
               {section.paragraphs.map((paragraph, i) => (
-                <p key={i} className="mt-4 text-muted-foreground leading-relaxed">{paragraph}</p>
+                <p key={i} className="mt-4 text-muted-foreground leading-relaxed">
+                  {paragraph}
+                </p>
               ))}
               {section.bullets && (
                 <ul className="mt-4 space-y-2 list-disc pl-6 text-muted-foreground leading-relaxed">
@@ -140,7 +180,13 @@ export function BlogPostView({ post }: { post: BlogPost }) {
                     <thead className="bg-surface">
                       <tr>
                         {section.table.headers.map((header) => (
-                          <th key={header} scope="col" className="px-4 py-3 text-left font-semibold text-foreground">{header}</th>
+                          <th
+                            key={header}
+                            scope="col"
+                            className="px-4 py-3 text-left font-semibold text-foreground"
+                          >
+                            {header}
+                          </th>
                         ))}
                       </tr>
                     </thead>
@@ -148,7 +194,9 @@ export function BlogPostView({ post }: { post: BlogPost }) {
                       {section.table.rows.map((row, r) => (
                         <tr key={r} className="border-t border-border">
                           {row.map((cell, c) => (
-                            <td key={c} className="px-4 py-3 align-top text-muted-foreground">{cell}</td>
+                            <td key={c} className="px-4 py-3 align-top text-muted-foreground">
+                              {cell}
+                            </td>
                           ))}
                         </tr>
                       ))}
@@ -160,10 +208,13 @@ export function BlogPostView({ post }: { post: BlogPost }) {
           ))}
 
           <div className="mt-16 rounded-2xl border border-border bg-surface/60 p-8">
-            <h2 className="text-2xl font-semibold tracking-tight">Need this built for your operation?</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Need this built for your operation?
+            </h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Stacklyn builds custom oil and gas, industrial, and AI automation software. Tell us what you need and we
-              reply within 24 hours, or get a ballpark price in two minutes with our free cost estimator.
+              Stacklyn builds custom oil and gas, industrial, and AI automation software. Tell us
+              what you need and we reply within 24 hours, or get a ballpark price in two minutes
+              with our free cost estimator.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -189,7 +240,9 @@ export function BlogPostView({ post }: { post: BlogPost }) {
 
         <section className="pb-16">
           <div className="mx-auto max-w-3xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Related</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Related
+            </div>
             <div className="flex flex-wrap gap-3">
               {post.related.map((link) => (
                 <a

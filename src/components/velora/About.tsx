@@ -15,7 +15,12 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     });
     return () => controls.stop();
   }, [inView, to]);
-  return <span ref={ref}>{val}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {val}
+      {suffix}
+    </span>
+  );
 }
 
 const stats = [
@@ -52,9 +57,7 @@ export function About() {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
 }
-

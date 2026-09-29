@@ -8,7 +8,12 @@ export type { MarketPage, MarketPoint } from "./types";
 
 export const MARKETS_BASE_PATH = "/markets";
 
-export const marketPages: MarketPage[] = [...gulfMarketPages, ...specialistMarketPages, ...usMarketPages, ...europeMarketPages];
+export const marketPages: MarketPage[] = [
+  ...gulfMarketPages,
+  ...specialistMarketPages,
+  ...usMarketPages,
+  ...europeMarketPages,
+];
 
 const bySlug = new Map(marketPages.map((page) => [page.slug, page]));
 

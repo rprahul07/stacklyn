@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Healthcare software fails for reasons that have little to do with features. It fails when a clinician needs eleven clicks to record a vital, when the lab system and the billing system disagree about who the patient is, and when nobody can prove after the fact who viewed a record. Modern healthcare platforms are judged on three things: whether clinical staff will actually use them under time pressure, whether data moves cleanly between systems via HL7 and FHIR, and whether every access to patient data leaves an audit trail. Custom development earns its place where off-the-shelf HMS products force a hospital to abandon protocols that took a decade to refine.",
   painPoints: [
-    { title: "Clinician Workflow Friction", desc: "Systems designed for billing rather than bedside use, so doctors and nurses revert to paper and data quality collapses at source." },
-    { title: "Disconnected Departmental Systems", desc: "OPD, IPD, pharmacy, lab, radiology, and billing running as islands, forcing repeated patient registration and manual reconciliation." },
-    { title: "No Interoperability Layer", desc: "Legacy systems without HL7 or FHIR support, blocking device integration, health information exchange, and ABDM participation." },
-    { title: "Weak Access Auditing", desc: "No reliable record of who viewed or modified a patient record, creating privacy exposure and failing internal and accreditation audits." },
-    { title: "Manual Insurance & TPA Claims", desc: "Pre-authorisation and claim documentation assembled by hand, extending revenue cycles and driving avoidable claim rejections." },
-    { title: "Patients Without Digital Access", desc: "No portal for reports, prescriptions, appointments, or teleconsultation, pushing routine queries onto reception phone lines." },
+    {
+      title: "Clinician Workflow Friction",
+      desc: "Systems designed for billing rather than bedside use, so doctors and nurses revert to paper and data quality collapses at source.",
+    },
+    {
+      title: "Disconnected Departmental Systems",
+      desc: "OPD, IPD, pharmacy, lab, radiology, and billing running as islands, forcing repeated patient registration and manual reconciliation.",
+    },
+    {
+      title: "No Interoperability Layer",
+      desc: "Legacy systems without HL7 or FHIR support, blocking device integration, health information exchange, and ABDM participation.",
+    },
+    {
+      title: "Weak Access Auditing",
+      desc: "No reliable record of who viewed or modified a patient record, creating privacy exposure and failing internal and accreditation audits.",
+    },
+    {
+      title: "Manual Insurance & TPA Claims",
+      desc: "Pre-authorisation and claim documentation assembled by hand, extending revenue cycles and driving avoidable claim rejections.",
+    },
+    {
+      title: "Patients Without Digital Access",
+      desc: "No portal for reports, prescriptions, appointments, or teleconsultation, pushing routine queries onto reception phone lines.",
+    },
   ],
   solutions: [
     {
@@ -55,17 +73,27 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
     "HL7 v2 / FHIR / DICOM",
     "ABDM / ABHA Integration",
     "React Native (Patient & Clinician Apps)",
     "WebRTC (Teleconsultation)",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Role-Based Access Control & Audit Logging",
     "Encryption at Rest & In Transit",
     "Payment Gateway & Insurance API Integration",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Python (Clinical Analytics & ML)",
   ],
   clients: [
@@ -78,12 +106,30 @@ const data: IndustryData = {
     "Medical device and healthtech product companies",
   ],
   whyStacklyn: [
-    { title: "Designed for the Clinician, Not the Invoice", desc: "We time real workflows and cut keystrokes where it counts. A vitals entry that takes eleven clicks does not get used, and data quality dies at the point of capture." },
-    { title: "Interoperability Built In, Not Bolted On", desc: "HL7, FHIR, and DICOM are treated as core architecture, so device integration, health exchange, and ABDM participation are configuration rather than a rewrite." },
-    { title: "Audit Trails as a First-Class Feature", desc: "Every read and write to patient data is attributed and timestamped, because privacy exposure is discovered during an audit or a complaint, not during development." },
-    { title: "Security Engineering as Standard", desc: "Role-based access, least-privilege data exposure, encryption in transit and at rest, and session controls are applied by default and documented for your compliance team." },
-    { title: "Migration From Legacy HMS", desc: "We plan phased cutovers with parallel running, patient identity de-duplication, and historical data migration, so a hospital is never asked to switch everything on a Monday morning." },
-    { title: "Honest About Compliance Boundaries", desc: "We engineer to HIPAA, GDPR, and DPDP-aligned practices and document the controls we implement. Certification and legal attestation rest with your organisation, and we support that process with evidence." },
+    {
+      title: "Designed for the Clinician, Not the Invoice",
+      desc: "We time real workflows and cut keystrokes where it counts. A vitals entry that takes eleven clicks does not get used, and data quality dies at the point of capture.",
+    },
+    {
+      title: "Interoperability Built In, Not Bolted On",
+      desc: "HL7, FHIR, and DICOM are treated as core architecture, so device integration, health exchange, and ABDM participation are configuration rather than a rewrite.",
+    },
+    {
+      title: "Audit Trails as a First-Class Feature",
+      desc: "Every read and write to patient data is attributed and timestamped, because privacy exposure is discovered during an audit or a complaint, not during development.",
+    },
+    {
+      title: "Security Engineering as Standard",
+      desc: "Role-based access, least-privilege data exposure, encryption in transit and at rest, and session controls are applied by default and documented for your compliance team.",
+    },
+    {
+      title: "Migration From Legacy HMS",
+      desc: "We plan phased cutovers with parallel running, patient identity de-duplication, and historical data migration, so a hospital is never asked to switch everything on a Monday morning.",
+    },
+    {
+      title: "Honest About Compliance Boundaries",
+      desc: "We engineer to HIPAA, GDPR, and DPDP-aligned practices and document the controls we implement. Certification and legal attestation rest with your organisation, and we support that process with evidence.",
+    },
   ],
   faqs: [
     {
@@ -147,27 +193,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/healthcare-software#service`,
-      "name": "Healthcare Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Healthcare Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom healthcare software development: hospital management systems, EMR and EHR platforms, telemedicine, patient portals, LIS and RIS, HL7/FHIR and ABDM interoperability, and clinical analytics.",
-      "areaServed": ["IN", "AE", "SA", "GB", "US", "SG", "QA"],
-      "serviceType": "Custom Software Development for Healthcare",
+      areaServed: ["IN", "AE", "SA", "GB", "US", "SG", "QA"],
+      serviceType: "Custom Software Development for Healthcare",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Healthcare Software", "item": `${BASE_URL}/industries/healthcare-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Healthcare Software",
+          item: `${BASE_URL}/industries/healthcare-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -201,7 +257,8 @@ export const Route = createFileRoute("/industries/healthcare-software")({
       { name: "twitter:title", content: "Healthcare Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "HMS, EMR/EHR, telemedicine, patient portals, and HL7/FHIR integration. From Kerala, India.",
+        content:
+          "HMS, EMR/EHR, telemedicine, patient portals, and HL7/FHIR integration. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/healthcare-software` }],

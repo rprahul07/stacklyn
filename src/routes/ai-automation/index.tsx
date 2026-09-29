@@ -40,28 +40,33 @@ const hubSchema = {
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "AI & Automation", "item": `${BASE_URL}/ai-automation` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "AI & Automation",
+          item: `${BASE_URL}/ai-automation`,
+        },
       ],
     },
     {
       "@type": "ItemList",
       "@id": `${BASE_URL}/ai-automation#list`,
-      "name": "AI and Automation Services by Stacklyn",
-      "itemListElement": aiAutomationPages.map((page, i) => ({
+      name: "AI and Automation Services by Stacklyn",
+      itemListElement: aiAutomationPages.map((page, i) => ({
         "@type": "ListItem",
-        "position": i + 1,
-        "name": page.name,
-        "url": `${BASE_URL}${aiPagePath(page.slug)}`,
+        position: i + 1,
+        name: page.name,
+        url: `${BASE_URL}${aiPagePath(page.slug)}`,
       })),
     },
     {
       "@type": "FAQPage",
-      "mainEntity": hubFaqs.map((faq) => ({
+      mainEntity: hubFaqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -96,7 +101,8 @@ export const Route = createFileRoute("/ai-automation/")({
       { name: "twitter:title", content: "AI & Automation Company in Kerala, India | Stacklyn" },
       {
         name: "twitter:description",
-        content: "AI chatbots, agents, WhatsApp and Malayalam AI, document AI, and business automation. Based in Kerala.",
+        content:
+          "AI chatbots, agents, WhatsApp and Malayalam AI, document AI, and business automation. Based in Kerala.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/ai-automation` }],
@@ -123,7 +129,11 @@ function AIAutomationHub() {
           <div className="relative mx-auto max-w-7xl px-6">
             <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex items-center gap-2 text-xs text-muted-foreground">
-                <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+                <li>
+                  <a href="/" className="hover:text-primary transition-colors">
+                    Home
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
                 <li className="text-foreground font-medium">AI &amp; Automation</li>
               </ol>
@@ -154,10 +164,10 @@ function AIAutomationHub() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
             >
-              Stacklyn is a Kerala-based AI and software company. We build chatbots that answer from your own data,
-              agents that complete multi-step tasks, WhatsApp and Malayalam assistants, and automations that connect
-              Tally, Zoho, and the tools your team already uses — engineered with evaluation, guardrails, and human
-              approval where it matters.
+              Stacklyn is a Kerala-based AI and software company. We build chatbots that answer from
+              your own data, agents that complete multi-step tasks, WhatsApp and Malayalam
+              assistants, and automations that connect Tally, Zoho, and the tools your team already
+              uses — engineered with evaluation, guardrails, and human approval where it matters.
             </motion.p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -182,7 +192,9 @@ function AIAutomationHub() {
         {groups.map((group) => (
           <section key={group.name} className="py-16 md:py-20 border-t border-border">
             <div className="mx-auto max-w-7xl px-6">
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">{group.name}</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                {group.name}
+              </div>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">{group.blurb}</h2>
               <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {group.pages.map((page, i) => (
@@ -197,10 +209,14 @@ function AIAutomationHub() {
                   >
                     <div className="flex items-center justify-between gap-3">
                       <h3 className="text-lg font-semibold">{page.name}</h3>
-                      <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                      <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        →
+                      </span>
                     </div>
                     <p className="mt-2 text-xs text-muted-foreground">{page.eyebrow}</p>
-                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-4">{page.intro}</p>
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-4">
+                      {page.intro}
+                    </p>
                   </motion.a>
                 ))}
               </div>
@@ -208,7 +224,11 @@ function AIAutomationHub() {
           </section>
         ))}
 
-        <FAQ items={hubFaqs} title="AI & Automation in Kerala and India — FAQs" includeSchema={false} />
+        <FAQ
+          items={hubFaqs}
+          title="AI & Automation in Kerala and India — FAQs"
+          includeSchema={false}
+        />
       </main>
 
       <Footer />

@@ -7,18 +7,37 @@ const data: IndustryData = {
   industry: "Mining",
   slug: "mining-software",
   headline: "Custom Software Development for Mining Companies",
-  tagline: "Surface Mining · Underground Mining · Mine Operations · Fleet Management · Safety Compliance",
+  tagline:
+    "Surface Mining · Underground Mining · Mine Operations · Fleet Management · Safety Compliance",
   intro:
     "Stacklyn builds enterprise software for mining companies, from junior explorers to multinational mining conglomerates. We deliver mine operations platforms, fleet and equipment management systems, HSE compliance tools, environmental monitoring dashboards, and workforce management software tailored to the unique demands of open-pit, underground, and bulk materials mining operations.",
   industryContext:
     "Mining is a capital-intensive, safety-critical industry operating under strict regulatory oversight globally — from MSHA in the USA to DGMS in India, HSE in the UK, and SIMTARS in Australia. Mines generate enormous volumes of operational data — blast patterns, haul cycle times, ore grade data, equipment health metrics — that are locked in siloed systems. Modern mining MNCs require integrated digital platforms that bring this data together for operational intelligence, safety compliance, and cost optimization.",
   painPoints: [
-    { title: "Fragmented Operational Data", desc: "Production data, equipment telematics, and blast data trapped in separate vendor systems with no unified view for operations managers." },
-    { title: "Manual Safety Compliance", desc: "Paper-based JSA, HARC reports, and safety audits creating compliance gaps and slow incident response in high-risk mining environments." },
-    { title: "Fleet & Equipment Downtime", desc: "Unplanned equipment failures in haul trucks, excavators, and drills causing production losses worth millions daily." },
-    { title: "Workforce Management at Scale", desc: "Tracking thousands of contract and direct workforce employees across multiple mine sites, shifts, zones, and competency requirements." },
-    { title: "Environmental Monitoring", desc: "Manual environmental data collection for dust, noise, water, and tailings monitoring that fails regulatory reporting requirements." },
-    { title: "Supply Chain Inefficiency", desc: "Manual procurement of explosives, consumables, and critical spare parts creating delivery delays and stock-outs in remote mine locations." },
+    {
+      title: "Fragmented Operational Data",
+      desc: "Production data, equipment telematics, and blast data trapped in separate vendor systems with no unified view for operations managers.",
+    },
+    {
+      title: "Manual Safety Compliance",
+      desc: "Paper-based JSA, HARC reports, and safety audits creating compliance gaps and slow incident response in high-risk mining environments.",
+    },
+    {
+      title: "Fleet & Equipment Downtime",
+      desc: "Unplanned equipment failures in haul trucks, excavators, and drills causing production losses worth millions daily.",
+    },
+    {
+      title: "Workforce Management at Scale",
+      desc: "Tracking thousands of contract and direct workforce employees across multiple mine sites, shifts, zones, and competency requirements.",
+    },
+    {
+      title: "Environmental Monitoring",
+      desc: "Manual environmental data collection for dust, noise, water, and tailings monitoring that fails regulatory reporting requirements.",
+    },
+    {
+      title: "Supply Chain Inefficiency",
+      desc: "Manual procurement of explosives, consumables, and critical spare parts creating delivery delays and stock-outs in remote mine locations.",
+    },
   ],
   solutions: [
     {
@@ -55,13 +74,24 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "TimescaleDB", "PostGIS",
-    "REST API", "GraphQL", "WebSockets",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "TimescaleDB",
+    "PostGIS",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Fleet Telematics APIs (MineStar, Wenco, Modular)",
     "IoT / MQTT / OPC-UA",
-    "AWS", "Azure", "Docker", "Kubernetes",
-    "Redis", "InfluxDB",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
+    "Redis",
+    "InfluxDB",
     "Mapbox / Leaflet (Spatial Visualization)",
     "D3.js / Recharts (Production Charts)",
     "React Native (Site Mobile Apps)",
@@ -76,12 +106,30 @@ const data: IndustryData = {
     "Mineral processing and beneficiation plants",
   ],
   whyStacklyn: [
-    { title: "Mining-Specific Domain Knowledge", desc: "We understand mine production cycles, blast-and-shoot operations, haul truck dispatching, ore grade reconciliation, and mining regulatory frameworks — not generic manufacturing concepts." },
-    { title: "Fleet Telematics Integration", desc: "We integrate with major fleet management systems (Caterpillar MineStar, Wenco, Modular Mining) and GPS telematics providers used across mining operations globally." },
-    { title: "Remote & Offline-First Design", desc: "Mine sites in remote locations have limited connectivity. We build offline-capable mobile apps and bandwidth-efficient systems designed for the realities of remote mine site operations." },
-    { title: "Regulatory Compliance Built In", desc: "Mining platforms built by Stacklyn have audit trails, MSHA/DGMS/HSE reporting formats, and compliance dashboards built into the core architecture." },
-    { title: "Spatial Data Capability", desc: "Mining involves geospatial data — pit boundaries, stockpile locations, blast designs, infrastructure maps. We build platforms with embedded GIS visualization using PostGIS, Mapbox, and Leaflet." },
-    { title: "Enterprise Security & Multi-Site", desc: "Mining MNCs operate multiple sites globally. We build multi-tenant, multi-site platforms with role-based access, site isolation, and centralized management across all operations." },
+    {
+      title: "Mining-Specific Domain Knowledge",
+      desc: "We understand mine production cycles, blast-and-shoot operations, haul truck dispatching, ore grade reconciliation, and mining regulatory frameworks — not generic manufacturing concepts.",
+    },
+    {
+      title: "Fleet Telematics Integration",
+      desc: "We integrate with major fleet management systems (Caterpillar MineStar, Wenco, Modular Mining) and GPS telematics providers used across mining operations globally.",
+    },
+    {
+      title: "Remote & Offline-First Design",
+      desc: "Mine sites in remote locations have limited connectivity. We build offline-capable mobile apps and bandwidth-efficient systems designed for the realities of remote mine site operations.",
+    },
+    {
+      title: "Regulatory Compliance Built In",
+      desc: "Mining platforms built by Stacklyn have audit trails, MSHA/DGMS/HSE reporting formats, and compliance dashboards built into the core architecture.",
+    },
+    {
+      title: "Spatial Data Capability",
+      desc: "Mining involves geospatial data — pit boundaries, stockpile locations, blast designs, infrastructure maps. We build platforms with embedded GIS visualization using PostGIS, Mapbox, and Leaflet.",
+    },
+    {
+      title: "Enterprise Security & Multi-Site",
+      desc: "Mining MNCs operate multiple sites globally. We build multi-tenant, multi-site platforms with role-based access, site isolation, and centralized management across all operations.",
+    },
   ],
   faqs: [
     {
@@ -144,33 +192,38 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/mining-software#service`,
-      "name": "Mining Software Development",
-      "provider": {
+      name: "Mining Software Development",
+      provider: {
         "@type": "Organization",
-        "name": "Stacklyn",
-        "url": BASE_URL,
+        name: "Stacklyn",
+        url: BASE_URL,
       },
-      "description":
+      description:
         "Custom software development for mining companies: mine operations platforms, fleet management, HSE compliance, environmental monitoring, and workforce management for open-pit and underground mining.",
-      "areaServed": ["AU", "IN", "ZA", "AE", "GB", "US"],
-      "serviceType": "Custom Software Development for Mining Industry",
+      areaServed: ["AU", "IN", "ZA", "AE", "GB", "US"],
+      serviceType: "Custom Software Development for Mining Industry",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Mining Software", "item": `${BASE_URL}/industries/mining-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Mining Software",
+          item: `${BASE_URL}/industries/mining-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": {
+        name: faq.q,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": faq.a,
+          text: faq.a,
         },
       })),
     },
@@ -209,9 +262,7 @@ export const Route = createFileRoute("/industries/mining-software")({
           "Mine operations platforms, fleet management, HSE systems, environmental monitoring for mining MNCs. From Kerala, India.",
       },
     ],
-    links: [
-      { rel: "canonical", href: `${BASE_URL}/industries/mining-software` },
-    ],
+    links: [{ rel: "canonical", href: `${BASE_URL}/industries/mining-software` }],
   }),
   component: () => <IndustryPage data={data} schema={schemaMarkup} />,
 });

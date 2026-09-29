@@ -5,7 +5,8 @@ const projects = [
   {
     name: "LenientTree",
     kind: "Enterprise Learning Platform",
-    blurb: "Scalable architecture, modern frontend, and cloud-native deployment for a fast-growing learning organization.",
+    blurb:
+      "Scalable architecture, modern frontend, and cloud-native deployment for a fast-growing learning organization.",
     stack: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
     accent: "from-primary/15 to-primary/0",
     url: "https://lenienttree.com",
@@ -14,7 +15,8 @@ const projects = [
   {
     name: "Alumni Network",
     kind: "Community Platform",
-    blurb: "End-to-end authentication, social networking primitives, and a clean, opinionated database architecture.",
+    blurb:
+      "End-to-end authentication, social networking primitives, and a clean, opinionated database architecture.",
     stack: ["Next.js", "Auth.js", "Postgres", "Azure"],
     accent: "from-navy/10 to-primary/0",
     url: "#",
@@ -23,7 +25,8 @@ const projects = [
   {
     name: "ThinkerRoot Ideathon 2025",
     kind: "Innovation Platform",
-    blurb: "A one of a kind hackathon designed to nurture core innovation. Empowering developers, thinkers, and creators to build impactful solutions.",
+    blurb:
+      "A one of a kind hackathon designed to nurture core innovation. Empowering developers, thinkers, and creators to build impactful solutions.",
     stack: ["React", "Node.js", "Vercel", "PostgreSQL"],
     accent: "from-primary/20 to-primary-soft/10",
     url: "https://thinker-root-2025.vercel.app/",
@@ -60,7 +63,9 @@ export function Work() {
                       <span className="h-2 w-2 rounded-full bg-yellow-400/80" />
                       <span className="h-2 w-2 rounded-full bg-green-400/80" />
                       <span className="ml-2 flex-1 rounded bg-surface border border-border px-2 py-0.5 text-[9px] text-muted-foreground truncate">
-                        {p.url.startsWith("http") ? p.url.replace("https://", "").replace("http://", "") : `${p.name.toLowerCase().replace(/\s+/g, "-")}.com`}
+                        {p.url.startsWith("http")
+                          ? p.url.replace("https://", "").replace("http://", "")
+                          : `${p.name.toLowerCase().replace(/\s+/g, "-")}.com`}
                       </span>
                     </div>
                     <div className="bg-background/60 backdrop-blur-sm flex items-center justify-center py-2">
@@ -78,7 +83,10 @@ export function Work() {
                 <p className="mt-4 text-muted-foreground max-w-xl leading-relaxed">{p.blurb}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
-                    <span key={s} className="rounded-md bg-surface border border-border px-2.5 py-1 text-xs font-medium text-foreground">
+                    <span
+                      key={s}
+                      className="rounded-md bg-surface border border-border px-2.5 py-1 text-xs font-medium text-foreground"
+                    >
                       {s}
                     </span>
                   ))}
@@ -116,8 +124,26 @@ function ProjectGlyph({ glyph, index }: { glyph: string; index: number }) {
       </defs>
       {glyph === "lenienttree" && (
         <>
-          <rect x="30" y="20" width="140" height="16" rx="4" fill="white" stroke="oklch(0.55 0.24 263)" strokeWidth="1.2" />
-          <rect x="30" y="46" width="90" height="80" rx="4" fill="white" stroke="oklch(0.55 0.24 263)" strokeWidth="1.2" />
+          <rect
+            x="30"
+            y="20"
+            width="140"
+            height="16"
+            rx="4"
+            fill="white"
+            stroke="oklch(0.55 0.24 263)"
+            strokeWidth="1.2"
+          />
+          <rect
+            x="30"
+            y="46"
+            width="90"
+            height="80"
+            rx="4"
+            fill="white"
+            stroke="oklch(0.55 0.24 263)"
+            strokeWidth="1.2"
+          />
           <rect x="130" y="46" width="40" height="80" rx="4" fill={`url(#pg-${index})`} />
           <circle cx="150" cy="86" r="6" fill="white" />
         </>
@@ -125,11 +151,31 @@ function ProjectGlyph({ glyph, index }: { glyph: string; index: number }) {
       {glyph === "alumni" && (
         <>
           {[
-            [100, 30], [50, 80], [150, 80], [100, 130], [65, 50], [135, 110],
+            [100, 30],
+            [50, 80],
+            [150, 80],
+            [100, 130],
+            [65, 50],
+            [135, 110],
           ].map(([x, y], k) => (
             <g key={k}>
-              <line x1="100" y1="80" x2={x} y2={y} stroke="oklch(0.55 0.24 263)" strokeWidth="1" opacity="0.5" />
-              <circle cx={x} cy={y} r="7" fill="white" stroke="oklch(0.55 0.24 263)" strokeWidth="1.2" />
+              <line
+                x1="100"
+                y1="80"
+                x2={x}
+                y2={y}
+                stroke="oklch(0.55 0.24 263)"
+                strokeWidth="1"
+                opacity="0.5"
+              />
+              <circle
+                cx={x}
+                cy={y}
+                r="7"
+                fill="white"
+                stroke="oklch(0.55 0.24 263)"
+                strokeWidth="1.2"
+              />
             </g>
           ))}
           <circle cx="100" cy="80" r="10" fill={`url(#pg-${index})`} />
@@ -137,15 +183,70 @@ function ProjectGlyph({ glyph, index }: { glyph: string; index: number }) {
       )}
       {glyph === "thinkerroot" && (
         <>
-          <circle cx="100" cy="72" r="38" fill="none" stroke="oklch(0.55 0.24 263)" strokeWidth="1.5" />
+          <circle
+            cx="100"
+            cy="72"
+            r="38"
+            fill="none"
+            stroke="oklch(0.55 0.24 263)"
+            strokeWidth="1.5"
+          />
           <circle cx="100" cy="72" r="38" fill={`url(#pg-${index})`} opacity="0.15" />
           <circle cx="100" cy="72" r="18" fill={`url(#pg-${index})`} opacity="0.8" />
-          <line x1="88" y1="114" x2="112" y2="114" stroke="oklch(0.55 0.24 263)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="91" y1="122" x2="109" y2="122" stroke="oklch(0.55 0.24 263)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="94" y1="130" x2="106" y2="130" stroke="oklch(0.55 0.24 263)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="100" y1="34" x2="100" y2="24" stroke="oklch(0.78 0.12 255)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="128" y1="44" x2="135" y2="37" stroke="oklch(0.78 0.12 255)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="72" y1="44" x2="65" y2="37" stroke="oklch(0.78 0.12 255)" strokeWidth="2" strokeLinecap="round" />
+          <line
+            x1="88"
+            y1="114"
+            x2="112"
+            y2="114"
+            stroke="oklch(0.55 0.24 263)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <line
+            x1="91"
+            y1="122"
+            x2="109"
+            y2="122"
+            stroke="oklch(0.55 0.24 263)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <line
+            x1="94"
+            y1="130"
+            x2="106"
+            y2="130"
+            stroke="oklch(0.55 0.24 263)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <line
+            x1="100"
+            y1="34"
+            x2="100"
+            y2="24"
+            stroke="oklch(0.78 0.12 255)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <line
+            x1="128"
+            y1="44"
+            x2="135"
+            y2="37"
+            stroke="oklch(0.78 0.12 255)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <line
+            x1="72"
+            y1="44"
+            x2="65"
+            y2="37"
+            stroke="oklch(0.78 0.12 255)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
         </>
       )}
     </svg>

@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Manufacturers sit on more operational data than almost any other sector — PLC tags, SCADA historians, machine controllers, quality gauges, ERP transactions — and use a fraction of it. ERP tells you what was planned and what was invoiced; it rarely tells you why line 3 lost four hours yesterday. The gap between the ERP layer and the shop floor is where Industry 4.0 investments either pay back or stall. Custom MES and analytics software bridges that gap by capturing production, downtime, quality, and maintenance events at the machine and turning them into OEE, traceability, and predictive insight.",
   painPoints: [
-    { title: "No Real-Time OEE Visibility", desc: "Availability, performance, and quality losses calculated in Excel a week later, long after the shift that could have acted on them." },
-    { title: "Manual Production Logging", desc: "Operators recording output, rejections, and downtime reasons on paper registers that are keyed into ERP with delay and error." },
-    { title: "Machine Data Locked in PLCs", desc: "PLC, SCADA, and historian data siloed by vendor with no unified plant-wide view for production and maintenance teams." },
-    { title: "Weak Batch & Lot Traceability", desc: "Genealogy from raw material lot to finished goods reconstructed manually, making recalls slow and audits painful." },
-    { title: "Reactive Maintenance Culture", desc: "Breakdowns driving the maintenance calendar because condition data and work order history are never analysed together." },
-    { title: "Multi-Plant Reporting Chaos", desc: "Every plant reporting differently, so group management cannot compare performance or roll up numbers without manual consolidation." },
+    {
+      title: "No Real-Time OEE Visibility",
+      desc: "Availability, performance, and quality losses calculated in Excel a week later, long after the shift that could have acted on them.",
+    },
+    {
+      title: "Manual Production Logging",
+      desc: "Operators recording output, rejections, and downtime reasons on paper registers that are keyed into ERP with delay and error.",
+    },
+    {
+      title: "Machine Data Locked in PLCs",
+      desc: "PLC, SCADA, and historian data siloed by vendor with no unified plant-wide view for production and maintenance teams.",
+    },
+    {
+      title: "Weak Batch & Lot Traceability",
+      desc: "Genealogy from raw material lot to finished goods reconstructed manually, making recalls slow and audits painful.",
+    },
+    {
+      title: "Reactive Maintenance Culture",
+      desc: "Breakdowns driving the maintenance calendar because condition data and work order history are never analysed together.",
+    },
+    {
+      title: "Multi-Plant Reporting Chaos",
+      desc: "Every plant reporting differently, so group management cannot compare performance or roll up numbers without manual consolidation.",
+    },
   ],
   solutions: [
     {
@@ -55,15 +73,28 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "TimescaleDB", "InfluxDB", "Redis",
-    "OPC-UA", "MQTT", "Modbus",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "TimescaleDB",
+    "InfluxDB",
+    "Redis",
+    "OPC-UA",
+    "MQTT",
+    "Modbus",
     "Node-RED / Edge Gateways",
     "SAP / Oracle / Dynamics Integration",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Python (ML & Predictive Models)",
     "Computer Vision (OpenCV, ONNX)",
-    "AWS IoT", "Azure IoT Hub", "Docker", "Kubernetes",
+    "AWS IoT",
+    "Azure IoT Hub",
+    "Docker",
+    "Kubernetes",
     "Recharts / D3.js (OEE & SPC Charts)",
   ],
   clients: [
@@ -76,12 +107,30 @@ const data: IndustryData = {
     "Contract manufacturers and OEM suppliers",
   ],
   whyStacklyn: [
-    { title: "Shop Floor to Boardroom in One Model", desc: "We design a single data model that serves operator terminals, supervisor dashboards, and group-level plant comparison — rather than three disconnected reporting tools." },
-    { title: "Vendor-Neutral Machine Connectivity", desc: "We integrate mixed-vendor equipment through OPC-UA, Modbus, MQTT, and file or database drops, so a 20-year-old machine and a new line land in the same dataset." },
-    { title: "Time-Series Engineering Done Right", desc: "High-frequency machine data needs purpose-built storage. We use TimescaleDB and InfluxDB with downsampling and retention strategies that keep dashboards fast at scale." },
-    { title: "ERP-Complementary, Not ERP-Replacing", desc: "Your SAP, Oracle, or Dynamics investment stays. We build the execution and analytics layer around it and integrate cleanly at order, confirmation, and inventory boundaries." },
-    { title: "Operator-First Interfaces", desc: "Shop floor terminals are used with gloves, in poor light, under time pressure. We design large-target, low-keystroke interfaces that operators actually adopt." },
-    { title: "Audit-Ready by Design", desc: "Electronic records, audit trails, user attribution, and traceability are built into the core — important for pharma, food, and automotive quality audits." },
+    {
+      title: "Shop Floor to Boardroom in One Model",
+      desc: "We design a single data model that serves operator terminals, supervisor dashboards, and group-level plant comparison — rather than three disconnected reporting tools.",
+    },
+    {
+      title: "Vendor-Neutral Machine Connectivity",
+      desc: "We integrate mixed-vendor equipment through OPC-UA, Modbus, MQTT, and file or database drops, so a 20-year-old machine and a new line land in the same dataset.",
+    },
+    {
+      title: "Time-Series Engineering Done Right",
+      desc: "High-frequency machine data needs purpose-built storage. We use TimescaleDB and InfluxDB with downsampling and retention strategies that keep dashboards fast at scale.",
+    },
+    {
+      title: "ERP-Complementary, Not ERP-Replacing",
+      desc: "Your SAP, Oracle, or Dynamics investment stays. We build the execution and analytics layer around it and integrate cleanly at order, confirmation, and inventory boundaries.",
+    },
+    {
+      title: "Operator-First Interfaces",
+      desc: "Shop floor terminals are used with gloves, in poor light, under time pressure. We design large-target, low-keystroke interfaces that operators actually adopt.",
+    },
+    {
+      title: "Audit-Ready by Design",
+      desc: "Electronic records, audit trails, user attribution, and traceability are built into the core — important for pharma, food, and automotive quality audits.",
+    },
   ],
   faqs: [
     {
@@ -145,27 +194,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/manufacturing-software#service`,
-      "name": "Manufacturing Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Manufacturing Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom manufacturing software development: MES, real-time OEE dashboards, PLC and SCADA integration, quality and traceability platforms, CMMS maintenance systems, and AI predictive maintenance.",
-      "areaServed": ["IN", "AE", "SA", "GB", "US", "DE", "SG", "AU"],
-      "serviceType": "Custom Software Development for Manufacturing Industry",
+      areaServed: ["IN", "AE", "SA", "GB", "US", "DE", "SG", "AU"],
+      serviceType: "Custom Software Development for Manufacturing Industry",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Manufacturing Software", "item": `${BASE_URL}/industries/manufacturing-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Manufacturing Software",
+          item: `${BASE_URL}/industries/manufacturing-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -199,7 +258,8 @@ export const Route = createFileRoute("/industries/manufacturing-software")({
       { name: "twitter:title", content: "Manufacturing Software & MES Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "MES, OEE dashboards, OPC-UA machine connectivity, traceability, and CMMS for plants. From Kerala, India.",
+        content:
+          "MES, OEE dashboards, OPC-UA machine connectivity, traceability, and CMMS for plants. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/manufacturing-software` }],

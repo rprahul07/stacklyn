@@ -28,35 +28,40 @@ function generateServiceSchema(data: ServiceData, slug: string) {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/services/${slug}/#service`,
-      "name": data.title,
-      "serviceType": data.title,
-      "provider": {
+      name: data.title,
+      serviceType: data.title,
+      provider: {
         "@type": "Organization",
         "@id": `${BASE_URL}/#organization`,
-        "name": "Stacklyn",
-        "url": BASE_URL,
+        name: "Stacklyn",
+        url: BASE_URL,
       },
-      "description": data.intro,
-      "areaServed": "Worldwide",
-      "url": `${BASE_URL}/services/${slug}`,
+      description: data.intro,
+      areaServed: "Worldwide",
+      url: `${BASE_URL}/services/${slug}`,
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${BASE_URL}/#capabilities` },
-        { "@type": "ListItem", "position": 3, "name": data.title, "item": `${BASE_URL}/services/${slug}` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${BASE_URL}/services` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: data.title,
+          item: `${BASE_URL}/services/${slug}`,
+        },
       ],
     },
     {
       "@type": "WebPage",
       "@id": `${BASE_URL}/services/${slug}/#webpage`,
-      "url": `${BASE_URL}/services/${slug}`,
-      "name": `${data.title} | Stacklyn`,
-      "isPartOf": { "@id": `${BASE_URL}/#website` },
-      "about": { "@id": `${BASE_URL}/services/${slug}/#service` },
-      "inLanguage": "en",
-      "dateModified": "2026-06-09",
+      url: `${BASE_URL}/services/${slug}`,
+      name: `${data.title} | Stacklyn`,
+      isPartOf: { "@id": `${BASE_URL}/#website` },
+      about: { "@id": `${BASE_URL}/services/${slug}/#service` },
+      inLanguage: "en",
+      dateModified: "2026-06-09",
     },
   ];
 }
@@ -81,9 +86,17 @@ export function ServicePage({ data }: ServicePageProps) {
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex items-center gap-2 text-xs text-muted-foreground">
-                <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+                <li>
+                  <a href="/" className="hover:text-primary transition-colors">
+                    Home
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
-                <li><a href="/#capabilities" className="hover:text-primary transition-colors">Services</a></li>
+                <li>
+                  <a href="/services" className="hover:text-primary transition-colors">
+                    Services
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
                 <li className="text-foreground font-medium">{data.title}</li>
               </ol>
@@ -145,19 +158,31 @@ export function ServicePage({ data }: ServicePageProps) {
         <section className="py-20 md:py-24 border-b border-border">
           <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Definition</div>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">What is {data.title}?</h2>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Definition
+              </div>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                What is {data.title}?
+              </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">{data.whatIs}</p>
               <p className="mt-4 text-muted-foreground leading-relaxed">{data.whyItMatters}</p>
             </div>
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Scope of Services</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Scope of Services
+              </div>
               <h3 className="text-xl font-semibold mb-5">Our {data.title} Services Include</h3>
               <ul className="space-y-3">
                 {data.subServices.map((s) => (
                   <li key={s} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <span className="mt-0.5 h-5 w-5 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                      <svg viewBox="0 0 20 20" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <svg
+                        viewBox="0 0 20 20"
+                        className="h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      >
                         <path d="M4 10.5l4 4 8-9" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
@@ -172,7 +197,9 @@ export function ServicePage({ data }: ServicePageProps) {
         {/* Benefits */}
         <section className="py-20 md:py-24 bg-surface/60">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Why It Matters</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Why It Matters
+            </div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
               Key Benefits of {data.title}
             </h2>
@@ -200,7 +227,9 @@ export function ServicePage({ data }: ServicePageProps) {
         {/* Process */}
         <section className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">How We Work</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              How We Work
+            </div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
               Our {data.title} Process
             </h2>
@@ -214,7 +243,9 @@ export function ServicePage({ data }: ServicePageProps) {
                   transition={{ duration: 0.5, delay: i * 0.06 }}
                   className="relative rounded-2xl border border-border bg-background p-7 hover:border-primary/30 transition-colors"
                 >
-                  <div className="text-4xl font-bold text-primary/10 mb-3">{String(i + 1).padStart(2, "0")}</div>
+                  <div className="text-4xl font-bold text-primary/10 mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
                   <h3 className="text-base font-semibold">{p.step}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
                 </motion.div>
@@ -226,11 +257,18 @@ export function ServicePage({ data }: ServicePageProps) {
         {/* Tech Stack */}
         <section className="py-16 md:py-20 bg-surface/60 border-y border-border">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Technologies</div>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">Tech Stack We Use</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Technologies
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+              Tech Stack We Use
+            </h2>
             <div className="flex flex-wrap gap-3">
               {data.techStack.map((t) => (
-                <span key={t} className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground">
+                <span
+                  key={t}
+                  className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground"
+                >
                   {t}
                 </span>
               ))}
@@ -241,7 +279,9 @@ export function ServicePage({ data }: ServicePageProps) {
         {/* Why Stacklyn */}
         <section className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Why Stacklyn</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Why Stacklyn
+            </div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
               Why Choose Stacklyn for {data.title}
             </h2>
@@ -256,7 +296,13 @@ export function ServicePage({ data }: ServicePageProps) {
                   className="flex gap-4 p-6 rounded-2xl border border-border bg-background hover:bg-surface transition-colors"
                 >
                   <div className="h-8 w-8 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                    <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2">
+                    <svg
+                      viewBox="0 0 20 20"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                    >
                       <path d="M4 10.5l4 4 8-9" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
@@ -275,7 +321,9 @@ export function ServicePage({ data }: ServicePageProps) {
           <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-2xl font-semibold">See Our {data.title} Work in Action</h2>
-              <p className="mt-2 text-muted-foreground text-sm">Real products built and shipped by Stacklyn.</p>
+              <p className="mt-2 text-muted-foreground text-sm">
+                Real products built and shipped by Stacklyn.
+              </p>
             </div>
             <a
               href="/#work"
@@ -292,7 +340,9 @@ export function ServicePage({ data }: ServicePageProps) {
         {/* Related Services */}
         <section className="py-16 border-t border-border bg-surface/60">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Explore More</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Explore More
+            </div>
             <h2 className="text-2xl font-semibold tracking-tight mb-8">Related Services</h2>
             <div className="flex flex-wrap gap-3">
               {data.relatedServices.map((s) => (
@@ -317,12 +367,15 @@ export function ServicePage({ data }: ServicePageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">Get Started</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">
+                Get Started
+              </div>
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-balance">
                 Ready to start your <span className="text-primary">{data.title}</span> project?
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                Tell us about your project and we'll respond with a detailed proposal within 24 hours.
+                Tell us about your project and we'll respond with a detailed proposal within 24
+                hours.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <a

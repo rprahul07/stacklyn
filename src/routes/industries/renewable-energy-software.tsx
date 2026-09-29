@@ -7,18 +7,37 @@ const data: IndustryData = {
   industry: "Renewable Energy & Utilities",
   slug: "renewable-energy-software",
   headline: "Custom Software for Renewable Energy, Solar & Utility Companies",
-  tagline: "Asset Monitoring · SCADA Integration · O&M Platforms · Generation Analytics · EPC Tracking",
+  tagline:
+    "Asset Monitoring · SCADA Integration · O&M Platforms · Generation Analytics · EPC Tracking",
   intro:
     "Stacklyn builds custom software for solar and wind developers, IPPs, EPC contractors, and utility operators. We deliver plant performance monitoring platforms, SCADA and inverter data integration, O&M ticketing and preventive maintenance systems, generation and PPA reporting dashboards, and field engineer mobile apps for distributed renewable assets.",
   industryContext:
     "A renewable portfolio is a fleet of remote, revenue-generating assets whose value depends entirely on uptime and yield. Inverters, string monitors, weather stations, and turbine controllers all emit data, but each OEM ships its own portal — so a developer with plants from four vendors has four dashboards, four alarm conventions, and no portfolio view. Meanwhile O&M is coordinated on phone calls and performance ratio is calculated monthly in Excel, weeks after the underperformance happened. Custom software normalises multi-OEM data, makes losses visible while they are still recoverable, and ties every alarm to a closed O&M ticket.",
   painPoints: [
-    { title: "Multi-OEM Portal Fragmentation", desc: "Separate inverter and turbine vendor portals per site with different alarm codes, no portfolio view, and no comparable KPIs." },
-    { title: "Underperformance Found Too Late", desc: "Performance ratio and yield losses computed monthly in spreadsheets, long after string faults, soiling, or shading could have been corrected." },
-    { title: "O&M Coordinated by Phone", desc: "Field tickets raised by call and closed verbally, leaving no evidence trail for warranty claims or O&M contract SLA reporting." },
-    { title: "Manual Generation & PPA Reporting", desc: "Monthly generation, availability, and PPA invoice data compiled by hand across sites, delaying billing and disputes with offtakers." },
-    { title: "Weak Warranty & Claims Evidence", desc: "Equipment failures and downtime periods poorly documented, weakening warranty and performance guarantee claims against OEMs and EPCs." },
-    { title: "Project Execution Blind Spots", desc: "EPC construction progress across module mounting, stringing, and commissioning tracked in disconnected trackers per site." },
+    {
+      title: "Multi-OEM Portal Fragmentation",
+      desc: "Separate inverter and turbine vendor portals per site with different alarm codes, no portfolio view, and no comparable KPIs.",
+    },
+    {
+      title: "Underperformance Found Too Late",
+      desc: "Performance ratio and yield losses computed monthly in spreadsheets, long after string faults, soiling, or shading could have been corrected.",
+    },
+    {
+      title: "O&M Coordinated by Phone",
+      desc: "Field tickets raised by call and closed verbally, leaving no evidence trail for warranty claims or O&M contract SLA reporting.",
+    },
+    {
+      title: "Manual Generation & PPA Reporting",
+      desc: "Monthly generation, availability, and PPA invoice data compiled by hand across sites, delaying billing and disputes with offtakers.",
+    },
+    {
+      title: "Weak Warranty & Claims Evidence",
+      desc: "Equipment failures and downtime periods poorly documented, weakening warranty and performance guarantee claims against OEMs and EPCs.",
+    },
+    {
+      title: "Project Execution Blind Spots",
+      desc: "EPC construction progress across module mounting, stringing, and commissioning tracked in disconnected trackers per site.",
+    },
   ],
   solutions: [
     {
@@ -55,15 +74,29 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "TimescaleDB", "InfluxDB", "Redis",
-    "Modbus", "OPC-UA", "MQTT", "SunSpec",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "TimescaleDB",
+    "InfluxDB",
+    "Redis",
+    "Modbus",
+    "OPC-UA",
+    "MQTT",
+    "SunSpec",
     "Inverter & SCADA Vendor API Integration",
     "Python (Analytics & ML Models)",
     "Weather & Irradiance Data APIs",
     "React Native (Field Engineer Apps)",
-    "REST API", "GraphQL", "WebSockets",
-    "AWS IoT", "Azure IoT Hub", "Docker", "Kubernetes",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
+    "AWS IoT",
+    "Azure IoT Hub",
+    "Docker",
+    "Kubernetes",
     "Recharts / D3.js (Generation Dashboards)",
   ],
   clients: [
@@ -76,12 +109,30 @@ const data: IndustryData = {
     "Battery storage and hybrid plant operators",
   ],
   whyStacklyn: [
-    { title: "Vendor-Neutral by Design", desc: "We normalise inverter, turbine, and SCADA data across OEMs into one model, so portfolio KPIs stay comparable no matter who supplied the equipment." },
-    { title: "Time-Series at Plant Scale", desc: "Minute-level data from thousands of devices needs purpose-built storage. We use TimescaleDB and InfluxDB with downsampling and retention policies that keep dashboards responsive." },
-    { title: "Losses Framed as Money", desc: "Diagnostics are expressed in recoverable kWh and revenue impact, not just alarm counts — which is what makes O&M teams and investors act on them." },
-    { title: "Evidence for Warranty Claims", desc: "Downtime windows, alarm history, and field intervention records are captured with timestamps and photos, turning warranty and performance guarantee claims into documented cases." },
-    { title: "Remote Site Field Apps", desc: "Plants sit far from coverage. Our field apps work fully offline for string testing, thermography, cleaning records, and ticket closure, syncing when the crew returns to signal." },
-    { title: "From One Plant to a Portfolio", desc: "Multi-site, multi-SPV, and multi-client O&M structures with role-based access and per-entity reporting are built into the architecture from the start." },
+    {
+      title: "Vendor-Neutral by Design",
+      desc: "We normalise inverter, turbine, and SCADA data across OEMs into one model, so portfolio KPIs stay comparable no matter who supplied the equipment.",
+    },
+    {
+      title: "Time-Series at Plant Scale",
+      desc: "Minute-level data from thousands of devices needs purpose-built storage. We use TimescaleDB and InfluxDB with downsampling and retention policies that keep dashboards responsive.",
+    },
+    {
+      title: "Losses Framed as Money",
+      desc: "Diagnostics are expressed in recoverable kWh and revenue impact, not just alarm counts — which is what makes O&M teams and investors act on them.",
+    },
+    {
+      title: "Evidence for Warranty Claims",
+      desc: "Downtime windows, alarm history, and field intervention records are captured with timestamps and photos, turning warranty and performance guarantee claims into documented cases.",
+    },
+    {
+      title: "Remote Site Field Apps",
+      desc: "Plants sit far from coverage. Our field apps work fully offline for string testing, thermography, cleaning records, and ticket closure, syncing when the crew returns to signal.",
+    },
+    {
+      title: "From One Plant to a Portfolio",
+      desc: "Multi-site, multi-SPV, and multi-client O&M structures with role-based access and per-entity reporting are built into the architecture from the start.",
+    },
   ],
   faqs: [
     {
@@ -145,27 +196,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/renewable-energy-software#service`,
-      "name": "Renewable Energy Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Renewable Energy Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom software development for renewable energy and utility companies: solar and wind plant monitoring, SCADA and inverter integration, loss analytics, O&M ticketing, field engineer apps, and automated generation and PPA reporting.",
-      "areaServed": ["IN", "AE", "SA", "GB", "US", "AU", "SG", "ZA"],
-      "serviceType": "Custom Software Development for Renewable Energy and Utilities",
+      areaServed: ["IN", "AE", "SA", "GB", "US", "AU", "SG", "ZA"],
+      serviceType: "Custom Software Development for Renewable Energy and Utilities",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Renewable Energy Software", "item": `${BASE_URL}/industries/renewable-energy-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Renewable Energy Software",
+          item: `${BASE_URL}/industries/renewable-energy-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -199,7 +260,8 @@ export const Route = createFileRoute("/industries/renewable-energy-software")({
       { name: "twitter:title", content: "Renewable Energy & Solar Software | Stacklyn" },
       {
         name: "twitter:description",
-        content: "Solar and wind monitoring, SCADA integration, loss analytics, and O&M platforms. From Kerala, India.",
+        content:
+          "Solar and wind monitoring, SCADA integration, loss analytics, and O&M platforms. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/renewable-energy-software` }],

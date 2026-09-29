@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Facility management is a contract business measured in SLAs, response times, and uptime — but most operators still run on job cards, WhatsApp escalations, and a monthly Excel report assembled the night before a client review. When an FM contract is audited, the operator has to prove that every PPM task was done, every reactive call met its response window, and every asset was serviced on schedule. Without a CAFM system holding timestamped evidence, penalties are argued rather than defended. Custom FM software turns that evidence trail into a byproduct of daily work.",
   painPoints: [
-    { title: "Unverifiable PPM Completion", desc: "Planned preventive maintenance signed off on paper with no timestamp, location, or photo evidence to defend during client audits." },
-    { title: "SLA Breaches Discovered Late", desc: "Response and resolution breaches surfacing only in the monthly report, after penalties are already contractually due." },
-    { title: "Incomplete Asset Registers", desc: "Assets tracked in spreadsheets with no reliable location, warranty, service history, or lifecycle costing per equipment." },
-    { title: "Helpdesk Chaos Across Sites", desc: "Complaints arriving by phone, email, and WhatsApp with no single queue, priority logic, or escalation matrix." },
-    { title: "Technician Deployment Blind Spots", desc: "No visibility of which technician is where, workload balance across sites, or first-time-fix rates by trade." },
-    { title: "Manual Client Reporting", desc: "Days of effort each month compiling SLA, PPM, consumption, and manpower reports per client from disconnected sources." },
+    {
+      title: "Unverifiable PPM Completion",
+      desc: "Planned preventive maintenance signed off on paper with no timestamp, location, or photo evidence to defend during client audits.",
+    },
+    {
+      title: "SLA Breaches Discovered Late",
+      desc: "Response and resolution breaches surfacing only in the monthly report, after penalties are already contractually due.",
+    },
+    {
+      title: "Incomplete Asset Registers",
+      desc: "Assets tracked in spreadsheets with no reliable location, warranty, service history, or lifecycle costing per equipment.",
+    },
+    {
+      title: "Helpdesk Chaos Across Sites",
+      desc: "Complaints arriving by phone, email, and WhatsApp with no single queue, priority logic, or escalation matrix.",
+    },
+    {
+      title: "Technician Deployment Blind Spots",
+      desc: "No visibility of which technician is where, workload balance across sites, or first-time-fix rates by trade.",
+    },
+    {
+      title: "Manual Client Reporting",
+      desc: "Days of effort each month compiling SLA, PPM, consumption, and manpower reports per client from disconnected sources.",
+    },
   ],
   solutions: [
     {
@@ -55,15 +73,25 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
     "React Native (Technician Apps)",
     "QR / NFC Asset Tagging",
     "BMS & IoT Integration (BACnet, MQTT, Modbus)",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Geofencing & Location Services",
     "SAP / Oracle / Tally Integration",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Recharts / D3.js (SLA & Energy Dashboards)",
     "PDF Report Generation Pipelines",
   ],
@@ -77,12 +105,30 @@ const data: IndustryData = {
     "Housing societies and residential portfolio managers",
   ],
   whyStacklyn: [
-    { title: "Contract-Shaped SLA Engine", desc: "Every FM contract defines response and resolution differently. We make SLA rules configurable per client, per priority, and per asset class rather than hard-coding one model." },
-    { title: "Evidence-First Job Closure", desc: "Timestamped, geotagged, photo-backed completion records turn client audits from an argument into a data export." },
-    { title: "Works in Basements and Plant Rooms", desc: "Technician apps run fully offline, scan QR-tagged assets without signal, and sync when the technician surfaces." },
-    { title: "Portfolio-Scale Architecture", desc: "Client, site, building, floor, and asset hierarchies with role-based access are built in, so one platform serves a hundred sites without forking." },
-    { title: "Reporting That Ships Itself", desc: "The monthly client report pack is generated automatically from live data, ending the multi-day scramble before every review meeting." },
-    { title: "IoT and BMS Ready", desc: "We integrate BMS, energy meters, and IoT sensors where they exist, so condition-based maintenance can replace blind calendar schedules over time." },
+    {
+      title: "Contract-Shaped SLA Engine",
+      desc: "Every FM contract defines response and resolution differently. We make SLA rules configurable per client, per priority, and per asset class rather than hard-coding one model.",
+    },
+    {
+      title: "Evidence-First Job Closure",
+      desc: "Timestamped, geotagged, photo-backed completion records turn client audits from an argument into a data export.",
+    },
+    {
+      title: "Works in Basements and Plant Rooms",
+      desc: "Technician apps run fully offline, scan QR-tagged assets without signal, and sync when the technician surfaces.",
+    },
+    {
+      title: "Portfolio-Scale Architecture",
+      desc: "Client, site, building, floor, and asset hierarchies with role-based access are built in, so one platform serves a hundred sites without forking.",
+    },
+    {
+      title: "Reporting That Ships Itself",
+      desc: "The monthly client report pack is generated automatically from live data, ending the multi-day scramble before every review meeting.",
+    },
+    {
+      title: "IoT and BMS Ready",
+      desc: "We integrate BMS, energy meters, and IoT sensors where they exist, so condition-based maintenance can replace blind calendar schedules over time.",
+    },
   ],
   faqs: [
     {
@@ -146,27 +192,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/facility-management-software#service`,
-      "name": "Facility Management Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Facility Management Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom facility management software development: CAFM and CMMS platforms, asset registers, PPM scheduling, technician mobile apps, helpdesk and tenant portals, SLA and penalty dashboards, and energy tracking.",
-      "areaServed": ["IN", "AE", "SA", "QA", "OM", "GB", "SG"],
-      "serviceType": "Custom Software Development for Facility Management",
+      areaServed: ["IN", "AE", "SA", "QA", "OM", "GB", "SG"],
+      serviceType: "Custom Software Development for Facility Management",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Facility Management Software", "item": `${BASE_URL}/industries/facility-management-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Facility Management Software",
+          item: `${BASE_URL}/industries/facility-management-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -188,7 +244,10 @@ export const Route = createFileRoute("/industries/facility-management-software")
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/industries/facility-management-software` },
-      { property: "og:title", content: "Facility Management & CMMS Software Development | Stacklyn" },
+      {
+        property: "og:title",
+        content: "Facility Management & CMMS Software Development | Stacklyn",
+      },
       {
         property: "og:description",
         content:
@@ -200,7 +259,8 @@ export const Route = createFileRoute("/industries/facility-management-software")
       { name: "twitter:title", content: "Facility Management & CMMS Software | Stacklyn" },
       {
         name: "twitter:description",
-        content: "CAFM, CMMS, PPM scheduling, technician apps, and SLA dashboards for FM contractors. From Kerala, India.",
+        content:
+          "CAFM, CMMS, PPM scheduling, technician apps, and SLA dashboards for FM contractors. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/facility-management-software` }],

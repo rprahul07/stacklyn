@@ -24,6 +24,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AiAutomationRouteImport } from './routes/ai-automation'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as MarketsIndexRouteImport } from './routes/markets/index'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
@@ -134,6 +135,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesRoute,
 } as any)
 const MarketsIndexRoute = MarketsIndexRouteImport.update({
   id: '/',
@@ -387,6 +393,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/markets/': typeof MarketsIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -398,7 +405,6 @@ export interface FileRoutesByTo {
   '/hire-nodejs-developer': typeof HireNodejsDeveloperRoute
   '/hire-react-developer': typeof HireReactDeveloperRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/services': typeof ServicesRouteWithChildren
   '/terms': typeof TermsRoute
   '/ai-automation/$slug': typeof AiAutomationSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -435,6 +441,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/markets': typeof MarketsIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -488,6 +495,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/markets/': typeof MarketsIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -542,6 +550,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/industries/'
     | '/markets/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -553,7 +562,6 @@ export interface FileRouteTypes {
     | '/hire-nodejs-developer'
     | '/hire-react-developer'
     | '/privacy-policy'
-    | '/services'
     | '/terms'
     | '/ai-automation/$slug'
     | '/blog/$slug'
@@ -590,6 +598,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/industries'
     | '/markets'
+    | '/services'
   id:
     | '__root__'
     | '/'
@@ -642,6 +651,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/industries/'
     | '/markets/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -769,6 +779,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof ServicesRoute
     }
     '/markets/': {
       id: '/markets/'
@@ -1122,6 +1139,7 @@ interface ServicesRouteChildren {
   ServicesNextjsDevelopmentRoute: typeof ServicesNextjsDevelopmentRoute
   ServicesNodejsDevelopmentRoute: typeof ServicesNodejsDevelopmentRoute
   ServicesReactDevelopmentRoute: typeof ServicesReactDevelopmentRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 const ServicesRouteChildren: ServicesRouteChildren = {
@@ -1135,6 +1153,7 @@ const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesNextjsDevelopmentRoute: ServicesNextjsDevelopmentRoute,
   ServicesNodejsDevelopmentRoute: ServicesNodejsDevelopmentRoute,
   ServicesReactDevelopmentRoute: ServicesReactDevelopmentRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 
 const ServicesRouteWithChildren = ServicesRoute._addFileChildren(

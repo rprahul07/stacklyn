@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { SchemaMarkup } from "./SchemaMarkup";
 
 export interface FAQItem {
@@ -13,16 +18,20 @@ interface FAQProps {
   includeSchema?: boolean;
 }
 
-export function FAQ({ items, title = "Frequently Asked Questions", includeSchema = true }: FAQProps) {
+export function FAQ({
+  items,
+  title = "Frequently Asked Questions",
+  includeSchema = true,
+}: FAQProps) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": items.map((item) => ({
+    mainEntity: items.map((item) => ({
       "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
+      name: item.q,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": item.a,
+        text: item.a,
       },
     })),
   };
@@ -37,7 +46,9 @@ export function FAQ({ items, title = "Frequently Asked Questions", includeSchema
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">FAQ</div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+            FAQ
+          </div>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">{title}</h2>
           <Accordion type="single" collapsible className="space-y-3">
             {items.map((item, i) => (

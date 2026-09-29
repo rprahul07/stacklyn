@@ -37,28 +37,28 @@ const hubSchema = {
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Global Markets", "item": `${BASE_URL}/markets` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Global Markets", item: `${BASE_URL}/markets` },
       ],
     },
     {
       "@type": "ItemList",
       "@id": `${BASE_URL}/markets#list`,
-      "name": "Oil & Gas and Industrial Software by Market",
-      "itemListElement": marketPages.map((page, i) => ({
+      name: "Oil & Gas and Industrial Software by Market",
+      itemListElement: marketPages.map((page, i) => ({
         "@type": "ListItem",
-        "position": i + 1,
-        "name": page.name,
-        "url": `${BASE_URL}${marketPagePath(page.slug)}`,
+        position: i + 1,
+        name: page.name,
+        url: `${BASE_URL}${marketPagePath(page.slug)}`,
       })),
     },
     {
       "@type": "FAQPage",
-      "mainEntity": hubFaqs.map((faq) => ({
+      mainEntity: hubFaqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -67,7 +67,9 @@ const hubSchema = {
 export const Route = createFileRoute("/markets/")({
   head: () => ({
     meta: [
-      { title: "Oil & Gas Software Development for the UAE, Saudi Arabia, Qatar & Oman | Stacklyn" },
+      {
+        title: "Oil & Gas Software Development for the UAE, Saudi Arabia, Qatar & Oman | Stacklyn",
+      },
       {
         name: "description",
         content:
@@ -80,18 +82,26 @@ export const Route = createFileRoute("/markets/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/markets` },
-      { property: "og:title", content: "Oil & Gas Software for the Gulf & Global Markets | Stacklyn" },
+      {
+        property: "og:title",
+        content: "Oil & Gas Software for the Gulf & Global Markets | Stacklyn",
+      },
       {
         property: "og:description",
-        content: "Custom oil and gas software for the UAE, Saudi Arabia, Qatar, Oman, and global markets, built from India.",
+        content:
+          "Custom oil and gas software for the UAE, Saudi Arabia, Qatar, Oman, and global markets, built from India.",
       },
       { property: "og:image", content: `${BASE_URL}/og-image.png` },
       { property: "og:site_name", content: "Stacklyn" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Oil & Gas Software for the Gulf & Global Markets | Stacklyn" },
+      {
+        name: "twitter:title",
+        content: "Oil & Gas Software for the Gulf & Global Markets | Stacklyn",
+      },
       {
         name: "twitter:description",
-        content: "Permit to work, HSE, ICV reporting, and operations software for GCC and global oil and gas companies.",
+        content:
+          "Permit to work, HSE, ICV reporting, and operations software for GCC and global oil and gas companies.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/markets` }],
@@ -111,7 +121,11 @@ function MarketsHub() {
           <div className="relative mx-auto max-w-7xl px-6">
             <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex items-center gap-2 text-xs text-muted-foreground">
-                <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+                <li>
+                  <a href="/" className="hover:text-primary transition-colors">
+                    Home
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
                 <li className="text-foreground font-medium">Global Markets</li>
               </ol>
@@ -126,9 +140,10 @@ function MarketsHub() {
               Oil &amp; Gas Software for the Gulf and Global Markets
             </motion.h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-              Stacklyn builds custom software for oil and gas operators, EPC contractors, and service companies in the UAE,
-              Saudi Arabia, Qatar, Oman, and worldwide — permit to work, HSE, in-country value reporting, crew rotation, and
-              operations platforms designed around each market's operators and regulations.
+              Stacklyn builds custom software for oil and gas operators, EPC contractors, and
+              service companies in the UAE, Saudi Arabia, Qatar, Oman, and worldwide — permit to
+              work, HSE, in-country value reporting, crew rotation, and operations platforms
+              designed around each market's operators and regulations.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -162,12 +177,18 @@ function MarketsHub() {
                 transition={{ duration: 0.45, delay: i * 0.05 }}
                 className="group rounded-2xl border border-border bg-background p-7 hover:border-primary/30 hover:bg-surface transition-all"
               >
-                <div className="text-xs font-semibold uppercase tracking-wider text-primary">{page.region}</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+                  {page.region}
+                </div>
                 <div className="mt-2 flex items-center justify-between gap-3">
                   <h2 className="text-lg font-semibold">{page.name}</h2>
-                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                    →
+                  </span>
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-4">{page.intro}</p>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-4">
+                  {page.intro}
+                </p>
               </motion.a>
             ))}
           </div>

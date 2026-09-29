@@ -1,7 +1,12 @@
 const items = [
-  "Web Applications", "Mobile Apps", "AI Solutions",
-  "Cloud Infrastructure", "SaaS Platforms", "Enterprise Systems",
-  "Blockchain & Web3", "UI/UX Design",
+  "Web Applications",
+  "Mobile Apps",
+  "AI Solutions",
+  "Cloud Infrastructure",
+  "SaaS Platforms",
+  "Enterprise Systems",
+  "Blockchain & Web3",
+  "UI/UX Design",
 ];
 
 export function Marquee() {

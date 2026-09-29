@@ -94,8 +94,8 @@ export function Contact() {
             Let's build something <span className="text-primary">exceptional.</span>
           </motion.h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            Tell us about your project. Your enquiry goes straight to our engineering team, and we reply within 24 hours —
-            usually much sooner on WhatsApp.
+            Tell us about your project. Your enquiry goes straight to our engineering team, and we
+            reply within 24 hours — usually much sooner on WhatsApp.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -107,7 +107,9 @@ export function Contact() {
               className="group flex items-center justify-between rounded-xl border border-primary/30 bg-background px-5 py-4 hover:border-primary/60 transition-colors"
             >
               <div>
-                <div className="text-xs uppercase tracking-wider text-primary">WhatsApp · Fastest reply</div>
+                <div className="text-xs uppercase tracking-wider text-primary">
+                  WhatsApp · Fastest reply
+                </div>
                 <div className="mt-1 text-sm font-medium text-foreground">{CONTACT_PHONE}</div>
               </div>
               <span className="text-primary transition-transform group-hover:translate-x-1">→</span>
@@ -138,11 +140,15 @@ export function Contact() {
 
           <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Response within 24 hours · Working hours overlap with the UAE, Saudi Arabia, Qatar, and Oman
+            Response within 24 hours · Working hours overlap with the UAE, Saudi Arabia, Qatar, and
+            Oman
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
             Want a ballpark first?{" "}
-            <a href="/tools/software-cost-estimator" className="text-primary underline underline-offset-4">
+            <a
+              href="/tools/software-cost-estimator"
+              className="text-primary underline underline-offset-4"
+            >
               Try the free cost estimator →
             </a>
           </p>
@@ -158,7 +164,9 @@ export function Contact() {
         >
           {status === "success" ? (
             <div className="flex flex-col items-center justify-center h-full min-h-64 text-center gap-4">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">✓</div>
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">
+                ✓
+              </div>
               <h3 className="text-lg font-semibold">Message sent!</h3>
               <p className="text-sm text-muted-foreground max-w-xs">
                 We received your enquiry and will get back to you within 24 hours.
@@ -175,14 +183,34 @@ export function Contact() {
             <>
               <div className="grid md:grid-cols-2 gap-5">
                 <Field label="Name" name="name" placeholder="Jane Doe" autoComplete="name" />
-                <Field label="Email" name="email" type="email" placeholder="jane@company.com" autoComplete="email" />
-                <Field label="Company" name="company" placeholder="Acme Inc." required={false} autoComplete="organization" />
+                <Field
+                  label="Email"
+                  name="email"
+                  type="email"
+                  placeholder="jane@company.com"
+                  autoComplete="email"
+                />
+                <Field
+                  label="Company"
+                  name="company"
+                  placeholder="Acme Inc."
+                  required={false}
+                  autoComplete="organization"
+                />
                 <Select label="Project Type" name="type" options={projectTypes} />
                 <Select label="Budget" name="budget" options={budgets} />
-                <Field label="Timeline" name="timeline" placeholder="e.g. Q1 2027" required={false} />
+                <Field
+                  label="Timeline"
+                  name="timeline"
+                  placeholder="e.g. Q1 2027"
+                  required={false}
+                />
               </div>
               <div className="mt-5">
-                <label htmlFor="description" className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                <label
+                  htmlFor="description"
+                  className="block text-xs font-medium uppercase tracking-wider text-muted-foreground"
+                >
                   Project Description
                 </label>
                 <textarea
@@ -198,7 +226,8 @@ export function Contact() {
               {status === "error" && lastEnquiry && (
                 <div className="mt-4 rounded-xl border border-destructive/30 bg-destructive/5 p-4">
                   <p className="text-sm text-foreground">
-                    Our form couldn't send your message just now. Your details are ready to send on WhatsApp instead — one tap:
+                    Our form couldn't send your message just now. Your details are ready to send on
+                    WhatsApp instead — one tap:
                   </p>
                   <a
                     href={whatsappFallbackHref(lastEnquiry)}
@@ -209,7 +238,9 @@ export function Contact() {
                   >
                     Send via WhatsApp <span aria-hidden>→</span>
                   </a>
-                  <p className="mt-2 text-xs text-muted-foreground">Or email us at {CONTACT_EMAIL}.</p>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Or email us at {CONTACT_EMAIL}.
+                  </p>
                 </div>
               )}
               <div className="mt-6 flex items-center justify-end">
@@ -224,7 +255,9 @@ export function Contact() {
                       Sending…
                     </>
                   ) : (
-                    <>Send Enquiry <span aria-hidden>→</span></>
+                    <>
+                      Send Enquiry <span aria-hidden>→</span>
+                    </>
                   )}
                 </button>
               </div>
@@ -237,15 +270,35 @@ export function Contact() {
 }
 
 function Field({
-  label, name, type = "text", placeholder, required = true, autoComplete = "off",
-}: { label: string; name: string; type?: string; placeholder?: string; required?: boolean; autoComplete?: string }) {
+  label,
+  name,
+  type = "text",
+  placeholder,
+  required = true,
+  autoComplete = "off",
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  placeholder?: string;
+  required?: boolean;
+  autoComplete?: string;
+}) {
   return (
     <div>
-      <label htmlFor={name} className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+      <label
+        htmlFor={name}
+        className="block text-xs font-medium uppercase tracking-wider text-muted-foreground"
+      >
         {label}
       </label>
       <input
-        id={name} name={name} type={type} placeholder={placeholder} required={required} autoComplete={autoComplete}
+        id={name}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        autoComplete={autoComplete}
         className="mt-2 w-full rounded-lg border border-input bg-background px-4 h-11 text-sm outline-none focus:ring-2 focus:ring-ring focus:border-primary transition"
       />
     </div>
@@ -255,15 +308,23 @@ function Field({
 function Select({ label, name, options }: { label: string; name: string; options: string[] }) {
   return (
     <div>
-      <label htmlFor={name} className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+      <label
+        htmlFor={name}
+        className="block text-xs font-medium uppercase tracking-wider text-muted-foreground"
+      >
         {label}
       </label>
       <select
-        id={name} name={name} required autoComplete="off"
+        id={name}
+        name={name}
+        required
+        autoComplete="off"
         className="mt-2 w-full rounded-lg border border-input bg-background px-4 h-11 text-sm outline-none focus:ring-2 focus:ring-ring focus:border-primary transition"
       >
         <option value="">Select…</option>
-        {options.map((o) => <option key={o}>{o}</option>)}
+        {options.map((o) => (
+          <option key={o}>{o}</option>
+        ))}
       </select>
     </div>
   );

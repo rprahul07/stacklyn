@@ -49,20 +49,46 @@ export const oilGasPosts: BlogPost[] = [
         table: {
           headers: ["Step", "What happens"],
           rows: [
-            ["1. Request", "The team doing the work describes the job, location, equipment, and expected duration."],
-            ["2. Risk assessment", "A job safety analysis or task risk assessment identifies hazards and the controls needed."],
-            ["3. Isolation", "Energy sources are isolated and locked, usually recorded on an isolation certificate."],
-            ["4. Gas testing", "The atmosphere is tested where required and results are recorded, with re-testing at set intervals."],
-            ["5. Authorisation", "The responsible authority checks the controls and issues the permit with any conditions."],
-            ["6. Work and monitoring", "The permit is displayed at the worksite and its conditions are checked during the job."],
-            ["7. Suspension and handover", "Unfinished work is suspended or formally handed over between shifts."],
-            ["8. Completion and hand-back", "The site is inspected, isolations are removed, and the area is returned to operations before the permit closes."],
+            [
+              "1. Request",
+              "The team doing the work describes the job, location, equipment, and expected duration.",
+            ],
+            [
+              "2. Risk assessment",
+              "A job safety analysis or task risk assessment identifies hazards and the controls needed.",
+            ],
+            [
+              "3. Isolation",
+              "Energy sources are isolated and locked, usually recorded on an isolation certificate.",
+            ],
+            [
+              "4. Gas testing",
+              "The atmosphere is tested where required and results are recorded, with re-testing at set intervals.",
+            ],
+            [
+              "5. Authorisation",
+              "The responsible authority checks the controls and issues the permit with any conditions.",
+            ],
+            [
+              "6. Work and monitoring",
+              "The permit is displayed at the worksite and its conditions are checked during the job.",
+            ],
+            [
+              "7. Suspension and handover",
+              "Unfinished work is suspended or formally handed over between shifts.",
+            ],
+            [
+              "8. Completion and hand-back",
+              "The site is inspected, isolations are removed, and the area is returned to operations before the permit closes.",
+            ],
           ],
         },
       },
       {
         heading: "Key roles in a permit to work system",
-        paragraphs: ["Titles vary between companies, but most systems separate these responsibilities:"],
+        paragraphs: [
+          "Titles vary between companies, but most systems separate these responsibilities:",
+        ],
         bullets: [
           "Issuing or area authority — responsible for the plant area and authorises work in it.",
           "Performing authority or permit receiver — leads the work party and accepts responsibility for working within the permit conditions.",
@@ -93,11 +119,31 @@ export const oilGasPosts: BlogPost[] = [
         table: {
           headers: ["Area", "Paper permits", "Digital permits"],
           rows: [
-            ["Visibility", "Permit board in one control room", "Live view of all permits on any authorised screen"],
-            ["Conflicting work", "Relies on people noticing", "Automatic warnings for overlapping work on the same area or equipment"],
-            ["Isolations", "Separate paper certificates", "Linked to the permits that depend on them"],
-            ["Gas tests", "Written on the form, if remembered", "Timestamped entries with re-test reminders"],
-            ["Competency", "Assumed", "Only trained, authorised people can issue or receive permits"],
+            [
+              "Visibility",
+              "Permit board in one control room",
+              "Live view of all permits on any authorised screen",
+            ],
+            [
+              "Conflicting work",
+              "Relies on people noticing",
+              "Automatic warnings for overlapping work on the same area or equipment",
+            ],
+            [
+              "Isolations",
+              "Separate paper certificates",
+              "Linked to the permits that depend on them",
+            ],
+            [
+              "Gas tests",
+              "Written on the form, if remembered",
+              "Timestamped entries with re-test reminders",
+            ],
+            [
+              "Competency",
+              "Assumed",
+              "Only trained, authorised people can issue or receive permits",
+            ],
             ["Audit", "Days of document gathering", "Complete history exported in minutes"],
           ],
         },
@@ -111,11 +157,26 @@ export const oilGasPosts: BlogPost[] = [
       },
     ],
     faqs: [
-      { q: "What is the difference between a permit to work and a risk assessment?", a: "A risk assessment identifies the hazards of a job and the controls needed. The permit to work is the formal authorisation that confirms those controls are actually in place before the work starts, and it usually references the risk assessment." },
-      { q: "What are the main types of work permits?", a: "The most common are hot work, cold work, confined space entry, electrical and isolation permits, excavation, and work at height. Many sites add permits for lifting operations, radiography, and breaking containment." },
-      { q: "Who can issue a permit to work?", a: "Only people trained and authorised under the site's permit to work procedure, usually the area authority responsible for that part of the plant. The permit receiver who leads the work party accepts responsibility for working within its conditions." },
-      { q: "Do operators accept digital permit to work systems?", a: "Many operators and contractors use electronic permit systems. Whether a particular system is accepted depends on the operator's own procedures, so a digital system should implement those procedures exactly and be reviewed with the operator before use." },
-      { q: "How long does it take to implement a digital permit to work system?", a: "A pilot on one site typically takes 8–12 weeks, including configuring permit types, approval chains, and reports. Rollout to further sites follows in phases." },
+      {
+        q: "What is the difference between a permit to work and a risk assessment?",
+        a: "A risk assessment identifies the hazards of a job and the controls needed. The permit to work is the formal authorisation that confirms those controls are actually in place before the work starts, and it usually references the risk assessment.",
+      },
+      {
+        q: "What are the main types of work permits?",
+        a: "The most common are hot work, cold work, confined space entry, electrical and isolation permits, excavation, and work at height. Many sites add permits for lifting operations, radiography, and breaking containment.",
+      },
+      {
+        q: "Who can issue a permit to work?",
+        a: "Only people trained and authorised under the site's permit to work procedure, usually the area authority responsible for that part of the plant. The permit receiver who leads the work party accepts responsibility for working within its conditions.",
+      },
+      {
+        q: "Do operators accept digital permit to work systems?",
+        a: "Many operators and contractors use electronic permit systems. Whether a particular system is accepted depends on the operator's own procedures, so a digital system should implement those procedures exactly and be reviewed with the operator before use.",
+      },
+      {
+        q: "How long does it take to implement a digital permit to work system?",
+        a: "A pilot on one site typically takes 8–12 weeks, including configuring permit types, approval chains, and reports. Rollout to further sites follows in phases.",
+      },
     ],
     related: [
       { name: "HSE & Compliance Software", href: "/industries/hse-compliance-software" },
@@ -150,7 +211,9 @@ export const oilGasPosts: BlogPost[] = [
       },
       {
         heading: "What makes up the ICV score",
-        paragraphs: ["The score is calculated from several components defined in the MoIAT methodology:"],
+        paragraphs: [
+          "The score is calculated from several components defined in the MoIAT methodology:",
+        ],
         bullets: [
           "Goods and third-party spend — manufacturing in the UAE and money spent with UAE-based suppliers.",
           "Investment — investment in UAE-based assets such as facilities, equipment, and technology.",
@@ -186,7 +249,9 @@ export const oilGasPosts: BlogPost[] = [
       },
       {
         heading: "Why ICV scores come out lower than expected",
-        paragraphs: ["When companies are disappointed by their score, the cause is usually data rather than performance:"],
+        paragraphs: [
+          "When companies are disappointed by their score, the cause is usually data rather than performance:",
+        ],
         bullets: [
           "Supplier certificates that were expired or never collected.",
           "Spend classified incorrectly between UAE-based and imported.",
@@ -197,7 +262,9 @@ export const oilGasPosts: BlogPost[] = [
       },
       {
         heading: "Practical ways to improve your score",
-        paragraphs: ["Most improvements come from managing the score throughout the year instead of calculating it once:"],
+        paragraphs: [
+          "Most improvements come from managing the score throughout the year instead of calculating it once:",
+        ],
         bullets: [
           "Prefer ICV-certified UAE suppliers where it makes commercial sense.",
           "Ask key suppliers for their current certificates and track expiry dates.",
@@ -215,11 +282,26 @@ export const oilGasPosts: BlogPost[] = [
       },
     ],
     faqs: [
-      { q: "Who issues the ICV certificate in the UAE?", a: "ICV certificates are issued by certification bodies approved by the Ministry of Industry and Advanced Technology (MoIAT) under the National In-Country Value Program, based on your audited financial statements." },
-      { q: "How long is an ICV certificate valid?", a: "An ICV certificate is valid for 14 months from the date of the audited financial statements it is based on, so it needs renewing with each new financial year." },
-      { q: "Is an ICV certificate mandatory?", a: "It is not a general legal requirement for every company, but federal entities and major buyers such as ADNOC use ICV in tender evaluation, so suppliers without a valid certificate lose the ICV part of the evaluation." },
-      { q: "How can a service company improve its ICV score?", a: "Focus on third-party spend: work with ICV-certified UAE suppliers where sensible, collect current supplier certificates, classify spend accurately, and track data during the year so there is time to act before the audit." },
-      { q: "Can software calculate my official ICV score?", a: "No. Software can estimate your score and organise the evidence, but the official score is calculated by an approved certification body under the MoIAT methodology." },
+      {
+        q: "Who issues the ICV certificate in the UAE?",
+        a: "ICV certificates are issued by certification bodies approved by the Ministry of Industry and Advanced Technology (MoIAT) under the National In-Country Value Program, based on your audited financial statements.",
+      },
+      {
+        q: "How long is an ICV certificate valid?",
+        a: "An ICV certificate is valid for 14 months from the date of the audited financial statements it is based on, so it needs renewing with each new financial year.",
+      },
+      {
+        q: "Is an ICV certificate mandatory?",
+        a: "It is not a general legal requirement for every company, but federal entities and major buyers such as ADNOC use ICV in tender evaluation, so suppliers without a valid certificate lose the ICV part of the evaluation.",
+      },
+      {
+        q: "How can a service company improve its ICV score?",
+        a: "Focus on third-party spend: work with ICV-certified UAE suppliers where sensible, collect current supplier certificates, classify spend accurately, and track data during the year so there is time to act before the audit.",
+      },
+      {
+        q: "Can software calculate my official ICV score?",
+        a: "No. Software can estimate your score and organise the evidence, but the official score is calculated by an approved certification body under the MoIAT methodology.",
+      },
     ],
     related: [
       { name: "ICV Reporting Software (UAE)", href: "/markets/icv-reporting-software-uae" },

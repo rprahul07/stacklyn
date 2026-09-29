@@ -7,18 +7,37 @@ const data: IndustryData = {
   industry: "Marine & Shipping",
   slug: "marine-shipping-software",
   headline: "Custom Software Development for Marine, Shipping & Port Operations",
-  tagline: "Fleet Operations · Crew Management · Port Calls · Planned Maintenance · Bunker & Voyage",
+  tagline:
+    "Fleet Operations · Crew Management · Port Calls · Planned Maintenance · Bunker & Voyage",
   intro:
     "Stacklyn builds custom marine and shipping software for ship owners, ship managers, port and terminal operators, and offshore marine contractors. We deliver fleet operations dashboards, crew management and certification systems, planned maintenance systems (PMS), voyage and bunker analytics, port call coordination platforms, and vessel inspection apps designed for low-bandwidth shipboard use.",
   industryContext:
     "Shipping runs on documentation, certification, and narrow operational windows, under regulators that do not accept excuses — IMO, class societies, flag states, and port state control. A vessel is a remote site with expensive connectivity, a rotating crew, and mandatory records that must survive audit years later. Most operators run licensed suites that fit large fleets but leave managers of 5 to 40 vessels paying for complexity they do not need while still keeping the real work in Excel. Purpose-built software closes the gap: shipboard tools that work on a satellite link, and shore dashboards that see the whole fleet.",
   painPoints: [
-    { title: "Crew Certification Expiry Risk", desc: "STCW certificates, medicals, and visas tracked in spreadsheets, with expiries discovered during port state control rather than before crew change." },
-    { title: "Bandwidth-Hostile Systems", desc: "Shore systems that shipboard users cannot practically operate over satellite links, forcing email attachments and manual re-keying ashore." },
-    { title: "Fragmented Voyage & Bunker Data", desc: "Noon reports, bunker figures, and port costs arriving by email in inconsistent formats, making voyage profitability an after-the-fact estimate." },
-    { title: "Maintenance Records Under Audit Pressure", desc: "Planned maintenance evidence scattered across vessel folders, creating a scramble before class survey or vetting inspection." },
-    { title: "Port Call Coordination by Email", desc: "Agents, terminals, suppliers, and surveyors coordinated over long email chains with no shared timeline or cost visibility." },
-    { title: "Inspection & Deficiency Backlogs", desc: "Internal audits, vetting observations, and deficiency close-outs tracked manually, so overdue items surface only at the next inspection." },
+    {
+      title: "Crew Certification Expiry Risk",
+      desc: "STCW certificates, medicals, and visas tracked in spreadsheets, with expiries discovered during port state control rather than before crew change.",
+    },
+    {
+      title: "Bandwidth-Hostile Systems",
+      desc: "Shore systems that shipboard users cannot practically operate over satellite links, forcing email attachments and manual re-keying ashore.",
+    },
+    {
+      title: "Fragmented Voyage & Bunker Data",
+      desc: "Noon reports, bunker figures, and port costs arriving by email in inconsistent formats, making voyage profitability an after-the-fact estimate.",
+    },
+    {
+      title: "Maintenance Records Under Audit Pressure",
+      desc: "Planned maintenance evidence scattered across vessel folders, creating a scramble before class survey or vetting inspection.",
+    },
+    {
+      title: "Port Call Coordination by Email",
+      desc: "Agents, terminals, suppliers, and surveyors coordinated over long email chains with no shared timeline or cost visibility.",
+    },
+    {
+      title: "Inspection & Deficiency Backlogs",
+      desc: "Internal audits, vetting observations, and deficiency close-outs tracked manually, so overdue items surface only at the next inspection.",
+    },
   ],
   solutions: [
     {
@@ -55,16 +74,27 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "PostGIS", "SQLite (Shipboard)", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "PostGIS",
+    "SQLite (Shipboard)",
+    "Redis",
     "Offline-First Sync & Delta Replication",
     "AIS & Vessel Tracking API Integration",
     "React Native / Electron (Shipboard Apps)",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Mapbox / Leaflet (Fleet & Route Maps)",
     "Weather & Routing Data Integration",
     "ERP & Accounting Integration",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "PDF & Report Generation (Class/PSC Formats)",
   ],
   clients: [
@@ -77,12 +107,30 @@ const data: IndustryData = {
     "Dredging and marine construction contractors",
   ],
   whyStacklyn: [
-    { title: "Built for the Satellite Link", desc: "Shipboard software is designed around scarce bandwidth: local-first data, compressed delta sync, and resumable transfers instead of chatty cloud calls." },
-    { title: "Certification Expiry Never Slips", desc: "Automated alerting chains for STCW, medicals, visas, and class certificates give shore teams weeks of warning, not port state control surprises." },
-    { title: "Audit Evidence as a Byproduct", desc: "Maintenance, inspection, and deficiency records are captured with timestamps and photos at the point of work, so class survey and vetting preparation stops being a fire drill." },
-    { title: "Right-Sized for 5 to 40 Vessel Fleets", desc: "Managers of small and mid-size fleets get exactly the modules they operate, without licensing an enterprise suite built for two hundred ships." },
-    { title: "Integrates With Existing Marine Software", desc: "We connect to AIS providers, accounting systems, and existing PMS or crewing tools rather than demanding a full replacement on day one." },
-    { title: "Shore and Ship Share One Model", desc: "The same data model serves the master onboard and the operations manager ashore, ending the re-keying and version conflicts that email-based workflows create." },
+    {
+      title: "Built for the Satellite Link",
+      desc: "Shipboard software is designed around scarce bandwidth: local-first data, compressed delta sync, and resumable transfers instead of chatty cloud calls.",
+    },
+    {
+      title: "Certification Expiry Never Slips",
+      desc: "Automated alerting chains for STCW, medicals, visas, and class certificates give shore teams weeks of warning, not port state control surprises.",
+    },
+    {
+      title: "Audit Evidence as a Byproduct",
+      desc: "Maintenance, inspection, and deficiency records are captured with timestamps and photos at the point of work, so class survey and vetting preparation stops being a fire drill.",
+    },
+    {
+      title: "Right-Sized for 5 to 40 Vessel Fleets",
+      desc: "Managers of small and mid-size fleets get exactly the modules they operate, without licensing an enterprise suite built for two hundred ships.",
+    },
+    {
+      title: "Integrates With Existing Marine Software",
+      desc: "We connect to AIS providers, accounting systems, and existing PMS or crewing tools rather than demanding a full replacement on day one.",
+    },
+    {
+      title: "Shore and Ship Share One Model",
+      desc: "The same data model serves the master onboard and the operations manager ashore, ending the re-keying and version conflicts that email-based workflows create.",
+    },
   ],
   faqs: [
     {
@@ -146,27 +194,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/marine-shipping-software#service`,
-      "name": "Marine & Shipping Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Marine & Shipping Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom marine and shipping software development: fleet operations dashboards, crew management and certification systems, planned maintenance systems, voyage and bunker analytics, port call platforms, and offline vessel inspection apps.",
-      "areaServed": ["IN", "AE", "SG", "GB", "NO", "GR", "QA", "SA"],
-      "serviceType": "Custom Software Development for Marine and Shipping Industry",
+      areaServed: ["IN", "AE", "SG", "GB", "NO", "GR", "QA", "SA"],
+      serviceType: "Custom Software Development for Marine and Shipping Industry",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Marine & Shipping Software", "item": `${BASE_URL}/industries/marine-shipping-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Marine & Shipping Software",
+          item: `${BASE_URL}/industries/marine-shipping-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -200,7 +258,8 @@ export const Route = createFileRoute("/industries/marine-shipping-software")({
       { name: "twitter:title", content: "Marine & Shipping Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "Fleet ops, crew certification, PMS, voyage analytics, and offline vessel apps. From Kerala, India.",
+        content:
+          "Fleet ops, crew certification, PMS, voyage analytics, and offline vessel apps. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/marine-shipping-software` }],

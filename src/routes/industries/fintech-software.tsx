@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Financial software is unforgiving in a specific way: everything must reconcile. A retail product can tolerate an eventually-consistent counter; a lending or payments platform cannot tolerate a ledger that disagrees with the bank statement. The engineering that matters is therefore unglamorous — idempotent transaction handling, immutable ledgers, deterministic interest and fee computation, replayable webhooks, and audit trails that survive a regulatory inspection years later. Most fintech incidents trace back to one of those fundamentals being treated as an afterthought during a rush to launch.",
   painPoints: [
-    { title: "Reconciliation Breaks at Scale", desc: "Payment gateway settlements, internal ledgers, and bank statements diverging daily, consuming finance team hours and hiding real losses." },
-    { title: "Manual, Drop-Off Heavy Onboarding", desc: "KYC journeys with document upload friction and manual verification queues, where most applicants abandon before completion." },
-    { title: "Rigid Off-the-Shelf LOS/LMS", desc: "Loan platforms that cannot express your actual credit policy, forcing workarounds in spreadsheets outside the system of record." },
-    { title: "Interest & Fee Computation Disputes", desc: "Interest, penal charges, and foreclosure calculations implemented inconsistently across systems, producing customer disputes and audit findings." },
-    { title: "Collections Run on Spreadsheets", desc: "Delinquency buckets, allocation to agents, and promise-to-pay tracking managed outside the core system with no field visibility." },
-    { title: "Painful Regulatory Reporting", desc: "Periodic regulatory and bureau submissions assembled manually each cycle, with format errors discovered only after rejection." },
+    {
+      title: "Reconciliation Breaks at Scale",
+      desc: "Payment gateway settlements, internal ledgers, and bank statements diverging daily, consuming finance team hours and hiding real losses.",
+    },
+    {
+      title: "Manual, Drop-Off Heavy Onboarding",
+      desc: "KYC journeys with document upload friction and manual verification queues, where most applicants abandon before completion.",
+    },
+    {
+      title: "Rigid Off-the-Shelf LOS/LMS",
+      desc: "Loan platforms that cannot express your actual credit policy, forcing workarounds in spreadsheets outside the system of record.",
+    },
+    {
+      title: "Interest & Fee Computation Disputes",
+      desc: "Interest, penal charges, and foreclosure calculations implemented inconsistently across systems, producing customer disputes and audit findings.",
+    },
+    {
+      title: "Collections Run on Spreadsheets",
+      desc: "Delinquency buckets, allocation to agents, and promise-to-pay tracking managed outside the core system with no field visibility.",
+    },
+    {
+      title: "Painful Regulatory Reporting",
+      desc: "Periodic regulatory and bureau submissions assembled manually each cycle, with format errors discovered only after rejection.",
+    },
   ],
   solutions: [
     {
@@ -55,17 +73,27 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "Redis", "Kafka / Event Streams",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Redis",
+    "Kafka / Event Streams",
     "Double-Entry Ledger Design",
     "Idempotency & Exactly-Once Transaction Patterns",
     "Payment Gateway & Banking API Integration",
     "UPI / NACH / Card Rails Integration",
     "KYC, Bureau & Verification API Orchestration",
     "React Native (Customer & Field Apps)",
-    "REST API", "GraphQL", "Webhooks",
+    "REST API",
+    "GraphQL",
+    "Webhooks",
     "Encryption, Tokenisation & Secrets Management",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Python (Scoring, Risk & Analytics)",
   ],
   clients: [
@@ -78,12 +106,30 @@ const data: IndustryData = {
     "Fintech startups building regulated products",
   ],
   whyStacklyn: [
-    { title: "Ledger-First Architecture", desc: "We design the ledger before the screens. Immutable, double-entry records with idempotent posting are what keep a platform reconcilable at ten thousand transactions a day and at ten million." },
-    { title: "Money Movement Done Carefully", desc: "Retries, duplicate webhooks, partial failures, and timeouts are designed for explicitly, so a network blip never becomes a double disbursement or a lost repayment." },
-    { title: "Credit Policy as Configuration", desc: "Rules, scorecards, deviation matrices, and approval hierarchies are configurable by your credit team, so policy changes do not queue behind an engineering release." },
-    { title: "Reconciliation Is a Feature", desc: "Automated settlement matching with exception queues is built in from day one, because a finance team spending its month-end in spreadsheets is a product defect." },
-    { title: "Audit-Ready Records", desc: "Immutable event history, user attribution, and reproducible computation mean an inspection or dispute is answered from the system rather than reconstructed from memory." },
-    { title: "Clear on the Compliance Line", desc: "We build the technical controls, documentation, and evidence your compliance and audit functions need. Licensing, regulatory approval, and legal attestation remain yours, and we support that process rather than making claims on your behalf." },
+    {
+      title: "Ledger-First Architecture",
+      desc: "We design the ledger before the screens. Immutable, double-entry records with idempotent posting are what keep a platform reconcilable at ten thousand transactions a day and at ten million.",
+    },
+    {
+      title: "Money Movement Done Carefully",
+      desc: "Retries, duplicate webhooks, partial failures, and timeouts are designed for explicitly, so a network blip never becomes a double disbursement or a lost repayment.",
+    },
+    {
+      title: "Credit Policy as Configuration",
+      desc: "Rules, scorecards, deviation matrices, and approval hierarchies are configurable by your credit team, so policy changes do not queue behind an engineering release.",
+    },
+    {
+      title: "Reconciliation Is a Feature",
+      desc: "Automated settlement matching with exception queues is built in from day one, because a finance team spending its month-end in spreadsheets is a product defect.",
+    },
+    {
+      title: "Audit-Ready Records",
+      desc: "Immutable event history, user attribution, and reproducible computation mean an inspection or dispute is answered from the system rather than reconstructed from memory.",
+    },
+    {
+      title: "Clear on the Compliance Line",
+      desc: "We build the technical controls, documentation, and evidence your compliance and audit functions need. Licensing, regulatory approval, and legal attestation remain yours, and we support that process rather than making claims on your behalf.",
+    },
   ],
   faqs: [
     {
@@ -147,27 +193,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/fintech-software#service`,
-      "name": "Fintech & BFSI Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Fintech & BFSI Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom fintech and BFSI software development: loan origination and management systems, payments and settlement infrastructure, digital KYC and onboarding, collections platforms, wealth dashboards, risk controls, and regulatory reporting.",
-      "areaServed": ["IN", "AE", "SA", "SG", "GB", "US", "QA"],
-      "serviceType": "Custom Software Development for Fintech and BFSI",
+      areaServed: ["IN", "AE", "SA", "SG", "GB", "US", "QA"],
+      serviceType: "Custom Software Development for Fintech and BFSI",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Fintech Software", "item": `${BASE_URL}/industries/fintech-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Fintech Software",
+          item: `${BASE_URL}/industries/fintech-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -201,7 +257,8 @@ export const Route = createFileRoute("/industries/fintech-software")({
       { name: "twitter:title", content: "Fintech & BFSI Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "LOS/LMS, payments, KYC, collections, and reconciliation-grade ledgers. From Kerala, India.",
+        content:
+          "LOS/LMS, payments, KYC, collections, and reconciliation-grade ledgers. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/fintech-software` }],

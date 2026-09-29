@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Most retail businesses start on a hosted platform and stay there happily until one of three things breaks: catalogue complexity, order orchestration, or margin. A brand with configurable products, tiered B2B pricing, or split fulfilment eventually finds itself paying for apps that half-fit and running the remainder in spreadsheets. The threshold for custom development is rarely design — it is when the order lifecycle spans multiple warehouses, channels, and partners, and no off-the-shelf product can hold the truth about what is actually in stock and where it is going.",
   painPoints: [
-    { title: "Platform Limits on Catalogue Logic", desc: "Configurable products, bundles, tiered B2B pricing, and customer-specific catalogues forced into a template model that was never designed for them." },
-    { title: "Inventory Truth Scattered Across Channels", desc: "Marketplace, website, POS, and warehouse stock tracked separately, producing oversells, cancellations, and account health penalties." },
-    { title: "Manual Order Orchestration", desc: "Split shipments, partial fulfilment, backorders, and returns coordinated by hand across warehouses and courier partners." },
-    { title: "App Sprawl and Rising Costs", desc: "A dozen paid plugins layered on a hosted platform, each adding load time, fragility, and a monthly bill that grows with volume." },
-    { title: "Slow Storefront Performance", desc: "Heavy themes and third-party scripts pushing Core Web Vitals into failing territory, quietly reducing conversion on every session." },
-    { title: "No Margin Visibility by SKU", desc: "Discounts, shipping costs, returns, and marketplace commissions never reconciled per SKU, so best-selling products may be loss-making." },
+    {
+      title: "Platform Limits on Catalogue Logic",
+      desc: "Configurable products, bundles, tiered B2B pricing, and customer-specific catalogues forced into a template model that was never designed for them.",
+    },
+    {
+      title: "Inventory Truth Scattered Across Channels",
+      desc: "Marketplace, website, POS, and warehouse stock tracked separately, producing oversells, cancellations, and account health penalties.",
+    },
+    {
+      title: "Manual Order Orchestration",
+      desc: "Split shipments, partial fulfilment, backorders, and returns coordinated by hand across warehouses and courier partners.",
+    },
+    {
+      title: "App Sprawl and Rising Costs",
+      desc: "A dozen paid plugins layered on a hosted platform, each adding load time, fragility, and a monthly bill that grows with volume.",
+    },
+    {
+      title: "Slow Storefront Performance",
+      desc: "Heavy themes and third-party scripts pushing Core Web Vitals into failing territory, quietly reducing conversion on every session.",
+    },
+    {
+      title: "No Margin Visibility by SKU",
+      desc: "Discounts, shipping costs, returns, and marketplace commissions never reconciled per SKU, so best-selling products may be loss-making.",
+    },
   ],
   solutions: [
     {
@@ -55,8 +73,13 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
     "Headless Commerce Architecture",
     "Elasticsearch / Typesense (Search)",
     "React Native (D2C & POS Apps)",
@@ -64,9 +87,15 @@ const data: IndustryData = {
     "Shipping & Courier Aggregator APIs",
     "Marketplace APIs (Amazon, Flipkart)",
     "SAP / Tally / Zoho Integration",
-    "REST API", "GraphQL", "Webhooks",
-    "CDN & Edge Caching", "Core Web Vitals Optimisation",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "REST API",
+    "GraphQL",
+    "Webhooks",
+    "CDN & Edge Caching",
+    "Core Web Vitals Optimisation",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
   ],
   clients: [
     "D2C brands scaling beyond hosted platforms",
@@ -78,12 +107,30 @@ const data: IndustryData = {
     "Subscription and replenishment commerce businesses",
   ],
   whyStacklyn: [
-    { title: "Performance Is Revenue", desc: "We build storefronts where server rendering, edge caching, and disciplined third-party scripts keep Core Web Vitals green, because load time shows up directly in conversion rate." },
-    { title: "One Source of Stock Truth", desc: "Inventory is modelled once with reservation logic, then projected to every channel — the only reliable way to stop oversells across marketplace, web, and store." },
-    { title: "Order Orchestration That Handles Reality", desc: "Split shipments, partial cancellations, exchanges, and multi-warehouse allocation are modelled explicitly rather than patched with manual workarounds." },
-    { title: "You Own the Platform", desc: "Custom commerce ends the per-app monthly tax and the ceiling on what your catalogue and pricing logic can express. The codebase and the data are yours." },
-    { title: "Margin Made Visible", desc: "We reconcile discounts, shipping, returns, and commissions to SKU level, so merchandising decisions are made on contribution margin rather than gross revenue." },
-    { title: "Migrate Without a Blackout", desc: "We run phased migrations with catalogue and customer data mapping, URL and SEO preservation with redirects, and parallel running so search rankings and orders survive the switch." },
+    {
+      title: "Performance Is Revenue",
+      desc: "We build storefronts where server rendering, edge caching, and disciplined third-party scripts keep Core Web Vitals green, because load time shows up directly in conversion rate.",
+    },
+    {
+      title: "One Source of Stock Truth",
+      desc: "Inventory is modelled once with reservation logic, then projected to every channel — the only reliable way to stop oversells across marketplace, web, and store.",
+    },
+    {
+      title: "Order Orchestration That Handles Reality",
+      desc: "Split shipments, partial cancellations, exchanges, and multi-warehouse allocation are modelled explicitly rather than patched with manual workarounds.",
+    },
+    {
+      title: "You Own the Platform",
+      desc: "Custom commerce ends the per-app monthly tax and the ceiling on what your catalogue and pricing logic can express. The codebase and the data are yours.",
+    },
+    {
+      title: "Margin Made Visible",
+      desc: "We reconcile discounts, shipping, returns, and commissions to SKU level, so merchandising decisions are made on contribution margin rather than gross revenue.",
+    },
+    {
+      title: "Migrate Without a Blackout",
+      desc: "We run phased migrations with catalogue and customer data mapping, URL and SEO preservation with redirects, and parallel running so search rankings and orders survive the switch.",
+    },
   ],
   faqs: [
     {
@@ -147,27 +194,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/ecommerce-retail-software#service`,
-      "name": "E-commerce & Retail Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "E-commerce & Retail Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom e-commerce and retail software development: headless Next.js storefronts, B2B and B2C marketplaces, order management systems, inventory and warehouse management, POS and omnichannel tools, D2C apps, and margin analytics.",
-      "areaServed": ["IN", "AE", "SA", "GB", "US", "SG", "AU"],
-      "serviceType": "Custom Software Development for E-commerce and Retail",
+      areaServed: ["IN", "AE", "SA", "GB", "US", "SG", "AU"],
+      serviceType: "Custom Software Development for E-commerce and Retail",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "E-commerce & Retail Software", "item": `${BASE_URL}/industries/ecommerce-retail-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "E-commerce & Retail Software",
+          item: `${BASE_URL}/industries/ecommerce-retail-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -201,7 +258,8 @@ export const Route = createFileRoute("/industries/ecommerce-retail-software")({
       { name: "twitter:title", content: "E-commerce & Retail Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "Headless storefronts, marketplaces, OMS, inventory, and POS for growing retailers. From Kerala, India.",
+        content:
+          "Headless storefronts, marketplaces, OMS, inventory, and POS for growing retailers. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/ecommerce-retail-software` }],

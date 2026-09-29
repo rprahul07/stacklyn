@@ -32,7 +32,7 @@ export const sendContactEmail = createServerFn({ method: "POST" })
       throw new Error("Failed to submit form.");
     }
 
-    const json = await res.json() as { ok: boolean; error?: string };
+    const json = (await res.json()) as { ok: boolean; error?: string };
     if (!json.ok) {
       console.error("[contact] Script returned error:", json.error);
       throw new Error("Failed to submit form.");

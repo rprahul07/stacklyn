@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    // Understands Tailwind v4 @theme/@source/@custom-variant and gives class
+    // completions. Without it, VS Code falls back to the generic CSS validator.
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}

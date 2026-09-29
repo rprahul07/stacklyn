@@ -81,10 +81,6 @@ const homepageFAQs = [
 
 export function HomepageFAQ() {
   return (
-    <FAQ
-      items={homepageFAQs}
-      title="Frequently Asked Questions About Stacklyn"
-      includeSchema
-    />
+    <FAQ items={homepageFAQs} title="Frequently Asked Questions About Stacklyn" includeSchema />
   );
 }

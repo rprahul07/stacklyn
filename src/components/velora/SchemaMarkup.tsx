@@ -7,9 +7,6 @@ export function SchemaMarkup({ schema }: SchemaMarkupProps) {
     ? { "@context": "https://schema.org", "@graph": schema }
     : schema;
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }

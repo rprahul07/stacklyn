@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "The oil & gas sector operates in extreme environments with complex logistics, strict regulatory frameworks (OSHA, BSEE, PHMSA), and multi-site global operations spanning onshore, offshore, and subsea. Digital transformation in upstream, midstream, and downstream operations is no longer optional — oil majors and independent operators alike are investing in custom platforms that replace legacy systems, reduce operational downtime, and bring real-time intelligence to field operations.",
   painPoints: [
-    { title: "Legacy System Overload", desc: "Outdated SCADA and ERP systems that cannot integrate with modern data pipelines or cloud infrastructure." },
-    { title: "Disconnected Field Operations", desc: "Onshore and offshore teams operating in data silos with no real-time visibility into equipment status, production data, or incident reports." },
-    { title: "HSE Compliance Complexity", desc: "Manual, paper-based safety audits and incident tracking that fail regulatory inspections and create liability exposure." },
-    { title: "Workforce Logistics", desc: "Managing crew rotations, competency tracking, certifications, and mobilization for thousands of field workers across global sites." },
-    { title: "Production Data Fragmentation", desc: "Production data spread across historian databases, spreadsheets, and vendor-specific tools with no unified analytics layer." },
-    { title: "Procurement & Supply Chain Gaps", desc: "Manual procurement workflows for critical well equipment, parts, and consumables causing delays and cost overruns." },
+    {
+      title: "Legacy System Overload",
+      desc: "Outdated SCADA and ERP systems that cannot integrate with modern data pipelines or cloud infrastructure.",
+    },
+    {
+      title: "Disconnected Field Operations",
+      desc: "Onshore and offshore teams operating in data silos with no real-time visibility into equipment status, production data, or incident reports.",
+    },
+    {
+      title: "HSE Compliance Complexity",
+      desc: "Manual, paper-based safety audits and incident tracking that fail regulatory inspections and create liability exposure.",
+    },
+    {
+      title: "Workforce Logistics",
+      desc: "Managing crew rotations, competency tracking, certifications, and mobilization for thousands of field workers across global sites.",
+    },
+    {
+      title: "Production Data Fragmentation",
+      desc: "Production data spread across historian databases, spreadsheets, and vendor-specific tools with no unified analytics layer.",
+    },
+    {
+      title: "Procurement & Supply Chain Gaps",
+      desc: "Manual procurement workflows for critical well equipment, parts, and consumables causing delays and cost overruns.",
+    },
   ],
   solutions: [
     {
@@ -55,13 +73,26 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "TimescaleDB", "InfluxDB",
-    "REST API", "GraphQL", "WebSockets",
-    "SCADA Integration", "OPC-UA", "MQTT",
-    "AWS GovCloud", "Azure",
-    "Docker", "Kubernetes", "Redis",
-    "Power BI Embedding", "D3.js",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "TimescaleDB",
+    "InfluxDB",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
+    "SCADA Integration",
+    "OPC-UA",
+    "MQTT",
+    "AWS GovCloud",
+    "Azure",
+    "Docker",
+    "Kubernetes",
+    "Redis",
+    "Power BI Embedding",
+    "D3.js",
     "React Native (Field Mobile Apps)",
   ],
   clients: [
@@ -74,12 +105,30 @@ const data: IndustryData = {
     "Energy trading and midstream companies",
   ],
   whyStacklyn: [
-    { title: "Industrial-Grade Architecture", desc: "We design software with the reliability, uptime, and security requirements of critical energy infrastructure — not typical web app standards." },
-    { title: "SCADA & Historian Integration Experience", desc: "We've integrated with industrial data systems including OPC-UA, MQTT, PI Historian, and WITSML protocols used across oil & gas operations." },
-    { title: "Regulatory Awareness", desc: "Our team understands HSE regulatory frameworks (OSHA, BSEE, PHMSA) and builds software with audit-ready data trails and compliance reporting built in." },
-    { title: "Offshore & Remote-Capable Systems", desc: "We build offline-first mobile apps and bandwidth-optimised dashboards that work reliably on limited connectivity in remote field and offshore environments." },
-    { title: "Enterprise Security", desc: "Oil & gas systems handle sensitive production, financial, and safety data. We implement end-to-end encryption, RBAC, SSO integration, and audit logging." },
-    { title: "Rapid Time-to-Value", desc: "We deliver working MVP software in 8–12 weeks and iterate fast. MNCs don't wait 18 months for enterprise software — we work at field operations speed." },
+    {
+      title: "Industrial-Grade Architecture",
+      desc: "We design software with the reliability, uptime, and security requirements of critical energy infrastructure — not typical web app standards.",
+    },
+    {
+      title: "SCADA & Historian Integration Experience",
+      desc: "We've integrated with industrial data systems including OPC-UA, MQTT, PI Historian, and WITSML protocols used across oil & gas operations.",
+    },
+    {
+      title: "Regulatory Awareness",
+      desc: "Our team understands HSE regulatory frameworks (OSHA, BSEE, PHMSA) and builds software with audit-ready data trails and compliance reporting built in.",
+    },
+    {
+      title: "Offshore & Remote-Capable Systems",
+      desc: "We build offline-first mobile apps and bandwidth-optimised dashboards that work reliably on limited connectivity in remote field and offshore environments.",
+    },
+    {
+      title: "Enterprise Security",
+      desc: "Oil & gas systems handle sensitive production, financial, and safety data. We implement end-to-end encryption, RBAC, SSO integration, and audit logging.",
+    },
+    {
+      title: "Rapid Time-to-Value",
+      desc: "We deliver working MVP software in 8–12 weeks and iterate fast. MNCs don't wait 18 months for enterprise software — we work at field operations speed.",
+    },
   ],
   faqs: [
     {
@@ -142,33 +191,38 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/oil-gas-software#service`,
-      "name": "Oil & Gas Software Development",
-      "provider": {
+      name: "Oil & Gas Software Development",
+      provider: {
         "@type": "Organization",
-        "name": "Stacklyn",
-        "url": BASE_URL,
+        name: "Stacklyn",
+        url: BASE_URL,
       },
-      "description":
+      description:
         "Custom software development for oil & gas operators, EPC contractors, and energy MNCs. Digital oilfield platforms, HSE systems, crew management, SCADA integration, and regulatory compliance tools.",
-      "areaServed": ["AE", "GB", "US", "SG", "IN", "AU"],
-      "serviceType": "Custom Software Development for Oil & Gas Industry",
+      areaServed: ["AE", "GB", "US", "SG", "IN", "AU"],
+      serviceType: "Custom Software Development for Oil & Gas Industry",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Oil & Gas Software", "item": `${BASE_URL}/industries/oil-gas-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Oil & Gas Software",
+          item: `${BASE_URL}/industries/oil-gas-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": {
+        name: faq.q,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": faq.a,
+          text: faq.a,
         },
       })),
     },
@@ -207,9 +261,7 @@ export const Route = createFileRoute("/industries/oil-gas-software")({
           "Digital oilfield platforms, HSE systems, SCADA integration, crew management software for oil & gas MNCs. From Kerala, India.",
       },
     ],
-    links: [
-      { rel: "canonical", href: `${BASE_URL}/industries/oil-gas-software` },
-    ],
+    links: [{ rel: "canonical", href: `${BASE_URL}/industries/oil-gas-software` }],
   }),
   component: () => <IndustryPage data={data} schema={schemaMarkup} />,
 });

@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "After-sales service is where equipment businesses either build annuity revenue or quietly leak margin. The economics turn on a handful of numbers: first-time fix rate, technician utilisation, average response time, AMC renewal rate, and parts consumed per call. Almost none of those can be measured when jobs are assigned over phone calls, service reports are handwritten carbon copies, and AMC renewals live in a sales manager's calendar reminders. Custom FSM software instruments the whole cycle — from customer complaint to signed service report to invoice — and makes each of those numbers visible per technician, region, and contract.",
   painPoints: [
-    { title: "Phone-Based Dispatch", desc: "Jobs assigned by call with no view of technician location, skill match, or current workload, producing avoidable travel and missed SLAs." },
-    { title: "Handwritten Service Reports", desc: "Carbon-copy job sheets that arrive at the office days later, delaying invoicing and losing the data needed for failure analysis." },
-    { title: "AMC Renewals Slipping", desc: "Annual maintenance contracts expiring unnoticed, with renewals chased reactively and revenue lost to competitors." },
-    { title: "Low First-Time Fix Rates", desc: "Technicians arriving without the right part or equipment history, forcing repeat visits that destroy service profitability." },
-    { title: "Spare Parts Blind Spots", desc: "Van stock, branch stock, and consumption per job untracked, causing both stock-outs and slow-moving inventory buildup." },
-    { title: "No Service Profitability View", desc: "Cost of labour, travel, and parts per job never compared against contract or billing value, so loss-making contracts renew unchallenged." },
+    {
+      title: "Phone-Based Dispatch",
+      desc: "Jobs assigned by call with no view of technician location, skill match, or current workload, producing avoidable travel and missed SLAs.",
+    },
+    {
+      title: "Handwritten Service Reports",
+      desc: "Carbon-copy job sheets that arrive at the office days later, delaying invoicing and losing the data needed for failure analysis.",
+    },
+    {
+      title: "AMC Renewals Slipping",
+      desc: "Annual maintenance contracts expiring unnoticed, with renewals chased reactively and revenue lost to competitors.",
+    },
+    {
+      title: "Low First-Time Fix Rates",
+      desc: "Technicians arriving without the right part or equipment history, forcing repeat visits that destroy service profitability.",
+    },
+    {
+      title: "Spare Parts Blind Spots",
+      desc: "Van stock, branch stock, and consumption per job untracked, causing both stock-outs and slow-moving inventory buildup.",
+    },
+    {
+      title: "No Service Profitability View",
+      desc: "Cost of labour, travel, and parts per job never compared against contract or billing value, so loss-making contracts renew unchallenged.",
+    },
   ],
   solutions: [
     {
@@ -55,16 +73,26 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
     "React Native (Offline Technician Apps)",
     "Mapbox / Google Maps (Routing & Geo-Assignment)",
     "QR / Barcode Equipment Tagging",
     "WhatsApp Business / SMS / Email APIs",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Tally / Zoho / SAP Integration",
     "Payment Gateway Integration",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Recharts / D3.js (Service KPI Dashboards)",
   ],
   clients: [
@@ -77,12 +105,30 @@ const data: IndustryData = {
     "Home appliance and consumer service networks",
   ],
   whyStacklyn: [
-    { title: "Built Around First-Time Fix", desc: "Equipment history, prior failures, and required parts reach the technician before the visit, because the single biggest lever in service economics is not going back twice." },
-    { title: "Genuinely Offline Field Apps", desc: "Basements, plant rooms, and customer sites with no signal are the norm. Our technician apps complete the entire job flow offline and sync safely afterwards." },
-    { title: "AMC Revenue Treated as an Asset", desc: "Renewal pipelines, entitlement consumption, and contract-level profitability are first-class features, not a spreadsheet the service head maintains privately." },
-    { title: "Van Stock That Reconciles", desc: "Parts issued to technicians, consumed on jobs, and returned are tracked as inventory movements, so van stock stops being an unmeasured warehouse on wheels." },
-    { title: "Customer-Visible Service Quality", desc: "Live job status, technician ETA, and digital service reports raise perceived service quality — often the difference at renewal time." },
-    { title: "Deploys Region by Region", desc: "We roll out by branch or region so early adopters generate real data and process fixes before a national or multi-country rollout." },
+    {
+      title: "Built Around First-Time Fix",
+      desc: "Equipment history, prior failures, and required parts reach the technician before the visit, because the single biggest lever in service economics is not going back twice.",
+    },
+    {
+      title: "Genuinely Offline Field Apps",
+      desc: "Basements, plant rooms, and customer sites with no signal are the norm. Our technician apps complete the entire job flow offline and sync safely afterwards.",
+    },
+    {
+      title: "AMC Revenue Treated as an Asset",
+      desc: "Renewal pipelines, entitlement consumption, and contract-level profitability are first-class features, not a spreadsheet the service head maintains privately.",
+    },
+    {
+      title: "Van Stock That Reconciles",
+      desc: "Parts issued to technicians, consumed on jobs, and returned are tracked as inventory movements, so van stock stops being an unmeasured warehouse on wheels.",
+    },
+    {
+      title: "Customer-Visible Service Quality",
+      desc: "Live job status, technician ETA, and digital service reports raise perceived service quality — often the difference at renewal time.",
+    },
+    {
+      title: "Deploys Region by Region",
+      desc: "We roll out by branch or region so early adopters generate real data and process fixes before a national or multi-country rollout.",
+    },
   ],
   faqs: [
     {
@@ -146,27 +192,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/field-service-management-software#service`,
-      "name": "Field Service Management Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Field Service Management Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom field service management software development: job scheduling and dispatch, offline technician mobile apps, AMC and warranty contract management, spare parts and van stock tracking, customer service portals, and service analytics.",
-      "areaServed": ["IN", "AE", "SA", "QA", "GB", "US", "SG", "AU"],
-      "serviceType": "Custom Software Development for Field Service Management",
+      areaServed: ["IN", "AE", "SA", "QA", "GB", "US", "SG", "AU"],
+      serviceType: "Custom Software Development for Field Service Management",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Field Service Management Software", "item": `${BASE_URL}/industries/field-service-management-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Field Service Management Software",
+          item: `${BASE_URL}/industries/field-service-management-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -200,7 +256,8 @@ export const Route = createFileRoute("/industries/field-service-management-softw
       { name: "twitter:title", content: "Field Service Management Software | Stacklyn" },
       {
         name: "twitter:description",
-        content: "Dispatch, offline technician apps, AMC contracts, spare parts, and service KPIs. From Kerala, India.",
+        content:
+          "Dispatch, offline technician apps, AMC contracts, spare parts, and service KPIs. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/field-service-management-software` }],

@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Education products are judged on completion, not on features. A course library nobody finishes and an assessment engine that buckles on results day are the two failure modes that end edtech contracts. The hard engineering sits in unglamorous places: assessment integrity under concurrent load, video delivery on inconsistent mobile connections, progress tracking that survives an app being killed mid-lesson, and reporting that a school administrator can read without training. Custom development matters most where an institution's academic structure — its terms, streams, grading schemes, and fee rules — refuses to fit a generic product.",
   painPoints: [
-    { title: "Low Course Completion", desc: "Content delivered without pacing, nudges, or progress visibility, so enrolments look healthy while completion rates quietly collapse." },
-    { title: "Assessments Failing Under Load", desc: "Exam platforms that degrade when the whole cohort submits at once, creating disputes that damage institutional credibility." },
-    { title: "Rigid Academic Structures", desc: "Off-the-shelf systems that cannot express your terms, streams, electives, grading schemes, or fee rules without painful workarounds." },
-    { title: "Fragmented School Operations", desc: "Admissions, attendance, timetable, fees, exams, and communication running in separate tools with duplicate student records." },
-    { title: "Poor Mobile Learning Experience", desc: "Video-heavy content that fails on patchy connections, with no offline access or resumable playback for learners on mobile data." },
-    { title: "No Real Learning Insight", desc: "Dashboards showing logins and video views but never which concepts a cohort is failing, so intervention comes after the exam." },
+    {
+      title: "Low Course Completion",
+      desc: "Content delivered without pacing, nudges, or progress visibility, so enrolments look healthy while completion rates quietly collapse.",
+    },
+    {
+      title: "Assessments Failing Under Load",
+      desc: "Exam platforms that degrade when the whole cohort submits at once, creating disputes that damage institutional credibility.",
+    },
+    {
+      title: "Rigid Academic Structures",
+      desc: "Off-the-shelf systems that cannot express your terms, streams, electives, grading schemes, or fee rules without painful workarounds.",
+    },
+    {
+      title: "Fragmented School Operations",
+      desc: "Admissions, attendance, timetable, fees, exams, and communication running in separate tools with duplicate student records.",
+    },
+    {
+      title: "Poor Mobile Learning Experience",
+      desc: "Video-heavy content that fails on patchy connections, with no offline access or resumable playback for learners on mobile data.",
+    },
+    {
+      title: "No Real Learning Insight",
+      desc: "Dashboards showing logins and video views but never which concepts a cohort is failing, so intervention comes after the exam.",
+    },
   ],
   solutions: [
     {
@@ -55,17 +73,28 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
     "React Native (Student & Parent Apps)",
     "WebRTC / Live Streaming Infrastructure",
     "Adaptive Bitrate Video & DRM",
     "SCORM / xAPI Support",
     "Elasticsearch (Content & Question Search)",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Payment Gateway Integration (Fees)",
     "LLM Integration (AI Tutoring & Question Generation)",
-    "AWS", "Azure", "CDN", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "CDN",
+    "Docker",
+    "Kubernetes",
     "Recharts / D3.js (Learning Dashboards)",
   ],
   clients: [
@@ -78,12 +107,30 @@ const data: IndustryData = {
     "Publishers moving content to digital delivery",
   ],
   whyStacklyn: [
-    { title: "Completion Is the Metric", desc: "We design for pacing, nudges, and visible progress, because enrolment numbers flatter a product while completion rates decide whether it renews." },
-    { title: "Assessments That Hold on Results Day", desc: "Exam engines are load-tested for the moment an entire cohort submits simultaneously — the single scenario where edtech platforms most often fail publicly." },
-    { title: "Built for Bad Connections", desc: "Offline lessons, resumable playback, and bandwidth-aware streaming reflect how learners on mobile data actually study, not how a demo runs on office wifi." },
-    { title: "Your Academic Structure, Not a Template", desc: "Terms, streams, electives, grading schemes, and fee rules are modelled to match your institution, which is the usual reason generic school products get abandoned." },
-    { title: "Analytics Teachers Can Act On", desc: "We report concept-level mastery and at-risk flags rather than logins and video views, so intervention happens before the exam rather than after it." },
-    { title: "Content Protection Handled Properly", desc: "DRM, watermarking, expiring downloads, and device limits protect paid content without making the legitimate learner experience worse." },
+    {
+      title: "Completion Is the Metric",
+      desc: "We design for pacing, nudges, and visible progress, because enrolment numbers flatter a product while completion rates decide whether it renews.",
+    },
+    {
+      title: "Assessments That Hold on Results Day",
+      desc: "Exam engines are load-tested for the moment an entire cohort submits simultaneously — the single scenario where edtech platforms most often fail publicly.",
+    },
+    {
+      title: "Built for Bad Connections",
+      desc: "Offline lessons, resumable playback, and bandwidth-aware streaming reflect how learners on mobile data actually study, not how a demo runs on office wifi.",
+    },
+    {
+      title: "Your Academic Structure, Not a Template",
+      desc: "Terms, streams, electives, grading schemes, and fee rules are modelled to match your institution, which is the usual reason generic school products get abandoned.",
+    },
+    {
+      title: "Analytics Teachers Can Act On",
+      desc: "We report concept-level mastery and at-risk flags rather than logins and video views, so intervention happens before the exam rather than after it.",
+    },
+    {
+      title: "Content Protection Handled Properly",
+      desc: "DRM, watermarking, expiring downloads, and device limits protect paid content without making the legitimate learner experience worse.",
+    },
   ],
   faqs: [
     {
@@ -147,27 +194,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/edtech-software#service`,
-      "name": "EdTech & Education Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "EdTech & Education Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom edtech software development: learning management systems, assessment and proctoring engines, live class platforms, school and campus ERP, student and parent apps, video infrastructure, and learning analytics.",
-      "areaServed": ["IN", "AE", "SA", "GB", "US", "SG", "AU"],
-      "serviceType": "Custom Software Development for Education and EdTech",
+      areaServed: ["IN", "AE", "SA", "GB", "US", "SG", "AU"],
+      serviceType: "Custom Software Development for Education and EdTech",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "EdTech Software", "item": `${BASE_URL}/industries/edtech-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "EdTech Software",
+          item: `${BASE_URL}/industries/edtech-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -201,7 +258,8 @@ export const Route = createFileRoute("/industries/edtech-software")({
       { name: "twitter:title", content: "EdTech & Education Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "LMS, assessments and proctoring, live classes, school ERP, and learning analytics. From Kerala, India.",
+        content:
+          "LMS, assessments and proctoring, live classes, school ERP, and learning analytics. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/edtech-software` }],

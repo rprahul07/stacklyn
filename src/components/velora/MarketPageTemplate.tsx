@@ -17,62 +17,67 @@ function buildSchema(page: MarketPage) {
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
-        "url": url,
-        "name": page.metaTitle,
-        "description": page.metaDescription,
-        "isPartOf": { "@id": `${BASE_URL}/#website` },
-        "about": { "@id": `${url}#service` },
-        "speakable": {
+        url: url,
+        name: page.metaTitle,
+        description: page.metaDescription,
+        isPartOf: { "@id": `${BASE_URL}/#website` },
+        about: { "@id": `${url}#service` },
+        speakable: {
           "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-intro", "h1"],
+          cssSelector: [".speakable-intro", "h1"],
         },
       },
       {
         "@type": "Service",
         "@id": `${url}#service`,
-        "name": page.name,
-        "serviceType": page.name,
-        "description": page.metaDescription,
-        "url": url,
-        "provider": { "@type": "Organization", "@id": `${BASE_URL}/#organization`, "name": "Stacklyn", "url": BASE_URL },
-        "areaServed": page.areaServed.map((code) => ({ "@type": "Country", "identifier": code })),
-        "hasOfferCatalog": {
+        name: page.name,
+        serviceType: page.name,
+        description: page.metaDescription,
+        url: url,
+        provider: {
+          "@type": "Organization",
+          "@id": `${BASE_URL}/#organization`,
+          name: "Stacklyn",
+          url: BASE_URL,
+        },
+        areaServed: page.areaServed.map((code) => ({ "@type": "Country", identifier: code })),
+        hasOfferCatalog: {
           "@type": "OfferCatalog",
-          "name": `${page.name} — Solutions`,
-          "itemListElement": page.solutions.map((s, i) => ({
+          name: `${page.name} — Solutions`,
+          itemListElement: page.solutions.map((s, i) => ({
             "@type": "Offer",
-            "position": i + 1,
-            "name": s.title,
-            "description": s.desc,
+            position: i + 1,
+            name: s.title,
+            description: s.desc,
           })),
         },
       },
       {
         "@type": "HowTo",
         "@id": `${url}#howto`,
-        "name": `How Stacklyn delivers ${page.name}`,
-        "description": `Stacklyn's delivery process for ${page.name}: from discovery through handover.`,
-        "step": page.delivery.map((step, i) => ({
+        name: `How Stacklyn delivers ${page.name}`,
+        description: `Stacklyn's delivery process for ${page.name}: from discovery through handover.`,
+        step: page.delivery.map((step, i) => ({
           "@type": "HowToStep",
-          "position": i + 1,
-          "name": step.title,
-          "text": step.desc,
+          position: i + 1,
+          name: step.title,
+          text: step.desc,
         })),
       },
       {
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-          { "@type": "ListItem", "position": 2, "name": "Global Markets", "item": `${BASE_URL}/markets` },
-          { "@type": "ListItem", "position": 3, "name": page.name, "item": url },
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+          { "@type": "ListItem", position: 2, name: "Global Markets", item: `${BASE_URL}/markets` },
+          { "@type": "ListItem", position: 3, name: page.name, item: url },
         ],
       },
       {
         "@type": "FAQPage",
-        "mainEntity": page.faqs.map((faq) => ({
+        mainEntity: page.faqs.map((faq) => ({
           "@type": "Question",
-          "name": faq.q,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+          name: faq.q,
+          acceptedAnswer: { "@type": "Answer", text: faq.a },
         })),
       },
     ],
@@ -101,9 +106,17 @@ export function MarketPageView({ page }: { page: MarketPage }) {
           <div className="relative mx-auto max-w-7xl px-6">
             <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+                <li>
+                  <a href="/" className="hover:text-primary transition-colors">
+                    Home
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
-                <li><a href="/markets" className="hover:text-primary transition-colors">Global Markets</a></li>
+                <li>
+                  <a href="/markets" className="hover:text-primary transition-colors">
+                    Global Markets
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
                 <li className="text-foreground font-medium">{page.name}</li>
               </ol>
@@ -161,17 +174,28 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         <section className="cv-auto py-20 md:py-24 border-b border-border">
           <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">{page.region}</div>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-balance">{page.context.heading}</h2>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                {page.region}
+              </div>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-balance">
+                {page.context.heading}
+              </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">{page.context.body}</p>
             </div>
             <div className="rounded-2xl border border-border bg-surface/60 p-8">
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-5">Key Facts</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-5">
+                Key Facts
+              </div>
               <dl className="space-y-4">
                 {page.keyFacts.map((fact) => (
-                  <div key={fact.label} className="grid grid-cols-3 gap-4 border-b border-border pb-4 last:border-0 last:pb-0">
+                  <div
+                    key={fact.label}
+                    className="grid grid-cols-3 gap-4 border-b border-border pb-4 last:border-0 last:pb-0"
+                  >
                     <dt className="text-sm font-semibold text-foreground">{fact.label}</dt>
-                    <dd className="col-span-2 text-sm text-muted-foreground leading-relaxed">{fact.value}</dd>
+                    <dd className="col-span-2 text-sm text-muted-foreground leading-relaxed">
+                      {fact.value}
+                    </dd>
                   </div>
                 ))}
               </dl>
@@ -182,11 +206,18 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         {/* Compliance */}
         <section className="cv-auto py-20 md:py-24 bg-surface/60">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Compliance Built In</div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12 text-balance">{page.compliance.heading}</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Compliance Built In
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12 text-balance">
+              {page.compliance.heading}
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {page.compliance.points.map((point) => (
-                <div key={point.title} className="rounded-2xl border border-border bg-background p-7">
+                <div
+                  key={point.title}
+                  className="rounded-2xl border border-border bg-background p-7"
+                >
                   <h3 className="text-base font-semibold">{point.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{point.desc}</p>
                 </div>
@@ -198,8 +229,12 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         {/* Solutions */}
         <section className="cv-auto py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">What We Build</div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Software We Build for {page.region}</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              What We Build
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
+              Software We Build for {page.region}
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {page.solutions.map((solution, i) => (
                 <motion.div
@@ -210,9 +245,13 @@ export function MarketPageView({ page }: { page: MarketPage }) {
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                   className="rounded-2xl border border-border bg-background p-7 hover:border-primary/30 transition-colors"
                 >
-                  <div className="text-4xl font-bold text-primary/10 mb-3">{String(i + 1).padStart(2, "0")}</div>
+                  <div className="text-4xl font-bold text-primary/10 mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
                   <h3 className="text-base font-semibold">{solution.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{solution.desc}</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {solution.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -222,11 +261,18 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         {/* Delivery model */}
         <section className="cv-auto py-20 md:py-24 bg-surface/60 border-y border-border">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">How We Work</div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Working With Stacklyn From {page.region}</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              How We Work
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
+              Working With Stacklyn From {page.region}
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {page.delivery.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-border bg-background p-7">
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-border bg-background p-7"
+                >
                   <h3 className="text-base font-semibold">{item.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
@@ -235,14 +281,20 @@ export function MarketPageView({ page }: { page: MarketPage }) {
           </div>
         </section>
 
-        <FAQ items={page.faqs} title={`${page.name} — Frequently Asked Questions`} includeSchema={false} />
+        <FAQ
+          items={page.faqs}
+          title={`${page.name} — Frequently Asked Questions`}
+          includeSchema={false}
+        />
 
         {/* Related */}
         <section className="py-16 border-t border-border">
           <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
             {related.length > 0 && (
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Other Markets</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                  Other Markets
+                </div>
                 <h2 className="text-2xl font-semibold tracking-tight mb-6">We Also Serve</h2>
                 <div className="flex flex-wrap gap-3">
                   {related.map((item) => (
@@ -258,7 +310,9 @@ export function MarketPageView({ page }: { page: MarketPage }) {
               </div>
             )}
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Capabilities</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Capabilities
+              </div>
               <h2 className="text-2xl font-semibold tracking-tight mb-6">Related Solutions</h2>
               <div className="flex flex-wrap gap-3">
                 {page.relatedLinks.map((link) => (
@@ -278,13 +332,16 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         {/* Final CTA */}
         <section className="py-24 md:py-32">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">Get Started</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">
+              Get Started
+            </div>
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-balance">
-              Tell us what your operation needs. <span className="text-primary">We reply within 24 hours.</span>
+              Tell us what your operation needs.{" "}
+              <span className="text-primary">We reply within 24 hours.</span>
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Share the workflow you want to digitise and the systems you run today. You get a technical assessment and a
-              phased, fixed-price proposal — with no obligation.
+              Share the workflow you want to digitise and the systems you run today. You get a
+              technical assessment and a phased, fixed-price proposal — with no obligation.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a

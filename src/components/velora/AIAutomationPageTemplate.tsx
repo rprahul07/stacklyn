@@ -8,10 +8,22 @@ import { getAIPage, aiPagePath, type AIAutomationPage } from "@/data/ai-automati
 const BASE_URL = "https://stacklyn.in";
 
 const processSteps = [
-  { title: "Discovery on your real data", desc: "We review sample conversations, documents, or workflows and confirm feasibility before you commit to a build." },
-  { title: "Pilot with measured accuracy", desc: "A working pilot on a slice of real data, scored against an evaluation set agreed with your team." },
-  { title: "Build, integrate, and harden", desc: "Production build with integrations, guardrails, monitoring, and human handover or approval steps." },
-  { title: "Launch, monitor, and improve", desc: "Supervised launch, weekly quality reviews in the first month, and ongoing improvement from real usage." },
+  {
+    title: "Discovery on your real data",
+    desc: "We review sample conversations, documents, or workflows and confirm feasibility before you commit to a build.",
+  },
+  {
+    title: "Pilot with measured accuracy",
+    desc: "A working pilot on a slice of real data, scored against an evaluation set agreed with your team.",
+  },
+  {
+    title: "Build, integrate, and harden",
+    desc: "Production build with integrations, guardrails, monitoring, and human handover or approval steps.",
+  },
+  {
+    title: "Launch, monitor, and improve",
+    desc: "Supervised launch, weekly quality reviews in the first month, and ongoing improvement from real usage.",
+  },
 ];
 
 function buildSchema(page: AIAutomationPage) {
@@ -22,30 +34,40 @@ function buildSchema(page: AIAutomationPage) {
       {
         "@type": "Service",
         "@id": `${url}#service`,
-        "name": page.name,
-        "serviceType": page.name,
-        "description": page.metaDescription,
-        "url": url,
-        "provider": { "@type": "Organization", "@id": `${BASE_URL}/#organization`, "name": "Stacklyn", "url": BASE_URL },
-        "areaServed": [
-          { "@type": "State", "name": "Kerala" },
-          { "@type": "Country", "name": "India" },
+        name: page.name,
+        serviceType: page.name,
+        description: page.metaDescription,
+        url: url,
+        provider: {
+          "@type": "Organization",
+          "@id": `${BASE_URL}/#organization`,
+          name: "Stacklyn",
+          url: BASE_URL,
+        },
+        areaServed: [
+          { "@type": "State", name: "Kerala" },
+          { "@type": "Country", name: "India" },
         ],
       },
       {
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-          { "@type": "ListItem", "position": 2, "name": "AI & Automation", "item": `${BASE_URL}/ai-automation` },
-          { "@type": "ListItem", "position": 3, "name": page.name, "item": url },
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "AI & Automation",
+            item: `${BASE_URL}/ai-automation`,
+          },
+          { "@type": "ListItem", position: 3, name: page.name, item: url },
         ],
       },
       {
         "@type": "FAQPage",
-        "mainEntity": page.faqs.map((faq) => ({
+        mainEntity: page.faqs.map((faq) => ({
           "@type": "Question",
-          "name": faq.q,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+          name: faq.q,
+          acceptedAnswer: { "@type": "Answer", text: faq.a },
         })),
       },
     ],
@@ -54,7 +76,13 @@ function buildSchema(page: AIAutomationPage) {
 
 function CheckIcon() {
   return (
-    <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4">
+    <svg
+      viewBox="0 0 20 20"
+      className="h-3.5 w-3.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+    >
       <path d="M4 10.5l4 4 8-9" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
@@ -77,9 +105,17 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
           <div className="relative mx-auto max-w-7xl px-6">
             <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+                <li>
+                  <a href="/" className="hover:text-primary transition-colors">
+                    Home
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
-                <li><a href="/ai-automation" className="hover:text-primary transition-colors">AI &amp; Automation</a></li>
+                <li>
+                  <a href="/ai-automation" className="hover:text-primary transition-colors">
+                    AI &amp; Automation
+                  </a>
+                </li>
                 <li className="opacity-40">/</li>
                 <li className="text-foreground font-medium">{page.name}</li>
               </ol>
@@ -141,12 +177,18 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
         <section className="py-20 md:py-24 border-b border-border">
           <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">The Real Problem</div>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-balance">{page.context.heading}</h2>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                The Real Problem
+              </div>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-balance">
+                {page.context.heading}
+              </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">{page.context.body}</p>
             </div>
             <div className="rounded-2xl border border-border bg-surface/60 p-8">
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kerala &amp; India</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Kerala &amp; India
+              </div>
               <h3 className="text-xl font-semibold mb-6">{page.localAngle.heading}</h3>
               <ul className="space-y-5">
                 {page.localAngle.points.map((point) => (
@@ -156,7 +198,9 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
                     </span>
                     <div>
                       <div className="text-sm font-semibold">{point.title}</div>
-                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{point.desc}</p>
+                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                        {point.desc}
+                      </p>
                     </div>
                   </li>
                 ))}
@@ -168,8 +212,12 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
         {/* Use cases */}
         <section className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Use Cases</div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">What {page.name} Can Do for Your Business</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Use Cases
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
+              What {page.name} Can Do for Your Business
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {page.useCases.map((useCase, i) => (
                 <motion.div
@@ -181,7 +229,9 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
                   className="rounded-2xl border border-border bg-background p-7 hover:border-primary/30 transition-colors"
                 >
                   <h3 className="text-base font-semibold">{useCase.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{useCase.desc}</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {useCase.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -191,12 +241,21 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
         {/* Deliverables */}
         <section className="py-20 md:py-24 bg-surface/60 border-y border-border">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">What We Deliver</div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">What You Get From Stacklyn</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              What We Deliver
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
+              What You Get From Stacklyn
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {page.deliverables.map((item, i) => (
-                <div key={item.title} className="rounded-2xl border border-border bg-background p-7">
-                  <div className="text-4xl font-bold text-primary/10 mb-3">{String(i + 1).padStart(2, "0")}</div>
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-border bg-background p-7"
+                >
+                  <div className="text-4xl font-bold text-primary/10 mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
                   <h3 className="text-base font-semibold">{item.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
@@ -208,8 +267,12 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
         {/* Process */}
         <section className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">How We Work</div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">From Idea to a Measured, Working System</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              How We Work
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
+              From Idea to a Measured, Working System
+            </h2>
             <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {processSteps.map((step, i) => (
                 <li key={step.title} className="rounded-2xl border border-border bg-background p-7">
@@ -227,11 +290,18 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
         {/* Stack */}
         <section className="py-16 md:py-20 bg-surface/60 border-y border-border">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Technology</div>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">Models, Platforms, and Tools We Use</h2>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              Technology
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+              Models, Platforms, and Tools We Use
+            </h2>
             <div className="flex flex-wrap gap-3">
               {page.stack.map((tool) => (
-                <span key={tool} className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground">
+                <span
+                  key={tool}
+                  className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground"
+                >
                   {tool}
                 </span>
               ))}
@@ -239,15 +309,23 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
           </div>
         </section>
 
-        <FAQ items={page.faqs} title={`${page.name} — Frequently Asked Questions`} includeSchema={false} />
+        <FAQ
+          items={page.faqs}
+          title={`${page.name} — Frequently Asked Questions`}
+          includeSchema={false}
+        />
 
         {/* Related */}
         <section className="py-16 border-t border-border">
           <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
             {related.length > 0 && (
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Related</div>
-                <h2 className="text-2xl font-semibold tracking-tight mb-6">More AI &amp; Automation Solutions</h2>
+                <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                  Related
+                </div>
+                <h2 className="text-2xl font-semibold tracking-tight mb-6">
+                  More AI &amp; Automation Solutions
+                </h2>
                 <div className="flex flex-wrap gap-3">
                   {related.map((item) => (
                     <a
@@ -262,8 +340,12 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
               </div>
             )}
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Services</div>
-              <h2 className="text-2xl font-semibold tracking-tight mb-6">Engineering Services Behind It</h2>
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                Services
+              </div>
+              <h2 className="text-2xl font-semibold tracking-tight mb-6">
+                Engineering Services Behind It
+              </h2>
               <div className="flex flex-wrap gap-3">
                 {page.relatedServices.map((service) => (
                   <a
@@ -282,12 +364,15 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
         {/* Final CTA */}
         <section className="py-24 md:py-32">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">Get Started</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">
+              Get Started
+            </div>
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-balance">
               Find out what <span className="text-primary">{page.name}</span> can do for you.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Share your use case and a few real examples. We will tell you honestly what AI can and cannot do for it, and send a scoped proposal within 48 hours.
+              Share your use case and a few real examples. We will tell you honestly what AI can and
+              cannot do for it, and send a scoped proposal within 48 hours.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a

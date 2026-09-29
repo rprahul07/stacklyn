@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Construction runs on thin margins, long supply chains, and thousands of daily decisions taken at site level — yet most contractors still coordinate through WhatsApp groups, Excel trackers, and PDF drawings. Large contractors run Primavera P6 or MS Project at the planning layer and SAP or Tally at the finance layer, but the site execution layer between them is almost always a spreadsheet. That gap is where cost overruns, rework, delayed variations, and disputed claims are created. Purpose-built execution software closes it by capturing progress, quality, labour, and material data at source.",
   painPoints: [
-    { title: "Site Progress Trapped in Excel", desc: "Daily progress reports compiled manually from site engineers, reaching management days late and too aggregated to act on." },
-    { title: "Drawing Version Chaos", desc: "Site teams working from superseded drawings and revisions, causing rework that is only discovered at inspection stage." },
-    { title: "Subcontractor Billing Disputes", desc: "Manual measurement books and work-done certification creating disputes, delayed RA bills, and unrecoverable claims." },
-    { title: "Material & Equipment Leakage", desc: "No real-time visibility of material consumption against BOQ, idle plant hire, and untracked movement of equipment between sites." },
-    { title: "QA/QC and Snag Backlogs", desc: "Paper-based inspection checklists and snag lists that never close out, holding up handover and retention release." },
-    { title: "Labour Productivity Blind Spots", desc: "No reliable data on manpower deployed versus output achieved per activity, making productivity claims impossible to defend." },
+    {
+      title: "Site Progress Trapped in Excel",
+      desc: "Daily progress reports compiled manually from site engineers, reaching management days late and too aggregated to act on.",
+    },
+    {
+      title: "Drawing Version Chaos",
+      desc: "Site teams working from superseded drawings and revisions, causing rework that is only discovered at inspection stage.",
+    },
+    {
+      title: "Subcontractor Billing Disputes",
+      desc: "Manual measurement books and work-done certification creating disputes, delayed RA bills, and unrecoverable claims.",
+    },
+    {
+      title: "Material & Equipment Leakage",
+      desc: "No real-time visibility of material consumption against BOQ, idle plant hire, and untracked movement of equipment between sites.",
+    },
+    {
+      title: "QA/QC and Snag Backlogs",
+      desc: "Paper-based inspection checklists and snag lists that never close out, holding up handover and retention release.",
+    },
+    {
+      title: "Labour Productivity Blind Spots",
+      desc: "No reliable data on manpower deployed versus output achieved per activity, making productivity claims impossible to defend.",
+    },
   ],
   solutions: [
     {
@@ -55,13 +73,23 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "MongoDB", "Redis",
-    "REST API", "GraphQL", "WebSockets",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "React Native (Offline Site Apps)",
     "Primavera P6 / MS Project Integration",
     "SAP / Tally / Zoho Books Integration",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
     "Mapbox / Leaflet (Site & Asset Mapping)",
     "IFC / BIM Data Integration",
     "Recharts / D3.js (S-Curves & Dashboards)",
@@ -76,12 +104,30 @@ const data: IndustryData = {
     "Construction equipment and plant hire companies",
   ],
   whyStacklyn: [
-    { title: "We Speak Construction, Not Generic SaaS", desc: "BOQ, RA bills, measurement books, ITPs, NCRs, retention, and variation orders are the vocabulary we design around — not an afterthought bolted onto a generic project tool." },
-    { title: "Offline-First Site Apps", desc: "Basements, tunnels, and remote alignments have no signal. Our site apps capture data offline and sync automatically when connectivity returns, with conflict-safe merging." },
-    { title: "Integrates With What You Already Run", desc: "We connect to Primavera P6, MS Project, SAP, Tally, and existing ERP investments rather than asking you to rip out working systems." },
-    { title: "Built for Multi-Project, Multi-Entity Groups", desc: "Role-based access by project, entity, and region, with consolidated group-level reporting for management and board review." },
-    { title: "Photo & Evidence-Led Workflows", desc: "Every progress claim, snag, and inspection carries timestamped, geotagged photo evidence — the difference between a claim that is paid and one that is disputed." },
-    { title: "Rapid Pilot, Then Scale", desc: "We start with one live project as a pilot in 8-12 weeks, prove value against real site data, then roll out across the portfolio." },
+    {
+      title: "We Speak Construction, Not Generic SaaS",
+      desc: "BOQ, RA bills, measurement books, ITPs, NCRs, retention, and variation orders are the vocabulary we design around — not an afterthought bolted onto a generic project tool.",
+    },
+    {
+      title: "Offline-First Site Apps",
+      desc: "Basements, tunnels, and remote alignments have no signal. Our site apps capture data offline and sync automatically when connectivity returns, with conflict-safe merging.",
+    },
+    {
+      title: "Integrates With What You Already Run",
+      desc: "We connect to Primavera P6, MS Project, SAP, Tally, and existing ERP investments rather than asking you to rip out working systems.",
+    },
+    {
+      title: "Built for Multi-Project, Multi-Entity Groups",
+      desc: "Role-based access by project, entity, and region, with consolidated group-level reporting for management and board review.",
+    },
+    {
+      title: "Photo & Evidence-Led Workflows",
+      desc: "Every progress claim, snag, and inspection carries timestamped, geotagged photo evidence — the difference between a claim that is paid and one that is disputed.",
+    },
+    {
+      title: "Rapid Pilot, Then Scale",
+      desc: "We start with one live project as a pilot in 8-12 weeks, prove value against real site data, then roll out across the portfolio.",
+    },
   ],
   faqs: [
     {
@@ -145,27 +191,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/construction-software#service`,
-      "name": "Construction Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Construction Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom software development for construction companies: project controls platforms, digital daily progress reporting, BOQ and subcontractor billing, QA/QC and snagging apps, material and plant management.",
-      "areaServed": ["IN", "AE", "SA", "QA", "OM", "GB", "US", "AU"],
-      "serviceType": "Custom Software Development for Construction Industry",
+      areaServed: ["IN", "AE", "SA", "QA", "OM", "GB", "US", "AU"],
+      serviceType: "Custom Software Development for Construction Industry",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Construction Software", "item": `${BASE_URL}/industries/construction-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Construction Software",
+          item: `${BASE_URL}/industries/construction-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -199,7 +255,8 @@ export const Route = createFileRoute("/industries/construction-software")({
       { name: "twitter:title", content: "Construction Software Development | Stacklyn" },
       {
         name: "twitter:description",
-        content: "Project controls, digital DPR, BOQ billing, QA/QC and snagging apps for contractors. From Kerala, India.",
+        content:
+          "Project controls, digital DPR, BOQ billing, QA/QC and snagging apps for contractors. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/construction-software` }],

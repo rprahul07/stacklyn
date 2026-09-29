@@ -13,12 +13,30 @@ const data: IndustryData = {
   industryContext:
     "Logistics margins are decided by utilisation, dwell time, and exception handling — all of which depend on knowing where things are right now. Most operators run a patchwork: an accounting package, a GPS vendor portal, spreadsheets for trip sheets, and email for customer updates. Data never joins up, so nobody can answer basic questions like true cost per trip, detention hours by customer, or on-time delivery by lane. Custom TMS and WMS platforms unify booking, execution, tracking, and billing so that operations and finance finally read from the same source.",
   painPoints: [
-    { title: "No Single View of Consignments", desc: "Shipment status spread across GPS portals, driver phone calls, and email chains, so customer service cannot answer where the load is." },
-    { title: "Manual Trip Sheets & Billing", desc: "Trip sheets, fuel slips, and freight bills reconciled by hand, delaying invoicing and hiding leakage in detention, halting, and toll costs." },
-    { title: "Poor Warehouse Accuracy", desc: "Bin-level stock inaccuracy, mis-picks, and manual stock counts causing dispatch errors and customer claims." },
-    { title: "Fragmented Fleet Data", desc: "GPS, fuel, tyre, and maintenance data in separate vendor systems, making true cost per kilometre impossible to calculate." },
-    { title: "Customer Visibility Gaps", desc: "Clients demanding portals, ETAs, and proof of delivery that the operator can only supply by manual email, losing tenders to better-instrumented competitors." },
-    { title: "Compliance & Documentation Load", desc: "E-way bills, LR/GC notes, customs paperwork, and POD archives handled manually across branches with no audit trail." },
+    {
+      title: "No Single View of Consignments",
+      desc: "Shipment status spread across GPS portals, driver phone calls, and email chains, so customer service cannot answer where the load is.",
+    },
+    {
+      title: "Manual Trip Sheets & Billing",
+      desc: "Trip sheets, fuel slips, and freight bills reconciled by hand, delaying invoicing and hiding leakage in detention, halting, and toll costs.",
+    },
+    {
+      title: "Poor Warehouse Accuracy",
+      desc: "Bin-level stock inaccuracy, mis-picks, and manual stock counts causing dispatch errors and customer claims.",
+    },
+    {
+      title: "Fragmented Fleet Data",
+      desc: "GPS, fuel, tyre, and maintenance data in separate vendor systems, making true cost per kilometre impossible to calculate.",
+    },
+    {
+      title: "Customer Visibility Gaps",
+      desc: "Clients demanding portals, ETAs, and proof of delivery that the operator can only supply by manual email, losing tenders to better-instrumented competitors.",
+    },
+    {
+      title: "Compliance & Documentation Load",
+      desc: "E-way bills, LR/GC notes, customs paperwork, and POD archives handled manually across branches with no audit trail.",
+    },
   ],
   solutions: [
     {
@@ -55,17 +73,28 @@ const data: IndustryData = {
     },
   ],
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js",
-    "PostgreSQL", "PostGIS", "MongoDB", "Redis",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "PostGIS",
+    "MongoDB",
+    "Redis",
     "React Native (Driver & Warehouse Apps)",
     "Mapbox / Google Maps / OSRM Routing",
     "GPS Telematics API Integration",
     "Barcode & RFID Scanner Integration",
-    "REST API", "GraphQL", "WebSockets",
+    "REST API",
+    "GraphQL",
+    "WebSockets",
     "Kafka / Queue-Based Event Pipelines",
     "E-Way Bill & GST API Integration",
     "SAP / Oracle / Tally Integration",
-    "AWS", "Azure", "Docker", "Kubernetes",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
   ],
   clients: [
     "3PL and contract logistics providers",
@@ -77,12 +106,30 @@ const data: IndustryData = {
     "E-commerce and last-mile delivery businesses",
   ],
   whyStacklyn: [
-    { title: "Operations-First Design", desc: "We model the actual movement — indent, allocation, loading, in-transit exception, unloading, POD, billing — instead of a generic order table with a status column." },
-    { title: "Telematics Vendor Independence", desc: "We aggregate multiple GPS and telematics vendors behind one tracking API, so changing a hardware supplier does not mean rebuilding your platform." },
-    { title: "Low-Connectivity Field Apps", desc: "Driver and warehouse apps work offline across highway dead zones and metal-clad warehouses, syncing reliably once signal returns." },
-    { title: "Billing Logic That Matches Reality", desc: "Detention, halting, multi-point delivery, fuel escalation, and slab-based lane rates are configurable — the areas where generic TMS products usually break." },
-    { title: "Customer-Facing Visibility as a Tender Asset", desc: "A branded customer portal with live tracking and SLA reporting is often what wins the contract. We build it as a first-class part of the platform." },
-    { title: "Scales From One Branch to a Network", desc: "Multi-branch, multi-entity, and multi-client 3PL structures with consolidated reporting are part of the architecture from day one." },
+    {
+      title: "Operations-First Design",
+      desc: "We model the actual movement — indent, allocation, loading, in-transit exception, unloading, POD, billing — instead of a generic order table with a status column.",
+    },
+    {
+      title: "Telematics Vendor Independence",
+      desc: "We aggregate multiple GPS and telematics vendors behind one tracking API, so changing a hardware supplier does not mean rebuilding your platform.",
+    },
+    {
+      title: "Low-Connectivity Field Apps",
+      desc: "Driver and warehouse apps work offline across highway dead zones and metal-clad warehouses, syncing reliably once signal returns.",
+    },
+    {
+      title: "Billing Logic That Matches Reality",
+      desc: "Detention, halting, multi-point delivery, fuel escalation, and slab-based lane rates are configurable — the areas where generic TMS products usually break.",
+    },
+    {
+      title: "Customer-Facing Visibility as a Tender Asset",
+      desc: "A branded customer portal with live tracking and SLA reporting is often what wins the contract. We build it as a first-class part of the platform.",
+    },
+    {
+      title: "Scales From One Branch to a Network",
+      desc: "Multi-branch, multi-entity, and multi-client 3PL structures with consolidated reporting are part of the architecture from day one.",
+    },
   ],
   faqs: [
     {
@@ -146,27 +193,37 @@ const schemaMarkup = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/industries/logistics-supply-chain-software#service`,
-      "name": "Logistics & Supply Chain Software Development",
-      "provider": { "@type": "Organization", "name": "Stacklyn", "url": BASE_URL },
-      "description":
+      name: "Logistics & Supply Chain Software Development",
+      provider: {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "Stacklyn",
+        url: BASE_URL,
+      },
+      description:
         "Custom logistics and supply chain software development: transport management systems, warehouse management systems, live fleet and consignment tracking, driver and POD apps, customer visibility portals, and freight forwarding platforms.",
-      "areaServed": ["IN", "AE", "SA", "SG", "GB", "US", "AU", "QA"],
-      "serviceType": "Custom Software Development for Logistics and Supply Chain",
+      areaServed: ["IN", "AE", "SA", "SG", "GB", "US", "AU", "QA"],
+      serviceType: "Custom Software Development for Logistics and Supply Chain",
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${BASE_URL}/industries` },
-        { "@type": "ListItem", "position": 3, "name": "Logistics & Supply Chain Software", "item": `${BASE_URL}/industries/logistics-supply-chain-software` },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Industries", item: `${BASE_URL}/industries` },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Logistics & Supply Chain Software",
+          item: `${BASE_URL}/industries/logistics-supply-chain-software`,
+        },
       ],
     },
     {
       "@type": "FAQPage",
-      "mainEntity": data.faqs.map((faq) => ({
+      mainEntity: data.faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
     },
   ],
@@ -197,10 +254,14 @@ export const Route = createFileRoute("/industries/logistics-supply-chain-softwar
       { property: "og:image", content: `${BASE_URL}/og-image.png` },
       { property: "og:site_name", content: "Stacklyn" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Logistics & Supply Chain Software Development | Stacklyn" },
+      {
+        name: "twitter:title",
+        content: "Logistics & Supply Chain Software Development | Stacklyn",
+      },
       {
         name: "twitter:description",
-        content: "TMS, WMS, live tracking, driver POD apps, and customer portals for 3PL and transport companies. From Kerala, India.",
+        content:
+          "TMS, WMS, live tracking, driver POD apps, and customer portals for 3PL and transport companies. From Kerala, India.",
       },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/industries/logistics-supply-chain-software` }],
