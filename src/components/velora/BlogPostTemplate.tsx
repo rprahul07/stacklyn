@@ -29,14 +29,24 @@ function buildSchema(post: BlogPost) {
         "articleSection": post.category,
         "keywords": post.keywords,
         "inLanguage": "en",
-        "mainEntityOfPage": url,
-        "image": `${BASE_URL}/og-image.png`,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+        "image": { "@type": "ImageObject", "url": `${BASE_URL}/og-image.png`, "width": 1200, "height": 630 },
+        "wordCount": post.readMinutes * 200,
+        "timeRequired": `PT${post.readMinutes}M`,
         "author": { "@type": "Organization", "@id": `${BASE_URL}/#organization`, "name": "Stacklyn", "url": BASE_URL },
         "publisher": {
           "@type": "Organization",
           "@id": `${BASE_URL}/#organization`,
           "name": "Stacklyn",
-          "logo": { "@type": "ImageObject", "url": `${BASE_URL}/favicon.png` },
+          "logo": { "@type": "ImageObject", "url": `${BASE_URL}/favicon.png`, "width": 512, "height": 512 },
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".speakable-answer", "h1"],
+        },
+        "potentialAction": {
+          "@type": "ReadAction",
+          "target": [url],
         },
       },
       {
@@ -91,7 +101,7 @@ export function BlogPostView({ post }: { post: BlogPost }) {
           <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight text-balance leading-[1.1]">{post.title}</h1>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">{post.dek}</p>
 
-          <aside className="mt-10 rounded-2xl border border-primary/30 bg-primary/5 p-6" aria-label="Short answer">
+          <aside className="speakable-answer mt-10 rounded-2xl border border-primary/30 bg-primary/5 p-6" aria-label="Short answer">
             <div className="text-xs font-semibold uppercase tracking-wider text-primary">Short answer</div>
             <p className="mt-2 text-base text-foreground leading-relaxed">{post.shortAnswer}</p>
           </aside>

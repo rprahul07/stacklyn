@@ -15,6 +15,19 @@ function buildSchema(page: MarketPage) {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        "url": url,
+        "name": page.metaTitle,
+        "description": page.metaDescription,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+        "about": { "@id": `${url}#service` },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".speakable-intro", "h1"],
+        },
+      },
+      {
         "@type": "Service",
         "@id": `${url}#service`,
         "name": page.name,
@@ -22,7 +35,29 @@ function buildSchema(page: MarketPage) {
         "description": page.metaDescription,
         "url": url,
         "provider": { "@type": "Organization", "@id": `${BASE_URL}/#organization`, "name": "Stacklyn", "url": BASE_URL },
-        "areaServed": page.areaServed,
+        "areaServed": page.areaServed.map((code) => ({ "@type": "Country", "identifier": code })),
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": `${page.name} — Solutions`,
+          "itemListElement": page.solutions.map((s, i) => ({
+            "@type": "Offer",
+            "position": i + 1,
+            "name": s.title,
+            "description": s.desc,
+          })),
+        },
+      },
+      {
+        "@type": "HowTo",
+        "@id": `${url}#howto`,
+        "name": `How Stacklyn delivers ${page.name}`,
+        "description": `Stacklyn's delivery process for ${page.name}: from discovery through handover.`,
+        "step": page.delivery.map((step, i) => ({
+          "@type": "HowToStep",
+          "position": i + 1,
+          "name": step.title,
+          "text": step.desc,
+        })),
       },
       {
         "@type": "BreadcrumbList",
@@ -97,7 +132,7 @@ export function MarketPageView({ page }: { page: MarketPage }) {
               initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
+              className="speakable-intro mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
             >
               {page.intro}
             </motion.p>
@@ -123,7 +158,7 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         </section>
 
         {/* Market context + key facts */}
-        <section className="py-20 md:py-24 border-b border-border">
+        <section className="cv-auto py-20 md:py-24 border-b border-border">
           <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">{page.region}</div>
@@ -145,7 +180,7 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         </section>
 
         {/* Compliance */}
-        <section className="py-20 md:py-24 bg-surface/60">
+        <section className="cv-auto py-20 md:py-24 bg-surface/60">
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Compliance Built In</div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12 text-balance">{page.compliance.heading}</h2>
@@ -161,7 +196,7 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         </section>
 
         {/* Solutions */}
-        <section className="py-20 md:py-24">
+        <section className="cv-auto py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">What We Build</div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Software We Build for {page.region}</h2>
@@ -185,7 +220,7 @@ export function MarketPageView({ page }: { page: MarketPage }) {
         </section>
 
         {/* Delivery model */}
-        <section className="py-20 md:py-24 bg-surface/60 border-y border-border">
+        <section className="cv-auto py-20 md:py-24 bg-surface/60 border-y border-border">
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">How We Work</div>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Working With Stacklyn From {page.region}</h2>

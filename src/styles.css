@@ -108,6 +108,7 @@
   }
   .marquee {
     animation: marquee 38s linear infinite;
+    will-change: transform;
   }
   @keyframes marquee {
     from { transform: translateX(0); }
@@ -124,4 +125,31 @@
   .dash-flow {
     stroke-dasharray: 6 8;
   }
+  /**
+   * content-visibility: auto — browser skips layout and paint for off-screen sections
+   * until they are about to scroll into view. Improves LCP and TTI on long pages.
+   * contain-intrinsic-size gives the browser a placeholder height to avoid scroll jump.
+   */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 600px;
+  }
+  /* AEO: speakable regions are identified in JSON-LD; the class itself carries no visual style */
+  .speakable-intro,
+  .speakable-answer {
+    /* intentionally no visual override */
+  }
 }
+
+/* Respect user motion preference: disable all transitions and animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

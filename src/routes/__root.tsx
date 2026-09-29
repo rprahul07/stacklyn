@@ -91,11 +91,84 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      // ── Inter font — display=swap eliminates FOIT; latin subset keeps payload small
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&subset=latin",
+      },
+      // ── Resource hints — reduces DNS + TLS handshake latency for third-parties
+      { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
+      { rel: "dns-prefetch", href: "https://wa.me" },
+      // ── Icons
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "icon", type: "image/png", sizes: "512x512", href: "/favicon.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
     ],
     scripts: [
+      // ── Global Organization + WebSite schema — enables Google sitelinks searchbox
+      // and anchors all page-level Service/FAQPage schemas to a known brand entity.
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://stacklyn.in/#organization",
+              "name": "Stacklyn",
+              "url": "https://stacklyn.in",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://stacklyn.in/favicon.png",
+                "width": 512,
+                "height": 512,
+              },
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-95444-51720",
+                  "contactType": "sales",
+                  "areaServed": ["IN", "AE", "SA", "QA", "OM", "US", "GB", "DE", "IE", "NO", "SE", "DK", "FI", "NL", "AU", "CA"],
+                  "availableLanguage": ["English"],
+                },
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/stacklyn",
+                "https://twitter.com/stacklyn",
+              ],
+              "founder": {
+                "@type": "Person",
+                "name": "Rahul R P",
+                "jobTitle": "Founder & CEO",
+                "url": "https://www.linkedin.com/in/rahulrp07/",
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Kerala",
+                "addressCountry": "IN",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://stacklyn.in/#website",
+              "url": "https://stacklyn.in",
+              "name": "Stacklyn",
+              "description": "Custom software development, AI solutions, and industrial software for global clients. Built in Kerala, India.",
+              "publisher": { "@id": "https://stacklyn.in/#organization" },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://stacklyn.in/blog?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+            },
+          ],
+        }),
+      },
       // After a deploy, an open tab can request code chunks that no longer exist.
       // Reload once to pick up the new version; the 10s guard prevents a reload loop.
       {
