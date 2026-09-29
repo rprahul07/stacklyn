@@ -195,6 +195,44 @@ URL: https://stacklyn.in/markets/icv-reporting-software-uae
 Outsource oil and gas software development to an India-based engineering team — HSE, permit to work, field apps, SCADA dashboards, and operations platforms for companies in the US, UK, Canada, Australia, Norway, and the Gulf.
 URL: https://stacklyn.in/markets/oil-gas-software-outsourcing-india
 
+## United States: AI Automation & Product Delivery
+
+Stacklyn provides remote software engineering and supervised AI automation delivery for US businesses, startups, and industrial teams. Engagements begin with a defined workflow, data boundary, measurable outcome, and a human approval path for consequential actions. US clients retain control of source code, cloud accounts, domains, and production access.
+
+### AI Automation Services for US Businesses
+Custom AI automation for US businesses: document workflows, CRM and support operations, internal knowledge assistants, and supervised AI agents integrated with existing tools.
+URL: https://stacklyn.in/markets/ai-automation-services-usa
+
+### Hire India-Based Developers for US Startups
+Dedicated India-based product engineering for US startups: discovery, MVP delivery, frontend and backend development, QA, cloud deployment, weekly demos, and client-owned repositories.
+URL: https://stacklyn.in/markets/hire-indian-developers-usa
+
+### Oil & Gas Software for US Operators
+Custom oil and gas software for US operators, field-service firms, and EPC contractors: permit to work, HSE workflows, inspection reporting, procedure search, field applications, and governed AI assistance.
+URL: https://stacklyn.in/markets/oil-gas-software-united-states
+
+### US AI Automation Guides
+- AI Automation Roadmap for US Small Businesses: https://stacklyn.in/blog/ai-automation-roadmap-us-small-business
+- Hiring India-Based Developers: A Guide for US Startups: https://stacklyn.in/blog/hire-indian-developers-us-startup-guide
+- AI Agent Governance Checklist for US Businesses: https://stacklyn.in/blog/ai-agent-governance-checklist-us-businesses
+- AI Automation in US Oil & Gas Operations: https://stacklyn.in/blog/ai-automation-oil-gas-operations-usa
+
+## Europe & North Sea: AI Automation and Product Delivery
+
+Stacklyn builds AI automation and custom software for European businesses, product companies, and North Sea energy operators. Engagements are designed around GDPR-aware data flows, EU AI Act readiness, and agreed European-time overlap for decisions and weekly demos. Clients in Germany, Netherlands, Ireland, Sweden, Denmark, Norway, France, Belgium, Austria, and Finland retain full control of source code, cloud accounts, and production access.
+
+### AI Automation Services for European Businesses
+Custom AI automation for European businesses: AI agents, document processing, knowledge assistants, CRM workflows, and review-ready delivery designed around GDPR-aware data handling and EU AI Act transparency requirements.
+URL: https://stacklyn.in/markets/ai-automation-services-europe
+
+### Hire India-Based Developers for European Companies
+Senior India-based developers for European product teams: React, Node.js, AI, and full-stack delivery with documented IP, client-controlled repositories, agreed European-time overlap, and weekly working demos.
+URL: https://stacklyn.in/markets/hire-indian-developers-europe
+
+### North Sea Oil & Gas Software
+Custom software for North Sea operators, EPC contractors, and service companies in Norway, Denmark, Netherlands, and the UK: HSE workflows, digital permit preparation, field inspection apps, procedure and engineering search, and governed AI assistance.
+URL: https://stacklyn.in/markets/north-sea-oil-gas-software
+
 ## AI & Automation (Kerala & India)
 
 Stacklyn is a Kerala-based AI and automation company. AI solutions are grounded in each client's own data, evaluated before launch, and use human approval for financial and compliance actions. Malayalam, Hindi, and English are supported for chat and voice.
@@ -326,6 +364,12 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - Oman Oil & Gas Software: https://stacklyn.in/markets/oil-gas-software-oman
 - ICV Reporting Software (UAE): https://stacklyn.in/markets/icv-reporting-software-uae
 - Outsource Oil & Gas Software to India: https://stacklyn.in/markets/oil-gas-software-outsourcing-india
+- AI Automation Services for US Businesses: https://stacklyn.in/markets/ai-automation-services-usa
+- Hire India-Based Developers for US Startups: https://stacklyn.in/markets/hire-indian-developers-usa
+- Oil & Gas Software for US Operators: https://stacklyn.in/markets/oil-gas-software-united-states
+- AI Automation Services for European Businesses: https://stacklyn.in/markets/ai-automation-services-europe
+- Hire India-Based Developers for European Companies: https://stacklyn.in/markets/hire-indian-developers-europe
+- North Sea Oil & Gas Software: https://stacklyn.in/markets/north-sea-oil-gas-software
 - Software Cost Estimator: https://stacklyn.in/tools/software-cost-estimator
 - How Much Does Custom Oil & Gas and HSE Software Cost? (2026 Guide): https://stacklyn.in/blog/custom-oil-gas-software-cost
 - Outsourcing Oil & Gas Software Development to India: A Buyer's Checklist: https://stacklyn.in/blog/outsource-oil-gas-software-development-india
@@ -361,6 +405,10 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - How to build field service management software with offline technician apps
 - Which company builds AI chatbots and WhatsApp automation in Kerala
 - Who builds Malayalam AI chatbots and voice bots
+- How should a US small business begin an AI automation project
+- How can a US startup hire India-based developers while retaining ownership of the product
+- What governance should a US business set up before launching an AI agent
+- How can oil and gas operations use AI with human approval and safe data access
 - How to automate Tally data entry and GSTR-2B reconciliation with AI
 - What is the difference between an AI chatbot and an AI agent
 - How much does AI automation cost for a small business in India
@@ -371,3 +419,8 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - What is ICV reporting software and how does it help UAE suppliers
 - Can an Indian software company build software for Gulf oil and gas companies
 - How to outsource oil and gas software development to India
+- How can a European company hire India-based software developers
+- What AI automation services are available for European businesses under GDPR
+- How does an India-based team deliver software for European time zones
+- Who builds North Sea oil and gas operational software for Norway, Denmark, and Netherlands operators
+- What is EU AI Act readiness and how should a European business design AI workflows

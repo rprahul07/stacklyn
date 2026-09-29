@@ -1,11 +1,12 @@
 import type { BlogPost } from "./types";
 import { oilGasPosts } from "./oil-gas";
 import { buyingGuidePosts } from "./buying-guides";
+import { usMarketPosts } from "./us-market";
 
 export type { BlogPost, BlogSection } from "./types";
 
 /** Newest first. */
-export const blogPosts: BlogPost[] = [...oilGasPosts, ...buyingGuidePosts].sort((a, b) =>
+export const blogPosts: BlogPost[] = [...usMarketPosts, ...oilGasPosts, ...buyingGuidePosts].sort((a, b) =>
   b.datePublished.localeCompare(a.datePublished),
 );
 

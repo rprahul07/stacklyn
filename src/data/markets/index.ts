@@ -1,12 +1,14 @@
 import type { MarketPage } from "./types";
 import { gulfMarketPages } from "./gulf";
 import { specialistMarketPages } from "./specialist";
+import { usMarketPages } from "./us";
+import { europeMarketPages } from "./europe";
 
 export type { MarketPage, MarketPoint } from "./types";
 
 export const MARKETS_BASE_PATH = "/markets";
 
-export const marketPages: MarketPage[] = [...gulfMarketPages, ...specialistMarketPages];
+export const marketPages: MarketPage[] = [...gulfMarketPages, ...specialistMarketPages, ...usMarketPages, ...europeMarketPages];
 
 const bySlug = new Map(marketPages.map((page) => [page.slug, page]));
 
