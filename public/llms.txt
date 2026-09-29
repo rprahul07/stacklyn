@@ -233,6 +233,25 @@ URL: https://stacklyn.in/markets/hire-indian-developers-europe
 Custom software for North Sea operators, EPC contractors, and service companies in Norway, Denmark, Netherlands, and the UK: HSE workflows, digital permit preparation, field inspection apps, procedure and engineering search, and governed AI assistance.
 URL: https://stacklyn.in/markets/north-sea-oil-gas-software
 
+### AI Automation for German Businesses
+Practical AI automation for German engineering firms and businesses: document processing, knowledge assistants, CRM and ERP workflow automation, and supervised AI agents—designed for Datenschutz requirements and EU AI Act transparency.
+URL: https://stacklyn.in/markets/ai-automation-germany
+
+### Hire India-Based Developers for UK Companies
+Senior India-based developers for UK startups, fintechs, and product companies: React, Node.js, AI, full-stack delivery with IP assignment, client-controlled repositories, and weekly working demos in UK business hours.
+URL: https://stacklyn.in/markets/hire-indian-developers-uk
+
+### Software Development for Irish Companies
+Custom software and AI solutions for Irish businesses and Dublin-based EMEA tech teams: SaaS development, product team extension, MVP delivery, and AI features with IP ownership and weekly demos.
+URL: https://stacklyn.in/markets/software-development-ireland
+
+### AI Automation for Scandinavian Businesses
+Governed AI automation for businesses in Sweden, Denmark, Norway, and Finland: document workflows, knowledge assistants, CRM automation, and supervised AI agents—built for GDPR, NIS2, and EU AI Act compliance.
+URL: https://stacklyn.in/markets/ai-automation-scandinavia
+
+### Renewable Energy Software for European Operators
+Custom software for European wind, solar, and green energy operators: asset performance dashboards, O&M workflows, offline field inspection apps, PPA and regulatory reporting, and AI-assisted document processing.
+URL: https://stacklyn.in/markets/renewable-energy-software-europe
 ## AI & Automation (Kerala & India)
 
 Stacklyn is a Kerala-based AI and automation company. AI solutions are grounded in each client's own data, evaluated before launch, and use human approval for financial and compliance actions. Malayalam, Hindi, and English are supported for chat and voice.
@@ -370,6 +389,11 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - AI Automation Services for European Businesses: https://stacklyn.in/markets/ai-automation-services-europe
 - Hire India-Based Developers for European Companies: https://stacklyn.in/markets/hire-indian-developers-europe
 - North Sea Oil & Gas Software: https://stacklyn.in/markets/north-sea-oil-gas-software
+- AI Automation for German Businesses: https://stacklyn.in/markets/ai-automation-germany
+- Hire India-Based Developers for UK Companies: https://stacklyn.in/markets/hire-indian-developers-uk
+- Software Development for Irish Companies: https://stacklyn.in/markets/software-development-ireland
+- AI Automation for Scandinavian Businesses: https://stacklyn.in/markets/ai-automation-scandinavia
+- Renewable Energy Software for European Operators: https://stacklyn.in/markets/renewable-energy-software-europe
 - Software Cost Estimator: https://stacklyn.in/tools/software-cost-estimator
 - How Much Does Custom Oil & Gas and HSE Software Cost? (2026 Guide): https://stacklyn.in/blog/custom-oil-gas-software-cost
 - Outsourcing Oil & Gas Software Development to India: A Buyer's Checklist: https://stacklyn.in/blog/outsource-oil-gas-software-development-india
