@@ -35,3 +35,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Bun lockfile — this project installs with npm and maintains package-lock.json.
+# A stale bun.lock (untouched since the first commit) made Cloudflare Pages pick
+# bun and fail on `bun install --frozen-lockfile`. Don't reintroduce it unless
+# the project actually switches to bun, in which case delete package-lock.json.
+bun.lock
+bun.lockb
