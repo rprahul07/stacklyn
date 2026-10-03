@@ -16,9 +16,9 @@ import { SchemaMarkup } from "@/components/velora/SchemaMarkup";
 
 const BASE_URL = "https://stacklyn.in";
 
-const PAGE_TITLE = "Stacklyn — Oil & Gas, Industrial & AI Software Development | India & GCC";
+const PAGE_TITLE = "Stacklyn —  AI Software Development | India";
 const PAGE_DESCRIPTION =
-  "Stacklyn builds custom oil and gas, industrial, and AI automation software for companies in the UAE, Saudi Arabia, Qatar, Oman, and worldwide — permit to work, HSE, ICV reporting, operations dashboards, and AI agents. Engineering team based in Kerala, India.";
+  "Stacklyn builds AI automation software for companies in worldwide — reporting, operations dashboards, and AI agents. Engineering team based in Kerala, India.";
 const LAST_MODIFIED = "2026-09-30";
 
 /**
