@@ -15,9 +15,9 @@ import { LeadCTA } from "../components/velora/LeadCTA";
 
 const BASE_URL = "https://stacklyn.in";
 
-const DEFAULT_TITLE = "Stacklyn — Custom Software, Industrial & AI Development | India, GCC & US";
+const DEFAULT_TITLE = "Stacklyn — Custom Software Development Company | Kerala, India";
 const DEFAULT_DESCRIPTION =
-  "Stacklyn builds custom software, industrial systems, and AI automation for companies in India, the GCC, Europe, and the US — web apps, SaaS platforms, MVPs, and AI agents, engineered in Kerala, India.";
+  "Stacklyn is a custom software development company in Kerala, India, building web apps, mobile apps, ERP and CRM systems, SaaS products, e-commerce, and AI automation for businesses worldwide.";
 
 /**
  * Structured-data only: this bio feeds the Person entity in JSON-LD and is never
@@ -49,7 +49,7 @@ const siteSchema = {
       alternateName: "Stacklyn Software",
       url: BASE_URL,
       description:
-        "Stacklyn is a custom software development company in Kerala, India, providing full stack development, AI solutions, SaaS development, and startup MVP development for startups and enterprises globally.",
+        "Stacklyn is a custom software development company in Kerala, India, providing web application development, mobile app development, ERP and CRM development, SaaS and MVP development, e-commerce, UI/UX design, and AI automation for startups, businesses, and enterprises globally.",
       logo: {
         "@type": "ImageObject",
         "@id": `${BASE_URL}/#logo`,
@@ -115,6 +115,12 @@ const siteSchema = {
       currenciesAccepted: "USD, INR",
       paymentAccepted: "Bank Transfer, Wire Transfer",
       serviceType: [
+        "Custom Software Development",
+        "Web Application Development",
+        "Mobile App Development",
+        "ERP and CRM Development",
+        "E-commerce Development",
+        "UI/UX Design",
         "Full Stack Development",
         "MERN Stack Development",
         "Node.js Development",
@@ -123,17 +129,21 @@ const siteSchema = {
         "AI Application Development",
         "SaaS Development",
         "Startup MVP Development",
-        "Custom Software Development",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Software Development Services",
         itemListElement: [
+          ["Custom Software Development", "custom-software-development"],
+          ["Web Application Development", "web-development"],
+          ["Mobile App Development", "mobile-app-development"],
+          ["ERP and CRM Development", "erp-crm-development"],
+          ["E-commerce Development", "ecommerce-development"],
+          ["UI/UX Design", "ui-ux-design"],
           ["Full Stack Development", "full-stack-development"],
           ["MERN Stack Development", "mern-development"],
           ["AI Application Development", "ai-development"],
           ["MVP Development", "mvp-development"],
-          ["Custom Software Development", "custom-software-development"],
         ].map(([name, slug]) => ({
           "@type": "Offer",
           itemOffered: {

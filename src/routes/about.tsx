@@ -28,11 +28,11 @@ const schema = {
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Stacklyn | Oil & Gas, Industrial & AI Software Company in India" },
+      { title: "About Stacklyn | Software Development Company in Kerala, India" },
       {
         name: "description",
         content:
-          "Stacklyn is a software and AI engineering company in Kerala, India, building custom oil and gas, industrial, and AI automation software for companies in India, the Gulf, and worldwide.",
+          "Stacklyn is a custom software development company in Kerala, India, building web apps, mobile apps, ERP and CRM systems, SaaS products, and AI automation for businesses in India and worldwide.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/about` },
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "Custom oil and gas, industrial, and AI automation software, engineered in Kerala, India.",
+          "Web apps, mobile apps, business software, and AI automation, engineered in Kerala, India.",
       },
       { property: "og:image", content: `${BASE_URL}/og-image.png` },
       { name: "twitter:card", content: "summary_large_image" },
@@ -55,7 +55,7 @@ function AboutPage() {
     <SimplePageLayout
       title="About Stacklyn"
       eyebrow="Company"
-      intro="Stacklyn is a software and AI engineering company based in Kerala, India. We build custom software for oil and gas, industrial, and growing businesses in India, the Gulf, and worldwide."
+      intro="Stacklyn is a custom software development company based in Kerala, India. We build web apps, mobile apps, business software, SaaS products, and AI automation for startups, growing businesses, and enterprises in India and worldwide."
       schema={schema}
     >
       <h2>What we build</h2>
@@ -66,11 +66,15 @@ function AboutPage() {
       </p>
       <ul>
         <li>
-          <strong>Oil &amp; gas and industrial software</strong> — digital permit to work, HSE and
-          incident management, in-country value reporting, crew and competency tracking, document
-          control, and operations dashboards. See our{" "}
-          <a href="/markets">Gulf and global market pages</a> and{" "}
-          <a href="/industries">industries</a>.
+          <strong>Web and mobile apps</strong> — business websites, web applications, customer
+          portals, and iOS and Android apps. See{" "}
+          <a href="/services/web-development">web development</a> and{" "}
+          <a href="/services/mobile-app-development">mobile app development</a>.
+        </li>
+        <li>
+          <strong>Business software</strong> — custom ERP, CRM, inventory, billing, and HR systems,
+          and e-commerce stores. See <a href="/services/erp-crm-development">ERP &amp; CRM</a> and{" "}
+          <a href="/services/ecommerce-development">e-commerce</a>.
         </li>
         <li>
           <strong>AI and automation</strong> — chatbots and assistants grounded in your own data, AI
@@ -78,24 +82,30 @@ function AboutPage() {
           <a href="/ai-automation">AI &amp; Automation</a>.
         </li>
         <li>
-          <strong>Custom software and products</strong> — web platforms, mobile apps, SaaS products,
-          and MVPs built on React, Next.js, Node.js, and modern cloud infrastructure.
+          <strong>SaaS products and MVPs</strong> — from idea to launched product on React, Next.js,
+          Node.js, and modern cloud infrastructure. See{" "}
+          <a href="/services/mvp-development">MVP development</a>.
+        </li>
+        <li>
+          <strong>Industry software</strong> — systems for construction, logistics, healthcare,
+          manufacturing, oil and gas, and other sectors. See <a href="/industries">industries</a>.
         </li>
       </ul>
 
       <h2>Who we work with</h2>
       <p>
-        Oil and gas operators, EPC contractors, and service companies; manufacturers, logistics and
-        facility management firms; and small and mid-sized businesses and startups that need an
-        engineering team rather than a vendor that resells templates.
+        Startups and founders, small and mid-sized businesses, and larger companies in any industry
+        — retail, healthcare, education, finance, real estate, logistics, manufacturing,
+        construction, and energy — that need an engineering team rather than a vendor that resells
+        templates.
       </p>
 
       <h2>Where we work</h2>
       <p>
-        Our engineering team is in Kerala, India. We work with clients across India, in the UAE,
-        Saudi Arabia, Qatar, and Oman, and in the UK, Europe, North America, and Australia. India is
-        1.5 hours ahead of the UAE and Oman and 2.5 hours ahead of Saudi Arabia and Qatar, so most
-        of a Gulf working day overlaps with ours.
+        Our engineering team is in Kerala, India. We work with clients across India and abroad,
+        communicating over WhatsApp, email, and video calls. Our working hours overlap with most of
+        the Gulf and European business day, and we schedule calls to suit clients in the US and
+        Australia.
       </p>
 
       <h2>How we work</h2>

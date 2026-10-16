@@ -209,12 +209,12 @@ export function BlogPostView({ post }: { post: BlogPost }) {
 
           <div className="mt-16 rounded-2xl border border-border bg-surface/60 p-8">
             <h2 className="text-2xl font-semibold tracking-tight">
-              Need this built for your operation?
+              Need software built for your business?
             </h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Stacklyn builds custom oil and gas, industrial, and AI automation software. Tell us
-              what you need and we reply within 24 hours, or get a ballpark price in two minutes
-              with our free cost estimator.
+              Stacklyn builds custom software, web and mobile apps, and AI automation. Tell us what
+              you need and we reply within 24 hours, or get a ballpark price in two minutes with our
+              free cost estimator.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a

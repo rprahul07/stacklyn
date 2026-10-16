@@ -30,12 +30,17 @@ import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as AiAutomationIndexRouteImport } from './routes/ai-automation/index'
 import { Route as ToolsSoftwareCostEstimatorRouteImport } from './routes/tools/software-cost-estimator'
+import { Route as ServicesWebDevelopmentRouteImport } from './routes/services/web-development'
+import { Route as ServicesUiUxDesignRouteImport } from './routes/services/ui-ux-design'
 import { Route as ServicesReactDevelopmentRouteImport } from './routes/services/react-development'
 import { Route as ServicesNodejsDevelopmentRouteImport } from './routes/services/nodejs-development'
 import { Route as ServicesNextjsDevelopmentRouteImport } from './routes/services/nextjs-development'
 import { Route as ServicesMvpDevelopmentRouteImport } from './routes/services/mvp-development'
+import { Route as ServicesMobileAppDevelopmentRouteImport } from './routes/services/mobile-app-development'
 import { Route as ServicesMernDevelopmentRouteImport } from './routes/services/mern-development'
 import { Route as ServicesFullStackDevelopmentRouteImport } from './routes/services/full-stack-development'
+import { Route as ServicesErpCrmDevelopmentRouteImport } from './routes/services/erp-crm-development'
+import { Route as ServicesEcommerceDevelopmentRouteImport } from './routes/services/ecommerce-development'
 import { Route as ServicesCustomSoftwareDevelopmentRouteImport } from './routes/services/custom-software-development'
 import { Route as ServicesBackendDevelopmentRouteImport } from './routes/services/backend-development'
 import { Route as ServicesAiDevelopmentRouteImport } from './routes/services/ai-development'
@@ -167,6 +172,16 @@ const ToolsSoftwareCostEstimatorRoute =
     path: '/tools/software-cost-estimator',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ServicesWebDevelopmentRoute = ServicesWebDevelopmentRouteImport.update({
+  id: '/web-development',
+  path: '/web-development',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesUiUxDesignRoute = ServicesUiUxDesignRouteImport.update({
+  id: '/ui-ux-design',
+  path: '/ui-ux-design',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const ServicesReactDevelopmentRoute =
   ServicesReactDevelopmentRouteImport.update({
     id: '/react-development',
@@ -190,6 +205,12 @@ const ServicesMvpDevelopmentRoute = ServicesMvpDevelopmentRouteImport.update({
   path: '/mvp-development',
   getParentRoute: () => ServicesRoute,
 } as any)
+const ServicesMobileAppDevelopmentRoute =
+  ServicesMobileAppDevelopmentRouteImport.update({
+    id: '/mobile-app-development',
+    path: '/mobile-app-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
 const ServicesMernDevelopmentRoute = ServicesMernDevelopmentRouteImport.update({
   id: '/mern-development',
   path: '/mern-development',
@@ -199,6 +220,18 @@ const ServicesFullStackDevelopmentRoute =
   ServicesFullStackDevelopmentRouteImport.update({
     id: '/full-stack-development',
     path: '/full-stack-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesErpCrmDevelopmentRoute =
+  ServicesErpCrmDevelopmentRouteImport.update({
+    id: '/erp-crm-development',
+    path: '/erp-crm-development',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesEcommerceDevelopmentRoute =
+  ServicesEcommerceDevelopmentRouteImport.update({
+    id: '/ecommerce-development',
+    path: '/ecommerce-development',
     getParentRoute: () => ServicesRoute,
   } as any)
 const ServicesCustomSoftwareDevelopmentRoute =
@@ -382,12 +415,17 @@ export interface FileRoutesByFullPath {
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
+  '/services/ecommerce-development': typeof ServicesEcommerceDevelopmentRoute
+  '/services/erp-crm-development': typeof ServicesErpCrmDevelopmentRoute
   '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
   '/services/mern-development': typeof ServicesMernDevelopmentRoute
+  '/services/mobile-app-development': typeof ServicesMobileAppDevelopmentRoute
   '/services/mvp-development': typeof ServicesMvpDevelopmentRoute
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/services/ui-ux-design': typeof ServicesUiUxDesignRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
   '/tools/software-cost-estimator': typeof ToolsSoftwareCostEstimatorRoute
   '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
@@ -430,12 +468,17 @@ export interface FileRoutesByTo {
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
+  '/services/ecommerce-development': typeof ServicesEcommerceDevelopmentRoute
+  '/services/erp-crm-development': typeof ServicesErpCrmDevelopmentRoute
   '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
   '/services/mern-development': typeof ServicesMernDevelopmentRoute
+  '/services/mobile-app-development': typeof ServicesMobileAppDevelopmentRoute
   '/services/mvp-development': typeof ServicesMvpDevelopmentRoute
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/services/ui-ux-design': typeof ServicesUiUxDesignRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
   '/tools/software-cost-estimator': typeof ToolsSoftwareCostEstimatorRoute
   '/ai-automation': typeof AiAutomationIndexRoute
   '/blog': typeof BlogIndexRoute
@@ -484,12 +527,17 @@ export interface FileRoutesById {
   '/services/ai-development': typeof ServicesAiDevelopmentRoute
   '/services/backend-development': typeof ServicesBackendDevelopmentRoute
   '/services/custom-software-development': typeof ServicesCustomSoftwareDevelopmentRoute
+  '/services/ecommerce-development': typeof ServicesEcommerceDevelopmentRoute
+  '/services/erp-crm-development': typeof ServicesErpCrmDevelopmentRoute
   '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
   '/services/mern-development': typeof ServicesMernDevelopmentRoute
+  '/services/mobile-app-development': typeof ServicesMobileAppDevelopmentRoute
   '/services/mvp-development': typeof ServicesMvpDevelopmentRoute
   '/services/nextjs-development': typeof ServicesNextjsDevelopmentRoute
   '/services/nodejs-development': typeof ServicesNodejsDevelopmentRoute
   '/services/react-development': typeof ServicesReactDevelopmentRoute
+  '/services/ui-ux-design': typeof ServicesUiUxDesignRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
   '/tools/software-cost-estimator': typeof ToolsSoftwareCostEstimatorRoute
   '/ai-automation/': typeof AiAutomationIndexRoute
   '/blog/': typeof BlogIndexRoute
@@ -539,12 +587,17 @@ export interface FileRouteTypes {
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
+    | '/services/ecommerce-development'
+    | '/services/erp-crm-development'
     | '/services/full-stack-development'
     | '/services/mern-development'
+    | '/services/mobile-app-development'
     | '/services/mvp-development'
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/services/ui-ux-design'
+    | '/services/web-development'
     | '/tools/software-cost-estimator'
     | '/ai-automation/'
     | '/blog/'
@@ -587,12 +640,17 @@ export interface FileRouteTypes {
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
+    | '/services/ecommerce-development'
+    | '/services/erp-crm-development'
     | '/services/full-stack-development'
     | '/services/mern-development'
+    | '/services/mobile-app-development'
     | '/services/mvp-development'
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/services/ui-ux-design'
+    | '/services/web-development'
     | '/tools/software-cost-estimator'
     | '/ai-automation'
     | '/blog'
@@ -640,12 +698,17 @@ export interface FileRouteTypes {
     | '/services/ai-development'
     | '/services/backend-development'
     | '/services/custom-software-development'
+    | '/services/ecommerce-development'
+    | '/services/erp-crm-development'
     | '/services/full-stack-development'
     | '/services/mern-development'
+    | '/services/mobile-app-development'
     | '/services/mvp-development'
     | '/services/nextjs-development'
     | '/services/nodejs-development'
     | '/services/react-development'
+    | '/services/ui-ux-design'
+    | '/services/web-development'
     | '/tools/software-cost-estimator'
     | '/ai-automation/'
     | '/blog/'
@@ -822,6 +885,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsSoftwareCostEstimatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/web-development': {
+      id: '/services/web-development'
+      path: '/web-development'
+      fullPath: '/services/web-development'
+      preLoaderRoute: typeof ServicesWebDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/ui-ux-design': {
+      id: '/services/ui-ux-design'
+      path: '/ui-ux-design'
+      fullPath: '/services/ui-ux-design'
+      preLoaderRoute: typeof ServicesUiUxDesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/react-development': {
       id: '/services/react-development'
       path: '/react-development'
@@ -850,6 +927,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesMvpDevelopmentRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/services/mobile-app-development': {
+      id: '/services/mobile-app-development'
+      path: '/mobile-app-development'
+      fullPath: '/services/mobile-app-development'
+      preLoaderRoute: typeof ServicesMobileAppDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/mern-development': {
       id: '/services/mern-development'
       path: '/mern-development'
@@ -862,6 +946,20 @@ declare module '@tanstack/react-router' {
       path: '/full-stack-development'
       fullPath: '/services/full-stack-development'
       preLoaderRoute: typeof ServicesFullStackDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/erp-crm-development': {
+      id: '/services/erp-crm-development'
+      path: '/erp-crm-development'
+      fullPath: '/services/erp-crm-development'
+      preLoaderRoute: typeof ServicesErpCrmDevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/ecommerce-development': {
+      id: '/services/ecommerce-development'
+      path: '/ecommerce-development'
+      fullPath: '/services/ecommerce-development'
+      preLoaderRoute: typeof ServicesEcommerceDevelopmentRouteImport
       parentRoute: typeof ServicesRoute
     }
     '/services/custom-software-development': {
@@ -1133,12 +1231,17 @@ interface ServicesRouteChildren {
   ServicesAiDevelopmentRoute: typeof ServicesAiDevelopmentRoute
   ServicesBackendDevelopmentRoute: typeof ServicesBackendDevelopmentRoute
   ServicesCustomSoftwareDevelopmentRoute: typeof ServicesCustomSoftwareDevelopmentRoute
+  ServicesEcommerceDevelopmentRoute: typeof ServicesEcommerceDevelopmentRoute
+  ServicesErpCrmDevelopmentRoute: typeof ServicesErpCrmDevelopmentRoute
   ServicesFullStackDevelopmentRoute: typeof ServicesFullStackDevelopmentRoute
   ServicesMernDevelopmentRoute: typeof ServicesMernDevelopmentRoute
+  ServicesMobileAppDevelopmentRoute: typeof ServicesMobileAppDevelopmentRoute
   ServicesMvpDevelopmentRoute: typeof ServicesMvpDevelopmentRoute
   ServicesNextjsDevelopmentRoute: typeof ServicesNextjsDevelopmentRoute
   ServicesNodejsDevelopmentRoute: typeof ServicesNodejsDevelopmentRoute
   ServicesReactDevelopmentRoute: typeof ServicesReactDevelopmentRoute
+  ServicesUiUxDesignRoute: typeof ServicesUiUxDesignRoute
+  ServicesWebDevelopmentRoute: typeof ServicesWebDevelopmentRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
@@ -1147,12 +1250,17 @@ const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesBackendDevelopmentRoute: ServicesBackendDevelopmentRoute,
   ServicesCustomSoftwareDevelopmentRoute:
     ServicesCustomSoftwareDevelopmentRoute,
+  ServicesEcommerceDevelopmentRoute: ServicesEcommerceDevelopmentRoute,
+  ServicesErpCrmDevelopmentRoute: ServicesErpCrmDevelopmentRoute,
   ServicesFullStackDevelopmentRoute: ServicesFullStackDevelopmentRoute,
   ServicesMernDevelopmentRoute: ServicesMernDevelopmentRoute,
+  ServicesMobileAppDevelopmentRoute: ServicesMobileAppDevelopmentRoute,
   ServicesMvpDevelopmentRoute: ServicesMvpDevelopmentRoute,
   ServicesNextjsDevelopmentRoute: ServicesNextjsDevelopmentRoute,
   ServicesNodejsDevelopmentRoute: ServicesNodejsDevelopmentRoute,
   ServicesReactDevelopmentRoute: ServicesReactDevelopmentRoute,
+  ServicesUiUxDesignRoute: ServicesUiUxDesignRoute,
+  ServicesWebDevelopmentRoute: ServicesWebDevelopmentRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 

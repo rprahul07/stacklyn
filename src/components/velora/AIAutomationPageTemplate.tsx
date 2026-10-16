@@ -390,7 +390,7 @@ export function AIAutomationPageView({ page }: { page: AIAutomationPage }) {
             </div>
             <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs text-muted-foreground">
               <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              Based in Kerala · Serving businesses across India and the Gulf
+              Based in Kerala · Serving businesses across India and worldwide
             </div>
           </div>
         </section>

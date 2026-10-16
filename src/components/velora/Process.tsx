@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
 
 const steps = [
-  ["Discovery", "Understand the problem, audience, and constraints."],
-  ["Strategy", "Define scope, architecture, and a clear delivery plan."],
-  ["Design", "Craft interfaces, flows, and a coherent design system."],
-  ["Development", "Build in iterative cycles with continuous reviews."],
-  ["Testing", "Automated and manual QA across critical user paths."],
-  ["Deployment", "Ship to production with CI/CD and observability."],
-  ["Growth", "Iterate, measure, and scale with confidence."],
+  ["Discovery", "Understand your business, users, and goals — free first call."],
+  ["Proposal", "Fixed-price scope, architecture, and a phased delivery plan."],
+  ["Design", "Wireframes, user flows, and a clean interface your users will like."],
+  ["Development", "Build in short sprints with a working demo every week."],
+  ["Testing", "Automated and manual QA across devices and critical user paths."],
+  ["Launch", "Deploy to the web, App Store, or Play Store with monitoring in place."],
+  ["Support", "Maintenance, new features, and scaling as your business grows."],
 ];
 
 export function Process() {

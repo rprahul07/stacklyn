@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
 
 const rows = [
-  ["Direct founder communication", true, false],
+  ["One team for web, mobile, AI & cloud", true, false],
+  ["Direct senior engineer access", true, false],
+  ["Fixed-price delivery phases", true, false],
   ["Modern, type-safe tech stack", true, false],
-  ["Faster delivery cycles", true, false],
   ["Scalable, cloud-native architecture", true, false],
-  ["AI-first product thinking", true, false],
   ["Transparent roadmaps & weekly demos", true, false],
 ];
 

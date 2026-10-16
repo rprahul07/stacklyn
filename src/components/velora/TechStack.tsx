@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
 
 const groups = [
-  { title: "Frontend", items: ["React", "Next.js", "Flutter", "TypeScript"] },
+  { title: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind"] },
+  { title: "Mobile", items: ["Flutter", "React Native", "iOS", "Android"] },
   { title: "Backend", items: ["Node.js", "Express", "NestJS"] },
   { title: "Database", items: ["PostgreSQL", "MongoDB", "Redis"] },
-  { title: "Cloud", items: ["AWS", "Azure", "Docker"] },
-  { title: "AI", items: ["OpenAI", "LangChain", "Vector DBs"] },
+  { title: "Cloud", items: ["AWS", "Azure", "Docker", "CI/CD"] },
+  { title: "AI", items: ["OpenAI", "Anthropic", "LangChain", "Vector DBs"] },
 ];
 
 export function TechStack() {
@@ -19,7 +20,7 @@ export function TechStack() {
           description="We pick the right tool for the job — proven where it matters, modern where it pays off."
         />
 
-        <div className="mt-16 grid lg:grid-cols-5 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+        <div className="mt-16 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-border rounded-2xl overflow-hidden border border-border">
           {groups.map((g, i) => (
             <motion.div
               key={g.title}

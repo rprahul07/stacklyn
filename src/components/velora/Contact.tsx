@@ -4,12 +4,14 @@ import { sendContactEmail } from "@/lib/api/contact.functions";
 import { trackLead } from "@/lib/analytics";
 
 const projectTypes = [
-  "Oil & Gas / Industrial Software",
-  "Business Automation",
-  "AI Solution",
-  "Web App",
+  "Web App / Website",
   "Mobile App",
-  "SaaS Product",
+  "Custom Software / ERP / CRM",
+  "AI / Automation",
+  "SaaS Product / MVP",
+  "E-commerce",
+  "UI/UX Design",
+  "Industrial Software",
   "Cloud / DevOps",
   "Other",
 ];
@@ -140,8 +142,7 @@ export function Contact() {
 
           <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Response within 24 hours · Working hours overlap with the UAE, Saudi Arabia, Qatar, and
-            Oman
+            Response within 24 hours · Working with clients in India and worldwide
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
             Want a ballpark first?{" "}

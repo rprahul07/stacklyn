@@ -11,19 +11,20 @@ export function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Serving the UAE, Saudi Arabia, Qatar, Oman &amp; worldwide
+            Software development company · Kerala, India · Clients worldwide
           </div>
 
           <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-balance leading-[1.05]">
-            Oil &amp; Gas, Industrial &amp; AI Software
+            Custom Software Development
             <br />
-            <span className="text-primary">for the Gulf and Beyond.</span>
+            <span className="text-primary">for Web, Mobile &amp; AI.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Stacklyn builds custom software for oil and gas, industrial, and growing businesses —
-            digital permit to work, HSE, ICV reporting, operations dashboards, and AI automation.
-            Senior engineers in Kerala, India, fixed-price phases, and a reply within 24 hours.
+            Stacklyn builds web applications, mobile apps, ERP and CRM systems, SaaS products,
+            e-commerce, and AI automation for startups, growing businesses, and enterprises in any
+            industry — fixed-price phases, senior engineers in Kerala, India, and a reply within 24
+            hours.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -35,10 +36,10 @@ export function Hero() {
               <span aria-hidden>→</span>
             </a>
             <a
-              href="/markets"
+              href="/tools/software-cost-estimator"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 h-12 text-sm font-medium text-foreground hover:bg-surface transition-colors"
             >
-              Gulf Oil &amp; Gas Software
+              Get a Free Cost Estimate
             </a>
           </div>
 

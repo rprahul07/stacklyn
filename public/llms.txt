@@ -1,13 +1,13 @@
 # Stacklyn
 
-> Stacklyn is a software development company in Kerala, India, providing custom software development, AI solutions, SaaS development, and startup MVP development for global clients.
+> Stacklyn is a custom software development company in Kerala, India, building websites and web apps, mobile apps (iOS and Android), ERP and CRM systems, e-commerce stores, SaaS products and MVPs, UI/UX design, and AI automation for businesses of every size and industry, worldwide.
 
 ## About Stacklyn
 
 Stacklyn is a full-service software engineering and AI solutions studio founded in Kerala, India. The company builds scalable web applications, AI-powered products, and cloud-native systems for startups, SMEs, SaaS companies, and enterprises worldwide. Stacklyn operates with the speed and focus of a startup team while delivering enterprise-grade engineering quality.
 
 **Founded:** Kerala, India
-**Services:** Full Stack Development, MERN Stack, Node.js, React, Next.js, AI Development, SaaS, MVP Development, Custom Software
+**Services:** Custom Software, Web Application Development, Mobile App Development, ERP & CRM Development, E-commerce Development, UI/UX Design, AI Development & Automation, SaaS & MVP Development, Full Stack Development (MERN, Node.js, React, Next.js)
 **Contact:** rahulrp@stacklyn.in | +91 95444 51720
 **Website:** https://stacklyn.in
 **Founder & CEO:** Rahul R P
@@ -28,6 +28,30 @@ Rahul R P is the founder and CEO of Stacklyn, a custom software development and 
 **LinkedIn:** https://www.linkedin.com/in/rahulrp07/
 
 ## Core Services
+
+### Custom Software Development
+Stacklyn delivers custom software for businesses that need tailored platforms beyond off-the-shelf tools: business software, portals, internal tools, workflow automation, and integrations.
+URL: https://stacklyn.in/services/custom-software-development
+
+### Web Application & Website Development
+Fast, SEO-ready business websites and custom web applications: customer and vendor portals, booking and ordering systems, dashboards, and admin panels. Typical cost: websites from about $1,500; web apps $4,000–15,000.
+URL: https://stacklyn.in/services/web-development
+
+### Mobile App Development (iOS & Android)
+Cross-platform iOS and Android apps with Flutter and React Native, including the backend, admin panel, and App Store and Google Play publishing. Typical cost: $6,000–18,000 for most business apps.
+URL: https://stacklyn.in/services/mobile-app-development
+
+### ERP & CRM Development
+Custom ERP, CRM, inventory, billing, and HR software that fits the client's process, with Tally, Zoho, and QuickBooks integration and no per-user fees, delivered in fixed-price modules ($5,000–12,000 per module).
+URL: https://stacklyn.in/services/erp-crm-development
+
+### E-commerce Development
+Shopify stores, custom online stores, and multi-vendor marketplaces with mobile checkout, payment gateways (Razorpay, Stripe, PayPal), inventory, and delivery tracking.
+URL: https://stacklyn.in/services/ecommerce-development
+
+### UI/UX Design
+User flows, wireframes, clickable prototypes, and design systems in Figma for web apps, mobile apps, SaaS dashboards, and websites.
+URL: https://stacklyn.in/services/ui-ux-design
 
 ### Full Stack Development
 Stacklyn builds end-to-end web platforms using React, Next.js, Node.js, Express, PostgreSQL, and MongoDB. Services include web applications, admin dashboards, REST APIs, GraphQL APIs, and database design.
@@ -61,13 +85,9 @@ URL: https://stacklyn.in/services/ai-development
 Stacklyn builds startup MVPs in 8–12 weeks using modern, scalable technologies. Services include product scoping, UI/UX design, full stack development, cloud deployment, and post-launch iteration.
 URL: https://stacklyn.in/services/mvp-development
 
-### Custom Software Development
-Stacklyn delivers custom software solutions for businesses that need tailored platforms beyond off-the-shelf tools. Services include enterprise software, internal tools, workflow automation, and data platforms.
-URL: https://stacklyn.in/services/custom-software-development
-
 ## Industries Stacklyn Serves
 
-Stacklyn builds industry-specific enterprise software for industrial companies and MNCs. Each industry practice combines domain workflow knowledge with modern engineering.
+Stacklyn builds software for businesses in any industry, plus industry-specific systems for the sectors below. Each industry practice combines domain workflow knowledge with modern engineering.
 
 ### Oil & Gas Software
 Digital oilfield platforms, HSE compliance systems, SCADA integration dashboards, crew rotation management, and regulatory reporting for operators and EPC contractors.
@@ -159,8 +179,8 @@ URL: https://stacklyn.in/blog/what-is-permit-to-work-system
 The UAE ICV certificate measures how much a company contributes to the UAE economy. Under the National In-Country Value Program run by MoIAT, approved certification bodies calculate a score from audited financial statements. It covers UAE goods and third-party spend, investment, Emiratisation, expatriate contribution, and bonus factors. A higher score improves how you are evaluated in tenders.
 URL: https://stacklyn.in/blog/uae-icv-certificate-score-guide
 
-### Oil & Gas Software Cost Estimator (free tool)
-Interactive estimator for the cost and timeline of custom oil and gas, HSE, permit to work, ICV reporting, and industrial software, based on Stacklyn's published USD price ranges.
+### Software Development Cost Calculator (free tool)
+Interactive estimator for the cost and timeline of websites, web apps, mobile apps, ERP and CRM, e-commerce, SaaS, AI automation, and industrial software, based on Stacklyn's published USD price ranges.
 URL: https://stacklyn.in/tools/software-cost-estimator
 
 ### About Stacklyn
@@ -344,6 +364,11 @@ URL: https://stacklyn.in/ai-automation/hr-recruitment-automation
 - AI Development: https://stacklyn.in/services/ai-development
 - MVP Development: https://stacklyn.in/services/mvp-development
 - Custom Software: https://stacklyn.in/services/custom-software-development
+- Web Development: https://stacklyn.in/services/web-development
+- Mobile App Development: https://stacklyn.in/services/mobile-app-development
+- ERP & CRM Development: https://stacklyn.in/services/erp-crm-development
+- E-commerce Development: https://stacklyn.in/services/ecommerce-development
+- UI/UX Design: https://stacklyn.in/services/ui-ux-design
 - Industries Overview: https://stacklyn.in/industries
 - Oil & Gas Software: https://stacklyn.in/industries/oil-gas-software
 - Mining Software: https://stacklyn.in/industries/mining-software

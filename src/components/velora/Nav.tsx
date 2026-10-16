@@ -12,6 +12,12 @@ const links = [
 ];
 
 const serviceLinks = [
+  { href: "/services/custom-software-development", label: "Custom Software" },
+  { href: "/services/web-development", label: "Web Development" },
+  { href: "/services/mobile-app-development", label: "Mobile App Development" },
+  { href: "/services/erp-crm-development", label: "ERP & CRM Development" },
+  { href: "/services/ecommerce-development", label: "E-commerce Development" },
+  { href: "/services/ui-ux-design", label: "UI/UX Design" },
   { href: "/services/full-stack-development", label: "Full Stack Development" },
   { href: "/services/mern-development", label: "MERN Stack" },
   { href: "/services/nodejs-development", label: "Node.js Development" },
@@ -20,7 +26,6 @@ const serviceLinks = [
   { href: "/services/ai-development", label: "AI Development" },
   { href: "/services/mvp-development", label: "MVP Development" },
   { href: "/services/backend-development", label: "Backend Development" },
-  { href: "/services/custom-software-development", label: "Custom Software" },
 ];
 
 const industryLinks = [
@@ -147,7 +152,7 @@ export function Nav() {
                   href="/markets"
                   className="block rounded-lg px-3 pb-2 text-sm font-medium text-primary hover:bg-surface transition-colors"
                 >
-                  Oil &amp; gas software for the Gulf &amp; global markets →
+                  Global markets →
                 </a>
               </div>
             )}

@@ -16,10 +16,10 @@ import { SchemaMarkup } from "@/components/velora/SchemaMarkup";
 
 const BASE_URL = "https://stacklyn.in";
 
-const PAGE_TITLE = "Stacklyn —  AI Software Development | India";
+const PAGE_TITLE = "Stacklyn — Custom Software Development Company | Kerala, India";
 const PAGE_DESCRIPTION =
-  "Stacklyn builds AI automation software for companies in worldwide — reporting, operations dashboards, and AI agents. Engineering team based in Kerala, India.";
-const LAST_MODIFIED = "2026-09-30";
+  "Custom software development company in Kerala, India. We build web apps, mobile apps, ERP and CRM systems, SaaS products, and AI automation for businesses worldwide.";
+const LAST_MODIFIED = "2026-10-16";
 
 /**
  * Homepage-specific schema only.
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "software development company Kerala, custom software development India, MERN stack developers, Node.js developers India, React developers, Next.js developers, AI development company, startup MVP development India, SaaS development agency, full stack developers India, hire software developers India, oil and gas software development UAE, oil and gas software Saudi Arabia, permit to work software GCC, ICV reporting software UAE, outsource oil and gas software development India",
+          "software development company Kerala, software company Kochi, custom software development India, web application development India, mobile app development company Kerala, app development company India, ERP software development India, CRM development company, SaaS development company India, e-commerce development India, AI development company India, UI UX design company Kerala, MVP development India, hire software developers India",
       },
       // Open Graph
       { property: "og:type", content: "website" },
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Custom software development company in Kerala, India. We build scalable web apps, AI solutions, SaaS products, and startup MVPs using React, Node.js, and modern cloud technologies.",
+          "Custom software development company in Kerala, India. Web apps, mobile apps, ERP and CRM, SaaS products, e-commerce, and AI automation for businesses worldwide.",
       },
       { property: "og:image", content: `${BASE_URL}/og-image.png` },
       { property: "og:image:width", content: "1200" },
@@ -77,7 +77,7 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "We build scalable web apps, AI solutions, SaaS products, and MVPs. MERN, Node.js, React, Next.js experts from Kerala, India.",
+          "Web apps, mobile apps, ERP/CRM, SaaS, and AI automation — built by senior engineers in Kerala, India.",
       },
       { name: "twitter:image", content: `${BASE_URL}/og-image.png` },
       { name: "twitter:creator", content: "@stacklyn" },

@@ -11,6 +11,12 @@ const PAGE_URL = `${BASE_URL}/tools/software-cost-estimator`;
 
 // Ranges follow Stacklyn's published USD pricing for focused modules and integrated platforms.
 const MODULES = [
+  { id: "website", label: "Business website", min: 1500, max: 4000 },
+  { id: "webapp", label: "Web app / customer portal", min: 4000, max: 12000 },
+  { id: "mobile", label: "Mobile app (iOS + Android)", min: 6000, max: 15000 },
+  { id: "ecommerce", label: "E-commerce store", min: 2000, max: 12000 },
+  { id: "erp", label: "ERP / CRM / inventory module", min: 5000, max: 12000 },
+  { id: "saas", label: "SaaS product / MVP", min: 4000, max: 12000 },
   { id: "ptw", label: "Digital permit to work (ePTW)", min: 6000, max: 12000 },
   { id: "hse", label: "HSE incidents, audits & inspections", min: 6000, max: 12000 },
   { id: "icv", label: "ICV / IKTVA / localisation reporting", min: 5000, max: 12000 },
@@ -22,9 +28,9 @@ const MODULES = [
 ] as const;
 
 const SCALE = [
-  { id: "one", label: "1 site", factor: 1 },
-  { id: "few", label: "2–5 sites", factor: 1.2 },
-  { id: "many", label: "6+ sites", factor: 1.4 },
+  { id: "one", label: "1 location", factor: 1 },
+  { id: "few", label: "2–5 locations", factor: 1.2 },
+  { id: "many", label: "6+ locations", factor: 1.4 },
 ] as const;
 
 const INTEGRATIONS = [
@@ -72,14 +78,20 @@ function estimate(
   min = roundTo500(min * factor);
   max = roundTo500(max * factor);
   const timeline =
-    max < 15000 ? "6–10 weeks" : max < 40000 ? "3–5 months" : "5–9 months, delivered in phases";
+    max <= 5000
+      ? "3–5 weeks"
+      : max < 15000
+        ? "6–10 weeks"
+        : max < 40000
+          ? "3–5 months"
+          : "5–9 months, delivered in phases";
   return { min, max, timeline };
 }
 
 const faqs = [
   {
-    q: "How much does a digital permit to work system cost?",
-    a: "A custom digital permit to work system for one site typically costs $6,000–12,000 to build with Stacklyn. Offline mobile apps for field crews, Arabic interfaces, integrations with systems such as SAP, and multiple sites increase the cost.",
+    q: "How much does custom software cost?",
+    a: "With Stacklyn, a business website typically costs $1,500–4,000, a web app or customer portal $4,000–12,000, a mobile app for iOS and Android $6,000–15,000, and an ERP or CRM module $5,000–12,000. Integrations, offline mobile apps, extra languages, and multiple locations increase the cost.",
   },
   {
     q: "How accurate is this estimate?",
@@ -95,7 +107,7 @@ const faqs = [
   },
   {
     q: "Can we start with one module and add more later?",
-    a: "Yes. Most clients start with one module as a pilot on a single site, then add modules and sites in fixed-price phases once the first one is proving its value.",
+    a: "Yes. Most clients start with one module or a first version, then add modules, locations, and features in fixed-price phases once the first one is proving its value.",
   },
 ];
 
@@ -105,12 +117,12 @@ const schema = {
     {
       "@type": "WebApplication",
       "@id": `${PAGE_URL}#app`,
-      name: "Oil & Gas Software Cost Estimator",
+      name: "Software Development Cost Estimator",
       url: PAGE_URL,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "Free tool that estimates the cost and timeline of custom oil and gas, HSE, and industrial software.",
+        "Free tool that estimates the cost and timeline of websites, web apps, mobile apps, ERP and CRM, e-commerce, SaaS, AI, and industrial software.",
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
       provider: {
         "@type": "Organization",
@@ -140,24 +152,24 @@ const schema = {
 export const Route = createFileRoute("/tools/software-cost-estimator")({
   head: () => ({
     meta: [
-      { title: "Oil & Gas Software Cost Estimator | Free Tool | Stacklyn" },
+      { title: "Software Development Cost Calculator | Free Estimate | Stacklyn" },
       {
         name: "description",
         content:
-          "Free estimator for the cost and timeline of custom oil and gas, HSE, permit to work, ICV reporting, and industrial software. Pick modules and options and get a USD range in seconds.",
+          "Free calculator for the cost and timeline of a website, web app, mobile app, ERP or CRM, e-commerce store, SaaS product, or AI automation. Pick what you need and get a USD range in seconds.",
       },
       {
         name: "keywords",
         content:
-          "oil and gas software cost, permit to work software cost, HSE software cost, custom software cost estimator, ICV reporting software cost, industrial software development cost, software development cost calculator",
+          "software development cost calculator, app development cost calculator, website cost estimator, mobile app development cost India, ERP development cost, custom software cost estimator, ecommerce website cost",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: PAGE_URL },
-      { property: "og:title", content: "Oil & Gas Software Cost Estimator | Stacklyn" },
+      { property: "og:title", content: "Software Development Cost Calculator | Stacklyn" },
       {
         property: "og:description",
         content:
-          "Estimate the cost and timeline of custom oil and gas and industrial software in seconds.",
+          "Estimate the cost and timeline of your website, app, or custom software in seconds.",
       },
       { property: "og:image", content: `${BASE_URL}/og-image.png` },
       { name: "twitter:card", content: "summary_large_image" },
@@ -168,7 +180,7 @@ export const Route = createFileRoute("/tools/software-cost-estimator")({
 });
 
 function CostEstimatorPage() {
-  const [moduleIds, setModuleIds] = useState<string[]>(["ptw"]);
+  const [moduleIds, setModuleIds] = useState<string[]>(["webapp"]);
   const [offline, setOffline] = useState(false);
   const [arabic, setArabic] = useState(false);
   const [gccHosting, setGccHosting] = useState(false);
@@ -189,12 +201,12 @@ function CostEstimatorPage() {
         .map((m) => m.label)
         .join(", ") || "none"
     }`,
-    `Sites: ${SCALE.find((s) => s.id === scale)!.label}`,
+    `Locations: ${SCALE.find((s) => s.id === scale)!.label}`,
     `Integrations: ${INTEGRATIONS.find((i) => i.id === integrations)!.label}`,
     [
       offline && "Offline mobile app",
-      arabic && "Arabic + English",
-      gccHosting && "GCC / in-country hosting",
+      arabic && "Second language (e.g. Arabic)",
+      gccHosting && "Private / in-country hosting",
     ]
       .filter(Boolean)
       .join(", ") || "No extra options",
@@ -224,7 +236,7 @@ function CostEstimatorPage() {
             </ol>
           </nav>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-balance">
-            Oil &amp; Gas Software Cost Estimator
+            Software Development Cost Calculator
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             Pick the modules and options you need to see a realistic price range and timeline for a
@@ -312,7 +324,7 @@ function CostEstimatorPage() {
                       onChange={(e) => setOffline(e.target.checked)}
                       className="h-4 w-4 accent-[var(--color-primary)]"
                     />
-                    Offline mobile app for field crews
+                    Offline mobile app for field staff
                   </label>
                   <label className="flex cursor-pointer items-center gap-3">
                     <input
@@ -321,7 +333,7 @@ function CostEstimatorPage() {
                       onChange={(e) => setArabic(e.target.checked)}
                       className="h-4 w-4 accent-[var(--color-primary)]"
                     />
-                    Arabic + English (right-to-left) interface
+                    Second language (e.g. Arabic, right-to-left)
                   </label>
                   <label className="flex cursor-pointer items-center gap-3">
                     <input
@@ -330,7 +342,7 @@ function CostEstimatorPage() {
                       onChange={(e) => setGccHosting(e.target.checked)}
                       className="h-4 w-4 accent-[var(--color-primary)]"
                     />
-                    Hosting inside the GCC or on your servers (data residency)
+                    Private or in-country hosting (data residency)
                   </label>
                 </div>
               </fieldset>
@@ -384,19 +396,20 @@ function CostEstimatorPage() {
               How this estimate works
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Each module has a price range based on our real project quotes for a single site. When
-              you choose several modules, they share one platform — user accounts, roles, approvals,
-              and reporting — so the combined price is lower than the sum. Offline mobile apps,
-              Arabic interfaces, integrations with systems such as SAP or Tally, in-country hosting,
-              and additional sites each add effort, and the estimator accounts for them.
+              Each module has a price range based on our real project quotes for a single location.
+              When you choose several modules, they share one platform — user accounts, roles,
+              approvals, and reporting — so the combined price is lower than the sum. Offline mobile
+              apps, extra languages, integrations with systems such as Tally, Zoho, or SAP,
+              in-country hosting, and additional locations each add effort, and the estimator
+              accounts for them.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Want to understand the numbers in more detail? Read our guide to{" "}
+              Building industrial or HSE software? Read our guide to{" "}
               <a
                 href="/blog/custom-oil-gas-software-cost"
                 className="text-primary underline underline-offset-4"
               >
-                what custom oil and gas software costs
+                what custom oil and gas and HSE software costs
               </a>
               .
             </p>

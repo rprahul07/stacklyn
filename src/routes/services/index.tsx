@@ -6,10 +6,9 @@ import { SchemaMarkup } from "@/components/velora/SchemaMarkup";
 
 const BASE_URL = "https://stacklyn.in";
 
-const PAGE_TITLE =
-  "Software Development Services | Full Stack, MERN, React, Node.js & AI | Stacklyn";
+const PAGE_TITLE = "Software Development Services | Web, Mobile, ERP, E-commerce & AI | Stacklyn";
 const PAGE_DESCRIPTION =
-  "Stacklyn's software development services: full stack, MERN stack, React, Next.js, Node.js, backend, AI application development, MVP development, and custom software. Engineered in Kerala, India for clients worldwide.";
+  "Stacklyn's software development services: custom software, web and mobile app development, ERP and CRM, e-commerce, UI/UX design, AI applications, MVPs, and full stack engineering. Kerala, India, for clients worldwide.";
 
 type Service = {
   name: string;
@@ -26,6 +25,54 @@ type Service = {
  * describe the same offering differently.
  */
 const services: Service[] = [
+  {
+    name: "Custom Software Development",
+    to: "/services/custom-software-development",
+    slug: "custom-software-development",
+    tagline: "Tailored software · Scalable architecture",
+    desc: "Bespoke platforms, internal tools, workflow automation, and data systems engineered precisely to your business requirements when off-the-shelf tools do not fit.",
+    keywords: ["Bespoke platforms", "Internal tools", "Automation", "Integrations"],
+  },
+  {
+    name: "Web Application Development",
+    to: "/services/web-development",
+    slug: "web-development",
+    tagline: "Websites · Web apps · Portals",
+    desc: "Fast, secure websites and web applications — customer portals, booking and ordering systems, dashboards, and admin panels.",
+    keywords: ["Business websites", "Portals", "Booking systems", "SEO-ready"],
+  },
+  {
+    name: "Mobile App Development",
+    to: "/services/mobile-app-development",
+    slug: "mobile-app-development",
+    tagline: "iOS & Android · Flutter · React Native",
+    desc: "iOS and Android apps from one codebase, with the backend, admin panel, and App Store and Google Play launch handled for you.",
+    keywords: ["Flutter", "React Native", "Offline apps", "Store launch"],
+  },
+  {
+    name: "ERP & CRM Development",
+    to: "/services/erp-crm-development",
+    slug: "erp-crm-development",
+    tagline: "ERP · CRM · Inventory · Billing · HR",
+    desc: "Custom ERP, CRM, inventory, billing, and HR software that fits your process, with no per-user fees, delivered in fixed-price modules.",
+    keywords: ["ERP", "CRM", "Inventory", "Tally integration"],
+  },
+  {
+    name: "E-commerce Development",
+    to: "/services/ecommerce-development",
+    slug: "ecommerce-development",
+    tagline: "Online stores · Shopify · Marketplaces",
+    desc: "Online stores and marketplaces with fast mobile checkout, payment gateways, inventory, and delivery tracking.",
+    keywords: ["Shopify", "Custom stores", "Marketplaces", "Payments"],
+  },
+  {
+    name: "UI/UX Design",
+    to: "/services/ui-ux-design",
+    slug: "ui-ux-design",
+    tagline: "Product design · Prototypes · Design systems",
+    desc: "User flows, wireframes, clickable prototypes, and design systems for web apps, mobile apps, and SaaS products.",
+    keywords: ["Figma", "Prototypes", "Design systems", "UX audit"],
+  },
   {
     name: "Full Stack Development",
     to: "/services/full-stack-development",
@@ -89,14 +136,6 @@ const services: Service[] = [
     tagline: "Idea to production in 8–12 weeks",
     desc: "Product scoping, UI/UX design, full stack build, cloud deployment, and post-launch iteration — a production-ready product that validates your market.",
     keywords: ["Product scoping", "8–12 weeks", "Launch ready", "Iteration"],
-  },
-  {
-    name: "Custom Software Development",
-    to: "/services/custom-software-development",
-    slug: "custom-software-development",
-    tagline: "Tailored software · Scalable architecture",
-    desc: "Bespoke platforms, internal tools, workflow automation, and data systems engineered precisely to your business requirements when off-the-shelf tools do not fit.",
-    keywords: ["Bespoke platforms", "Internal tools", "Automation", "Integrations"],
   },
 ];
 
@@ -201,10 +240,10 @@ function ServicesIndexPage() {
             </motion.h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Stacklyn designs, builds, and ships custom software end to end — full stack web
-              platforms, AI applications, and startup MVPs. Every engagement is led hands-on by
-              senior engineers from our team in Kerala, India, for clients across the GCC, Europe,
-              and the United States.
+              Stacklyn designs, builds, and ships custom software end to end — websites and web
+              apps, mobile apps, ERP and CRM systems, e-commerce, AI applications, and startup MVPs.
+              Every engagement is led hands-on by senior engineers from our team in Kerala, India,
+              for clients in India and worldwide.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">

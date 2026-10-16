@@ -1,6 +1,12 @@
 import { Logo } from "./Logo";
 
 const services = [
+  { label: "Custom Software", href: "/services/custom-software-development" },
+  { label: "Web Development", href: "/services/web-development" },
+  { label: "Mobile App Development", href: "/services/mobile-app-development" },
+  { label: "ERP & CRM Development", href: "/services/erp-crm-development" },
+  { label: "E-commerce Development", href: "/services/ecommerce-development" },
+  { label: "UI/UX Design", href: "/services/ui-ux-design" },
   { label: "Full Stack Development", href: "/services/full-stack-development" },
   { label: "MERN Stack", href: "/services/mern-development" },
   { label: "Node.js Development", href: "/services/nodejs-development" },
@@ -9,7 +15,6 @@ const services = [
   { label: "AI Development", href: "/services/ai-development" },
   { label: "MVP Development", href: "/services/mvp-development" },
   { label: "Backend Development", href: "/services/backend-development" },
-  { label: "Custom Software", href: "/services/custom-software-development" },
 ];
 
 const hireDev = [
@@ -211,7 +216,7 @@ export function Footer() {
             ))}
           </ul>
           <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-foreground">
-            Gulf &amp; Global Markets
+            Global Markets
           </div>
           <ul className="mt-4 space-y-2">
             {markets.map((s) => (
