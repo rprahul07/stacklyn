@@ -1,0 +1,21 @@
+name: IndexNow
+
+# Runs when the sitemap changes on main, so bump a page's lastmod to have it submitted.
+on:
+  push:
+    branches: [main]
+    paths: [public/sitemap.xml]
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Cloudflare Pages deploys the same push, and the new pages must be live before submitting.
+      - name: Wait for the Cloudflare Pages deploy
+        run: sleep 240
+      - run: node scripts/indexnow.mjs

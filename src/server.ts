@@ -39,9 +39,9 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
-    // One canonical host: www.stacklyn.in would otherwise serve a duplicate of every page.
+    // One canonical host: www and the Cloudflare Pages address would otherwise serve a duplicate of every page.
     const url = new URL(request.url);
-    if (url.hostname === "www.stacklyn.in") {
+    if (url.hostname === "www.stacklyn.in" || url.hostname === "stacklyn.pages.dev") {
       url.hostname = "stacklyn.in";
       return Response.redirect(url.toString(), 301);
     }

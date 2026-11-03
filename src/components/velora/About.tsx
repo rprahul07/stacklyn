@@ -5,7 +5,9 @@ import { SectionHeading } from "./SectionHeading";
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [val, setVal] = useState(0);
+  // Start at the real value so the server-rendered HTML says "10+", not "0+".
+  // The count-up from 0 only runs in the browser, once the stat scrolls into view.
+  const [val, setVal] = useState(to);
   useEffect(() => {
     if (!inView) return;
     const controls = animate(0, to, {
