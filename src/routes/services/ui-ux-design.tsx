@@ -148,7 +148,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start a design project?",
-      a: "Share what you are building through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 74836 52267. We reply within 24 hours.",
+      a: "Share what you are building through the contact form, email projects@stacklyn.in, or WhatsApp +91 74836 52267. We reply within 24 hours.",
     },
   ],
   relatedServices: [

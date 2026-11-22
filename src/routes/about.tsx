@@ -139,7 +139,7 @@ function AboutPage() {
       <p>
         WhatsApp <a href="https://wa.me/917483652267">+91 74836 52267</a>, call{" "}
         <a href="tel:+919544451720">+91 95444 51720</a>, email{" "}
-        <a href="mailto:rahulrp@stacklyn.in">rahulrp@stacklyn.in</a>, or send an enquiry through the{" "}
+        <a href="mailto:projects@stacklyn.in">projects@stacklyn.in</a>, or send an enquiry through the{" "}
         <a href="/#contact">contact form</a>. We reply within 24 hours. For a quick ballpark first,
         try our <a href="/tools/software-cost-estimator">software cost estimator</a>.
       </p>

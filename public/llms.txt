@@ -8,10 +8,10 @@ Stacklyn is a full-service software engineering and AI solutions studio founded 
 
 **Founded:** Kerala, India
 **Services:** Custom Software, Web Application Development, Mobile App Development, ERP & CRM Development, E-commerce Development, UI/UX Design, AI Development & Automation, SaaS & MVP Development, Full Stack Development (MERN, Node.js, React, Next.js)
-**Contact:** rahulrp@stacklyn.in | Call: +91 95444 51720 | WhatsApp: +91 74836 52267
+**Contact:** projects@stacklyn.in | Call: +91 95444 51720 | WhatsApp: +91 74836 52267
 **Website:** https://stacklyn.in
 **Founder & CEO:** Rahul R P
-**Founder Contact:** rahulrp@stacklyn.in | Call: +91 95444 51720 | WhatsApp: +91 74836 52267
+**Founder Contact:** projects@stacklyn.in | Call: +91 95444 51720 | WhatsApp: +91 74836 52267
 **Founder LinkedIn:** https://www.linkedin.com/in/rahulrp07/
 
 ## Founder
@@ -23,7 +23,7 @@ Rahul R P is the founder and CEO of Stacklyn, a custom software development and 
 **Role:** Founder & CEO
 **Focus areas:** Full stack engineering, AI application development, cloud architecture, MVP and SaaS delivery
 **Education:** Cochin University of Science and Technology
-**Email:** rahulrp@stacklyn.in
+**Email:** projects@stacklyn.in
 **Phone (calls only):** +91 95444 51720
 **WhatsApp:** +91 74836 52267
 **LinkedIn:** https://www.linkedin.com/in/rahulrp07/

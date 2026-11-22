@@ -206,7 +206,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start a Next.js project with Stacklyn?",
-      a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 74836 52267. We schedule a free discovery call, review your requirements, and deliver a project proposal with scope, timeline, and pricing within 48 hours.",
+      a: "Contact us at projects@stacklyn.in or WhatsApp +91 74836 52267. We schedule a free discovery call, review your requirements, and deliver a project proposal with scope, timeline, and pricing within 48 hours.",
     },
   ],
   relatedServices: [

@@ -62,7 +62,7 @@ const siteSchema = {
         {
           "@type": "ContactPoint",
           telephone: "+91-95444-51720",
-          email: "rahulrp@stacklyn.in",
+          email: "projects@stacklyn.in",
           contactType: "sales",
           areaServed: [
             "IN",
@@ -165,7 +165,7 @@ const siteSchema = {
       familyName: "R P",
       jobTitle: "Founder & CEO",
       description: FOUNDER_BIO,
-      email: "rahulrp@stacklyn.in",
+      email: "projects@stacklyn.in",
       telephone: "+91-95444-51720",
       nationality: { "@type": "Country", name: "India" },
       address: {

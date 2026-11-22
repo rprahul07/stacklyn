@@ -171,7 +171,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start an edtech project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with your profile — learner numbers, content format, and whether you need LMS, assessments, live classes, or campus ERP. We run a free discovery call and deliver a phased proposal within 48 hours.",
+      a: "Email projects@stacklyn.in or WhatsApp +91 74836 52267 with your profile — learner numbers, content format, and whether you need LMS, assessments, live classes, or campus ERP. We run a free discovery call and deliver a phased proposal within 48 hours.",
     },
   ],
   relatedIndustries: [

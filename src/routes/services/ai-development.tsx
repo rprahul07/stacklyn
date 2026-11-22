@@ -204,7 +204,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I get started with AI development at Stacklyn?",
-      a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 74836 52267. We start with a free AI use case consultation where we identify the highest-value AI features for your product and provide a technical roadmap and project estimate.",
+      a: "Contact us at projects@stacklyn.in or WhatsApp +91 74836 52267. We start with a free AI use case consultation where we identify the highest-value AI features for your product and provide a technical roadmap and project estimate.",
     },
   ],
   relatedServices: [

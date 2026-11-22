@@ -1,6 +1,6 @@
 import type { AIAutomationPage } from "./types";
 
-const CONTACT_CTA = "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267";
+const CONTACT_CTA = "Email projects@stacklyn.in or WhatsApp +91 74836 52267";
 
 const automationServices = [
   { name: "Custom Software Development", href: "/services/custom-software-development" },

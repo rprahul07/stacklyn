@@ -805,7 +805,7 @@ function IndustriesIndexPage() {
                   Get a Free Quote <span aria-hidden>→</span>
                 </a>
                 <a
-                  href="mailto:rahulrp@stacklyn.in"
+                  href="mailto:projects@stacklyn.in"
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-8 h-12 text-sm font-medium text-foreground hover:bg-surface transition-colors"
                 >
                   Email Us

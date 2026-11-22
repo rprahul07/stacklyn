@@ -171,7 +171,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start a real estate software project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with your profile — number of projects and units, sales team and channel partner count, and the systems you use today. We run a free discovery call and deliver a phased proposal within 48 hours.",
+      a: "Email projects@stacklyn.in or WhatsApp +91 74836 52267 with your profile — number of projects and units, sales team and channel partner count, and the systems you use today. We run a free discovery call and deliver a phased proposal within 48 hours.",
     },
   ],
   relatedIndustries: [

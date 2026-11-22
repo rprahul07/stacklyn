@@ -101,8 +101,8 @@ export function Footer() {
             solutions, and MVPs for global clients.
           </p>
           <div className="mt-5 flex flex-col gap-1.5 text-sm text-muted-foreground">
-            <a href="mailto:rahulrp@stacklyn.in" className="hover:text-primary transition-colors">
-              rahulrp@stacklyn.in
+            <a href="mailto:projects@stacklyn.in" className="hover:text-primary transition-colors">
+              projects@stacklyn.in
             </a>
             <a href="tel:+919544451720" className="hover:text-primary transition-colors">
               Call: +91 95444 51720

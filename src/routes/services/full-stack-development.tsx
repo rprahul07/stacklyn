@@ -205,7 +205,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I get started with Stacklyn for full stack development?",
-      a: "Contact us via the form on our website, email rahulrp@stacklyn.in, or WhatsApp +91 74836 52267. We schedule a free discovery call within 24 hours and send a detailed project proposal within 48 hours.",
+      a: "Contact us via the form on our website, email projects@stacklyn.in, or WhatsApp +91 74836 52267. We schedule a free discovery call within 24 hours and send a detailed project proposal within 48 hours.",
     },
   ],
   relatedServices: [

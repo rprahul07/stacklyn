@@ -206,7 +206,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I get started with backend development at Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267. We'll schedule a free technical consultation to discuss your backend requirements and architecture goals, then send a detailed proposal within 48 hours.",
+      a: "Email projects@stacklyn.in or WhatsApp +91 74836 52267. We'll schedule a free technical consultation to discuss your backend requirements and architecture goals, then send a detailed proposal within 48 hours.",
     },
   ],
   relatedServices: [

@@ -33,7 +33,7 @@ function PrivacyPolicyPage() {
       <p>
         Stacklyn is a software development company based in Kerala, India. For any question about
         this policy or your personal data, contact us at{" "}
-        <a href="mailto:rahulrp@stacklyn.in">rahulrp@stacklyn.in</a>.
+        <a href="mailto:projects@stacklyn.in">projects@stacklyn.in</a>.
       </p>
 
       <h2>What we collect</h2>
@@ -102,7 +102,7 @@ function PrivacyPolicyPage() {
         2023, the UK and EU GDPR, and the data protection laws of the UAE, Saudi Arabia, Qatar, and
         Oman — you may have the right to access, correct, or delete your personal data, to withdraw
         consent, and to object to certain processing. Email{" "}
-        <a href="mailto:rahulrp@stacklyn.in">rahulrp@stacklyn.in</a> and we will respond within 30
+        <a href="mailto:projects@stacklyn.in">projects@stacklyn.in</a> and we will respond within 30
         days.
       </p>
 

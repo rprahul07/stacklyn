@@ -97,7 +97,7 @@ function TermsPage() {
 
       <h2>Contact</h2>
       <p>
-        Questions about these terms: <a href="mailto:rahulrp@stacklyn.in">rahulrp@stacklyn.in</a>.
+        Questions about these terms: <a href="mailto:projects@stacklyn.in">projects@stacklyn.in</a>.
       </p>
     </SimplePageLayout>
   );

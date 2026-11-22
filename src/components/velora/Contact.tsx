@@ -17,7 +17,7 @@ const projectTypes = [
 ];
 const budgets = ["< $2,000", "$2,000 – $5,000", "$5,000 – $15,000", "$15,000+"];
 
-const CONTACT_EMAIL = "rahulrp@stacklyn.in";
+const CONTACT_EMAIL = "projects@stacklyn.in";
 const CONTACT_PHONE = "+91 95444 51720";
 const CONTACT_PHONE_RAW = "919544451720";
 const WHATSAPP_PHONE = "+91 74836 52267";

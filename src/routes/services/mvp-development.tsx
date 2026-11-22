@@ -203,7 +203,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start an MVP project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in with a brief description of your idea, target user, and desired timeline. We'll schedule a free discovery call within 24 hours and send a project proposal with scope, timeline, and pricing within 48 hours.",
+      a: "Email projects@stacklyn.in with a brief description of your idea, target user, and desired timeline. We'll schedule a free discovery call within 24 hours and send a project proposal with scope, timeline, and pricing within 48 hours.",
     },
   ],
   relatedServices: [

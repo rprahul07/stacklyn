@@ -161,7 +161,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start a web project with Stacklyn?",
-      a: "Send your requirements through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 74836 52267. We reply within 24 hours and send a fixed-price proposal after a short discovery call.",
+      a: "Send your requirements through the contact form, email projects@stacklyn.in, or WhatsApp +91 74836 52267. We reply within 24 hours and send a fixed-price proposal after a short discovery call.",
     },
   ],
   relatedServices: [

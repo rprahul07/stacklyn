@@ -1,6 +1,6 @@
 import type { MarketPage } from "./types";
 
-const CONTACT_CTA = "WhatsApp +91 74836 52267 or email rahulrp@stacklyn.in";
+const CONTACT_CTA = "WhatsApp +91 74836 52267 or email projects@stacklyn.in";
 
 export const specialistMarketPages: MarketPage[] = [
   // ------------------------------------------------------------------

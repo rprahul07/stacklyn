@@ -170,7 +170,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start a healthcare software project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with your facility profile — departments, bed count or consultation volume, and the systems you run today. We schedule a free technical discovery call and deliver a phased proposal within 48 hours.",
+      a: "Email projects@stacklyn.in or WhatsApp +91 74836 52267 with your facility profile — departments, bed count or consultation volume, and the systems you run today. We schedule a free technical discovery call and deliver a phased proposal within 48 hours.",
     },
   ],
   relatedIndustries: [
