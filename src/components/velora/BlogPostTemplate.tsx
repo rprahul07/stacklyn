@@ -80,7 +80,7 @@ function buildSchema(post: BlogPost) {
 }
 
 export function BlogPostView({ post }: { post: BlogPost }) {
-  const whatsappHref = `https://wa.me/919544451720?text=${encodeURIComponent(
+  const whatsappHref = `https://wa.me/917483652267?text=${encodeURIComponent(
     `Hi Stacklyn, I read your article "${post.title}" and would like to discuss a project.`,
   )}`;
 

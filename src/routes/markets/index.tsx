@@ -147,7 +147,7 @@ function MarketsHub() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="https://wa.me/919544451720?text=Hi%20Stacklyn%2C%20I%27d%20like%20to%20discuss%20an%20oil%20and%20gas%20software%20project."
+                href="https://wa.me/917483652267?text=Hi%20Stacklyn%2C%20I%27d%20like%20to%20discuss%20an%20oil%20and%20gas%20software%20project."
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackLead("whatsapp")}

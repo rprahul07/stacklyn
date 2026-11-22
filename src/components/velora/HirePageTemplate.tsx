@@ -124,7 +124,7 @@ export function HirePage({ data }: HirePageProps) {
                 Hire Now <span aria-hidden>→</span>
               </a>
               <a
-                href="https://wa.me/919544451720"
+                href="https://wa.me/917483652267"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 h-12 text-sm font-medium text-foreground hover:bg-surface transition-colors"

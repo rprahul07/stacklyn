@@ -20,6 +20,8 @@ const budgets = ["< $2,000", "$2,000 – $5,000", "$5,000 – $15,000", "$15,000
 const CONTACT_EMAIL = "rahulrp@stacklyn.in";
 const CONTACT_PHONE = "+91 95444 51720";
 const CONTACT_PHONE_RAW = "919544451720";
+const WHATSAPP_PHONE = "+91 74836 52267";
+const WHATSAPP_RAW = "917483652267";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -46,7 +48,7 @@ function whatsappFallbackHref(enquiry: Enquiry) {
     "",
     enquiry.description,
   ].filter((line): line is string => line !== null);
-  return `https://wa.me/${CONTACT_PHONE_RAW}?text=${encodeURIComponent(lines.join("\n"))}`;
+  return `https://wa.me/${WHATSAPP_RAW}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
 
 export function Contact() {
@@ -102,7 +104,7 @@ export function Contact() {
 
           <div className="mt-8 space-y-4">
             <a
-              href={`https://wa.me/${CONTACT_PHONE_RAW}`}
+              href={`https://wa.me/${WHATSAPP_RAW}`}
               target="_blank"
               rel="noreferrer"
               onClick={() => trackLead("whatsapp")}
@@ -112,7 +114,7 @@ export function Contact() {
                 <div className="text-xs uppercase tracking-wider text-primary">
                   WhatsApp · Fastest reply
                 </div>
-                <div className="mt-1 text-sm font-medium text-foreground">{CONTACT_PHONE}</div>
+                <div className="mt-1 text-sm font-medium text-foreground">{WHATSAPP_PHONE}</div>
               </div>
               <span className="text-primary transition-transform group-hover:translate-x-1">→</span>
             </a>
@@ -133,7 +135,9 @@ export function Contact() {
               className="group flex items-center justify-between rounded-xl border border-border bg-background px-5 py-4 hover:border-primary/40 transition-colors"
             >
               <div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Phone</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                  Phone · Calls only
+                </div>
                 <div className="mt-1 text-sm font-medium text-foreground">{CONTACT_PHONE}</div>
               </div>
               <span className="text-primary transition-transform group-hover:translate-x-1">→</span>

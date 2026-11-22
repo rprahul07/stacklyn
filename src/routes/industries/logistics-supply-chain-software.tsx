@@ -170,7 +170,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start a logistics software project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with your operation profile — fleet size, warehouse count, or shipment volumes. We run a free discovery call and deliver a phased proposal within 48 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with your operation profile — fleet size, warehouse count, or shipment volumes. We run a free discovery call and deliver a phased proposal within 48 hours.",
     },
   ],
   relatedIndustries: [

@@ -215,7 +215,7 @@ function CostEstimatorPage() {
   ]
     .filter(Boolean)
     .join("\n");
-  const whatsappHref = `https://wa.me/919544451720?text=${encodeURIComponent(summary)}`;
+  const whatsappHref = `https://wa.me/917483652267?text=${encodeURIComponent(summary)}`;
 
   return (
     <div className="bg-background text-foreground">

@@ -150,7 +150,7 @@ const data: HireData = {
     },
     {
       q: "How do I hire a Next.js developer from Stacklyn?",
-      a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Describe your project and we'll send a proposal within 24 hours.",
+      a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 74836 52267. Describe your project and we'll send a proposal within 24 hours.",
     },
   ],
   relatedHire: [

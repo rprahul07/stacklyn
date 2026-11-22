@@ -254,7 +254,7 @@ function ServicesIndexPage() {
                 Start Your Project <span aria-hidden>→</span>
               </a>
               <a
-                href="https://wa.me/919544451720"
+                href="https://wa.me/917483652267"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-medium text-foreground transition-colors hover:bg-surface"

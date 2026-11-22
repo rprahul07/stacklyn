@@ -1,6 +1,6 @@
 import type { MarketPage } from "./types";
 
-const CONTACT_CTA = "WhatsApp +91 95444 51720 or email rahulrp@stacklyn.in";
+const CONTACT_CTA = "WhatsApp +91 74836 52267 or email rahulrp@stacklyn.in";
 
 /** High-intent pages for EU/EEA and North Sea buyers. Legal requirements remain client-specific. */
 export const europeMarketPages: MarketPage[] = [

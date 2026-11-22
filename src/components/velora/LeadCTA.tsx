@@ -2,6 +2,7 @@ import { useRouterState } from "@tanstack/react-router";
 import { trackLead } from "@/lib/analytics";
 
 const PHONE_RAW = "919544451720";
+const WHATSAPP_RAW = "917483652267";
 
 function WhatsAppIcon() {
   return (
@@ -34,7 +35,7 @@ function PhoneIcon() {
 export function LeadCTA() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const message = `Hi Stacklyn, I'd like to discuss a software project. (Found you on stacklyn.in${pathname})`;
-  const whatsappHref = `https://wa.me/${PHONE_RAW}?text=${encodeURIComponent(message)}`;
+  const whatsappHref = `https://wa.me/${WHATSAPP_RAW}?text=${encodeURIComponent(message)}`;
 
   return (
     <div

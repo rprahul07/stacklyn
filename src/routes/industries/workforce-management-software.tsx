@@ -169,7 +169,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start a workforce management software project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with a description of your workforce and operational requirements. We'll schedule a free discovery call and deliver a detailed proposal within 48 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with a description of your workforce and operational requirements. We'll schedule a free discovery call and deliver a detailed proposal within 48 hours.",
     },
   ],
   relatedIndustries: [

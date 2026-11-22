@@ -149,7 +149,7 @@ const data: HireData = {
     },
     {
       q: "How do I hire a Node.js developer from Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with your requirements. We respond within 24 hours with a proposal and engineer profiles.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with your requirements. We respond within 24 hours with a proposal and engineer profiles.",
     },
   ],
   relatedHire: [

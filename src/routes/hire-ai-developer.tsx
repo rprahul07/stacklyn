@@ -149,7 +149,7 @@ const data: HireData = {
     },
     {
       q: "How do I hire an AI developer from Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Describe your AI use case and we'll respond with a technical assessment and proposal within 24 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267. Describe your AI use case and we'll respond with a technical assessment and proposal within 24 hours.",
     },
   ],
   relatedHire: [

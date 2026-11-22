@@ -161,7 +161,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start a mobile app project?",
-      a: "Share your app idea through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 95444 51720. We reply within 24 hours and send a fixed-price proposal after a short call.",
+      a: "Share your app idea through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 74836 52267. We reply within 24 hours and send a fixed-price proposal after a short call.",
     },
   ],
   relatedServices: [

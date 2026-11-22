@@ -7,7 +7,7 @@ import { trackLead } from "@/lib/analytics";
 import { getMarketPage, marketPagePath, type MarketPage } from "@/data/markets";
 
 const BASE_URL = "https://stacklyn.in";
-const PHONE_RAW = "919544451720";
+const PHONE_RAW = "917483652267";
 
 function buildSchema(page: MarketPage) {
   const url = `${BASE_URL}${marketPagePath(page.slug)}`;

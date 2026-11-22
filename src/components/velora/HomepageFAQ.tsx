@@ -55,7 +55,7 @@ const homepageFAQs = [
   },
   {
     q: "How do I start a project with Stacklyn?",
-    a: "Send an enquiry through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 95444 51720. We reply within 24 hours. The process is: (1) free discovery call, (2) fixed-price proposal, (3) kickoff, (4) weekly demos until launch.",
+    a: "Send an enquiry through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 74836 52267. We reply within 24 hours. The process is: (1) free discovery call, (2) fixed-price proposal, (3) kickoff, (4) weekly demos until launch.",
   },
 ];
 

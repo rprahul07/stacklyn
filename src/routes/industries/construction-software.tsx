@@ -168,7 +168,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start a construction software project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with a description of your requirements. We schedule a free technical discovery call, walk through your current site workflows, and deliver a detailed proposal within 48 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with a description of your requirements. We schedule a free technical discovery call, walk through your current site workflows, and deliver a detailed proposal within 48 hours.",
     },
   ],
   relatedIndustries: [

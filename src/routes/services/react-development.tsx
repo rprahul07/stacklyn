@@ -202,7 +202,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start a React project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with your project brief. We'll schedule a free call to discuss requirements and send a proposal within 48 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with your project brief. We'll schedule a free call to discuss requirements and send a proposal within 48 hours.",
     },
   ],
   relatedServices: [

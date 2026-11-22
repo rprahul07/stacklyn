@@ -206,7 +206,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start a custom software project with Stacklyn?",
-      a: "Contact rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with a description of your software needs. We'll schedule a free discovery call, produce a requirements document, and deliver a detailed project proposal within 48 hours.",
+      a: "Contact rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with a description of your software needs. We'll schedule a free discovery call, produce a requirements document, and deliver a detailed project proposal within 48 hours.",
     },
   ],
   relatedServices: [

@@ -105,15 +105,15 @@ export function Footer() {
               rahulrp@stacklyn.in
             </a>
             <a href="tel:+919544451720" className="hover:text-primary transition-colors">
-              +91 95444 51720
+              Call: +91 95444 51720
             </a>
             <a
-              href="https://wa.me/919544451720"
+              href="https://wa.me/917483652267"
               target="_blank"
               rel="noreferrer"
               className="hover:text-primary transition-colors"
             >
-              WhatsApp
+              WhatsApp: +91 74836 52267
             </a>
           </div>
         </div>

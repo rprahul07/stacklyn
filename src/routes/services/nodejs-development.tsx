@@ -206,7 +206,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I hire Stacklyn for Node.js development?",
-      a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 95444 51720. We offer a free technical consultation and project scoping call, followed by a detailed proposal within 48 hours.",
+      a: "Contact us at rahulrp@stacklyn.in or WhatsApp +91 74836 52267. We offer a free technical consultation and project scoping call, followed by a detailed proposal within 48 hours.",
     },
   ],
   relatedServices: [

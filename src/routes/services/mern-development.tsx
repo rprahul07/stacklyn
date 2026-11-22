@@ -203,7 +203,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I get started with a MERN stack project at Stacklyn?",
-      a: "Contact Stacklyn via email at rahulrp@stacklyn.in, WhatsApp +91 95444 51720, or the contact form on our website. We schedule a free 30-minute discovery call and send a detailed project proposal within 48 hours.",
+      a: "Contact Stacklyn via email at rahulrp@stacklyn.in, WhatsApp +91 74836 52267, or the contact form on our website. We schedule a free 30-minute discovery call and send a detailed project proposal within 48 hours.",
     },
   ],
   relatedServices: [

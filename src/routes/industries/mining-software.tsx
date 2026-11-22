@@ -170,7 +170,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start a software project with Stacklyn for my mining company?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with a description of your mining software requirements. We'll schedule a free technical discovery call and deliver a detailed proposal within 48 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with a description of your mining software requirements. We'll schedule a free technical discovery call and deliver a detailed proposal within 48 hours.",
     },
   ],
   relatedIndustries: [

@@ -152,7 +152,7 @@ const data: HireData = {
     },
     {
       q: "How do I hire a backend developer from Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Share your requirements and we'll send a proposal with engineer profile within 24 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267. Share your requirements and we'll send a proposal with engineer profile within 24 hours.",
     },
   ],
   relatedHire: [

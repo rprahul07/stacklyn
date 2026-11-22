@@ -141,7 +141,7 @@ const data: HireData = {
     },
     {
       q: "How do I start hiring a React developer from Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720. Share your project requirements and we'll send a proposal within 24 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267. Share your project requirements and we'll send a proposal within 24 hours.",
     },
   ],
   relatedHire: [

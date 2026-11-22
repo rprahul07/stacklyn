@@ -171,7 +171,7 @@ const data: IndustryData = {
     },
     {
       q: "How do I start a manufacturing software project with Stacklyn?",
-      a: "Email rahulrp@stacklyn.in or WhatsApp +91 95444 51720 with your plant profile and the problem you want solved first. We run a free technical discovery call, assess your machine and ERP landscape, and deliver a phased proposal within 48 hours.",
+      a: "Email rahulrp@stacklyn.in or WhatsApp +91 74836 52267 with your plant profile and the problem you want solved first. We run a free technical discovery call, assess your machine and ERP landscape, and deliver a phased proposal within 48 hours.",
     },
   ],
   relatedIndustries: [

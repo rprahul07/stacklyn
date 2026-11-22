@@ -160,7 +160,7 @@ const data: ServiceData = {
     },
     {
       q: "How do I start?",
-      a: "Tell us what you sell through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 95444 51720. We reply within 24 hours with next steps.",
+      a: "Tell us what you sell through the contact form, email rahulrp@stacklyn.in, or WhatsApp +91 74836 52267. We reply within 24 hours with next steps.",
     },
   ],
   relatedServices: [
